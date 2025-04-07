@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd ai && npm ci --prefer-offline --no-audit --no-fund || npm install --prefer-offline --no-audit --no-fund --legacy-peer-deps",
+  "buildCommand": "cd ai && npm ci --prefer-offline --no-audit --no-fund || npm install --prefer-offline --no-audit --no-fund --legacy-peer-deps && npm run build",
   "outputDirectory": "ai/.next",
   "framework": "nextjs",
   "devCommand": "cd ai && npm run dev",
