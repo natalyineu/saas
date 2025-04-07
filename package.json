@@ -1,1 +1,14 @@
-ai/package.json
+{
+  "name": "saas-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "ai"
+  ],
+  "scripts": {
+    "dev": "cd ai && npm run dev",
+    "build": "cd ai && npm run build",
+    "start": "cd ai && npm run start",
+    "lint": "cd ai && npm run lint"
+  }
+} 
