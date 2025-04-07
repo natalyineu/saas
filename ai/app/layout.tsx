@@ -1,12 +1,12 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Geist } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { Comfortaa } from 'next/font/google';
 import SupportButton from './components/SupportButton';
 import Script from 'next/script';
 
 // Initialize fonts
-const geist = Geist({
+const geist = Inter({
   subsets: ['latin'],
   weight: ["400", "500", "600", "700"],
   variable: '--font-geist',
