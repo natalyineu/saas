@@ -1,0 +1,76 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+export default function SupportButton() {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Track scroll position and screen size to adjust visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 300);
+    };
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    // Set initial states
+    handleResize();
+    handleScroll();
+    
+    // Add event listeners
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  return (
+    <>
+      {/* Buy Me Coffee Button will be inserted here by the script */}
+      <div
+        id="bmc-container"
+        className="fixed right-4 bottom-24 z-50"
+        style={{ minWidth: '150px', display: 'none' }}
+      ></div>
+      
+      {/* Main button - styled as Buy an Ads package button */}
+      <div className={`fixed right-2 sm:right-4 ${isMobile ? 'bottom-2' : 'bottom-4'} z-50 transition-all duration-300 ${isMobile && !isScrolled ? 'scale-75 opacity-70' : 'scale-100 opacity-100'}`}>
+        <button
+          className={`bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base font-medium shadow-lg rounded-full ${isMobile ? 'px-2 py-2' : 'px-4 sm:px-6 py-2.5 sm:py-3'} flex items-center justify-center hover:shadow-xl transition-all animate-pulse-slow`}
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+          onClick={() => window.open('https://buymeacoffee.com/aivertise/membership', '_blank')}
+          aria-label="Buy an Ads package"
+        >
+          {/* Target icon */}
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          </svg>
+          
+          {isMobile ? (
+            <span className="text-xs whitespace-nowrap">Buy Ads</span>
+          ) : (
+            <span>Buy an Ads package</span>
+          )}
+          
+          {showTooltip && (
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white text-blue-600 shadow-md rounded-md py-1 px-2 text-sm whitespace-nowrap hidden md:block">
+              Get premium advertising
+            </div>
+          )}
+        </button>
+      </div>
+    </>
+  );
+} 

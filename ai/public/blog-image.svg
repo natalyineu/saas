@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F8FAFC"/>
+  
+  <!-- Blog post cards -->
+  <rect x="100" y="100" width="600" height="400" rx="8" fill="#FFEDD5"/>
+  
+  <!-- Blog post 1 -->
+  <rect x="150" y="150" width="250" height="300" rx="8" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="150" y="150" width="250" height="120" rx="8" fill="#FF7E5F"/>
+  <text x="170" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#0F172A">How AI Transformed a Small Coffee Shop's Revenue</text>
+  <text x="170" y="320" font-family="Arial" font-size="14" fill="#64748B">Learn how Urban Beans increased foot traffic by 143% using our AI-powered ad targeting.</text>
+  <rect x="170" y="350" width="80" height="25" rx="12.5" fill="#FEB47B"/>
+  <text x="210" y="367" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">CASE STUDY</text>
+  
+  <!-- Blog post 2 -->
+  <rect x="450" y="150" width="250" height="300" rx="8" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="450" y="150" width="250" height="120" rx="8" fill="#FEB47B"/>
+  <text x="470" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#0F172A">5 AI Advertising Trends to Watch in 2024</text>
+  <text x="470" y="320" font-family="Arial" font-size="14" fill="#64748B">Stay ahead of the competition with these emerging AI-powered advertising strategies.</text>
+  <rect x="470" y="350" width="80" height="25" rx="12.5" fill="#FF7E5F"/>
+  <text x="510" y="367" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">TRENDS</text>
+  
+  <!-- Laptop and pencil illustration -->
+  <rect x="180" y="170" width="80" height="60" rx="4" fill="#64748B"/>
+  <rect x="185" y="175" width="70" height="45" rx="2" fill="white"/>
+  <path d="M240 195 L270 170" stroke="#FF7E5F" stroke-width="3"/>
+  <path d="M270 170 L280 180" stroke="#FF7E5F" stroke-width="3"/>
+  
+  <!-- Chart illustration -->
+  <rect x="480" y="170" width="80" height="60" rx="4" fill="white" stroke="#E2E8F0"/>
+  <path d="M490 210 L500 190 L510 200 L520 180 L530 170 L540 190 L550 180" stroke="#FF7E5F" stroke-width="2" fill="none"/>
+  
+  <!-- View more button -->
+  <rect x="325" y="500" width="150" height="50" rx="25" fill="#FF7E5F"/>
+  <text x="400" y="530" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">VIEW ALL POSTS</text>
+</svg> 

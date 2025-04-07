@@ -1,0 +1,61 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="8" fill="#F8FAFC"/>
+  <!-- Header -->
+  <rect width="800" height="60" fill="#FF7E5F"/>
+  <text x="30" y="38" font-family="Arial" font-size="18" font-weight="bold" fill="white">AI-Vertise Dashboard</text>
+  <circle cx="740" cy="30" r="20" fill="white" fill-opacity="0.2"/>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="60" width="200" height="540" fill="#FFFFFF"/>
+  <rect x="20" y="100" width="160" height="40" rx="4" fill="#FF7E5F" fill-opacity="0.1"/>
+  <text x="50" y="125" font-family="Arial" font-size="14" fill="#FF7E5F">Dashboard</text>
+  <text x="50" y="175" font-family="Arial" font-size="14" fill="#64748B">Campaigns</text>
+  <text x="50" y="225" font-family="Arial" font-size="14" fill="#64748B">Analytics</text>
+  <text x="50" y="275" font-family="Arial" font-size="14" fill="#64748B">Audiences</text>
+  <text x="50" y="325" font-family="Arial" font-size="14" fill="#64748B">Settings</text>
+  
+  <!-- Main Content -->
+  <text x="230" y="100" font-family="Arial" font-size="20" font-weight="bold" fill="#0F172A">Campaign Performance</text>
+  
+  <!-- Stats Cards -->
+  <rect x="230" y="130" width="160" height="100" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="250" y="160" font-family="Arial" font-size="12" fill="#64748B">IMPRESSIONS</text>
+  <text x="250" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#0F172A">12,548</text>
+  <text x="250" y="210" font-family="Arial" font-size="12" fill="#10B981">+12.5%</text>
+  
+  <rect x="410" y="130" width="160" height="100" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="430" y="160" font-family="Arial" font-size="12" fill="#64748B">CLICKS</text>
+  <text x="430" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#0F172A">1,024</text>
+  <text x="430" y="210" font-family="Arial" font-size="12" fill="#10B981">+8.3%</text>
+  
+  <rect x="590" y="130" width="160" height="100" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="610" y="160" font-family="Arial" font-size="12" fill="#64748B">CONVERSIONS</text>
+  <text x="610" y="190" font-family="Arial" font-size="24" font-weight="bold" fill="#0F172A">186</text>
+  <text x="610" y="210" font-family="Arial" font-size="12" fill="#10B981">+15.7%</text>
+  
+  <!-- Chart -->
+  <rect x="230" y="260" width="520" height="240" rx="8" fill="white" stroke="#E2E8F0"/>
+  <text x="250" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#0F172A">Campaign Performance</text>
+  
+  <!-- Chart lines -->
+  <path d="M250 450 L750 450" stroke="#E2E8F0"/>
+  <path d="M250 400 L750 400" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+  <path d="M250 350 L750 350" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+  <path d="M250 300 L750 300" stroke="#E2E8F0" stroke-dasharray="4 4"/>
+  
+  <!-- Chart data -->
+  <path d="M270 400 L320 380 L370 410 L420 370 L470 350 L520 330 L570 340 L620 310 L670 290 L720 270" stroke="#FF7E5F" stroke-width="3" fill="none"/>
+  <path d="M270 420 L320 430 L370 410 L420 400 L470 410 L520 390 L570 380 L620 370 L670 350 L720 360" stroke="#FEB47B" stroke-width="3" fill="none"/>
+  
+  <!-- Legend -->
+  <circle cx="280" y="480" r="6" fill="#FF7E5F"/>
+  <text x="295" y="485" font-family="Arial" font-size="12" fill="#64748B">Impressions</text>
+  <circle cx="380" y="480" r="6" fill="#FEB47B"/>
+  <text x="395" y="485" font-family="Arial" font-size="12" fill="#64748B">Clicks</text>
+  
+  <!-- Recent Activity -->
+  <rect x="230" y="520" width="520" height="70" rx="8" fill="white" stroke="#E2E8F0"/>
+  <circle cx="270" cy="555" r="15" fill="#EDF2F7"/>
+  <text x="300" y="545" font-family="Arial" font-size="14" font-weight="bold" fill="#0F172A">Coffee Shop Campaign updated</text>
+  <text x="300" y="565" font-family="Arial" font-size="12" fill="#64748B">2 hours ago</text>
+</svg> 
