@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd ai && npm ci --prefer-offline --no-audit --no-fund || npm install --prefer-offline --no-audit --no-fund --legacy-peer-deps",
+  "outputDirectory": "ai/.next",
+  "framework": "nextjs",
+  "devCommand": "cd ai && npm run dev",
+  "installCommand": "cd ai && npm install --no-audit --no-fund --legacy-peer-deps --prefer-offline",
+  "routes": [
+    { "src": "/(.*)", "dest": "/ai/$1" }
+  ]
+} 
