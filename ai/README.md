@@ -1,88 +1,47 @@
-# AI-Vertise Boost Landing Page
+# AI-Vertise Boost
 
-A modern, responsive landing page for AI-Vertise Boost, an AI-powered advertising platform for small and medium businesses.
-
-## Features
-
-- 💜 Beautiful purple-pink gradient design
-- 📱 Fully responsive layout
-- ⚡ Built with Next.js 15 and React 19
-- 🎨 Styled with Tailwind CSS
-- 🔠 Custom Comfortaa font integration
-- 🧩 Component-based architecture
+AI-Vertise Boost is an AI-powered advertising platform designed specifically for small and medium businesses. Our platform helps businesses create, launch, and optimize digital advertising campaigns across multiple platforms with minimal effort and maximum ROI.
 
 ## Project Structure
 
+The main application is in the `ai` directory. This is a Next.js application with TypeScript and Tailwind CSS.
+
+## Getting Started
+
+1. Navigate to the `ai` directory:
 ```
-app/
-  ├── components/           # UI components
-  │   ├── layout/           # Layout components (Section, Container)
-  │   ├── sections/         # Page sections (Hero, Features, etc.)
-  │   ├── ui/               # Reusable UI components (Button, icons)
-  │   └── forms/            # Form components
-  ├── lib/                  # Utilities and helpers
-  │   ├── hooks/            # Custom React hooks
-  │   ├── types/            # TypeScript types and interfaces
-  │   └── utils/            # Helper functions and constants
-  ├── globals.css           # Global styles
-  ├── layout.tsx            # Root layout
-  └── page.tsx              # Home page
+cd ai
 ```
 
-## Development
-
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
 2. Install dependencies:
-
-```bash
+```
 npm install
-# or
-yarn install
 ```
 
 3. Run the development server:
-
-```bash
+```
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Component Library
+## Features
 
-### Layout Components
+- AI-powered audience targeting
+- Fast campaign launch
+- Budget optimization
+- Real-time analytics
+- Multiple advertising platforms
+- User-friendly dashboard
 
-- `Container`: Handles consistent width and padding
-- `Section`: Creates consistent section spacing with background options
+## Pages
 
-### UI Components
+- Home: Main landing page
+- FAQ: Frequently asked questions
+- Privacy Policy: Legal information
+- Blog: Articles about digital advertising
 
-- `Button`: Versatile button component with multiple variants
-- Icon components: SVG icons as React components
+## Contact
 
-### Utility Hooks
-
-- `useMediaQuery`: Custom hook for responsive design
-- `useIsMobile`, `useIsTablet`, `useIsDesktop`: Breakpoint-specific hooks
-
-## Styling
-
-This project uses Tailwind CSS for styling with custom configurations for:
-
-- Colors (primary-purple, primary-pink, gradients)
-- Typography (Comfortaa for headings, Geist for body text)
-- Spacing and layout
-- Component-specific styles
-
-## License
-
-This project is licensed under the MIT License.
+Email: contact@ai-vertise.com
+Phone: +48503589781
