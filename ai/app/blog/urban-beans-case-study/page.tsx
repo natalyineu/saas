@@ -1,13 +1,81 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143% | AI-Vertise',
+  description: 'Discover how Urban Beans coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market. Learn about their successful digital marketing strategy.',
+  keywords: 'coffee shop marketing, local business advertising, foot traffic increase, digital marketing case study, AI advertising success',
+  openGraph: {
+    title: 'Urban Beans Success Story: 143% Increase in Foot Traffic',
+    description: 'See how this coffee shop used AI-Vertise to outperform competitors and increase foot traffic by 143%',
+    type: 'article',
+    publishedTime: '2023-04-15',
+    authors: ['Marketing Team'],
+    images: [
+      {
+        url: '/og-urban-beans.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Urban Beans Coffee Shop Success Story',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Urban Beans Success Story: 143% Increase in Foot Traffic',
+    description: 'See how this coffee shop used AI-Vertise to outperform competitors',
+    images: ['/og-urban-beans.jpg'],
+  },
+};
 
 export default function UrbanBeansCaseStudy() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143%",
+    "description": "Discover how Urban Beans coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market.",
+    "image": "/og-urban-beans.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Marketing Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI-Vertise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/logo.png"
+      }
+    },
+    "datePublished": "2023-04-15",
+    "dateModified": "2023-04-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aivertise.io/blog/urban-beans-case-study"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center space-x-2 text-sm text-gray-500">
+              <li><Link href="/" className="hover:text-primary-purple">Home</Link></li>
+              <li>/</li>
+              <li><Link href="/blog" className="hover:text-primary-purple">Blog</Link></li>
+              <li>/</li>
+              <li className="text-gray-700">Urban Beans Case Study</li>
+            </ol>
+          </nav>
+          
           <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

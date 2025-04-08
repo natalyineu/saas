@@ -2,6 +2,24 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { COMPANY_NAME, COMPANY_EMAIL } from '../lib/utils/constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | AI-Vertise Boost',
+  description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Boost, our AI-powered advertising platform.',
+  keywords: 'terms of service, terms and conditions, advertising terms, user agreement, subscription terms',
+  openGraph: {
+    title: 'Terms of Service | AI-Vertise Boost',
+    description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Boost, our AI-powered advertising platform.',
+    type: 'website',
+    url: 'https://aivertise.io/terms',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service | AI-Vertise Boost',
+    description: 'Our terms of service outline the rules and agreements for using AI-Vertise Boost.'
+  }
+};
 
 export default function TermsOfServicePage() {
   return (

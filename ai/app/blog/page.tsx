@@ -1,8 +1,53 @@
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
+  description: 'Explore our collection of digital marketing case studies, success stories, and insights. Learn how AI-Vertise helps businesses achieve their marketing goals.',
+  keywords: 'digital marketing, case studies, success stories, marketing insights, AI marketing, social media marketing',
+  openGraph: {
+    title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
+    description: 'Explore our collection of digital marketing case studies, success stories, and insights. Learn how AI-Vertise helps businesses achieve their marketing goals.',
+    type: 'website',
+    url: 'https://aivertise.io/blog',
+    images: [
+      {
+        url: '/images/blog-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI-Vertise Blog',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
+    description: 'Explore our collection of digital marketing case studies, success stories, and insights.',
+    images: ['/images/blog-og.jpg'],
+  },
+};
 
 export default function Blog() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AI-Vertise Blog",
+    "description": "Digital Marketing Insights & Case Studies",
+    "url": "https://aivertise.io/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI-Vertise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aivertise.io/images/logo.png"
+      }
+    }
+  };
+
   // Success story case studies matching our carousel
   const successStories = [
     {
@@ -128,79 +173,44 @@ export default function Blog() {
 
   return (
     <>
+      <Script
+        id="blog-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Blog & Success Stories</h1>
-          <p className="text-gray-600 mb-12">
-            Explore our case studies, insights, and strategies to improve your advertising campaigns.
-          </p>
-
-          {/* Featured Case Studies section */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-primary-purple">Featured Success Stories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {successStories.map((story) => (
-                <div key={story.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow group">
-                  {story.icon}
-                  <div className="p-6">
-                    <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs px-2 py-1 rounded-full mb-3">
-                      {story.category}
-                    </span>
-                    <h3 className="text-lg font-bold mb-2 line-clamp-2 hover:text-primary-purple transition-colors">
-                      {story.title}
-                    </h3>
-                    <div className="flex items-center text-gray-500 text-xs mb-3">
-                      <span>{story.date}</span>
-                      <span className="mx-2">•</span>
-                      <span>{story.readTime}</span>
-                    </div>
-                    <p className="text-gray-600 mb-4 text-sm line-clamp-3">
-                      {story.excerpt}
-                    </p>
-                    <Link href={`/blog/${story.id}`} className="inline-flex items-center text-primary-purple font-medium text-sm hover:underline">
-                      Read full case study
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </Link>
-                  </div>
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><Link href="/" className="hover:text-primary-purple">Home</Link></li>
+            <li>/</li>
+            <li className="text-gray-700">Blog</li>
+          </ol>
+        </nav>
+        
+        <h1 className="text-4xl font-bold mb-6">AI-Vertise Blog</h1>
+        <p className="text-xl text-gray-600 mb-12">Insights, case studies, and success stories from our AI-powered advertising platform.</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {successStories.map((story) => (
+            <Link 
+              key={story.id}
+              href={`/blog/${story.id}`}
+              className="group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
+            >
+              {story.icon}
+              <div className="p-6">
+                <div className="text-sm text-primary-purple font-semibold mb-2">{story.category}</div>
+                <h2 className="text-xl font-bold mb-2 group-hover:text-primary-purple transition-colors">{story.title}</h2>
+                <p className="text-gray-600 mb-4">{story.excerpt}</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <span>{story.date}</span>
+                  <span className="mx-2">•</span>
+                  <span>{story.readTime}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Regular Blog Posts */}
-          <h2 className="text-2xl font-bold mb-6">Latest Articles</h2>
-          <div className="space-y-12">
-            {blogPosts.map((post) => (
-              <article key={post.id} className="border-b border-gray-200 pb-10">
-                <Link href={`/blog/${post.id}`}>
-                  <div className="group cursor-pointer">
-                    <h2 className="text-2xl font-bold mb-3 group-hover:text-primary-purple transition-colors">
-                      {post.title}
-                    </h2>
-                    <div className="flex items-center text-gray-500 text-sm mb-4">
-                      <span>{post.date}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.author}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                    <p className="text-gray-600 mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="inline-flex items-center text-primary-purple font-medium group-hover:underline">
-                      Read more
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </main>
       <Footer />

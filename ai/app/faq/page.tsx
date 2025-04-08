@@ -2,6 +2,24 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { COMPANY_EMAIL } from '../lib/utils/constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions | AI-Vertise Boost',
+  description: 'Find answers to common questions about AI-Vertise Boost, our AI-powered advertising platform for small and medium businesses.',
+  keywords: 'AI advertising FAQ, digital marketing questions, ad platform help, SMB marketing FAQ',
+  openGraph: {
+    title: 'Frequently Asked Questions | AI-Vertise Boost',
+    description: 'Find answers to common questions about AI-Vertise Boost, our AI-powered advertising platform for small and medium businesses.',
+    type: 'website',
+    url: 'https://aivertise.io/faq',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Frequently Asked Questions | AI-Vertise Boost',
+    description: 'Find answers to common questions about AI-Vertise Boost.'
+  }
+};
 
 export default function FAQPage() {
   const faqs = [

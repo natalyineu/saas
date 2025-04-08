@@ -21,17 +21,33 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aivertise.io'),
+  metadataBase: new URL('https://ai-vertise.com'),
   title: 'AI-Vertise Boost | AI-Powered Ad Management',
   description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
-  keywords: 'AI advertising, digital marketing, ad management, SMB marketing, AI-powered ads',
+  keywords: 'AI advertising, digital marketing, ad management, SMB marketing, AI-powered ads, advertising automation, marketing for small businesses',
   authors: [{ name: 'AI-Vertise Team' }],
   creator: 'AI-Vertise',
   publisher: 'AI-Vertise',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ai-vertise.com',
     title: 'AI-Vertise Boost | AI-Powered Ad Management',
     description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
-    url: 'https://aivertise.io',
     siteName: 'AI-Vertise Boost',
     images: [
       {
@@ -41,14 +57,14 @@ export const metadata: Metadata = {
         alt: 'AI-Vertise Boost Platform',
       }
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI-Vertise Boost | AI-Powered Ad Management',
     description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
     images: ['/og-image.jpg'],
+    creator: '@aivertise',
+    site: '@aivertise',
   },
   icons: {
     icon: [
@@ -85,7 +101,25 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-NS08SGTMJ2');
+            
+            // Configure Google Analytics
+            gtag('config', 'G-NS08SGTMJ2', {
+              'anonymize_ip': true,
+              'send_page_view': true,
+              'allow_google_signals': true,
+              'allow_ad_personalization_signals': true,
+              'linker': {
+                'domains': ['aivertise.io']
+              }
+            });
+
+            // Enhanced measurement
+            gtag('event', 'page_view', {
+              'send_to': 'G-NS08SGTMJ2',
+              'page_title': document.title,
+              'page_location': window.location.href,
+              'page_path': window.location.pathname
+            });
           `}
         </Script>
         

@@ -2,6 +2,24 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { COMPANY_NAME, COMPANY_EMAIL } from '../lib/utils/constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | AI-Vertise Boost',
+  description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Boost, our AI-powered advertising platform.',
+  keywords: 'privacy policy, data protection, advertising privacy, personal data, GDPR compliance',
+  openGraph: {
+    title: 'Privacy Policy | AI-Vertise Boost',
+    description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Boost, our AI-powered advertising platform.',
+    type: 'website',
+    url: 'https://aivertise.io/policy',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy | AI-Vertise Boost',
+    description: 'Our privacy policy explains how we collect, use, and protect your information.'
+  }
+};
 
 export default function PrivacyPolicyPage() {
   return (
