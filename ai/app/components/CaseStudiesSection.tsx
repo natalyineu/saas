@@ -218,30 +218,23 @@ export default function CaseStudiesSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-          
-          {/* Progress indicator */}
-          <div className="flex flex-col items-center mt-8">
-            <div className="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-gradient-to-r from-primary-purple to-primary-pink transition-all duration-500 ease-out"
-                style={{ width: `${(activeSlide / (caseStudies.length - 1)) * 100}%` }}
-              ></div>
-            </div>
-            
-            <div className="flex justify-center mt-4 gap-2">
-              {caseStudies.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ease-out ${
-                    activeSlide === index 
-                      ? 'bg-gradient-to-r from-primary-purple to-primary-pink scale-125' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
+        </div>
+        
+        {/* Pagination indicator - moved outside the slider container for better layout */}
+        <div className="flex justify-center mt-6 mb-4">
+          <div className="flex items-center space-x-3">
+            {caseStudies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  activeSlide === index 
+                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
