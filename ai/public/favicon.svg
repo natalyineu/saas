@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#3F5EFB"/><path d="M25 30h50M25 50h50M25 70h50" stroke="white" stroke-width="5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Rounded square background -->
+  <rect width="32" height="32" rx="6" fill="#3F5EFB" />
+  
+  <!-- "AI" text using paths instead of text element for better compatibility -->
+  <path d="M10.5 22L13.5 10H16.5L19.5 22H17L16.4 20H13.6L13 22H10.5ZM14.2 18H15.8L15 14.2L14.2 18Z" fill="white"/>
+  <path d="M21 22V10H23V20H26.5V22H21Z" fill="white"/>
+</svg>
