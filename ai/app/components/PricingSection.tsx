@@ -153,53 +153,53 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-16 bg-soft-gradient">
+    <section id="pricing" className="py-12 bg-soft-gradient">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Simple, Transparent Pricing</h2>
+        <div className="text-center mb-10">
+          <h2 className="text-4xl md:text-5xl mb-3">Simple, Transparent Pricing</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Choose the plan that works best for your business. All plans include our core AI-powered features.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative bg-white p-6 rounded-lg ${plan.highlight ? 'ring-4 ring-primary-purple shadow-lg' : 'border border-gray-200 shadow-md'}`}
+              className={`relative bg-white p-4 rounded-lg ${plan.highlight ? 'ring-3 ring-primary-purple shadow-lg' : 'border border-gray-200 shadow-md'}`}
             >
               {/* Only render badges client-side to prevent hydration mismatch */}
               {isClient && plan.highlight && (
-                <div className="absolute -top-3 left-0 right-0 flex justify-center">
-                  <div className="bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs font-bold uppercase py-2 px-6 rounded-full shadow-md">
+                <div className="absolute -top-2.5 left-0 right-0 flex justify-center">
+                  <div className="bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs font-bold uppercase py-1 px-4 rounded-full shadow-sm">
                     MOST POPULAR
                   </div>
                 </div>
               )}
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <div className="mb-4">
-                <span className="text-3xl font-bold">{plan.price}</span>
-                {!plan.isCustom && <span className="text-gray-600">/month</span>}
+              <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
+              <div className="mb-2">
+                <span className="text-2xl font-bold">{plan.price}</span>
+                {!plan.isCustom && <span className="text-gray-600 text-sm">/month</span>}
               </div>
               
               {/* Impression count highlight */}
-              <div className="flex items-center mb-4 p-2 bg-gray-50 rounded-lg border-l-4 border-primary-purple">
-                <span className="text-primary-purple mr-2">📊</span>
+              <div className="flex items-center mb-3 p-1.5 bg-gray-50 rounded-md border-l-3 border-primary-purple">
+                <span className="text-primary-purple mr-1.5">📊</span>
                 <div>
-                  <span className="text-sm text-gray-600 block">Monthly Reach</span>
-                  <span className="font-bold text-lg text-primary-purple">{plan.impressions} impressions</span>
+                  <span className="text-xs text-gray-600 block">Monthly Reach</span>
+                  <span className="font-bold text-base text-primary-purple">{plan.impressions} impressions</span>
                 </div>
               </div>
               
-              <p className="text-gray-600 mb-6">{plan.description}</p>
+              <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
               
               {plan.featureGroups.map((group, gIndex) => (
-                <div key={gIndex} className="mb-6">
-                  <h4 className="text-sm uppercase text-gray-500 font-semibold mb-2 border-b border-gray-100 pb-1">{group.title}</h4>
-                  <ul className="space-y-2 mb-4">
+                <div key={gIndex} className="mb-4">
+                  <h4 className="text-xs uppercase text-gray-500 font-semibold mb-1.5 border-b border-gray-100 pb-1">{group.title}</h4>
+                  <ul className="space-y-1.5 mb-3">
                     {group.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start">
-                        <svg className="h-5 w-5 text-primary-purple mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <li key={fIndex} className="flex items-start text-sm">
+                        <svg className="h-4 w-4 text-primary-purple mr-1.5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {/* Replace dangerouslySetInnerHTML with conditional styling */}
@@ -214,7 +214,7 @@ export default function PricingSection() {
               
               <Link 
                 href={plan.buttonLink} 
-                className={`block text-center py-3 px-4 rounded-lg font-medium mt-auto ${
+                className={`block text-center py-2 px-3 rounded-md font-medium text-sm mt-auto ${
                   plan.highlight 
                     ? 'bg-gradient-to-r from-primary-purple to-primary-pink text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300' 
                     : 'btn-secondary'
