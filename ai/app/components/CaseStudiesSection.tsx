@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function CaseStudiesSection() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -236,6 +237,26 @@ export default function CaseStudiesSection() {
               />
             ))}
           </div>
+        </div>
+        
+        {/* Blog connection section */}
+        <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
+          <p className="text-lg text-gray-600 mb-4">
+            Want to explore more success stories and learn actionable strategies?
+          </p>
+          <Link 
+            href="#blog-cta"
+            className="inline-flex items-center text-primary-purple hover:text-primary-pink transition-colors font-medium"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('blog-cta')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            View more case studies in our blog
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

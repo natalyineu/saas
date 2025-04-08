@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function BlogCTASection() {
   return (
-    <section className="py-16 bg-soft-gradient">
+    <section id="blog-cta" className="py-16 bg-soft-gradient">
       <div className="container mx-auto px-4 md:px-6">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="flex flex-col md:flex-row">
@@ -28,7 +28,7 @@ export default function BlogCTASection() {
                   <svg className="h-5 w-5 text-primary-purple mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Beautiful vector illustrations</span>
+                  <span>Actionable advertising strategies</span>
                 </li>
               </ul>
               <Link 
