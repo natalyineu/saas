@@ -26,16 +26,30 @@ export default function UrbanBeansCaseStudy() {
             </div>
           </header>
           
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg mb-8">
-            <div className="flex items-center mb-4">
-              <div className="rounded-full bg-gradient-to-r from-primary-purple to-primary-pink p-3 mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-1/3 p-8 flex justify-center">
+                <div className="relative w-40 h-40">
+                  <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                    <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
+                      <rect x="35" y="25" width="30" height="10" rx="5" fill="rgba(252,70,107,1)" />
+                      <path d="M30 60 L70 60" stroke="rgba(63,94,251,1)" strokeWidth="3" />
+                      <path d="M40 50 C40 40, 60 40, 60 50" stroke="rgba(63,94,251,1)" strokeWidth="3" fill="none" />
+                      <path d="M30 70 L40 60 L60 60 L70 70" stroke="rgba(63,94,251,1)" strokeWidth="2" fill="none" />
+                    </g>
+                    <div className="absolute top-0 right-0 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                      +143%
+                    </div>
+                  </svg>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg">Results at a Glance</h3>
-                <p className="text-xl font-bold text-primary-purple">143% increase in foot traffic</p>
+              <div className="w-full md:w-2/3 p-8 bg-white/50">
+                <h2 className="text-2xl font-bold mb-2">Urban Beans</h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+                <h3 className="text-xl mb-2">Results at a Glance</h3>
+                <p className="text-2xl font-bold text-primary-purple mb-2">143% increase in foot traffic</p>
+                <p className="text-gray-600">Coffee shop in downtown Seattle targeting local coffee enthusiasts</p>
               </div>
             </div>
           </div>

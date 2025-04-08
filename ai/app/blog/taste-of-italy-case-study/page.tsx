@@ -26,16 +26,40 @@ export default function TasteOfItalyCaseStudy() {
             </div>
           </header>
           
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg mb-8">
-            <div className="flex items-center mb-4">
-              <div className="rounded-full bg-gradient-to-r from-primary-purple to-primary-pink p-3 mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg mb-12 overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-1/3 p-8 flex justify-center">
+                <div className="relative w-40 h-40">
+                  <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Background circle */}
+                    <circle cx="50" cy="50" r="40" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+                    
+                    {/* Restaurant plate */}
+                    <circle cx="50" cy="50" r="30" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" className="transform transition-transform duration-500 hover:scale-105" />
+                    
+                    {/* Fork and knife */}
+                    <path d="M35 30 L35 70" stroke="rgba(252,70,107,1)" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M40 30 C40 40, 38 50, 40 70" stroke="rgba(252,70,107,1)" strokeWidth="2.5" strokeLinecap="round" />
+                    
+                    <path d="M65 30 L65 40 C65 45, 60 50, 65 55 L65 70" stroke="rgba(63,94,251,1)" strokeWidth="2.5" strokeLinecap="round" />
+                    
+                    {/* Food on plate */}
+                    <circle cx="50" cy="50" r="12" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+                    <path d="M44 48 C47 44, 53 44, 56 48" stroke="rgba(63,94,251,1)" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M44 52 C47 56, 53 56, 56 52" stroke="rgba(63,94,251,1)" strokeWidth="1.5" strokeLinecap="round" />
+                    
+                    <div className="absolute top-0 right-0 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                      +87%
+                    </div>
+                  </svg>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg">Results at a Glance</h3>
-                <p className="text-xl font-bold text-primary-purple">87% boost in weekend reservations</p>
+              <div className="w-full md:w-2/3 p-8 bg-white/50">
+                <h2 className="text-2xl font-bold mb-2">Taste of Italy</h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+                <h3 className="text-xl mb-2">Results at a Glance</h3>
+                <p className="text-2xl font-bold text-primary-purple mb-2">87% boost in weekend reservations</p>
+                <p className="text-gray-600">Family-owned Italian restaurant in Chicago's vibrant food scene</p>
               </div>
             </div>
           </div>

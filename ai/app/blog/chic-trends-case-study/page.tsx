@@ -26,16 +26,34 @@ export default function ChicTrendsCaseStudy() {
             </div>
           </header>
           
-          <div className="bg-gradient-to-r from-pink-50 to-red-50 p-6 rounded-lg mb-8">
-            <div className="flex items-center mb-4">
-              <div className="rounded-full bg-gradient-to-r from-primary-purple to-primary-pink p-3 mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+          <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-lg mb-12 overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-1/3 p-8 flex justify-center">
+                <div className="relative w-40 h-40">
+                  <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect className="transform transition-transform duration-500 hover:scale-105" x="25" y="30" width="50" height="40" rx="4" fill="rgba(252,70,107,0.8)" />
+                    <rect className="transform origin-top transition-transform duration-500 hover:scale-y-105" x="30" y="35" width="40" height="30" rx="2" fill="white" />
+                    <rect className="transition-colors duration-500 hover:fill-purple-600" x="30" y="35" width="40" height="7" rx="1" fill="rgba(63,94,251,1)" />
+                    <rect className="animate-pulse-slow" x="33" y="46" width="10" height="15" rx="1" fill="rgba(63,94,251,0.1)" />
+                    <rect className="animate-pulse-slow" x="45" y="46" width="10" height="15" rx="1" fill="rgba(63,94,251,0.1)" />
+                    <rect className="animate-pulse-slow" x="57" y="46" width="10" height="15" rx="1" fill="rgba(63,94,251,0.1)" />
+                    <text className="animate-pulse-slow" x="80" y="40" fontFamily="Arial" fontSize="14" fontWeight="bold" fill="#10B981">$</text>
+                    <text className="animate-pulse-slow" x="20" y="40" fontFamily="Arial" fontSize="14" fontWeight="bold" fill="#10B981">$</text>
+                    <text className="animate-pulse-slow" x="80" y="60" fontFamily="Arial" fontSize="14" fontWeight="bold" fill="#10B981">$</text>
+                    <text className="animate-pulse-slow" x="20" y="60" fontFamily="Arial" fontSize="14" fontWeight="bold" fill="#10B981">$</text>
+                    
+                    <div className="absolute top-0 right-0 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                      +215%
+                    </div>
+                  </svg>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-lg">Results at a Glance</h3>
-                <p className="text-xl font-bold text-primary-purple">215% return on ad spend</p>
+              <div className="w-full md:w-2/3 p-8 bg-white/50">
+                <h2 className="text-2xl font-bold mb-2">Chic Trends</h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+                <h3 className="text-xl mb-2">Results at a Glance</h3>
+                <p className="text-2xl font-bold text-primary-purple mb-2">215% return on ad spend</p>
+                <p className="text-gray-600">New online boutique specializing in curated fashion for young professionals</p>
               </div>
             </div>
           </div>
