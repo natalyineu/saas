@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/ui/Breadcrumb';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -66,15 +67,13 @@ export default function UrbanBeansCaseStudy() {
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
-          <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className="flex items-center space-x-2 text-sm text-gray-500">
-              <li><Link href="/" className="hover:text-primary-purple">Home</Link></li>
-              <li>/</li>
-              <li><Link href="/blog" className="hover:text-primary-purple">Blog</Link></li>
-              <li>/</li>
-              <li className="text-gray-700">Urban Beans Case Study</li>
-            </ol>
-          </nav>
+          <Breadcrumb 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Urban Beans Case Study' }
+            ]} 
+          />
           
           <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

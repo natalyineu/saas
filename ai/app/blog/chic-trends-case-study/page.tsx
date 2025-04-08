@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/ui/Breadcrumb';
 
 export default function ChicTrendsCaseStudy() {
   return (
@@ -8,6 +9,14 @@ export default function ChicTrendsCaseStudy() {
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
+          <Breadcrumb 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Chic Trends Case Study' }
+            ]} 
+          />
+          
           <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

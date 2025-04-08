@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Script from 'next/script';
+import Breadcrumb from '../components/ui/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
@@ -180,13 +181,12 @@ export default function Blog() {
       />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
-        <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex items-center space-x-2 text-sm text-gray-500">
-            <li><Link href="/" className="hover:text-primary-purple">Home</Link></li>
-            <li>/</li>
-            <li className="text-gray-700">Blog</li>
-          </ol>
-        </nav>
+        <Breadcrumb 
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog' }
+          ]} 
+        />
         
         <h1 className="text-4xl font-bold mb-6">AI-Vertise Blog</h1>
         <p className="text-xl text-gray-600 mb-12">Insights, case studies, and success stories from our AI-powered advertising platform.</p>
