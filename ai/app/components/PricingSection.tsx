@@ -41,6 +41,15 @@ export default function PricingSection() {
             "Email support only",
             "Response within 48 hours"
           ]
+        },
+        {
+          title: "Service Details",
+          features: [
+            "3 AI-generated ad variations",
+            "1 campaign setup",
+            "Monthly budget management",
+            "Simple conversion tracking"
+          ]
         }
       ],
       buttonText: "Choose Starter",
@@ -74,6 +83,16 @@ export default function PricingSection() {
           features: [
             "Priority email support",
             "Response within 24 hours"
+          ]
+        },
+        {
+          title: "Service Details",
+          features: [
+            "5 AI-generated ad variations",
+            "3 campaign setups",
+            "Weekly budget optimization",
+            "Enhanced conversion tracking",
+            "Competitor analysis"
           ]
         }
       ],
@@ -109,6 +128,17 @@ export default function PricingSection() {
             "Dedicated support manager",
             "Priority response within hours"
           ]
+        },
+        {
+          title: "Service Details",
+          features: [
+            "10 AI-generated ad variations",
+            "5 campaign setups",
+            "Daily budget optimization",
+            "Full-funnel conversion tracking",
+            "Competitor analysis & benchmarking",
+            "Retargeting campaigns included"
+          ]
         }
       ],
       buttonText: "Choose Impact",
@@ -142,6 +172,18 @@ export default function PricingSection() {
           features: [
             "VIP support with account team",
             "Strategic consulting included"
+          ]
+        },
+        {
+          title: "Service Details",
+          features: [
+            "Unlimited AI-generated ad variations",
+            "Unlimited campaign setups",
+            "Continuous budget optimization",
+            "Custom attribution modeling",
+            "Full competitive analysis",
+            "Multi-platform strategy",
+            "Custom integration with your CRM"
           ]
         }
       ],

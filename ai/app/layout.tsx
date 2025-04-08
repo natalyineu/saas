@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Comfortaa } from 'next/font/google';
 import SupportButton from './components/SupportButton';
+import CookieConsent from './components/CookieConsent';
 import Script from 'next/script';
 
 // Initialize fonts
@@ -20,8 +21,44 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aivertise.io'),
   title: 'AI-Vertise Boost | AI-Powered Ad Management',
   description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
+  keywords: 'AI advertising, digital marketing, ad management, SMB marketing, AI-powered ads',
+  authors: [{ name: 'AI-Vertise Team' }],
+  creator: 'AI-Vertise',
+  publisher: 'AI-Vertise',
+  openGraph: {
+    title: 'AI-Vertise Boost | AI-Powered Ad Management',
+    description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
+    url: 'https://aivertise.io',
+    siteName: 'AI-Vertise Boost',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI-Vertise Boost Platform',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI-Vertise Boost | AI-Powered Ad Management',
+    description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed for SMBs.',
+    images: ['/og-image.jpg'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+  }
 };
 
 export const viewport: Viewport = {
@@ -38,8 +75,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${comfortaa.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NS08SGTMJ2"
@@ -87,6 +122,7 @@ export default function RootLayout({
           {children}
         </div>
         <SupportButton />
+        <CookieConsent />
       </body>
     </html>
   );
