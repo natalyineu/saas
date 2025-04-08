@@ -22,8 +22,7 @@ export default function PricingSection() {
         {
           title: "Ad Channels",
           features: [
-            "1 ad channel (Search or Display)",
-            "AI-powered ad creation",
+            "Display",
             "Basic audience targeting"
           ]
         },
@@ -45,8 +44,6 @@ export default function PricingSection() {
         {
           title: "Service Details",
           features: [
-            "3 AI-generated ad variations",
-            "1 campaign setup",
             "Monthly budget management",
             "Simple conversion tracking"
           ]
@@ -65,9 +62,9 @@ export default function PricingSection() {
         {
           title: "Ad Channels",
           features: [
-            "2 ad channels (Search + Display or Native)",
-            "Advanced audience targeting",
-            "A/B testing capabilities"
+            "Display",
+            "Native",
+            "Advanced audience targeting"
           ]
         },
         {
@@ -88,10 +85,8 @@ export default function PricingSection() {
         {
           title: "Service Details",
           features: [
-            "5 AI-generated ad variations",
-            "3 campaign setups",
             "Weekly budget optimization",
-            "Enhanced conversion tracking",
+            "Simple conversion tracking",
             "Competitor analysis"
           ]
         }
@@ -109,9 +104,10 @@ export default function PricingSection() {
         {
           title: "Ad Channels",
           features: [
-            "2–3 ad channels (CTV, OLV, Display, Search)",
-            "Premium audience targeting",
-            "Advanced A/B testing"
+            "Display",
+            "Native",
+            "Search",
+            "Premium audience targeting"
           ]
         },
         {
@@ -132,10 +128,8 @@ export default function PricingSection() {
         {
           title: "Service Details",
           features: [
-            "10 AI-generated ad variations",
-            "5 campaign setups",
             "Daily budget optimization",
-            "Full-funnel conversion tracking",
+            "Simple conversion tracking",
             "Competitor analysis & benchmarking",
             "Retargeting campaigns included"
           ]
@@ -177,10 +171,8 @@ export default function PricingSection() {
         {
           title: "Service Details",
           features: [
-            "Unlimited AI-generated ad variations",
-            "Unlimited campaign setups",
             "Continuous budget optimization",
-            "Custom attribution modeling",
+            "Simple conversion tracking",
             "Full competitive analysis",
             "Multi-platform strategy",
             "Custom integration with your CRM"
@@ -255,11 +247,11 @@ export default function PricingSection() {
               ))}
               
               <Link 
-                href={plan.buttonLink} 
-                className={`block text-center py-2 px-3 rounded-md font-medium text-sm mt-auto ${
+                href={plan.buttonLink}
+                className={`block w-full text-center py-2 px-4 rounded-md font-medium transition-colors ${
                   plan.highlight 
-                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink text-white hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300' 
-                    : 'btn-secondary'
+                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink text-white hover:from-primary-purple/90 hover:to-primary-pink/90' 
+                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                 }`}
               >
                 {plan.buttonText}

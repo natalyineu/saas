@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Frequently Asked Questions | AI-Vertise Boost',
     description: 'Find answers to common questions about AI-Vertise Boost, our AI-powered advertising platform for small and medium businesses.',
     type: 'website',
-    url: 'https://aivertise.io/faq',
+    url: 'https://ai-vertise.com/faq',
   },
   twitter: {
     card: 'summary',
@@ -45,15 +45,15 @@ export default function FAQPage() {
     },
     {
       question: "How does billing work?",
-      answer: "We offer monthly subscription plans with different features based on your business needs. You can upgrade, downgrade, or cancel your subscription at any time. Ad spend on platforms like Google and Facebook is separate from our subscription fee."
+      answer: "We offer monthly subscription plans with different features based on your business needs. You can upgrade, downgrade, or cancel your subscription at any time. Your payment includes all advertising costs, including ad spend on third-party platforms, as well as all work performed by our developers and product team."
     },
     {
       question: "Is there a minimum ad budget required?",
-      answer: "No, there's no minimum ad budget. However, we recommend at least $300/month of ad spend (paid directly to the ad platforms) to see meaningful results."
+      answer: "No, there's no minimum ad budget. However, we recommend at least $300/month of ad spend to see meaningful results. For clients requiring higher impression volumes (1 million or more), we offer fully customized campaigns with budgets starting from $600."
     },
     {
       question: "Can I get a refund if I'm not satisfied?",
-      answer: "Yes, we offer a 14-day money-back guarantee for new customers. If you're not satisfied with our service, contact us within 14 days of your initial purchase for a full refund."
+      answer: "Our refund policy is strictly limited to the following conditions: Refund requests must be submitted in writing to our support team within 24 hours of payment. If no refund request is received within 24 hours, we will proceed with the campaign as planned, and no refund will be provided. No refunds will be processed for campaigns that have already been launched. Technical issues on our side that prevent campaign delivery may qualify for partial or full refund at our discretion."
     },
     {
       question: "How do I contact customer support?",
