@@ -22,8 +22,7 @@ export default function PricingSection() {
         {
           title: "Ad Channels",
           features: [
-            "Display",
-            "Basic audience targeting"
+            "Display"
           ]
         },
         {
@@ -64,7 +63,7 @@ export default function PricingSection() {
           features: [
             "Display",
             "Native",
-            "Advanced audience targeting"
+            "Search"
           ]
         },
         {
@@ -86,8 +85,7 @@ export default function PricingSection() {
           title: "Service Details",
           features: [
             "Weekly budget optimization",
-            "Simple conversion tracking",
-            "Competitor analysis"
+            "Simple conversion tracking"
           ]
         }
       ],
@@ -105,9 +103,8 @@ export default function PricingSection() {
           title: "Ad Channels",
           features: [
             "Display",
-            "Native",
-            "Search",
-            "Premium audience targeting"
+            "OLV",
+            "Search"
           ]
         },
         {
@@ -148,9 +145,7 @@ export default function PricingSection() {
         {
           title: "Ad Channels",
           features: [
-            "Custom ad channel selection",
-            "Enterprise-grade targeting",
-            "Advanced campaign strategies"
+            "Custom ad channel selection"
           ]
         },
         {
@@ -174,8 +169,7 @@ export default function PricingSection() {
             "Continuous budget optimization",
             "Simple conversion tracking",
             "Full competitive analysis",
-            "Multi-platform strategy",
-            "Custom integration with your CRM"
+            "Multi-platform strategy"
           ]
         }
       ],
@@ -230,19 +224,51 @@ export default function PricingSection() {
               {plan.featureGroups.map((group, gIndex) => (
                 <div key={gIndex} className="mb-4">
                   <h4 className="text-xs uppercase text-gray-500 font-semibold mb-1.5 border-b border-gray-100 pb-1">{group.title}</h4>
-                  <ul className="space-y-1.5 mb-3">
-                    {group.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start text-sm">
-                        <svg className="h-4 w-4 text-primary-purple mr-1.5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {/* Replace dangerouslySetInnerHTML with conditional styling */}
-                        <span className={feature.includes("Weekly") || feature.includes("dashboard") ? "font-semibold text-primary-purple" : ""}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  {group.title === "Ad Channels" ? (
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {group.features.map((feature, fIndex) => {
+                        let bgColor = "bg-green-100";
+                        let textColor = "text-green-800";
+                        
+                        if (feature.includes("Native")) {
+                          bgColor = "bg-purple-100";
+                          textColor = "text-purple-800";
+                        } else if (feature.includes("Search")) {
+                          bgColor = "bg-blue-100";
+                          textColor = "text-blue-800";
+                        } else if (feature.includes("Custom")) {
+                          bgColor = "bg-orange-100";
+                          textColor = "text-orange-800";
+                        } else if (feature.includes("OLV")) {
+                          bgColor = "bg-pink-100";
+                          textColor = "text-pink-800";
+                        }
+                        
+                        return (
+                          <span 
+                            key={fIndex}
+                            className={`${bgColor} ${textColor} text-xs font-medium px-2.5 py-1 rounded-full`}
+                          >
+                            {feature}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <ul className="space-y-1.5 mb-3">
+                      {group.features.map((feature, fIndex) => (
+                        <li key={fIndex} className="flex items-start text-sm">
+                          <svg className="h-4 w-4 text-primary-purple mr-1.5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {/* Replace dangerouslySetInnerHTML with conditional styling */}
+                          <span className={feature.includes("Weekly") || feature.includes("dashboard") ? "font-semibold text-primary-purple" : ""}>
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
               
