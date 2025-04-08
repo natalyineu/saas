@@ -36,15 +36,39 @@ export default function TermsOfServicePage() {
             Subscription fees are billed in advance on a monthly basis and are non-refundable. There will be no refunds or credits for partial months of service, or for periods when you did not use the subscription service.
           </p>
           <p>
+            For standard packages ($99, $249, and $579), we commit only to delivering the specified number of impressions based on our framework. We may use client-provided creative assets or generate them ourselves at our discretion. These packages include only campaign launch and reporting services as specified in the package details.
+          </p>
+          <p>
+            The "Tailored" package offers full customization and more detailed consultation services beyond what is included in the standard packages.
+          </p>
+          <p>
             We reserve the right to change subscription fees at any time. If we do change fees, we will provide notice of the change on the website or by email, at our discretion, at least 14 days before the change takes effect.
           </p>
           
+          <h2>Refund Policy</h2>
+          <p>
+            Our refund policy is strictly limited to the following conditions:
+          </p>
+          <ul>
+            <li>Refund requests must be submitted in writing to {COMPANY_EMAIL} within 24 hours of payment.</li>
+            <li>If no refund request is received within 24 hours of payment, we will proceed with the campaign as planned, and no refund will be provided.</li>
+            <li>We reserve the right to deny refunds to businesses engaged in fraudulent, deceptive, or illegal activities.</li>
+            <li>No refunds will be processed for campaigns that have already been launched.</li>
+            <li>Technical issues on our side that prevent campaign delivery may qualify for partial or full refund at our discretion.</li>
+          </ul>
+          
           <h2>Our Advertising Services</h2>
           <p>
-            Our Services provide AI-powered advertising management. While we strive to provide effective advertising services, we cannot guarantee any specific results, such as a minimum number of impressions, clicks, or conversions.
+            Our Services provide AI-powered advertising management. While we strive to provide effective advertising services, we cannot guarantee any specific results, such as clicks, conversions, or sales. We only commit to delivering the approximate number of impressions specified in the package you purchase.
           </p>
           <p>
-            Ad spend on third-party platforms (such as Google, Facebook, or other advertising networks) is separate from our subscription fees and is paid directly to those platforms.
+            For the standard packages ($99, $249, and $579), our services are limited to campaign launch and reporting. We do not provide detailed consultations or strategy discussions for these packages. Such services are only available in the Tailored package.
+          </p>
+          <p>
+            Your payment includes all advertising costs, including ad spend on third-party platforms (such as Google, Facebook, or other advertising networks), as well as all work performed by our developers and product team. There are no additional fees beyond the subscription price.
+          </p>
+          <p>
+            For clients requiring higher impression volumes (1 million or more) with larger budgets ($600+, $1000+, or $5000+), we offer fully customized campaigns. In these cases, we will prepare a detailed media plan and strategy, executing every step of the campaign in a custom manner tailored to your specific needs and objectives. Please contact us directly to discuss these high-volume campaign options.
           </p>
           
           <h2>Acceptable Use Policy</h2>
@@ -60,6 +84,9 @@ export default function TermsOfServicePage() {
             <li>Send unsolicited communications, promotions, or advertisements</li>
             <li>Attempt to gain unauthorized access to our Services or related systems</li>
           </ul>
+          <p>
+            We reserve the right to refuse service to any business or individual engaged in activities we deem inappropriate, harmful, or contrary to our policies.
+          </p>
           
           <h2>Intellectual Property</h2>
           <p>
