@@ -99,9 +99,19 @@ export default function CookiePolicyPage() {
           </p>
           <ul>
             <li><strong>Google Analytics:</strong> Used to analyze website traffic and user behavior.</li>
+            <li><strong>Google Tag Manager:</strong> Used to manage and deploy marketing tags (snippets of code) on our website without modifying the code.</li>
+            <li><strong>Google Search Console:</strong> Used to monitor and maintain our site's presence in Google Search results.</li>
             <li><strong>Google Ads:</strong> Used for remarketing and measuring the effectiveness of our advertising campaigns.</li>
             <li><strong>Facebook Pixel:</strong> Used for measuring the effectiveness of our advertising campaigns on Facebook.</li>
           </ul>
+          
+          <h3>Google Services Data Processing</h3>
+          <p>
+            We use various Google services including Google Analytics, Google Tag Manager, and Google Search Console to help us understand how our website is being used and to improve user experience. These services may collect information such as your IP address, browser type, device type, pages visited, time spent on pages, and other statistical data. This information is processed in accordance with Google's Privacy Policy.
+          </p>
+          <p>
+            We have implemented IP anonymization where possible and do not use these services to collect personally identifiable information unless you explicitly provide it to us through forms or account registration.
+          </p>
           
           <h2>Changes to This Cookie Policy</h2>
           <p>
