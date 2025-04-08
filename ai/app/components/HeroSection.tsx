@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import BrowserMockup from './ui/BrowserMockup';
 import Modal from './ui/Modal';
 import CampaignDetails from './ui/CampaignDetails';
@@ -30,13 +30,37 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Hero content */}
           <div className="order-1 md:order-1">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl mb-3 leading-tight">
               <span className="gradient-text">AI-Vertise</span> Boost
             </h1>
-            <p className="text-lg mb-8 text-gray-600 max-w-md">
-              Supercharge your advertising with our AI-powered platform. 
-              Smart targeting, fast launch, and budget optimization designed specifically for small and medium businesses.
+            <h2 className="text-xl sm:text-2xl mb-6 text-gray-700 font-medium">
+              AI-powered advertising for small businesses — get results in 24 hours.
+            </h2>
+            <p className="text-lg mb-5 text-gray-600 max-w-md">
+              Skip agencies, delays, and high costs — our AI builds and launches your campaign, fast.
             </p>
+            
+            <ul className="mb-8 space-y-2">
+              <li className="flex items-start">
+                <span className="text-xl mr-2">🚀</span>
+                <span className="text-gray-700"><span className="font-medium">Launch in 1 Day</span> — start seeing results immediately</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-xl mr-2">🤖</span>
+                <span className="text-gray-700"><span className="font-medium">AI handles everything</span> — from targeting to optimization</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-xl mr-2">💸</span>
+                <span className="text-gray-700"><span className="font-medium">Smart budget optimization</span> — maximize your ROI</span>
+              </li>
+            </ul>
+            
+            <div className="mt-6 mb-8">
+              <p className="text-base text-primary-purple/80 font-medium italic">
+                No creatives? No problem — our AI picks the perfect visuals, and experts validate every campaign.
+              </p>
+            </div>
+            
             <div className="flex flex-wrap gap-3">
               <Link 
                 href="#pricing" 
@@ -46,7 +70,7 @@ export default function HeroSection() {
               </Link>
               <Link 
                 href={DASHBOARD_URL}
-                className="btn-secondary inline-block flex items-center"
+                className="btn-secondary ai-glow inline-block flex items-center text-base"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -56,6 +80,7 @@ export default function HeroSection() {
                 </svg>
               </Link>
             </div>
+            <p className="text-sm text-gray-500 mt-3">Fully automated. Just URL.</p>
           </div>
           
           {/* Dashboard preview */}

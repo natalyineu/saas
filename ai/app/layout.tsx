@@ -40,6 +40,20 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NS08SGTMJ2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NS08SGTMJ2');
+          `}
+        </Script>
+        
         <Script
           id="buy-me-coffee-script"
           src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
