@@ -72,6 +72,23 @@ export default function PrivacyPolicyPage() {
           <p>
             We use cookies and similar tracking technologies to track activity on our platform and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
           </p>
+          <p>
+            For more detailed information about the cookies we use, please see our <a href="/cookie-policy" className="text-primary-purple hover:underline">Cookie Policy</a>.
+          </p>
+          
+          <h2>Google Services</h2>
+          <p>
+            We use various Google services to help us analyze and improve our website and services:
+          </p>
+          <ul>
+            <li><strong>Google Analytics:</strong> We use Google Analytics to collect information about how users interact with our website. This information helps us understand user behavior and improve our services. Google Analytics collects information such as your IP address (anonymized where possible), browser type, device type, pages visited, and time spent on pages.</li>
+            <li><strong>Google Tag Manager:</strong> We use Google Tag Manager to manage and deploy various tracking tags on our website. Google Tag Manager itself doesn't collect personal data, but it facilitates the collection of data by other tools we use.</li>
+            <li><strong>Google Search Console:</strong> We use Google Search Console to monitor and maintain our site's presence in Google Search results. This service helps us understand how Google views our site and identify issues that might affect our visibility in search results.</li>
+            <li><strong>Google Ads:</strong> We may use Google Ads to deliver targeted advertisements. This service uses cookies to serve ads based on a user's prior visits to our website or other websites.</li>
+          </ul>
+          <p>
+            Data collected by these Google services is processed in accordance with Google's Privacy Policy. We have configured these services to respect user privacy as much as possible, including the implementation of IP anonymization where available. However, we cannot prevent Google from collecting data as outlined in their own privacy policy.
+          </p>
           
           <h2>Changes to this Privacy Policy</h2>
           <p>
