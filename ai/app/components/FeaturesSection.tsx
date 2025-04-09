@@ -37,10 +37,6 @@ export default function FeaturesSection() {
 
   return (
     <section id="features" className="py-24 bg-soft-gradient relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
-      
       {/* Decorative circles */}
       <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 blur-3xl"></div>
       <div className="absolute -bottom-32 -left-32 w-64 h-64 rounded-full bg-gradient-to-r from-blue-400/10 to-cyan-400/10 blur-3xl"></div>

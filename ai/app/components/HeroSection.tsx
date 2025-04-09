@@ -25,62 +25,89 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-soft-gradient">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Hero content */}
           <div className="order-1 md:order-1">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl mb-3 leading-tight">
-              <span className="gradient-text">AI-Vertise</span> Boost
-            </h1>
-            <h2 className="text-xl sm:text-2xl mb-6 text-gray-700 font-medium">
-              AI-powered advertising for small businesses — get results in 24 hours.
-            </h2>
-            <p className="text-lg mb-5 text-gray-600 max-w-md">
-              Skip agencies, delays, and high costs — our AI builds and launches your campaign, fast.
-            </p>
-            
-            <ul className="mb-8 space-y-2">
-              <li className="flex items-start">
-                <span className="text-xl mr-2">🚀</span>
-                <span className="text-gray-700"><span className="font-medium">Launch in 1 Day</span> — start seeing results immediately</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-xl mr-2">🤖</span>
-                <span className="text-gray-700"><span className="font-medium">AI handles everything</span> — from targeting to optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-xl mr-2">💸</span>
-                <span className="text-gray-700"><span className="font-medium">Smart budget optimization</span> — maximize your ROI</span>
-              </li>
-            </ul>
-            
-            <div className="mt-6 mb-8">
-              <p className="text-base text-primary-purple/80 font-medium italic">
-                No creatives? No problem — our AI picks the perfect visuals, and experts validate every campaign.
-              </p>
+            <div className="max-w-xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 leading-tight">
+                <span className="gradient-text">AI-Vertise</span> Boost
+              </h1>
+              <h2 className="text-xl sm:text-2xl mb-10 text-gray-700 font-medium leading-relaxed">
+                AI-powered advertising for small businesses — get results in 24 hours. Skip agencies, delays, and high costs — our AI builds and launches your campaign, fast.
+              </h2>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 mb-10">
+                <div className="flex items-start">
+                  <div className="bg-indigo-100 p-2.5 rounded-full mr-3.5 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Launch in 1 Day</h3>
+                    <p className="text-gray-600 leading-relaxed">Start seeing results immediately</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-indigo-100 p-2.5 rounded-full mr-3.5 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">AI-Powered Optimization</h3>
+                    <p className="text-gray-600 leading-relaxed">From targeting to results</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-indigo-100 p-2.5 rounded-full mr-3.5 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Smart Budget Management</h3>
+                    <p className="text-gray-600 leading-relaxed">Maximize your ROI</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-indigo-100 p-2.5 rounded-full mr-3.5 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Custom Audience Targeting</h3>
+                    <p className="text-gray-600 leading-relaxed">Precise reach</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link 
+                  href="#pricing" 
+                  className="btn-primary inline-block"
+                >
+                  Check Prices
+                </Link>
+                <Link 
+                  href={DASHBOARD_URL}
+                  className="btn-secondary ai-glow inline-block flex items-center text-base"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Start Your Ads
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            
-            <div className="flex flex-wrap gap-3">
-              <Link 
-                href="#pricing" 
-                className="btn-primary inline-block"
-              >
-                Check Prices
-              </Link>
-              <Link 
-                href={DASHBOARD_URL}
-                className="btn-secondary ai-glow inline-block flex items-center text-base"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Start Your Ads
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
-            <p className="text-sm text-gray-500 mt-3">Fully automated. Just URL.</p>
           </div>
           
           {/* Dashboard preview */}

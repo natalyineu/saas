@@ -8,7 +8,7 @@ A modern, responsive landing page for AI-Vertise Boost, an AI-powered advertisin
 - 📱 Fully responsive layout
 - ⚡ Built with Next.js 15 and React 19
 - 🎨 Styled with Tailwind CSS
-- 🔠 Custom Comfortaa font integration
+- 🔠 Custom Nunito font integration
 - 🧩 Component-based architecture
 
 ## Project Structure
@@ -79,7 +79,7 @@ yarn dev
 This project uses Tailwind CSS for styling with custom configurations for:
 
 - Colors (primary-purple, primary-pink, gradients)
-- Typography (Comfortaa for headings, Geist for body text)
+- Typography (Nunito font family for all text elements)
 - Spacing and layout
 - Component-specific styles
 

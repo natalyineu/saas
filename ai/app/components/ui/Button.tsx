@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   isExternal = false,
   onClick,
 }) => {
-  const baseStyles = "font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
+  const baseStyles = "font-medium rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variantStyles = {
     primary: "bg-gradient-to-r from-primary-purple to-primary-pink text-white shadow-sm hover:shadow-md focus:ring-primary-purple",

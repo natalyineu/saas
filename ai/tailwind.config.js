@@ -22,11 +22,11 @@ module.exports = {
         'text': '#2E2E2E',
       },
       fontFamily: {
-        sans: ['var(--font-geist)', 'sans-serif'],
-        heading: ['var(--font-comfortaa)', 'cursive'],
+        sans: ['var(--font-nunito)', 'sans-serif'],
+        heading: ['var(--font-nunito)', 'sans-serif'],
       },
       backgroundImage: {
-        'soft-gradient': 'linear-gradient(90deg, rgba(63,94,251,0.05) 0%, rgba(252,70,107,0.05) 100%)',
+        'soft-gradient': 'linear-gradient(90deg, rgba(63,94,251,0.03) 0%, rgba(252,70,107,0.03) 100%)',
         'bold-gradient': 'linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
       },
       typography: (theme) => ({

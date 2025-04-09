@@ -1,23 +1,16 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import { Comfortaa } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import SupportButton from './components/SupportButton';
 import CookieConsent from './components/CookieConsent';
 import Script from 'next/script';
 
 // Initialize fonts
-const geist = Inter({
+const nunito = Nunito({
   subsets: ['latin'],
-  weight: ["400", "500", "600", "700"],
-  variable: '--font-geist',
-});
-
-// Initialize Comfortaa font
-const comfortaa = Comfortaa({
-  subsets: ['latin'],
+  weight: ["300", "400", "500", "600", "700"],
   display: 'swap',
-  variable: '--font-comfortaa',
+  variable: '--font-nunito',
 });
 
 export const metadata: Metadata = {
@@ -89,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${comfortaa.variable}`}>
+    <html lang="en" className={`${nunito.variable}`}>
       <head>
         {/* Google Analytics */}
         <Script
@@ -130,7 +123,7 @@ export default function RootLayout({
           data-slug="aivertise"
           data-color="#5F7FFF"
           data-emoji="🎯"
-          data-font="Comic"
+          data-font="Nunito"
           data-text="Buy an Ads package"
           data-outline-color="#000000"
           data-font-color="#ffffff"
@@ -144,7 +137,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className="min-h-screen bg-[#FCFCFC] relative" suppressHydrationWarning>
+      <body className="min-h-screen bg-soft-gradient relative" suppressHydrationWarning>
         {/* AI-themed background grid with animated gradient nodes */}
         <div className="fixed inset-0 z-0 overflow-hidden opacity-5 pointer-events-none">
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-[length:40px_40px]"></div>
