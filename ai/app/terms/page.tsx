@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Terms of Service | AI-Vertise Boost',
     description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Boost, our AI-powered advertising platform.',
     type: 'website',
-    url: 'https://aivertise.io/terms',
+    url: 'https://ai-vertise.com/terms',
   },
   twitter: {
     card: 'summary',

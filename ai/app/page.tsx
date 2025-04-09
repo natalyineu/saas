@@ -13,11 +13,11 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "AI-Vertise Boost",
-    "url": "https://aivertise.io",
+    "url": "https://ai-vertise.com",
     "description": "AI-powered advertising platform for small and medium businesses",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://aivertise.io/search?q={search_term_string}",
+      "target": "https://ai-vertise.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -26,8 +26,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "AI-Vertise",
-    "url": "https://aivertise.io",
-    "logo": "https://aivertise.io/images/logo.png",
+    "url": "https://ai-vertise.com",
+    "logo": "https://ai-vertise.com/images/logo.png",
     "sameAs": [
       "https://twitter.com/aivertise",
       "https://www.linkedin.com/company/aivertise",

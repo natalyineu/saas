@@ -1,10 +1,71 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
+  description: 'Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.',
+  keywords: 'AI advertising, digital marketing, small business marketing, marketing automation, AI marketing tools',
+  openGraph: {
+    title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
+    description: 'Discover how AI is revolutionizing digital advertising for small businesses.',
+    type: 'article',
+    publishedTime: '2023-03-25',
+    authors: ['Tech Team'],
+    url: 'https://ai-vertise.com/blog/ai-in-digital-advertising',
+    images: [
+      {
+        url: '/images/blog/ai-advertising.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI in Digital Advertising',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How AI is Transforming Digital Advertising',
+    description: 'Discover how AI is revolutionizing digital advertising for small businesses.',
+    images: ['/images/blog/ai-advertising.jpg'],
+  },
+};
 
 export default function AIAdvertisingPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How AI is Transforming Digital Advertising for Small Businesses",
+    "description": "Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.",
+    "image": "/images/blog/ai-advertising.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Tech Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI-Vertise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ai-vertise.com/logo.png"
+      }
+    },
+    "datePublished": "2023-03-25",
+    "dateModified": "2023-03-25",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/ai-in-digital-advertising"
+    }
+  };
+
   return (
     <>
+      <Script
+        id="blogpost-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
@@ -23,6 +84,11 @@ export default function AIAdvertisingPost() {
               <span>Tech Team</span>
               <span className="mx-2">•</span>
               <span>8 min read</span>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AI Technology</span>
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Digital Marketing</span>
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Small Business</span>
             </div>
           </header>
           

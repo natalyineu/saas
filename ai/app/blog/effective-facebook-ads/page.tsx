@@ -1,10 +1,71 @@
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: '5 Keys to More Effective Facebook Advertising | AI-Vertise Boost',
+  description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023 with these expert tips on video content, audience targeting, and AI optimization.',
+  keywords: 'Facebook advertising, social media marketing, Facebook ads, digital marketing strategy, Meta ads',
+  openGraph: {
+    title: '5 Keys to More Effective Facebook Advertising in 2023',
+    description: 'Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.',
+    type: 'article',
+    publishedTime: '2023-04-10',
+    authors: ['Marketing Team'],
+    url: 'https://ai-vertise.com/blog/effective-facebook-ads',
+    images: [
+      {
+        url: '/images/blog/facebook-ads.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Effective Facebook Advertising Strategies',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '5 Keys to Effective Facebook Advertising',
+    description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023.',
+    images: ['/images/blog/facebook-ads.jpg'],
+  },
+};
 
 export default function EffectiveFacebookAdsPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "5 Keys to More Effective Facebook Advertising in 2023",
+    "description": "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights on video content, audience targeting, and AI optimization.",
+    "image": "/images/blog/facebook-ads.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Marketing Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI-Vertise",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ai-vertise.com/logo.png"
+      }
+    },
+    "datePublished": "2023-04-10",
+    "dateModified": "2023-04-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/effective-facebook-ads"
+    }
+  };
+
   return (
     <>
+      <Script
+        id="blogpost-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
@@ -23,6 +84,11 @@ export default function EffectiveFacebookAdsPost() {
               <span>Marketing Team</span>
               <span className="mx-2">•</span>
               <span>7 min read</span>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Facebook Ads</span>
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Social Media</span>
+              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Digital Marketing</span>
             </div>
           </header>
           

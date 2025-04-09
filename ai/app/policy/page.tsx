@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | AI-Vertise Boost',
     description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Boost, our AI-powered advertising platform.',
     type: 'website',
-    url: 'https://aivertise.io/policy',
+    url: 'https://ai-vertise.com/policy',
   },
   twitter: {
     card: 'summary',
@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
         <div className="prose prose-lg max-w-none">
           <h2>Introduction</h2>
           <p>
-            {COMPANY_NAME} ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our advertising platform.
+            {COMPANY_NAME} ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or use our advertising platform.
           </p>
           <p>
             Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site or use our services.

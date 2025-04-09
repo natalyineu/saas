@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Cookie Policy | AI-Vertise Boost',
     description: 'Our cookie policy explains how we use cookies and similar technologies on our website to enhance your browsing experience.',
     type: 'website',
-    url: 'https://aivertise.io/cookie-policy',
+    url: 'https://ai-vertise.com/cookie-policy',
   },
   twitter: {
     card: 'summary',
