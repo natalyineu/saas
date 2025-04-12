@@ -23,6 +23,7 @@ export const seoMetadata: Metadata = {
       'max-video-preview': -1,
       'max-snippet': -1,
     },
+    // Bing and other search engines will use the default index/follow values
   },
   openGraph: {
     type: 'website',

@@ -63,12 +63,49 @@ export default function BlogPost() {
     }
   };
   
+  // FAQ Schema for rich snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the key trends in UK advertising for 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Key trends include 7.2% growth in ad spend reaching £36.8 billion, digital channels now accounting for 74% of all advertising investment, increased focus on performance metrics and ROI accountability, and growing adoption of AI for creative development and audience targeting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are privacy concerns affecting UK advertising?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Privacy considerations are central to advertising approaches, with contextual advertising making a comeback as cookie alternatives, first-party data strategies becoming critical competitive differentiators, and increased adoption of privacy-enhancing technologies (PETs) in measurement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What regulatory changes are impacting UK advertising in 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Key regulatory changes include implementation of the Online Safety Act, stricter enforcement of UK GDPR and Privacy and Electronic Communications Regulations, new ASA rules regarding environmental claims, increased scrutiny of influencer marketing disclosures, and updated CAP Code provisions for HFSS products."
+        }
+      }
+    ]
+  };
+  
   return (
     <>
       <Script
         id="blogpost-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="faq-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
