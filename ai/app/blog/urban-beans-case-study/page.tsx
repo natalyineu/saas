@@ -4,39 +4,39 @@ import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143% | AI-Vertise',
-  description: 'Discover how Urban Beans coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market. Learn about their successful digital marketing strategy.',
+  title: 'Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143% | AI-Vertise',
+  description: 'Discover how a specialty coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market. Learn about their successful digital marketing strategy.',
   keywords: 'coffee shop marketing, local business advertising, foot traffic increase, digital marketing case study, AI advertising success',
   openGraph: {
-    title: 'Urban Beans Success Story: 143% Increase in Foot Traffic',
+    title: 'Coffee Shop Success Story: 143% Increase in Foot Traffic',
     description: 'See how this coffee shop used AI-Vertise to outperform competitors and increase foot traffic by 143%',
     type: 'article',
     publishedTime: '2023-04-15',
     authors: ['Marketing Team'],
     images: [
       {
-        url: '/og-urban-beans.jpg',
+        url: '/og-coffee-shop-case-study.jpg',
         width: 1200,
         height: 630,
-        alt: 'Urban Beans Coffee Shop Success Story',
+        alt: 'Coffee Shop Success Story',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Urban Beans Success Story: 143% Increase in Foot Traffic',
+    title: 'Coffee Shop Success Story: 143% Increase in Foot Traffic',
     description: 'See how this coffee shop used AI-Vertise to outperform competitors',
-    images: ['/og-urban-beans.jpg'],
+    images: ['/og-coffee-shop-case-study.jpg'],
   },
 };
 
-export default function UrbanBeansCaseStudy() {
+export default function CoffeeShopCaseStudy() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143%",
-    "description": "Discover how Urban Beans coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market.",
-    "image": "/og-urban-beans.jpg",
+    "headline": "Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143%",
+    "description": "Discover how a specialty coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market.",
+    "image": "/og-coffee-shop-case-study.jpg",
     "author": {
       "@type": "Organization",
       "name": "Marketing Team"
@@ -74,7 +74,7 @@ export default function UrbanBeansCaseStudy() {
           </Link>
           
           <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143%</h1>
+            <h1 className="text-4xl font-bold mb-4">Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143%</h1>
             <div className="flex items-center text-gray-500 text-sm">
               <span>April 15, 2023</span>
               <span className="mx-2">•</span>
@@ -103,22 +103,22 @@ export default function UrbanBeansCaseStudy() {
                 </div>
               </div>
               <div className="w-full md:w-2/3 p-8 bg-white/50">
-                <h2 className="text-2xl font-bold mb-2">Urban Beans</h2>
+                <h2 className="text-2xl font-bold mb-2">Local Specialty Coffee Shop</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
                 <h3 className="text-xl mb-2">Results at a Glance</h3>
                 <p className="text-2xl font-bold text-primary-purple mb-2">143% increase in foot traffic</p>
-                <p className="text-gray-600">Coffee shop in downtown Seattle targeting local coffee enthusiasts</p>
+                <p className="text-gray-600">Coffee shop in a metropolitan downtown area targeting local coffee enthusiasts</p>
               </div>
             </div>
           </div>
           
           <p className="lead">
-            Urban Beans, a specialty coffee shop in downtown Seattle, was struggling to stand out in an area saturated with large chain competitors. Despite having exceptional coffee and a unique atmosphere, they were having trouble attracting new customers and building awareness in their local community.
+            A specialty coffee shop in a busy downtown metropolitan area was struggling to stand out in an area saturated with large chain competitors. Despite having exceptional coffee and a unique atmosphere, they were having trouble attracting new customers and building awareness in their local community.
           </p>
           
           <h2>The Challenge</h2>
           <p>
-            Urban Beans faced several key challenges:
+            The coffee shop faced several key challenges:
           </p>
           <ul>
             <li>Limited marketing budget compared to chain competitors</li>
@@ -128,12 +128,12 @@ export default function UrbanBeansCaseStudy() {
           </ul>
           
           <p>
-            "We knew we had a great product, but we couldn't compete with the big chains' marketing budgets," said Sophia Chen, owner of Urban Beans. "We needed a solution that would help us reach coffee enthusiasts in our area without breaking the bank."
+            "We knew we had a great product, but we couldn't compete with the big chains' marketing budgets," said the owner of the coffee shop. "We needed a solution that would help us reach coffee enthusiasts in our area without breaking the bank."
           </p>
           
           <h2>The Solution: AI-Vertise Boost</h2>
           <p>
-            Urban Beans partnered with AI-Vertise Boost to implement a targeted digital advertising strategy. Our approach included:
+            The coffee shop partnered with AI-Vertise Boost to implement a targeted digital advertising strategy. Our approach included:
           </p>
           
           <ol>
@@ -154,7 +154,7 @@ export default function UrbanBeansCaseStudy() {
           <div className="my-8 p-5 bg-gray-50 rounded-lg border border-gray-100">
             <blockquote className="text-lg italic text-gray-700">
               "The AI-powered targeting was a game-changer for us. It was like having a marketing expert who knew exactly which doors to knock on in our neighborhood."
-              <footer className="text-sm mt-2 text-gray-500">— Sophia Chen, Owner of Urban Beans</footer>
+              <footer className="text-sm mt-2 text-gray-500">— Coffee Shop Owner</footer>
             </blockquote>
           </div>
           
@@ -165,7 +165,7 @@ export default function UrbanBeansCaseStudy() {
           
           <h3>Phase 1: Discovery and Strategy</h3>
           <p>
-            We began by analyzing Urban Beans' customer data and the local competitive landscape. This allowed us to identify key differentiators and craft messaging that would resonate with their target audience.
+            We began by analyzing the coffee shop's customer data and the local competitive landscape. This allowed us to identify key differentiators and craft messaging that would resonate with their target audience.
           </p>
           
           <h3>Phase 2: Launch and Optimization</h3>
@@ -180,7 +180,7 @@ export default function UrbanBeansCaseStudy() {
           
           <h2>The Results</h2>
           <p>
-            Within 30 days of launching the campaign, Urban Beans saw dramatic improvements:
+            Within 30 days of launching the campaign, the coffee shop saw dramatic improvements:
           </p>
           
           <ul>
@@ -196,7 +196,7 @@ export default function UrbanBeansCaseStudy() {
           
           <h2>Key Takeaways</h2>
           <p>
-            The success of Urban Beans' campaign highlights several important lessons for local businesses:
+            The success of this campaign highlights several important lessons for local businesses:
           </p>
           
           <ol>
@@ -216,13 +216,13 @@ export default function UrbanBeansCaseStudy() {
           
           <h2>Want Similar Results for Your Business?</h2>
           <p>
-            AI-Vertise Boost has helped hundreds of local businesses like Urban Beans achieve remarkable growth through intelligent, AI-powered advertising. Our platform makes sophisticated targeting and optimization accessible to businesses of all sizes, with no technical expertise required.
+            AI-Vertise Boost has helped hundreds of local businesses achieve remarkable growth through intelligent, AI-powered advertising. Our platform makes sophisticated targeting and optimization accessible to businesses of all sizes, with no technical expertise required.
           </p>
           
           <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
             <h3 className="font-bold text-xl mb-3">Ready to boost your business?</h3>
             <p className="mb-4">
-              Join Urban Beans and hundreds of other local businesses that have transformed their growth with AI-Vertise Boost.
+              Join hundreds of other local businesses that have transformed their growth with AI-Vertise Boost.
             </p>
             <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
               Get Started Today

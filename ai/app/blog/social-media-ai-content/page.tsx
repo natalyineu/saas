@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const postData = {
   title: 'Revolutionizing Social Media Content Creation with AI Tools',
   date: 'May 25, 2024',
-  author: 'Rachel Lee',
+  author: 'Content Team',
   readTime: '7 min read',
   tags: ['Social Media', 'Content Creation', 'AI Tools', 'Digital Marketing'],
 };
@@ -165,7 +165,7 @@ export default function BlogPost() {
               <div>
                 <h3 className="font-medium">{author}</h3>
                 <p className="text-gray-600 text-sm">
-                  Content Strategy Director specializing in AI-powered marketing tools. Rachel has helped brands across various industries implement AI solutions for more effective content creation and distribution.
+                  Content Strategy Director specializing in AI-powered marketing tools. Has helped brands across various industries implement AI solutions for more effective content creation and distribution.
                 </p>
               </div>
             </div>

@@ -6,29 +6,31 @@ import {
   AIBrainIcon, 
   AnalyticsIcon 
 } from './ui/AnimatedIcons';
+import { FEATURES } from '../lib/utils/constants';
 
 export default function FeaturesSection() {
-  const features = [
+  // Map the icons to the features from constants
+  const featuresWithIcons = [
     {
-      title: "Smart Targeting",
+      ...FEATURES[0],
       description: <>Reach the right audience at the right time. Our AI segments and targets with <span className="font-bold">95%</span> precision, boosting engagement and reducing wasted spend.</>,
       icon: <TargetIcon className="mx-auto transform hover:scale-110 transition-transform duration-300" />,
       gradient: "from-blue-400 to-primary-purple",
     },
     {
-      title: "Global Launch in Minutes",
+      ...FEATURES[1],
       description: <>Go live in under <span className="font-bold">10 minutes</span> — no agencies, no delays. Our system supports campaigns in any language or region.</>,
       icon: <RocketIcon className="mx-auto transform hover:scale-110 transition-transform duration-300" />,
       gradient: "from-primary-purple to-primary-pink",
     },
     {
-      title: "2.4x Higher ROI with AI Optimization",
+      ...FEATURES[2],
       description: <>Our algorithm learns and adapts in real time, squeezing the most out of every dollar. Most users see <span className="font-bold">2x–3x</span> better performance within 30 days.</>,
       icon: <AIBrainIcon className="mx-auto transform hover:scale-110 transition-transform duration-300" />,
       gradient: "from-primary-pink to-orange-400",
     },
     {
-      title: "Live Reports, No Manual Work",
+      ...FEATURES[3],
       description: "Track conversions, revenue, and reach in real time. Weekly reports are sent straight to your inbox — zero effort needed.",
       icon: <AnalyticsIcon className="mx-auto transform hover:scale-110 transition-transform duration-300" />,
       gradient: "from-cyan-400 to-blue-500",
@@ -53,7 +55,7 @@ export default function FeaturesSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {features.map((feature, index) => (
+          {featuresWithIcons.map((feature, index) => (
             <div 
               key={index} 
               className="group relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:-translate-y-2"

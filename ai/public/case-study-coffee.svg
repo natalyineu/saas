@@ -16,7 +16,7 @@
   
   <!-- Signage -->
   <rect x="270" y="170" width="260" height="40" rx="4" fill="#FF7E5F"/>
-  <text x="400" y="195" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">URBAN BEANS</text>
+  <text x="400" y="195" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">COFFEE SHOP</text>
   
   <!-- Coffee cups -->
   <circle cx="270" cy="350" r="20" fill="#FEB47B" stroke="#E2E8F0" stroke-width="2"/>

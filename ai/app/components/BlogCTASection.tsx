@@ -61,7 +61,7 @@ export default function BlogCTASection() {
                     </div>
                     <div className="p-3 md:p-4">
                       <h3 className="text-xs md:text-sm font-bold mb-1 line-clamp-2">Coffee Shop Campaign</h3>
-                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Urban Beans achieved 143% increase in foot traffic.</p>
+                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Local Coffee Shop achieved 143% increase in foot traffic.</p>
                       <div className="mt-2">
                         <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full">CASE STUDY</span>
                       </div>
@@ -95,7 +95,7 @@ export default function BlogCTASection() {
                     </div>
                     <div className="p-3 md:p-4">
                       <h3 className="text-xs md:text-sm font-bold mb-1 line-clamp-2">Local Restaurant Promotion</h3>
-                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Taste of Italy saw 87% boost in weekend reservations.</p>
+                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Italian Restaurant saw 87% boost in weekend reservations.</p>
                       <div className="mt-2">
                         <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full">CASE STUDY</span>
                       </div>
@@ -123,7 +123,7 @@ export default function BlogCTASection() {
                     </div>
                     <div className="p-3 md:p-4">
                       <h3 className="text-xs md:text-sm font-bold mb-1 line-clamp-2">Online Boutique Launch</h3>
-                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Chic Trends achieved 215% return on ad spend.</p>
+                      <p className="text-xs text-gray-500 line-clamp-2 text-[10px] md:text-xs">Fashion Retailer achieved 215% return on ad spend.</p>
                       <div className="mt-2">
                         <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full">CASE STUDY</span>
                       </div>

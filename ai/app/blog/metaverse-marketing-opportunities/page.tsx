@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const postData = {
   title: 'Metaverse Marketing: Opportunities in the Virtual Frontier',
   date: 'May 30, 2024',
-  author: 'Marcus Chang',
+  author: 'Innovation Team',
   readTime: '9 min read',
   tags: ['Metaverse', 'Digital Marketing', 'Virtual Reality', 'Web3'],
 };
@@ -167,7 +167,7 @@ export default function BlogPost() {
               <div>
                 <h3 className="font-medium">{author}</h3>
                 <p className="text-gray-600 text-sm">
-                  Digital Innovation Director specializing in emerging platforms and technologies. Marcus has helped major brands develop strategies for Web3, metaverse, and immersive digital experiences.
+                  Digital Innovation Director specializing in emerging platforms and technologies. Has helped major brands develop strategies for Web3, metaverse, and immersive digital experiences.
                 </p>
               </div>
             </div>

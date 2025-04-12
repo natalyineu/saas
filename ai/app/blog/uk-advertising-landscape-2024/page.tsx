@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 // Import using absolute paths
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
 const postData = {
   title: 'The UK Advertising Landscape in 2024: Trends, Challenges, and Opportunities',
   date: 'June 5, 2024',
-  author: 'James Bennett',
+  author: 'Market Research Team',
   readTime: '10 min read',
   tags: ['UK', 'Advertising', 'Industry Trends', '2024 Forecast'],
 };
@@ -35,10 +37,42 @@ const postData = {
 export default function BlogPost() {
   const { title, date, author, readTime, tags } = postData;
   
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "datePublished": date,
+    "dateModified": date,
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI-Vertise Boost",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ai-vertise.com/logo.png"
+      }
+    },
+    "description": "Explore the current UK advertising landscape in 2024, including key trends, regulatory changes, consumer behavior shifts, and AI adoption within the industry.",
+    "keywords": tags.join(", "),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/uk-advertising-landscape-2024"
+    }
+  };
+  
   return (
     <>
+      <Script
+        id="blogpost-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-12">
+        <Breadcrumbs />
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
           <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,7 +177,7 @@ export default function BlogPost() {
           
           <h2>Case Study: Financial Services Advertising Innovation</h2>
           <p>
-            A major UK banking group transformed their approach:
+            A leading financial services provider transformed their approach:
           </p>
           <ul>
             <li>42% improvement in acquisition cost through AI-powered channel optimization</li>
@@ -179,7 +213,7 @@ export default function BlogPost() {
               <div>
                 <h3 className="font-medium">{author}</h3>
                 <p className="text-gray-600 text-sm">
-                  UK Advertising Industry Analyst with over 15 years of experience tracking market trends and regulatory developments. James regularly consults with major UK brands and agencies on strategic adaptation to the evolving media landscape.
+                  Our team specializes in tracking UK advertising market trends and regulatory developments, with extensive experience consulting with businesses on strategic adaptation to the evolving media landscape.
                 </p>
               </div>
             </div>

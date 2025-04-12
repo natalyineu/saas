@@ -10,7 +10,7 @@
   
   <!-- Store header on screen -->
   <rect x="260" y="210" width="280" height="30" rx="2" fill="#FF7E5F"/>
-  <text x="400" y="230" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">CHIC TRENDS</text>
+  <text x="400" y="230" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">FASHION RETAILER</text>
   
   <!-- Products on screen -->
   <rect x="270" y="250" width="80" height="100" rx="2" fill="#F1F5F9"/>
@@ -49,7 +49,7 @@
   <text x="630" y="370" font-family="Arial" font-size="10" fill="#64748B" text-anchor="middle">Others</text>
   
   <rect x="660" y="250" width="20" height="110" rx="2" fill="#FF7E5F"/>
-  <text x="670" y="370" font-family="Arial" font-size="10" fill="#64748B" text-anchor="middle">Chic</text>
+  <text x="670" y="370" font-family="Arial" font-size="10" fill="#64748B" text-anchor="middle">Our</text>
   
   <!-- Stats indicator -->
   <rect x="300" y="100" width="200" height="40" rx="20" fill="#10B981"/>

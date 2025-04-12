@@ -116,20 +116,20 @@ export const WORK_STEPS: WorkStep[] = [
 export const CASE_STUDIES: Omit<CaseStudy, 'icon'>[] = [
   {
     title: "Coffee Shop Campaign",
-    company: "Urban Beans",
+    company: "Local Coffee Shop",
     result: "+143% increase in foot traffic",
-    description: "Urban Beans used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month."
+    description: "A specialty coffee shop used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month."
   },
   {
     title: "Local Restaurant Promotion",
-    company: "Taste of Italy",
+    company: "Italian Restaurant",
     result: "+87% boost in weekend reservations",
-    description: "Taste of Italy restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends."
+    description: "A family-owned Italian restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends."
   },
   {
     title: "Online Boutique Launch",
-    company: "Chic Trends",
+    company: "Fashion Retailer",
     result: "+215% return on ad spend",
-    description: "Chic Trends online boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one."
+    description: "An online fashion boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one."
   }
 ]; 

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { CASE_STUDIES } from '../lib/utils/constants';
 
 export default function CaseStudiesSection() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -48,12 +49,10 @@ export default function CaseStudiesSection() {
     };
   }, [activeSlide, isHovering]);
   
-  const caseStudies = [
+  // Add icons to the case studies from constants
+  const caseStudiesWithIcons = [
     {
-      title: "Coffee Shop Campaign",
-      company: "Urban Beans",
-      result: "+143% increase in foot traffic",
-      description: "Urban Beans used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month.",
+      ...CASE_STUDIES[0],
       icon: (
         <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 group-hover:from-purple-100 group-hover:to-pink-100 transition-all duration-500">
           <div className="relative w-24 h-24 transform transition-transform duration-500 group-hover:scale-110">
@@ -74,10 +73,7 @@ export default function CaseStudiesSection() {
       )
     },
     {
-      title: "Local Restaurant Promotion",
-      company: "Taste of Italy",
-      result: "+87% boost in weekend reservations",
-      description: "Taste of Italy restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends.",
+      ...CASE_STUDIES[1],
       icon: (
         <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 group-hover:from-blue-100 group-hover:to-indigo-100 transition-all duration-500">
           <div className="relative w-24 h-24 transform transition-transform duration-500 group-hover:scale-110">
@@ -107,10 +103,7 @@ export default function CaseStudiesSection() {
       )
     },
     {
-      title: "Online Boutique Launch",
-      company: "Chic Trends",
-      result: "+215% return on ad spend",
-      description: "Chic Trends online boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one.",
+      ...CASE_STUDIES[2],
       icon: (
         <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-pink-50 to-red-50 group-hover:from-pink-100 group-hover:to-red-100 transition-all duration-500">
           <div className="relative w-24 h-24 transform transition-transform duration-500 group-hover:scale-110">
@@ -136,11 +129,11 @@ export default function CaseStudiesSection() {
   ];
 
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1));
+    setActiveSlide((prev) => (prev === caseStudiesWithIcons.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
+    setActiveSlide((prev) => (prev === 0 ? caseStudiesWithIcons.length - 1 : prev - 1));
   };
 
   return (
@@ -163,7 +156,7 @@ export default function CaseStudiesSection() {
               className="flex transition-all duration-700 ease-in-out" 
               style={{ transform: `translateX(-${activeSlide * 100}%)` }}
             >
-              {caseStudies.map((caseStudy, index) => (
+              {caseStudiesWithIcons.map((caseStudy, index) => (
                 <div key={index} className="w-full flex-shrink-0 p-0">
                   <div className="bg-white rounded-lg overflow-hidden flex flex-col md:flex-row group">
                     <div className="relative w-full md:w-2/5 h-48 md:h-auto">
@@ -202,66 +195,43 @@ export default function CaseStudiesSection() {
                 </div>
               ))}
             </div>
+
+            {/* Navigation buttons */}
+            <button 
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10 hover:shadow-lg transition-all duration-300"
+              onClick={prevSlide}
+              aria-label="Previous slide"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button 
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10 hover:shadow-lg transition-all duration-300"
+              onClick={nextSlide}
+              aria-label="Next slide"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
           
-          {/* Improved navigation buttons */}
-          <button 
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -ml-5 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center text-primary-purple hover:bg-gray-50 transition-transform duration-300 transform hover:scale-110 hover:shadow-lg z-10"
-            aria-label="Previous slide"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button 
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -mr-5 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center text-primary-purple hover:bg-gray-50 transition-transform duration-300 transform hover:scale-110 hover:shadow-lg z-10"
-            aria-label="Next slide"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-        
-        {/* Pagination indicator - moved outside the slider container for better layout */}
-        <div className="flex justify-center mt-6 mb-4">
-          <div className="flex items-center space-x-3">
-            {caseStudies.map((_, index) => (
+          {/* Pagination dots */}
+          <div className="flex items-center justify-center mt-6 space-x-2">
+            {caseStudiesWithIcons.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeSlide === index 
-                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink'
+                  index === activeSlide 
+                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink scale-125' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
+                onClick={() => setActiveSlide(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
-        
-        {/* Blog connection section */}
-        <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
-          <p className="text-lg text-gray-600 mb-4">
-            Want to explore more success stories and learn actionable strategies?
-          </p>
-          <Link 
-            href="#blog-cta"
-            className="inline-flex items-center text-primary-purple hover:text-primary-pink transition-colors font-medium"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('blog-cta')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            View more case studies in our blog
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>

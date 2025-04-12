@@ -53,9 +53,9 @@ export default function Blog() {
   const successStories = [
     {
       id: 'urban-beans-case-study',
-      title: 'Coffee Shop Campaign: How Urban Beans Increased Foot Traffic by 143%',
+      title: 'Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143%',
       date: 'April 15, 2023',
-      excerpt: 'Urban Beans used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month.',
+      excerpt: 'A specialty coffee shop used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month.',
       author: 'Marketing Team',
       readTime: '5 min read',
       category: 'CASE STUDY',
@@ -82,9 +82,9 @@ export default function Blog() {
     },
     {
       id: 'taste-of-italy-case-study',
-      title: 'Local Restaurant Promotion: Taste of Italy Boosts Weekend Reservations by 87%',
+      title: 'Local Restaurant Promotion: Italian Restaurant Boosts Weekend Reservations by 87%',
       date: 'April 2, 2023',
-      excerpt: 'Taste of Italy restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends.',
+      excerpt: 'A family-owned Italian restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends.',
       author: 'Marketing Team',
       readTime: '6 min read',
       category: 'CASE STUDY',
@@ -120,9 +120,9 @@ export default function Blog() {
     },
     {
       id: 'chic-trends-case-study',
-      title: 'Online Boutique Launch: Chic Trends Achieves 215% Return on Ad Spend',
+      title: 'Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend',
       date: 'March 28, 2023',
-      excerpt: 'Chic Trends online boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one.',
+      excerpt: 'An online fashion boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one.',
       author: 'Marketing Team',
       readTime: '7 min read',
       category: 'CASE STUDY',

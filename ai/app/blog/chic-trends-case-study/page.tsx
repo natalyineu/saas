@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-export default function ChicTrendsCaseStudy() {
+export default function OnlineBoutiqueCaseStudy() {
   return (
     <>
       <Navbar />
@@ -16,7 +16,7 @@ export default function ChicTrendsCaseStudy() {
           </Link>
           
           <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Online Boutique Launch: Chic Trends Achieves 215% Return on Ad Spend</h1>
+            <h1 className="text-4xl font-bold mb-4">Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend</h1>
             <div className="flex items-center text-gray-500 text-sm">
               <span>March 28, 2023</span>
               <span className="mx-2">•</span>
@@ -49,7 +49,7 @@ export default function ChicTrendsCaseStudy() {
                 </div>
               </div>
               <div className="w-full md:w-2/3 p-8 bg-white/50">
-                <h2 className="text-2xl font-bold mb-2">Chic Trends</h2>
+                <h2 className="text-2xl font-bold mb-2">Online Fashion Boutique</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
                 <h3 className="text-xl mb-2">Results at a Glance</h3>
                 <p className="text-2xl font-bold text-primary-purple mb-2">215% return on ad spend</p>
@@ -59,12 +59,12 @@ export default function ChicTrendsCaseStudy() {
           </div>
           
           <p className="lead">
-            Chic Trends, a new online boutique specializing in curated fashion for young professionals, faced the daunting challenge of launching in a crowded e-commerce marketplace. With no established brand recognition and fierce competition from large retailers, they needed a strategic approach to their launch.
+            A new online boutique specializing in curated fashion for young professionals faced the daunting challenge of launching in a crowded e-commerce marketplace. With no established brand recognition and fierce competition from large retailers, they needed a strategic approach to their launch.
           </p>
           
           <h2>The Challenge</h2>
           <p>
-            As a new online boutique, Chic Trends faced multiple significant hurdles:
+            As a new online boutique, the company faced multiple significant hurdles:
           </p>
           <ul>
             <li>Zero brand recognition in a competitive fashion marketplace</li>
@@ -74,17 +74,17 @@ export default function ChicTrendsCaseStudy() {
           </ul>
           
           <p>
-            "Launching an online boutique today means competing with thousands of established brands with huge marketing budgets," explained Olivia Chen, founder of Chic Trends. "We knew we had unique products that would resonate with the right audience, but finding that audience efficiently was our biggest challenge."
+            "Launching an online boutique today means competing with thousands of established brands with huge marketing budgets," explained the founder. "We knew we had unique products that would resonate with the right audience, but finding that audience efficiently was our biggest challenge."
           </p>
           
           <h2>The Solution: AI-Vertise Boost</h2>
           <p>
-            Chic Trends partnered with AI-Vertise Boost to develop a data-driven launch strategy. Our approach included:
+            The boutique partnered with AI-Vertise Boost to develop a data-driven launch strategy. Our approach included:
           </p>
           
           <ol>
             <li>
-              <strong>Precision audience identification:</strong> Using AI to identify fashion-forward professionals most likely to appreciate Chic Trends' unique aesthetic and price point.
+              <strong>Precision audience identification:</strong> Using AI to identify fashion-forward professionals most likely to appreciate the boutique's unique aesthetic and price point.
             </li>
             <li>
               <strong>Predictive product promotion:</strong> Analyzing which products would most likely drive initial conversions and focusing ad spend on showcasing these items.
@@ -100,7 +100,7 @@ export default function ChicTrendsCaseStudy() {
           <div className="my-8 p-5 bg-gray-50 rounded-lg border border-gray-100">
             <blockquote className="text-lg italic text-gray-700">
               "The AI targeting was able to find exactly the right customers who appreciated our unique style. It was like having a personal shopper who knew exactly which customers to introduce to our brand."
-              <footer className="text-sm mt-2 text-gray-500">— Olivia Chen, Founder, Chic Trends</footer>
+              <footer className="text-sm mt-2 text-gray-500">— Founder, Online Fashion Boutique</footer>
             </blockquote>
           </div>
           
@@ -116,7 +116,7 @@ export default function ChicTrendsCaseStudy() {
           
           <h3>Phase 2: Multi-channel Launch Campaign</h3>
           <p>
-            The actual launch utilized a carefully orchestrated multi-channel approach. Initial ads highlighted Chic Trends' unique aesthetic and value proposition. As data accumulated, AI-Vertise Boost's algorithm continuously refined targeting, messaging, and budget allocation across platforms to focus on the highest-performing segments.
+            The actual launch utilized a carefully orchestrated multi-channel approach. Initial ads highlighted the boutique's unique aesthetic and value proposition. As data accumulated, AI-Vertise Boost's algorithm continuously refined targeting, messaging, and budget allocation across platforms to focus on the highest-performing segments.
           </p>
           
           <h3>Phase 3: Optimization and Scaling</h3>
@@ -137,12 +137,12 @@ export default function ChicTrendsCaseStudy() {
           </ul>
           
           <p>
-            Most importantly, Chic Trends was able to build a loyal customer base from day one, with 42% of first-time purchasers returning for a second purchase within 60 days.
+            Most importantly, the boutique was able to build a loyal customer base from day one, with 42% of first-time purchasers returning for a second purchase within 60 days.
           </p>
           
           <h2>Key Insights</h2>
           <p>
-            The success of Chic Trends' launch reveals several key insights for e-commerce businesses:
+            The success of this boutique's launch reveals several key insights for e-commerce businesses:
           </p>
           
           <ol>
@@ -162,13 +162,13 @@ export default function ChicTrendsCaseStudy() {
           
           <h2>Launch Your E-Commerce Success</h2>
           <p>
-            AI-Vertise Boost has helped numerous online retailers like Chic Trends achieve exceptional growth through intelligent, AI-powered advertising. Our platform makes sophisticated e-commerce marketing accessible to businesses of all sizes, with no technical expertise required.
+            AI-Vertise Boost has helped numerous online retailers achieve exceptional growth through intelligent, AI-powered advertising. Our platform makes sophisticated e-commerce marketing accessible to businesses of all sizes, with no technical expertise required.
           </p>
           
           <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
             <h3 className="font-bold text-xl mb-3">Ready to boost your online store?</h3>
             <p className="mb-4">
-              Join Chic Trends and hundreds of other e-commerce businesses that have transformed their growth with AI-Vertise Boost.
+              Join hundreds of other e-commerce businesses that have transformed their growth with AI-Vertise Boost.
             </p>
             <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
               Get Started Today

@@ -7,8 +7,8 @@
   <!-- Blog post 1 -->
   <rect x="150" y="150" width="250" height="300" rx="8" fill="white" stroke="#E2E8F0" stroke-width="2"/>
   <rect x="150" y="150" width="250" height="120" rx="8" fill="#FF7E5F"/>
-  <text x="170" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#0F172A">How AI Transformed a Small Coffee Shop's Revenue</text>
-  <text x="170" y="320" font-family="Arial" font-size="14" fill="#64748B">Learn how Urban Beans increased foot traffic by 143% using our AI-powered ad targeting.</text>
+  <text x="170" y="290" font-family="Arial" font-size="16" font-weight="bold" fill="#0F172A">How AI Transformed a Local Coffee Shop's Revenue</text>
+  <text x="170" y="320" font-family="Arial" font-size="14" fill="#64748B">Learn how a local coffee shop increased foot traffic by 143% using our AI-powered ad targeting.</text>
   <rect x="170" y="350" width="80" height="25" rx="12.5" fill="#FEB47B"/>
   <text x="210" y="367" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">CASE STUDY</text>
   

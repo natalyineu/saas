@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const postData = {
   title: 'Using AI to Select the Right Telegram Channels for Your Campaigns',
   date: 'June 2, 2024',
-  author: 'Natalia Kowalski',
+  author: 'Channel Strategy Team',
   readTime: '8 min read',
   tags: ['Telegram', 'Channel Selection', 'AI', 'Advertising'],
 };
@@ -167,7 +167,7 @@ export default function BlogPost() {
               <div>
                 <h3 className="font-medium">{author}</h3>
                 <p className="text-gray-600 text-sm">
-                  Digital Marketing Analytics Expert with a focus on emerging platforms. Natalia specializes in AI-driven campaign optimization and channel selection across messaging platforms, with particular expertise in Eastern European and Asian markets.
+                  Digital Marketing Analytics Expert with a focus on emerging platforms. Specializes in AI-driven campaign optimization and channel selection across messaging platforms, with particular expertise in Eastern European and Asian markets.
                 </p>
               </div>
             </div>

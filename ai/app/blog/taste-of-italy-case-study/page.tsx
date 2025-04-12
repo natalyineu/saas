@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-export default function TasteOfItalyCaseStudy() {
+export default function LocalRestaurantCaseStudy() {
   return (
     <>
       <Navbar />
@@ -16,7 +16,7 @@ export default function TasteOfItalyCaseStudy() {
           </Link>
           
           <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Local Restaurant Promotion: Taste of Italy Boosts Weekend Reservations by 87%</h1>
+            <h1 className="text-4xl font-bold mb-4">Local Restaurant Promotion: Italian Restaurant Boosts Weekend Reservations by 87%</h1>
             <div className="flex items-center text-gray-500 text-sm">
               <span>April 2, 2023</span>
               <span className="mx-2">•</span>
@@ -55,22 +55,22 @@ export default function TasteOfItalyCaseStudy() {
                 </div>
               </div>
               <div className="w-full md:w-2/3 p-8 bg-white/50">
-                <h2 className="text-2xl font-bold mb-2">Taste of Italy</h2>
+                <h2 className="text-2xl font-bold mb-2">Family-Owned Italian Restaurant</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
                 <h3 className="text-xl mb-2">Results at a Glance</h3>
                 <p className="text-2xl font-bold text-primary-purple mb-2">87% boost in weekend reservations</p>
-                <p className="text-gray-600">Family-owned Italian restaurant in Chicago's vibrant food scene</p>
+                <p className="text-gray-600">Family-owned Italian restaurant in a major city's vibrant food scene</p>
               </div>
             </div>
           </div>
           
           <p className="lead">
-            Taste of Italy, a family-owned Italian restaurant in Chicago's vibrant food scene, was struggling to fill tables during weekend dinner service despite their authentic cuisine and excellent reviews. They needed a way to stand out in an extremely competitive market.
+            A family-owned Italian restaurant in a major city's vibrant food scene was struggling to fill tables during weekend dinner service despite their authentic cuisine and excellent reviews. They needed a way to stand out in an extremely competitive market.
           </p>
           
           <h2>The Challenge</h2>
           <p>
-            Taste of Italy faced several significant challenges:
+            The restaurant faced several significant challenges:
           </p>
           <ul>
             <li>Intense competition from other Italian restaurants in the area</li>
@@ -80,12 +80,12 @@ export default function TasteOfItalyCaseStudy() {
           </ul>
           
           <p>
-            "We had great food and service, but we were invisible to many potential customers," said the Owner and Head Chef at Taste of Italy. "Our weekend tables were only about half full, which was frustrating because we knew once people tried our food, they'd become regulars."
+            "We had great food and service, but we were invisible to many potential customers," said the Owner and Head Chef. "Our weekend tables were only about half full, which was frustrating because we knew once people tried our food, they'd become regulars."
           </p>
           
           <h2>The Solution: AI-Vertise Boost</h2>
           <p>
-            Taste of Italy partnered with AI-Vertise Boost to develop a targeted campaign focused on promoting their weekend specials. Our strategy included:
+            The restaurant partnered with AI-Vertise Boost to develop a targeted campaign focused on promoting their weekend specials. Our strategy included:
           </p>
           
           <ol>
@@ -93,7 +93,7 @@ export default function TasteOfItalyCaseStudy() {
               <strong>Advanced audience targeting:</strong> Using AI to identify local foodies, Italian cuisine enthusiasts, and people who frequently dine out on weekends within a 10-mile radius.
             </li>
             <li>
-              <strong>Weekday-to-weekend conversion:</strong> Specifically targeting customers who had dined at Taste of Italy during weekdays but not on weekends.
+              <strong>Weekday-to-weekend conversion:</strong> Specifically targeting customers who had dined at the restaurant during weekdays but not on weekends.
             </li>
             <li>
               <strong>Special promotion strategy:</strong> Creating a "Weekend Chef's Special" campaign that highlighted unique dishes only available Friday through Sunday.
@@ -106,7 +106,7 @@ export default function TasteOfItalyCaseStudy() {
           <div className="my-8 p-5 bg-gray-50 rounded-lg border border-gray-100">
             <blockquote className="text-lg italic text-gray-700">
               "The AI targeting was remarkable. It was like the system knew exactly who would love our authentic Italian cooking and when they would be thinking about their weekend plans."
-              <footer className="text-sm mt-2 text-gray-500">— Owner & Head Chef, Taste of Italy</footer>
+              <footer className="text-sm mt-2 text-gray-500">— Owner & Head Chef</footer>
             </blockquote>
           </div>
           
@@ -117,7 +117,7 @@ export default function TasteOfItalyCaseStudy() {
           
           <h3>Stage 1: Analysis and Targeting</h3>
           <p>
-            We began by analyzing Taste of Italy's customer data and identifying patterns in their highest-value patrons. The AI platform created lookalike audiences across multiple advertising platforms to reach similar potential customers who weren't yet aware of the restaurant.
+            We began by analyzing the restaurant's customer data and identifying patterns in their highest-value patrons. The AI platform created lookalike audiences across multiple advertising platforms to reach similar potential customers who weren't yet aware of the restaurant.
           </p>
           
           <h3>Stage 2: Creative Testing and Optimization</h3>
@@ -132,7 +132,7 @@ export default function TasteOfItalyCaseStudy() {
           
           <h2>The Results</h2>
           <p>
-            Within just six weeks of launching the campaign, Taste of Italy experienced remarkable results:
+            Within just six weeks of launching the campaign, the restaurant experienced remarkable results:
           </p>
           
           <ul>
@@ -143,12 +143,12 @@ export default function TasteOfItalyCaseStudy() {
           </ul>
           
           <p>
-            Most significantly, Taste of Italy has maintained their fully booked weekends even after the initial promotion ended, as many first-time visitors have become regular patrons.
+            Most significantly, the restaurant has maintained their fully booked weekends even after the initial promotion ended, as many first-time visitors have become regular patrons.
           </p>
           
           <h2>Key Insights</h2>
           <p>
-            The success of Taste of Italy's campaign reveals several key insights for restaurants looking to increase bookings:
+            The success of this campaign reveals several key insights for restaurants looking to increase bookings:
           </p>
           
           <ol>
@@ -168,13 +168,13 @@ export default function TasteOfItalyCaseStudy() {
           
           <h2>Want to Fill Your Restaurant?</h2>
           <p>
-            AI-Vertise Boost has helped hundreds of restaurants like Taste of Italy fill their tables through intelligent, AI-powered advertising. Our platform makes sophisticated marketing accessible to independent restaurants, with no technical expertise required.
+            AI-Vertise Boost has helped hundreds of restaurants fill their tables through intelligent, AI-powered advertising. Our platform makes sophisticated marketing accessible to independent restaurants, with no technical expertise required.
           </p>
           
           <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
             <h3 className="font-bold text-xl mb-3">Ready to boost your restaurant bookings?</h3>
             <p className="mb-4">
-              Join Taste of Italy and hundreds of other restaurants that have transformed their business with AI-Vertise Boost.
+              Join hundreds of other restaurants that have transformed their business with AI-Vertise Boost.
             </p>
             <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
               Get Started Today
