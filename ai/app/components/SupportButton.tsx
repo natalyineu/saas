@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { TargetBullseyeIcon } from './ui/icons';
 
 export default function SupportButton() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -52,11 +53,7 @@ export default function SupportButton() {
           aria-label="Buy an Ads package"
         >
           {/* Target icon */}
-          <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="12" cy="12" r="2" fill="currentColor"/>
-          </svg>
+          <TargetBullseyeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" />
           
           {isMobile ? (
             <span className="text-xs whitespace-nowrap">Buy Ads</span>
