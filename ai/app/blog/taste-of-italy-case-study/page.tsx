@@ -80,7 +80,7 @@ export default function TasteOfItalyCaseStudy() {
           </ul>
           
           <p>
-            "We had great food and service, but we were invisible to many potential customers," said Marco Rossi, owner and head chef at Taste of Italy. "Our weekend tables were only about half full, which was frustrating because we knew once people tried our food, they'd become regulars."
+            "We had great food and service, but we were invisible to many potential customers," said the Owner and Head Chef at Taste of Italy. "Our weekend tables were only about half full, which was frustrating because we knew once people tried our food, they'd become regulars."
           </p>
           
           <h2>The Solution: AI-Vertise Boost</h2>
@@ -106,7 +106,7 @@ export default function TasteOfItalyCaseStudy() {
           <div className="my-8 p-5 bg-gray-50 rounded-lg border border-gray-100">
             <blockquote className="text-lg italic text-gray-700">
               "The AI targeting was remarkable. It was like the system knew exactly who would love our authentic Italian cooking and when they would be thinking about their weekend plans."
-              <footer className="text-sm mt-2 text-gray-500">— Marco Rossi, Owner & Head Chef, Taste of Italy</footer>
+              <footer className="text-sm mt-2 text-gray-500">— Owner & Head Chef, Taste of Italy</footer>
             </blockquote>
           </div>
           

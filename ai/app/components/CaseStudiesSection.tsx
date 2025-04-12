@@ -188,9 +188,14 @@ export default function CaseStudiesSection() {
                       
                       {/* Call-to-action button */}
                       <div className="animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-                        <button className="mt-6 px-6 py-2 bg-gradient-to-r from-primary-purple to-primary-pink text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <Link 
+                          href={index === 0 ? '/blog/urban-beans-case-study' : 
+                               index === 1 ? '/blog/taste-of-italy-case-study' : 
+                               '/blog/chic-trends-case-study'}
+                          className="mt-6 inline-block px-6 py-2 bg-gradient-to-r from-primary-purple to-primary-pink text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                        >
                           Learn More
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

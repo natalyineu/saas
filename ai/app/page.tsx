@@ -8,12 +8,13 @@ import BlogCTASection from './components/BlogCTASection';
 import Footer from './components/Footer';
 import Script from 'next/script';
 import { generateStructuredData } from './lib/seo';
+import SuppressHydrationWarning from './components/ui/SuppressHydrationWarning';
 
 export default function Home() {
   const { structuredData, organizationData } = generateStructuredData();
 
   return (
-    <>
+    <SuppressHydrationWarning>
       <Script
         id="homepage-structured-data"
         type="application/ld+json"
@@ -34,6 +35,6 @@ export default function Home() {
         <BlogCTASection />
       </main>
       <Footer />
-    </>
+    </SuppressHydrationWarning>
   );
 }
