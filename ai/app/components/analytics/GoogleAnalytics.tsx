@@ -17,6 +17,12 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           
+          // Set default consent state
+          gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+          });
+          
           // Configure Google Analytics
           gtag('config', '${GA_TRACKING_ID}', {
             'anonymize_ip': true,

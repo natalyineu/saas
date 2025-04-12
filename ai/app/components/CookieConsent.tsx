@@ -3,6 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+// Define the gtag type
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false);
 
@@ -21,6 +28,15 @@ export default function CookieConsent() {
 
   const acceptCookies = () => {
     localStorage.setItem('cookieConsent', 'true');
+    
+    // Update Google Analytics consent
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
+    
     setShowConsent(false);
   };
 
