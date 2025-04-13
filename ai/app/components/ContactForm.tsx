@@ -22,14 +22,25 @@ export default function ContactForm({
 }: ContactFormProps) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [validationError, setValidationError] = useState('');
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setValidationError('');
     
     // Get form data
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    
+    // Validate that either email or phone is provided
+    if (!email && !phone) {
+      setValidationError('Please provide either an email or phone number so we can contact you.');
+      return;
+    }
+    
+    setIsSubmitting(true);
     
     // Submit to Formspree
     fetch(`https://formspree.io/f/${formspreeId}`, {
@@ -67,19 +78,22 @@ export default function ContactForm({
         </div>
       ) : (
         <form onSubmit={handleFormSubmit}>
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
+              required
+            />
+          </div>
+          
+          <p className="text-sm text-gray-600 mb-2">Please provide at least one contact method:</p>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-                required
-              />
-            </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email
@@ -89,23 +103,26 @@ export default function ContactForm({
                 id="email"
                 name="email"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                Phone
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
               />
             </div>
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-              required
-            />
-          </div>
+          {validationError && (
+            <div className="mb-4 p-2 bg-red-50 text-red-700 border border-red-200 rounded-md text-sm">
+              {validationError}
+            </div>
+          )}
 
           <div className="mb-4">
             <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
