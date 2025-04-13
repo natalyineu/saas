@@ -4,11 +4,14 @@ import FeaturesSection from './components/FeaturesSection';
 import PricingSection from './components/PricingSection';
 import HowItWorksSection from './components/HowItWorksSection';
 import CaseStudiesSection from './components/CaseStudiesSection';
-import BlogCTASection from './components/BlogCTASection';
 import Footer from './components/Footer';
 import Script from 'next/script';
 import { generateStructuredData } from './lib/seo';
 import SuppressHydrationWarning from './components/ui/SuppressHydrationWarning';
+
+// Enable static generation for this page
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
 
 export default function Home() {
   const { structuredData, organizationData } = generateStructuredData();
@@ -32,7 +35,6 @@ export default function Home() {
         <PricingSection />
         <HowItWorksSection />
         <CaseStudiesSection />
-        <BlogCTASection />
       </main>
       <Footer />
     </SuppressHydrationWarning>

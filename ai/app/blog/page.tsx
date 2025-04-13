@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Script from 'next/script';
 import SuppressHydrationWarning from '../components/ui/SuppressHydrationWarning';
+import BlogList from '../components/blog/BlogList';
 
 export const metadata: Metadata = {
   title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
@@ -252,183 +253,74 @@ export default function Blog() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Navbar />
-      <main className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-6">AI-Vertise Blog</h1>
-        <p className="text-xl text-gray-600 mb-12">Insights, case studies, and success stories from our AI-powered advertising platform.</p>
-        
-        <h2 className="text-2xl font-bold mb-6">Success Stories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {successStories.map((story) => (
-            <Link 
-              key={story.id}
-              href={`/blog/${story.id}`}
-              className="group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
-            >
-              {story.icon}
-              <div className="p-6">
-                <div className="text-sm text-primary-purple font-semibold mb-2">{story.category}</div>
-                <h2 className="text-xl font-bold mb-2 group-hover:text-primary-purple transition-colors">{story.title}</h2>
-                <p className="text-gray-600 mb-4">{story.excerpt}</p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <span>{story.date}</span>
-                  <span className="mx-2">•</span>
-                  <span>{story.readTime}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        
-        <h2 className="text-2xl font-bold mb-6">Latest Articles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => {
-            // Generate different gradient backgrounds based on the post category or index
-            const gradients = [
-              "from-purple-50 to-pink-50 group-hover:from-purple-100 group-hover:to-pink-100",
-              "from-blue-50 to-indigo-50 group-hover:from-blue-100 group-hover:to-indigo-100",
-              "from-pink-50 to-red-50 group-hover:from-pink-100 group-hover:to-red-100",
-              "from-green-50 to-teal-50 group-hover:from-green-100 group-hover:to-teal-100",
-              "from-yellow-50 to-amber-50 group-hover:from-yellow-100 group-hover:to-amber-100",
-              "from-orange-50 to-rose-50 group-hover:from-orange-100 group-hover:to-rose-100"
-            ];
+      
+      <main className="pt-12 md:pt-20 pb-16 md:pb-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">AI-Vertise Blog</h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">Explore our collection of digital marketing insights, case studies, and success stories. Learn from our experts about the latest trends and strategies.</p>
+          </div>
+          
+          {/* Case Studies Section */}
+          <section className="mb-16">
+            <div className="mb-8 flex justify-between items-center">
+              <h2 className="text-2xl md:text-3xl font-semibold">Success Stories</h2>
+              <Link href="/blog/category/case-study" className="text-primary-purple hover:text-primary-pink transition-colors">
+                <span className="flex items-center text-sm font-medium">View all case studies <ArrowRight className="h-4 w-4 ml-1" /></span>
+              </Link>
+            </div>
             
-            const gradient = gradients[index % gradients.length];
-            
-            // Create consistent icons in the same style as case studies
-            let icon;
-            if (post.id.includes('advertising')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <rect x="30" y="30" width="40" height="40" rx="5" fill="rgba(252,70,107,0.8)" />
-                    <rect x="35" y="35" width="30" height="5" rx="2" fill="white" />
-                    <rect x="35" y="45" width="30" height="5" rx="2" fill="white" />
-                    <rect x="35" y="55" width="20" height="5" rx="2" fill="white" />
-                    <circle cx="65" cy="65" r="10" fill="rgba(63,94,251,1)" />
-                    <path d="M61 65 L69 65" stroke="white" strokeWidth="2" />
-                    <path d="M65 61 L65 69" stroke="white" strokeWidth="2" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('social-media')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <circle cx="50" cy="35" r="15" fill="rgba(252,70,107,0.8)" />
-                    <circle cx="30" cy="65" r="10" fill="rgba(252,70,107,0.8)" />
-                    <circle cx="70" cy="65" r="10" fill="rgba(252,70,107,0.8)" />
-                    <path d="M50 50 L30 65" stroke="rgba(63,94,251,1)" strokeWidth="3" />
-                    <path d="M50 50 L70 65" stroke="rgba(63,94,251,1)" strokeWidth="3" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('telegram')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <path d="M30 45 L50 65 L70 30 L35 50 Z" fill="rgba(252,70,107,0.8)" />
-                    <path d="M35 50 L45 60 L50 55" fill="white" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('facebook')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <rect x="25" y="25" width="50" height="50" rx="10" fill="rgba(63,94,251,1)" />
-                    <path d="M52 75 V55 H62 L64 45 H52 V38 C52 35 54 33 58 33 H64 V25 C62 24 58 24 55 24 C48 24 42 29 42 37 V45 H32 V55 H42 V75 Z" fill="white" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('ecommerce') || post.id.includes('commerce')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <path d="M30 35 H70 L65 55 H35 Z" fill="rgba(252,70,107,0.8)" />
-                    <circle cx="40" cy="65" r="5" fill="rgba(63,94,251,1)" />
-                    <circle cx="60" cy="65" r="5" fill="rgba(63,94,251,1)" />
-                    <path d="M35 45 H65" stroke="white" strokeWidth="2" />
-                    <path d="M40 70 L60 70" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('metaverse')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <path d="M25 40 L75 40 L75 70 L25 70 Z" fill="rgba(252,70,107,0.8)" strokeWidth="2" />
-                    <path d="M40 45 L50 35 L60 45" stroke="white" strokeWidth="2" />
-                    <path d="M35 70 L35 50 L65 50 L65 70" stroke="white" strokeWidth="2" fill="none" />
-                    <circle cx="40" cy="60" r="3" fill="white" />
-                    <circle cx="60" cy="60" r="3" fill="white" />
-                    <path d="M40 60 L60 60" stroke="white" strokeWidth="1.5" />
-                  </g>
-                </svg>
-              );
-            } else if (post.id.includes('uk-advertising')) {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <path d="M30 30 L70 30 L70 70 L30 70 Z" fill="rgba(252,70,107,0.1)" stroke="rgba(252,70,107,0.8)" strokeWidth="2" />
-                    <path d="M30 30 L70 70" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                    <path d="M30 70 L70 30" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                    <circle cx="50" cy="50" r="10" fill="rgba(252,70,107,0.8)" />
-                  </g>
-                </svg>
-              );
-            } else {
-              icon = (
-                <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-                    <rect x="30" y="30" width="40" height="40" rx="3" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                    <path d="M40 45 H60" stroke="rgba(252,70,107,0.8)" strokeWidth="3" />
-                    <path d="M40 55 H60" stroke="rgba(252,70,107,0.8)" strokeWidth="3" />
-                    <path d="M40 65 H50" stroke="rgba(252,70,107,0.8)" strokeWidth="3" />
-                  </g>
-                </svg>
-              );
-            }
-            
-            return (
-              <Link 
-                key={post.id}
-                href={`/blog/${post.id}`}
-                className="group block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
-              >
-                <div className="h-48 relative overflow-hidden rounded-t-lg">
-                  <div className={`h-full w-full flex items-center justify-center bg-gradient-to-br ${gradient} transition-all duration-500`}>
-                    <div className="relative w-32 h-32 flex items-center justify-center">
-                      <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-110">
-                        {icon}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {successStories.map((story) => (
+                <Link href={`/blog/${story.id}`} key={story.id} className="group">
+                  <article className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                    {/* Icon/Image */}
+                    {story.icon}
+                    
+                    {/* Content */}
+                    <div className="flex-grow p-6">
+                      <div className="mb-3">
+                        <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs px-3 py-1 rounded-full mb-2">
+                          {story.category}
+                        </span>
+                        <time dateTime={story.date} className="text-gray-500 text-sm">
+                          {story.date}
+                        </time>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary-purple transition-colors duration-300">
+                        {story.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-4">
+                        {story.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-sm text-gray-500">
+                          {story.author}
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          {story.readTime}
+                        </span>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-primary-purple font-semibold mb-2">ARTICLE</div>
-                  <h2 className="text-xl font-bold mb-2 group-hover:text-primary-purple transition-colors">{post.title}</h2>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <span>{post.date}</span>
-                    <span className="mx-2">•</span>
-                    <span>{post.author}</span>
-                    <span className="mx-2">•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </section>
+          
+          {/* Blog Posts Section */}
+          <section>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-8">Latest Articles</h2>
+            
+            {/* Blog List component with Load More functionality */}
+            <BlogList blogPosts={blogPosts} />
+          </section>
         </div>
       </main>
+      
       <Footer />
     </SuppressHydrationWarning>
   );

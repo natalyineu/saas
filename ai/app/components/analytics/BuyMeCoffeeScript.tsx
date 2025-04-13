@@ -18,12 +18,12 @@ export default function BuyMeCoffeeScript() {
         data-font-color="#ffffff"
         data-coffee-color="#FFDD00"
         data-url="https://buymeacoffee.com/aivertise/membership"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <Script
         id="buy-me-coffee-init"
         src="/buymeacoffee-init.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
     </>
   );

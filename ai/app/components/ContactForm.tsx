@@ -14,145 +14,179 @@ interface ContactFormProps {
 
 export default function ContactForm({
   title = 'Contact Us',
-  subtitle = 'Fill out the form below and we\'ll get back to you as soon as possible.',
+  subtitle = "We'd love to hear from you",
   className = '',
-  formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || '',
-  successMessage = 'Thank you! We\'ve received your message and will get back to you shortly.',
-  buttonText = 'Send Message'
+  formspreeId = 'moqpeyjn',
+  successMessage = "Thanks for your message! We'll get back to you soon.",
+  buttonText = 'Send Message',
 }: ContactFormProps) {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [validationError, setValidationError] = useState('');
+  const [status, setStatus] = useState('idle');
+  const [errors, setErrors] = useState<{contactMethod?: string; message?: string}>({});
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setValidationError('');
-    
-    // Get form data
-    const form = e.currentTarget;
+    setSubmitting(true);
+    setErrors({});
+
+    // Get the form data
+    const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    const email = formData.get('email') as string;
-    const phone = formData.get('phone') as string;
-    
-    // Validate that either email or phone is provided
-    if (!email && !phone) {
-      setValidationError('Please provide either an email or phone number so we can contact you.');
+    const contactMethod = formData.get('contactMethod') as string;
+    const message = formData.get('message') as string;
+
+    // Simple validation
+    const newErrors: {contactMethod?: string; message?: string} = {};
+    if (!contactMethod) {
+      newErrors.contactMethod = 'Please provide your email or phone number';
+    }
+    if (!message) {
+      newErrors.message = 'Please enter your message';
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setSubmitting(false);
       return;
     }
-    
-    setIsSubmitting(true);
-    
-    // Submit to Formspree
-    fetch(`https://formspree.io/f/${formspreeId}`, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-      .then(response => {
-        if (response.ok) {
-          setFormSubmitted(true);
-          form.reset();
-        } else {
-          alert('There was an error submitting the form. Please try again.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error submitting the form. Please try again.');
-      })
-      .finally(() => {
-        setIsSubmitting(false);
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
       });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+        alert('Oops! There was a problem submitting your form. Please try again.');
+      }
+    } catch (error) {
+      setStatus('error');
+      alert('Oops! There was a problem submitting your form. Please try again.');
+    }
+
+    setSubmitting(false);
   };
 
+  if (status === 'success') {
+    return (
+      <div className={`p-6 bg-white rounded-lg shadow-sm ${className}`}>
+        <div className="text-center py-12">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
+            <svg
+              className="w-8 h-8 text-green-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h3 className="text-2xl font-bold mb-4">Thank You!</h3>
+          <p className="text-gray-600 max-w-md mx-auto">{successMessage}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className={`bg-white rounded-lg shadow-sm p-6 ${className}`}>
+    <div className={`p-6 bg-white rounded-lg shadow-sm ${className}`}>
       {title && <h2 className="text-2xl font-bold mb-2">{title}</h2>}
       {subtitle && <p className="text-gray-600 mb-6">{subtitle}</p>}
 
-      {formSubmitted ? (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
-          <p>{successMessage}</p>
-        </div>
-      ) : (
-        <form onSubmit={handleFormSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-              Name
+      <form onSubmit={handleSubmit}>
+        <div className="space-y-6">
+          <div>
+            <label
+              htmlFor="contactMethod"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Email or Phone Number *
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-              required
+              name="contactMethod"
+              id="contactMethod"
+              placeholder="Enter your email or phone number"
+              className={`w-full px-4 py-3 rounded-lg border ${
+                errors.contactMethod ? 'border-red-500' : 'border-gray-300'
+              } focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent`}
             />
-          </div>
-          
-          <p className="text-sm text-gray-600 mb-2">Please provide at least one contact method:</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                Phone
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-              />
-            </div>
+            {errors.contactMethod && (
+              <p className="mt-1 text-sm text-red-600">{errors.contactMethod}</p>
+            )}
           </div>
 
-          {validationError && (
-            <div className="mb-4 p-2 bg-red-50 text-red-700 border border-red-200 rounded-md text-sm">
-              {validationError}
-            </div>
-          )}
-
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-              Message
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Message *
             </label>
             <textarea
               id="message"
               name="message"
               rows={5}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-purple focus:border-primary-purple"
-              required
+              placeholder="How can we help you?"
+              className={`w-full px-4 py-3 rounded-lg border ${
+                errors.message ? 'border-red-500' : 'border-gray-300'
+              } focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-transparent`}
             ></textarea>
+            {errors.message && (
+              <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+            )}
           </div>
 
-          <input type="hidden" name="_subject" value="New Contact Form Submission" />
-          <input type="hidden" name="_replyto" value={COMPANY_EMAIL} />
-          
-          <div className="flex items-center justify-end">
+          <div>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className={`px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white rounded-md shadow-sm hover:shadow-md transition-all duration-200 ${
-                isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-              }`}
+              disabled={submitting}
+              className="w-full bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-200 disabled:opacity-70 flex items-center justify-center"
             >
-              {isSubmitting ? 'Sending...' : buttonText}
+              {submitting ? (
+                <>
+                  <svg
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                buttonText
+              )}
             </button>
           </div>
-        </form>
-      )}
+        </div>
+      </form>
     </div>
   );
 } 

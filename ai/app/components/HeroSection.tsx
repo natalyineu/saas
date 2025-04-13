@@ -1,18 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import BrowserMockup from './ui/BrowserMockup';
-import Modal from './ui/Modal';
-import CampaignDetails from './ui/CampaignDetails';
-import OptimizationSuggestions from './ui/OptimizationSuggestions';
 import MobileDashboardView from './ui/MobileDashboardView';
 import TabletDashboardView from './ui/TabletDashboardView';
 import { DASHBOARD_URL } from '../lib/utils/constants';
 
+// Lazy load modal components
+const Modal = lazy(() => import('./ui/Modal'));
+const CampaignDetails = lazy(() => import('./ui/CampaignDetails'));
+const OptimizationSuggestions = lazy(() => import('./ui/OptimizationSuggestions'));
+
 export default function HeroSection() {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [isOptimizeModalOpen, setIsOptimizeModalOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   
   // Scroll to case studies section
   const scrollToCaseStudies = () => {
@@ -22,6 +25,14 @@ export default function HeroSection() {
     } else {
       setIsDetailsModalOpen(true);
     }
+  };
+  
+  // Handle form submission feedback
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Let Formspree handle the actual submission
+    setTimeout(() => {
+      setFormSubmitted(true);
+    }, 500);
   };
 
   return (
@@ -88,24 +99,46 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-4 pt-2">
-                <Link 
-                  href="#pricing" 
-                  className="btn-primary inline-block"
-                >
-                  Check Prices
-                </Link>
-                <Link 
-                  href={DASHBOARD_URL}
-                  className="btn-secondary ai-glow inline-block flex items-center text-base"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Start Your Ads
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
+              {/* Standalone form with large rounded corners */}
+              <div className="mt-8 mb-16 max-w-4xl">
+                {formSubmitted ? (
+                  <div className="bg-white border border-gray-200 rounded-full p-4">
+                    <p className="text-gray-500 font-normal text-sm">
+                      Thanks! We'll contact you shortly.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="bg-white rounded-full shadow-lg overflow-hidden flex w-full relative">
+                    <div className="absolute inset-0 rounded-full opacity-10" style={{ background: 'linear-gradient(90deg, #4A00E0, #FF416C)' }}></div>
+                    <input 
+                      name="contact"
+                      type="text" 
+                      placeholder="Enter your email or phone" 
+                      className="px-8 py-6 border-0 bg-transparent w-full focus:ring-0 focus:outline-none text-gray-500 text-lg relative z-10"
+                      required
+                      form="contact-form"
+                    />
+                    <div className="px-8 flex items-center relative z-10">
+                      <button 
+                        type="submit"
+                        className="text-gray-600 font-normal flex items-center text-lg whitespace-nowrap"
+                        form="contact-form"
+                      >
+                        Get AI Ads
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </button>
+                    </div>
+                    <form 
+                      id="contact-form"
+                      action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || ''}`}
+                      method="POST"
+                      onSubmit={handleFormSubmit}
+                      className="hidden"
+                    ></form>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -144,17 +177,25 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Modals */}
+      {/* Modals - Lazy loaded */}
       {isDetailsModalOpen && (
-        <Modal title="Campaign Details" onClose={() => setIsDetailsModalOpen(false)}>
-          <CampaignDetails />
-        </Modal>
+        <Suspense fallback={<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-lg">Loading...</div>
+        </div>}>
+          <Modal title="Campaign Details" onClose={() => setIsDetailsModalOpen(false)}>
+            <CampaignDetails />
+          </Modal>
+        </Suspense>
       )}
       
       {isOptimizeModalOpen && (
-        <Modal title="Optimization Suggestions" onClose={() => setIsOptimizeModalOpen(false)}>
-          <OptimizationSuggestions />
-        </Modal>
+        <Suspense fallback={<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-lg">Loading...</div>
+        </div>}>
+          <Modal title="Optimization Suggestions" onClose={() => setIsOptimizeModalOpen(false)}>
+            <OptimizationSuggestions />
+          </Modal>
+        </Suspense>
       )}
     </section>
   );

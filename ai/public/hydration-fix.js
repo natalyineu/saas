@@ -1,37 +1,18 @@
 // Script to clean up browser extension attributes before React hydration
 (function() {
   try {
-    // Function to clean up attributes
-    function cleanupAttributes() {
+    // Prevent hydration errors from browser extensions that modify the DOM
+    if (typeof window !== 'undefined') {
+      // Remove attributes added by browser extensions
       document.querySelectorAll('[bis_skin_checked]').forEach(function(el) {
         el.removeAttribute('bis_skin_checked');
       });
-    }
-    
-    // Run immediately
-    cleanupAttributes();
-    
-    // Also set up a MutationObserver to handle future additions
-    if (typeof MutationObserver !== 'undefined') {
-      var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          if (mutation.type === 'attributes' && mutation.attributeName === 'bis_skin_checked') {
-            mutation.target.removeAttribute('bis_skin_checked');
-          }
-        });
-      });
       
-      // Start observing once DOM is loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        observer.observe(document.body, { 
-          attributes: true, 
-          subtree: true, 
-          attributeFilter: ['bis_skin_checked'] 
-        });
-      });
+      // Set a flag to tell React this DOM was pre-processed
+      window.__NEXT_HYDRATION_FIX = true;
     }
   } catch (e) {
-    // Silently fail - we don't want to break anything
-    console.error('Error in hydration-fix script:', e);
+    // Silent fail - don't break anything if this fails
+    console.error('Hydration fix error:', e);
   }
 })(); 

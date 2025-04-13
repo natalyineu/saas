@@ -11,12 +11,20 @@ import Script from 'next/script';
 // Initialize fonts
 const nunito = Nunito({
   subsets: ['latin'],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "700"],
   display: 'swap',
   variable: '--font-nunito',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
-export const metadata = seoMetadata;
+export const metadata = {
+  ...seoMetadata,
+  other: {
+    ...seoMetadata.other,
+    'priority-hints': 'on'
+  }
+};
 export const viewport = viewportConfig;
 
 export default function RootLayout({
@@ -31,6 +39,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#6366f1" />
         <script src="/hydration-fix.js" async></script>
+        
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://cdn.buymeacoffee.com" crossOrigin="anonymous" />
+        
         <GoogleAnalytics />
         <BuyMeCoffeeScript />
       </head>

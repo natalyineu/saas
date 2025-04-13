@@ -18,7 +18,6 @@ export default function DesktopMenu() {
     { href: '#features', label: 'Features' },
     { href: '#pricing', label: 'Pricing' },
     { href: '#how-it-works', label: 'How It Works' },
-    { href: '#case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];

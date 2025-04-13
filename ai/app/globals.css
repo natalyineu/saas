@@ -191,13 +191,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Add xs breakpoint for very small screens */
 @layer utilities {
-  @variants responsive {
-    .xs\:inline {
-      display: inline;
-    }
-    .xs\:hidden {
-      display: none;
-    }
+  .xs\:inline {
+    display: inline;
+  }
+  .xs\:hidden {
+    display: none;
   }
 }
 
