@@ -20,6 +20,7 @@ export default function DesktopMenu() {
     { href: '#how-it-works', label: 'How It Works' },
     { href: '#case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
