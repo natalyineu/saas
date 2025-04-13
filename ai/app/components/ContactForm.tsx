@@ -17,7 +17,7 @@ export default function ContactForm({
   subtitle = "We'd love to hear from you",
   className = '',
   formspreeId = 'moqpeyjn',
-  successMessage = "Thanks for your message! We'll get back to you soon.",
+  successMessage = "Thank you for your message. Our team will review it and get back to you shortly.",
   buttonText = 'Send Message',
 }: ContactFormProps) {
   const [status, setStatus] = useState('idle');
