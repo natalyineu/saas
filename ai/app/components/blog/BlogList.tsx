@@ -19,7 +19,7 @@ interface BlogListProps {
 }
 
 // The number of posts to show initially
-const INITIAL_POSTS_TO_SHOW = 6;
+const INITIAL_POSTS_TO_SHOW = 3;
 // Number of additional posts to load with each click
 const POSTS_PER_PAGE = 3;
 
@@ -217,7 +217,7 @@ export default function BlogList({ blogPosts }: BlogListProps) {
             onClick={handleLoadMore}
             className="px-6 py-3 bg-white text-primary-purple font-medium rounded-lg shadow-sm border border-primary-purple hover:bg-gray-50 transition-all duration-300 flex items-center"
           >
-            Load More Articles
+            View More Articles
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               className="h-5 w-5 ml-2" 
