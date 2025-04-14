@@ -37,6 +37,9 @@ export default function BlogList({ blogPosts }: BlogListProps) {
     );
   };
   
+  // Console log for debugging
+  console.log(`Showing ${postsToShow} out of ${blogPosts.length} posts`);
+  
   // Generate gradient backgrounds based on post index
   const getGradient = (index: number) => {
     const gradients = [
@@ -215,7 +218,7 @@ export default function BlogList({ blogPosts }: BlogListProps) {
         <div className="flex justify-center mt-10">
           <button 
             onClick={handleLoadMore}
-            className="px-6 py-3 bg-white text-primary-purple font-medium rounded-lg shadow-sm border border-primary-purple hover:bg-gray-50 transition-all duration-300 flex items-center"
+            className="px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium rounded-lg shadow-sm hover:opacity-90 transition-all duration-300 flex items-center"
           >
             View More Articles
             <svg 
