@@ -265,9 +265,6 @@ export default function Blog() {
           <section className="mb-16">
             <div className="mb-8 flex justify-between items-center">
               <h2 className="text-2xl md:text-3xl font-semibold">Success Stories</h2>
-              <Link href="/blog/category/case-study" className="text-primary-purple hover:text-primary-pink transition-colors">
-                <span className="flex items-center text-sm font-medium">View all case studies <ArrowRight className="h-4 w-4 ml-1" /></span>
-              </Link>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -313,7 +310,10 @@ export default function Blog() {
           
           {/* Blog Posts Section */}
           <section>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-8">Latest Articles</h2>
+            <div className="mb-8">
+              <hr className="border-gray-200 my-10" />
+              <h2 className="text-2xl md:text-3xl font-semibold mb-8">Latest Articles</h2>
+            </div>
             
             {/* Blog List component with Load More functionality */}
             <BlogList blogPosts={blogPosts} />
