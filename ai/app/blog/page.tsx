@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
   description: 'Explore our collection of digital marketing case studies, success stories, and insights. Learn how AI-Vertise helps businesses achieve their marketing goals.',
   keywords: 'digital marketing, case studies, success stories, marketing insights, AI marketing, social media marketing',
+  alternates: {
+    canonical: 'https://ai-vertise.com/blog',
+  },
   openGraph: {
     title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
     description: 'Explore our collection of digital marketing case studies, success stories, and insights. Learn how AI-Vertise helps businesses achieve their marketing goals.',

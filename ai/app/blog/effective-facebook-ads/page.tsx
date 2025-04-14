@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: '5 Keys to More Effective Facebook Advertising | AI-Vertise Boost',
   description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023 with these expert tips on video content, audience targeting, and AI optimization.',
   keywords: 'Facebook advertising, social media marketing, Facebook ads, digital marketing strategy, Meta ads',
+  alternates: {
+    canonical: 'https://ai-vertise.com/blog/effective-facebook-ads',
+  },
   openGraph: {
     title: '5 Keys to More Effective Facebook Advertising in 2023',
     description: 'Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.',

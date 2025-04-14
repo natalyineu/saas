@@ -10,9 +10,6 @@ export const seoMetadata: Metadata = {
   authors: [{ name: 'AI-Vertise Team' }],
   creator: 'AI-Vertise',
   publisher: 'AI-Vertise',
-  alternates: {
-    canonical: '/',
-  },
   robots: {
     index: true,
     follow: true,
