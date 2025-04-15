@@ -10,8 +10,18 @@
       ]
     }
   ],
+  "rewrites": [
+    { "source": "/ai(.*)", "destination": "$1" }
+  ],
+  "redirects": [
+    { "source": "/ai", "destination": "/", "permanent": true },
+    { "source": "/ai/(.*)", "destination": "/$1", "permanent": true }
+  ],
   "buildCommand": "cd ai && npm run build",
   "outputDirectory": "ai/.next",
   "installCommand": "npm install",
-  "trailingSlash": false
+  "trailingSlash": false,
+  "github": {
+    "silent": true
+  }
 } 
