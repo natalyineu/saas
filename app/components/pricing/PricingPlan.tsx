@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Plan } from '../PricingSection';
+import { Plan } from '../../data/pricing';
 import { useState, useEffect } from 'react';
 
 interface PricingPlanProps {
   plan: Plan;
   isAnnual: boolean;
-  getAnnualSavings: (monthlyPrice: string, annualPrice: string) => string;
+  getAnnualSavings?: (monthlyPrice: string, annualPrice: string) => string;
   getAnnualImpressions: (impressions: string) => string;
 }
 
@@ -19,6 +19,12 @@ export default function PricingPlan({ plan, isAnnual, getAnnualSavings, getAnnua
   useEffect(() => {
     setIsMounted(true);
   }, []);
+  
+  // Safe version of getAnnualSavings that handles undefined function
+  const getSavingsText = (monthlyPrice: string, annualPrice: string): string => {
+    if (!getAnnualSavings) return "";
+    return getAnnualSavings(monthlyPrice, annualPrice);
+  };
   
   return (
     <div 
@@ -43,7 +49,7 @@ export default function PricingPlan({ plan, isAnnual, getAnnualSavings, getAnnua
         
         {isAnnual && !plan.isCustom && (
           <span className="ml-2 text-xs font-medium text-green-600">
-            {getAnnualSavings(plan.monthlyPrice, plan.annualPrice)}
+            {getSavingsText(plan.monthlyPrice, plan.annualPrice)}
           </span>
         )}
       </div>

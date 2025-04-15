@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DASHBOARD_URL } from '../../lib/utils/constants';
+import { usePathname } from 'next/navigation';
 
 // Navigation link component
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -14,10 +15,13 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
 }
 
 export default function DesktopMenu() {
+  const pathname = usePathname();
+  const isHomepage = pathname === '/';
+
   const navLinks = [
-    { href: '#features', label: 'Features' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#how-it-works', label: 'How It Works' },
+    { href: isHomepage ? '#features' : '/#features', label: 'Features' },
+    { href: isHomepage ? '#pricing' : '/#pricing', label: 'Pricing' },
+    { href: isHomepage ? '#how-it-works' : '/#how-it-works', label: 'How It Works' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];
