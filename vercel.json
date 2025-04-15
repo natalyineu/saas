@@ -10,11 +10,15 @@
       ]
     }
   ],
-  "trailingSlash": false,
   "buildCommand": "cd ai && npm run build",
   "outputDirectory": "ai/.next",
   "installCommand": "npm install",
+  "redirects": [
+    { "source": "/", "destination": "/ai" }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/ai/$1" }
-  ]
+    { "source": "/((?!api/).*)", "destination": "/ai/$1" },
+    { "source": "/api/(.*)", "destination": "/ai/api/$1" }
+  ],
+  "trailingSlash": false
 } 
