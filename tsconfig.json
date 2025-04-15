@@ -40,7 +40,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "ai"
+    "node_modules"
   ]
 }
