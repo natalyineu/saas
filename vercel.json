@@ -13,5 +13,8 @@
   "trailingSlash": false,
   "buildCommand": "cd ai && npm run build",
   "outputDirectory": "ai/.next",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/ai/$1" }
+  ]
 } 
