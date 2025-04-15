@@ -1,0 +1,21 @@
+{
+  "name": "AI-Vertise Boost",
+  "short_name": "AI-Vertise",
+  "description": "AI-powered advertising platform for small and medium businesses",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3F5EFB",
+  "icons": [
+    {
+      "src": "/favicon-new.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+} 

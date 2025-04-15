@@ -1,0 +1,55 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#F8FAFC"/>
+  
+  <!-- Restaurant illustration -->
+  <rect x="150" y="150" width="500" height="300" rx="8" fill="#FFEDD5"/>
+  
+  <!-- Restaurant building -->
+  <rect x="200" y="200" width="400" height="200" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Door -->
+  <rect x="350" y="280" width="100" height="120" rx="2" fill="#FF7E5F" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <rect x="230" y="230" width="80" height="80" rx="2" fill="#FFFBEB" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="490" y="230" width="80" height="80" rx="2" fill="#FFFBEB" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Signage -->
+  <rect x="270" y="170" width="260" height="40" rx="4" fill="#FF7E5F"/>
+  <text x="400" y="195" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">ITALIAN RESTAURANT</text>
+  
+  <!-- Restaurant tables inside windows -->
+  <circle cx="270" cy="270" r="15" fill="#FEB47B" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="530" cy="270" r="15" fill="#FEB47B" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- People waiting outside -->
+  <circle cx="300" cy="380" r="12" fill="#64748B"/>
+  <circle cx="330" cy="380" r="12" fill="#64748B"/>
+  <circle cx="360" cy="380" r="12" fill="#64748B"/>
+  <circle cx="390" cy="380" r="12" fill="#64748B"/>
+  <circle cx="420" cy="380" r="12" fill="#64748B"/>
+  <circle cx="450" cy="380" r="12" fill="#64748B"/>
+  <circle cx="480" cy="380" r="12" fill="#64748B"/>
+  
+  <!-- Reservation calendar -->
+  <rect x="600" y="230" width="120" height="140" rx="4" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="600" y="230" width="120" height="30" rx="4" fill="#FF7E5F"/>
+  <text x="660" y="250" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">RESERVATIONS</text>
+  
+  <!-- Calendar days (all booked) -->
+  <rect x="610" y="270" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="645" y="270" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="680" y="270" width="25" height="25" rx="2" fill="#FEB47B"/>
+  
+  <rect x="610" y="305" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="645" y="305" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="680" y="305" width="25" height="25" rx="2" fill="#FEB47B"/>
+  
+  <rect x="610" y="340" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="645" y="340" width="25" height="25" rx="2" fill="#FEB47B"/>
+  <rect x="680" y="340" width="25" height="25" rx="2" fill="#FEB47B"/>
+  
+  <!-- Stats indicator -->
+  <rect x="300" y="100" width="200" height="40" rx="20" fill="#10B981"/>
+  <text x="400" y="125" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">+87% RESERVATIONS</text>
+</svg> 
