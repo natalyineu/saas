@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
 import PricingSection from './components/PricingSection';
 import HowItWorksSection from './components/HowItWorksSection';
+import ClientCostComparisonSection from './components/ClientCostComparisonSection';
 import CaseStudiesSection from './components/CaseStudiesSection';
 import Footer from './components/Footer';
 import Script from 'next/script';
@@ -34,6 +35,7 @@ export default function Home() {
         <FeaturesSection />
         <PricingSection />
         <HowItWorksSection />
+        <ClientCostComparisonSection />
         <CaseStudiesSection />
       </main>
       <Footer />
