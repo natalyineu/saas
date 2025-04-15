@@ -39,7 +39,7 @@ export default function PricingSection() {
     {
       name: "Starter",
       monthlyPrice: "$99",
-      annualPrice: "$99",
+      annualPrice: "$1,188",
       impressions: "16,500",
       description: "Perfect for small businesses just getting started with advertising",
       featureGroups: [
@@ -63,13 +63,6 @@ export default function PricingSection() {
             "Email support only",
             "Response within 48 hours"
           ]
-        },
-        {
-          title: "Service Details",
-          features: [
-            "Monthly budget management",
-            "Simple conversion tracking"
-          ]
         }
       ],
       buttonText: "Choose Starter",
@@ -79,7 +72,7 @@ export default function PricingSection() {
     {
       name: "Growth",
       monthlyPrice: "$249",
-      annualPrice: "$249",
+      annualPrice: "$2,988",
       impressions: "46,500",
       description: "Ideal for growing businesses looking to expand their reach",
       featureGroups: [
@@ -105,13 +98,6 @@ export default function PricingSection() {
             "Priority email support",
             "Response within 24 hours"
           ]
-        },
-        {
-          title: "Service Details",
-          features: [
-            "Weekly budget optimization",
-            "Simple conversion tracking"
-          ]
         }
       ],
       buttonText: "Choose Growth",
@@ -121,7 +107,7 @@ export default function PricingSection() {
     {
       name: "Impact",
       monthlyPrice: "$579",
-      annualPrice: "$579",
+      annualPrice: "$6,948",
       impressions: "96,500",
       description: "For established businesses ready to maximize their advertising ROI",
       featureGroups: [
@@ -147,15 +133,6 @@ export default function PricingSection() {
             "Dedicated support manager",
             "Priority response within hours"
           ]
-        },
-        {
-          title: "Service Details",
-          features: [
-            "Daily budget optimization",
-            "Simple conversion tracking",
-            "Competitor analysis & benchmarking",
-            "Retargeting campaigns included"
-          ]
         }
       ],
       buttonText: "Choose Impact",
@@ -165,7 +142,7 @@ export default function PricingSection() {
     {
       name: "Tailored",
       monthlyPrice: "From $600",
-      annualPrice: "From $600",
+      annualPrice: "From $7,200",
       impressions: "100k+",
       description: "Custom solution tailored to your specific business needs",
       featureGroups: [
@@ -189,15 +166,6 @@ export default function PricingSection() {
             "VIP support with account team",
             "Strategic consulting included"
           ]
-        },
-        {
-          title: "Service Details",
-          features: [
-            "Continuous budget optimization",
-            "Simple conversion tracking",
-            "Full competitive analysis",
-            "Multi-platform strategy"
-          ]
         }
       ],
       buttonText: "Talk to Sales",
@@ -215,7 +183,8 @@ export default function PricingSection() {
     const monthly = parseInt(monthlyPrice.replace(/\D/g, ''));
     const annual = parseInt(annualPrice.replace(/\D/g, ''));
     
-    return `Save ${((monthly * 12 - annual * 12) / (monthly * 12) * 100).toFixed(0)}%`;
+    // Annual pricing doesn't provide a discount in this case since we're showing the full annual amount
+    return "";
   };
   
   const getAnnualImpressions = (impressions: string): string => {
@@ -224,7 +193,8 @@ export default function PricingSection() {
     }
     
     const baseImpressions = parseInt(impressions.replace(/,/g, ''));
-    const annualImpressions = baseImpressions * 12;
+    // For annual plans: monthly impressions × 12 months × 1.2 (20% bonus)
+    const annualImpressions = baseImpressions * 12 * 1.2;
     
     if (annualImpressions >= 1000000) {
       return `${(annualImpressions / 1000000).toFixed(1)}M+`;
@@ -234,17 +204,17 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-16 bg-soft-gradient">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 mb-3 text-xs font-medium text-primary-purple bg-primary-purple/10 rounded-full">PRICING</span>
-          <h2 className="text-4xl md:text-5xl mb-4 font-bold">Simple, Transparent Pricing</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+    <section id="pricing" className="py-12 bg-soft-gradient">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="text-center mb-10">
+          <span className="inline-block px-3 py-1 mb-2 text-xs font-medium text-primary-purple bg-primary-purple/10 rounded-full">PRICING</span>
+          <h2 className="text-3xl md:text-4xl mb-3 font-bold">Simple, Transparent Pricing</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto mb-6 text-sm">
             Choose a plan that fits your business needs. All plans include AI-powered campaigns, creative, and optimization.
           </p>
 
           {/* Billing toggle */}
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center mb-6">
             <span className={`mr-3 text-sm font-medium ${isAnnual ? 'text-gray-500' : 'text-gray-900'}`}>Monthly</span>
             
             <button
@@ -261,13 +231,19 @@ export default function PricingSection() {
             <span className={`ml-3 text-sm font-medium ${isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>
               Annual
               <span className="ml-1.5 inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
-                Save 20%
+                +20% impressions
               </span>
             </span>
           </div>
+          
+          {isAnnual && (
+            <p className="text-sm text-gray-600 mt-2">
+              Annual payment includes a bonus of 20% more impressions!
+            </p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <PricingPlan 
               key={index}
@@ -280,10 +256,10 @@ export default function PricingSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-500 mb-6">All plans include access to our AI advertising platform</p>
+          <p className="text-gray-500 mb-5 text-sm">All plans include access to our AI advertising platform</p>
           <Link
             href="/contact"
-            className="text-primary-purple hover:text-primary-pink transition-colors duration-200 inline-flex items-center"
+            className="text-primary-purple hover:text-primary-pink transition-colors duration-200 inline-flex items-center text-sm"
           >
             Need a custom plan? Talk to our team
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">

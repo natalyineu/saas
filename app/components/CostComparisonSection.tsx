@@ -81,7 +81,7 @@ export default function CostComparisonSection() {
         isVisible={isVisible}
         comparisonData={comparisonData}
         title="Marketing Team Cost Comparison"
-        subtitle="See how AI-Vertise delivers <span class='font-semibold'>the same marketing functions at a fraction of the cost and staff requirements</span> compared to traditional options."
+        subtitle="See how AI-Vertise delivers <span class='font-medium'>the same marketing functions at a fraction of the cost</span> compared to traditional options."
         showCta={true}
       />
     </div>
