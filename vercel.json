@@ -1,9 +1,9 @@
 {
-  "buildCommand": "cd ai && npm ci --prefer-offline --no-audit --no-fund || npm install --prefer-offline --no-audit --no-fund --legacy-peer-deps && npm run build",
-  "outputDirectory": "ai/.next",
+  "buildCommand": "npm ci --prefer-offline --no-audit --no-fund || npm install --prefer-offline --no-audit --no-fund --legacy-peer-deps && npm run build",
+  "outputDirectory": ".next",
   "framework": "nextjs",
-  "devCommand": "cd ai && npm run dev",
-  "installCommand": "cd ai && npm install --no-audit --no-fund --legacy-peer-deps --prefer-offline",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --no-audit --no-fund --legacy-peer-deps --prefer-offline",
   "headers": [
     {
       "source": "/(.*)",
