@@ -2,20 +2,44 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import PricingPlan from './pricing/PricingPlan';
+
+// Define types for the plan and features
+interface Feature {
+  title: string;
+  features: string[];
+}
+
+export interface Plan {
+  name: string;
+  monthlyPrice: string;
+  annualPrice: string;
+  impressions: string;
+  description: string;
+  featureGroups: Feature[];
+  buttonText: string;
+  buttonLink: string;
+  highlight: boolean;
+  isCustom?: boolean;
+}
 
 export default function PricingSection() {
   // Add client-side state to prevent hydration mismatch
   const [isClient, setIsClient] = useState(false);
-
+  // Add state for billing period toggle
+  const [isAnnual, setIsAnnual] = useState(false);
+  
   // This will only run on the client after hydration
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const plans = [
+  // Plans data structure with monthly and annual pricing options
+  const plans: Plan[] = [
     {
       name: "Starter",
-      price: "$99",
+      monthlyPrice: "$99",
+      annualPrice: "$99",
       impressions: "16,500",
       description: "Perfect for small businesses just getting started with advertising",
       featureGroups: [
@@ -54,7 +78,8 @@ export default function PricingSection() {
     },
     {
       name: "Growth",
-      price: "$249",
+      monthlyPrice: "$249",
+      annualPrice: "$249",
       impressions: "46,500",
       description: "Ideal for growing businesses looking to expand their reach",
       featureGroups: [
@@ -95,7 +120,8 @@ export default function PricingSection() {
     },
     {
       name: "Impact",
-      price: "$579",
+      monthlyPrice: "$579",
+      annualPrice: "$579",
       impressions: "96,500",
       description: "For established businesses ready to maximize their advertising ROI",
       featureGroups: [
@@ -138,7 +164,8 @@ export default function PricingSection() {
     },
     {
       name: "Tailored",
-      price: "From $600",
+      monthlyPrice: "From $600",
+      annualPrice: "From $600",
       impressions: "100k+",
       description: "Custom solution tailored to your specific business needs",
       featureGroups: [
@@ -173,117 +200,96 @@ export default function PricingSection() {
           ]
         }
       ],
-      buttonText: "Request a Quote",
-      buttonLink: "https://buymeacoffee.com/aivertise/membership",
+      buttonText: "Talk to Sales",
+      buttonLink: "/contact",
       highlight: false,
       isCustom: true
     }
   ];
 
+  const getAnnualSavings = (monthlyPrice: string, annualPrice: string): string => {
+    if (monthlyPrice.includes("From") || annualPrice.includes("From")) {
+      return "";
+    }
+    
+    const monthly = parseInt(monthlyPrice.replace(/\D/g, ''));
+    const annual = parseInt(annualPrice.replace(/\D/g, ''));
+    
+    return `Save ${((monthly * 12 - annual * 12) / (monthly * 12) * 100).toFixed(0)}%`;
+  };
+  
+  const getAnnualImpressions = (impressions: string): string => {
+    if (impressions.includes("k+")) {
+      return "1.2M+";
+    }
+    
+    const baseImpressions = parseInt(impressions.replace(/,/g, ''));
+    const annualImpressions = baseImpressions * 12;
+    
+    if (annualImpressions >= 1000000) {
+      return `${(annualImpressions / 1000000).toFixed(1)}M+`;
+    }
+    
+    return annualImpressions.toLocaleString();
+  };
+
   return (
-    <section id="pricing" className="py-12 bg-soft-gradient">
+    <section id="pricing" className="py-16 bg-soft-gradient">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl mb-3">Simple, Transparent Pricing</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that works best for your business. All plans include our core AI-powered features.
+        <div className="text-center mb-12">
+          <span className="inline-block px-3 py-1 mb-3 text-xs font-medium text-primary-purple bg-primary-purple/10 rounded-full">PRICING</span>
+          <h2 className="text-4xl md:text-5xl mb-4 font-bold">Simple, Transparent Pricing</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+            Choose a plan that fits your business needs. All plans include AI-powered campaigns, creative, and optimization.
           </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative bg-white p-4 rounded-lg ${plan.highlight ? 'ring-3 ring-primary-purple shadow-lg' : 'border border-gray-200 shadow-md'}`}
+
+          {/* Billing toggle */}
+          <div className="flex items-center justify-center mb-8">
+            <span className={`mr-3 text-sm font-medium ${isAnnual ? 'text-gray-500' : 'text-gray-900'}`}>Monthly</span>
+            
+            <button
+              onClick={() => isClient && setIsAnnual(!isAnnual)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-purple/40 ${isAnnual ? 'bg-primary-purple' : 'bg-gray-300'}`}
+              role="switch"
+              aria-checked={isAnnual}
             >
-              {/* Only render badges client-side to prevent hydration mismatch */}
-              {isClient && plan.highlight && (
-                <div className="absolute -top-2.5 left-0 right-0 flex justify-center">
-                  <div className="bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs font-bold uppercase py-1 px-4 rounded-full shadow-sm">
-                    MOST POPULAR
-                  </div>
-                </div>
-              )}
-              <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
-              <div className="mb-2">
-                <span className="text-2xl font-bold">{plan.price}</span>
-                {!plan.isCustom && <span className="text-gray-600 text-sm">/month</span>}
-              </div>
-              
-              {/* Impression count highlight */}
-              <div className="flex items-center mb-3 p-1.5 bg-gray-50 rounded-md border-l-3 border-primary-purple">
-                <span className="text-primary-purple mr-1.5">📊</span>
-                <div>
-                  <span className="text-xs text-gray-600 block">Monthly Reach</span>
-                  <span className="font-bold text-base text-primary-purple">{plan.impressions} impressions</span>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
-              
-              {plan.featureGroups.map((group, gIndex) => (
-                <div key={gIndex} className="mb-4">
-                  <h4 className="text-xs uppercase text-gray-500 font-semibold mb-1.5 border-b border-gray-100 pb-1">{group.title}</h4>
-                  {group.title === "Ad Channels" ? (
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {group.features.map((feature, fIndex) => {
-                        let bgColor = "bg-green-100";
-                        let textColor = "text-green-800";
-                        
-                        if (feature.includes("Native")) {
-                          bgColor = "bg-purple-100";
-                          textColor = "text-purple-800";
-                        } else if (feature.includes("Search")) {
-                          bgColor = "bg-blue-100";
-                          textColor = "text-blue-800";
-                        } else if (feature.includes("Custom")) {
-                          bgColor = "bg-orange-100";
-                          textColor = "text-orange-800";
-                        } else if (feature.includes("OLV")) {
-                          bgColor = "bg-pink-100";
-                          textColor = "text-pink-800";
-                        }
-                        
-                        return (
-                          <span 
-                            key={fIndex}
-                            className={`${bgColor} ${textColor} text-xs font-medium px-2.5 py-1 rounded-full`}
-                          >
-                            {feature}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <ul className="space-y-1.5 mb-3">
-                      {group.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start text-sm">
-                          <svg className="h-4 w-4 text-primary-purple mr-1.5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          {/* Replace dangerouslySetInnerHTML with conditional styling */}
-                          <span className={feature.includes("Weekly") || feature.includes("dashboard") ? "font-semibold text-primary-purple" : ""}>
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-              
-              <Link 
-                href={plan.buttonLink}
-                className={`block w-full text-center py-2 px-4 rounded-md font-medium transition-colors ${
-                  plan.highlight 
-                    ? 'bg-gradient-to-r from-primary-purple to-primary-pink text-white hover:from-primary-purple/90 hover:to-primary-pink/90' 
-                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-                }`}
-              >
-                {plan.buttonText}
-              </Link>
-            </div>
+              <span
+                className={`${isAnnual ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+              />
+            </button>
+            
+            <span className={`ml-3 text-sm font-medium ${isAnnual ? 'text-gray-900' : 'text-gray-500'}`}>
+              Annual
+              <span className="ml-1.5 inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
+                Save 20%
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {plans.map((plan, index) => (
+            <PricingPlan 
+              key={index}
+              plan={plan} 
+              isAnnual={isAnnual} 
+              getAnnualSavings={getAnnualSavings}
+              getAnnualImpressions={getAnnualImpressions}
+            />
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-gray-500 mb-6">All plans include access to our AI advertising platform</p>
+          <Link
+            href="/contact"
+            className="text-primary-purple hover:text-primary-pink transition-colors duration-200 inline-flex items-center"
+          >
+            Need a custom plan? Talk to our team
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
