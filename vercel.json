@@ -3,5 +3,29 @@
   "outputDirectory": "ai/.next",
   "framework": "nextjs",
   "devCommand": "cd ai && npm run dev",
-  "installCommand": "cd ai && npm install --no-audit --no-fund --legacy-peer-deps --prefer-offline"
+  "installCommand": "cd ai && npm install --no-audit --no-fund --legacy-peer-deps --prefer-offline",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<domain>.*\\.)?vercel\\.app"
+        }
+      ],
+      "destination": "https://$domain/$path",
+      "permanent": true
+    }
+  ]
 } 
