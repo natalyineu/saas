@@ -13,10 +13,5 @@
   "buildCommand": "cd ai && npm run build",
   "outputDirectory": "ai/.next",
   "installCommand": "npm install",
-  "redirects": [],
-  "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/$1" },
-    { "source": "/api/(.*)", "destination": "/api/$1" }
-  ],
   "trailingSlash": false
 } 
