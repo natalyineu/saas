@@ -10,7 +10,7 @@
       ]
     }
   ],
-  "buildCommand": "cd ai && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "ai/.next",
   "installCommand": "npm install",
   "trailingSlash": false
