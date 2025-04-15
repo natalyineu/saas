@@ -50,6 +50,18 @@ export function QuickLinks() {
       </li>
       <li>
         <FooterLinkItem 
+          href="/#cost-comparison"
+          icon={
+            <svg className="h-3.5 w-3.5 md:h-4 md:w-4 text-primary-purple/70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          }
+        >
+          Cost Comparison
+        </FooterLinkItem>
+      </li>
+      <li>
+        <FooterLinkItem 
           href="/#case-studies"
           icon={
             <svg className="h-3.5 w-3.5 md:h-4 md:w-4 text-primary-purple/70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +69,7 @@ export function QuickLinks() {
             </svg>
           }
         >
-          Case Studies
+          Success Stories
         </FooterLinkItem>
       </li>
     </FooterLinkGroup>
