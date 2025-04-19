@@ -1,5 +1,5 @@
 import './globals.css';
-import { Nunito } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import SupportButton from './components/SupportButton';
 import CookieConsent from './components/CookieConsent';
 import GoogleAnalytics from './components/analytics/GoogleAnalytics';
@@ -9,11 +9,11 @@ import { seoMetadata, viewportConfig } from './config/seo';
 import Script from 'next/script';
 
 // Initialize fonts
-const nunito = Nunito({
+const inter = Inter({
   subsets: ['latin'],
   weight: ["400", "500", "700"],
   display: 'swap',
-  variable: '--font-nunito',
+  variable: '--font-inter',
   preload: true,
   fallback: ['system-ui', 'arial'],
 });
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${nunito.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

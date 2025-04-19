@@ -22,8 +22,8 @@ module.exports = {
         'text': '#2E2E2E',
       },
       fontFamily: {
-        sans: ['var(--font-nunito)', 'sans-serif'],
-        heading: ['var(--font-nunito)', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-inter)', 'sans-serif'],
       },
       backgroundImage: {
         'soft-gradient': 'linear-gradient(90deg, rgba(63,94,251,0.03) 0%, rgba(252,70,107,0.03) 100%)',

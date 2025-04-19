@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     script.setAttribute('data-slug', 'aivertise');
     script.setAttribute('data-color', '#5F7FFF');
     script.setAttribute('data-emoji', '🎯');
-    script.setAttribute('data-font', 'Nunito');
+    script.setAttribute('data-font', 'Inter');
     script.setAttribute('data-text', 'Buy an Ads package');
     script.setAttribute('data-outline-color', '#000000');
     script.setAttribute('data-font-color', '#ffffff');
