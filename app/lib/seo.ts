@@ -29,8 +29,31 @@ export function generateStructuredData() {
     ]
   };
 
+  const productData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AI-Vertise Ad Management Platform",
+    "description": "AI-powered advertising platform that optimizes campaigns for small and medium businesses",
+    "brand": {
+      "@type": "Brand",
+      "name": "AI-Vertise"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "299",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    }
+  };
+
   return {
     structuredData,
-    organizationData
+    organizationData,
+    productData
   };
 } 

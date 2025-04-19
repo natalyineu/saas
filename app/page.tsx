@@ -16,7 +16,7 @@ export const dynamic = 'force-static';
 export const revalidate = 3600; // Revalidate every hour
 
 export default function Home() {
-  const { structuredData, organizationData } = generateStructuredData();
+  const { structuredData, organizationData, productData } = generateStructuredData();
 
   return (
     <SuppressHydrationWarning>
@@ -29,6 +29,11 @@ export default function Home() {
         id="organization-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+      />
+      <Script
+        id="product-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }}
       />
       <Navbar />
       <main>

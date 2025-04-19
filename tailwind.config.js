@@ -26,7 +26,7 @@ module.exports = {
         heading: ['var(--font-inter)', 'sans-serif'],
       },
       backgroundImage: {
-        'soft-gradient': 'linear-gradient(90deg, rgba(63,94,251,0.03) 0%, rgba(252,70,107,0.03) 100%)',
+        'soft-gradient': 'linear-gradient(90deg, rgba(63,94,251,0.01) 0%, rgba(252,70,107,0.01) 100%)',
         'bold-gradient': 'linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
       },
       typography: (theme) => ({

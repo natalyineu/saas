@@ -37,6 +37,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="canonical" href="https://ai-vertise.com" />
         <meta name="theme-color" content="#6366f1" />
         <script src="/hydration-fix.js" async></script>
         
