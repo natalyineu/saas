@@ -10,18 +10,30 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 // Metadata for SEO
 export const metadata: Metadata = {
   title: 'UK Advertising Landscape 2024 | AI-Vertise Boost',
-  description: 'Explore the current UK advertising landscape in 2024, including key trends, regulatory changes, consumer behavior shifts, and AI adoption within the industry.',
+  description: 'Explore key trends in the UK advertising landscape for 2024, including regulatory changes and AI adoption in digital marketing.',
+  keywords: 'UK advertising, UK marketing trends, 2024 advertising landscape, digital marketing UK, British advertising market',
   openGraph: {
     title: 'UK Advertising Landscape 2024 | AI-Vertise Boost',
-    description: 'Explore the current UK advertising landscape in 2024, including key trends, regulatory changes, consumer behavior shifts, and AI adoption within the industry.',
+    description: 'Explore key trends in the UK advertising landscape for 2024, including regulatory changes and AI adoption in digital marketing.',
+    type: 'article',
+    publishedTime: '2024-02-10',
+    authors: ['Marketing Team'],
     images: [
       {
-        url: '/images/blog/placeholder.svg',
+        url: '/images/blog/uk-advertising.jpg',
         width: 1200,
         height: 630,
         alt: 'UK Advertising Landscape 2024',
       }
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UK Advertising Landscape 2024',
+    description: 'Explore key trends in the UK advertising landscape for 2024.',
+    images: ['/images/blog/uk-advertising.jpg'],
+    creator: '@aivertise',
+    site: '@aivertise',
   },
 };
 

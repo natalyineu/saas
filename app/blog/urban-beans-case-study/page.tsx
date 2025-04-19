@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143% | AI-Vertise',
+  title: 'Coffee Shop Success: 143% Traffic Increase | AI-Vertise',
   description: 'Discover how a specialty coffee shop used AI-powered advertising to increase foot traffic by 143% and attract new customers in a competitive market. Learn about their successful digital marketing strategy.',
   keywords: 'coffee shop marketing, local business advertising, foot traffic increase, digital marketing case study, AI advertising success',
   openGraph: {
@@ -25,8 +25,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Coffee Shop Success Story: 143% Increase in Foot Traffic',
-    description: 'See how this coffee shop used AI-Vertise to outperform competitors',
+    description: 'See how this coffee shop used AI-Vertise to outperform competitors and increase foot traffic by 143%',
     images: ['/og-coffee-shop-case-study.jpg'],
+    creator: '@aivertise',
+    site: '@aivertise',
   },
 };
 

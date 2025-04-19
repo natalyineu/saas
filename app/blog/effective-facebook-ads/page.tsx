@@ -6,7 +6,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: '5 Keys to More Effective Facebook Advertising | AI-Vertise Boost',
-  description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023 with these expert tips on video content, audience targeting, and AI optimization.',
+  description: 'Learn the latest strategies for maximizing your ROI on Facebook ads with expert tips on video content, audience targeting, and optimization.',
   keywords: 'Facebook advertising, social media marketing, Facebook ads, digital marketing strategy, Meta ads',
   alternates: {
     canonical: 'https://ai-vertise.com/blog/effective-facebook-ads',
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     title: '5 Keys to Effective Facebook Advertising',
     description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023.',
     images: ['/images/blog/facebook-ads.jpg'],
+    creator: '@aivertise',
+    site: '@aivertise',
   },
 };
 
