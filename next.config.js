@@ -27,6 +27,8 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
+  // Transpile chart.js and related packages to fix webpack bundling issues
+  transpilePackages: ['chart.js', 'react-chartjs-2'],
   // Add headers for security and performance
   async headers() {
     return [
@@ -63,6 +65,8 @@ const nextConfig = {
       },
     ];
   },
+  // Set the src directory as the application source
+  distDir: '.next',
 };
 
 module.exports = nextConfig; 
