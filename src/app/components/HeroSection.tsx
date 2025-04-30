@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import BrowserMockup from './ui/BrowserMockup';
-import MobileDashboardView from './ui/MobileDashboardView';
-import TabletDashboardView from './ui/TabletDashboardView';
+import MobileDashboardView from '@/components/ui/MobileDashboardView';
+import TabletDashboardView from '@/components/ui/TabletDashboardView';
 import { DASHBOARD_URL } from '@/lib/utils/constants';
 
 // Dynamic imports with explicit loading state and no SSR
-const Modal = dynamic(() => import('./ui/Modal'), {
+const Modal = dynamic(() => import('@/components/ui/Modal'), {
   ssr: false,
   loading: () => (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
@@ -18,12 +18,12 @@ const Modal = dynamic(() => import('./ui/Modal'), {
   )
 });
 
-const CampaignDetails = dynamic(() => import('./ui/CampaignDetails'), { 
+const CampaignDetails = dynamic(() => import('@/components/ui/CampaignDetails'), { 
   ssr: false,
   loading: () => <div className="p-4 text-center">Loading campaign details...</div>
 });
 
-const OptimizationSuggestions = dynamic(() => import('./ui/OptimizationSuggestions'), {
+const OptimizationSuggestions = dynamic(() => import('@/components/ui/OptimizationSuggestions'), {
   ssr: false,
   loading: () => <div className="p-4 text-center">Loading optimization suggestions...</div>
 });

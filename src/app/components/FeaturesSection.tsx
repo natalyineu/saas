@@ -5,7 +5,7 @@ import {
   RocketIcon, 
   AIBrainIcon, 
   AnalyticsIcon 
-} from './ui/AnimatedIcons';
+} from '@/components/ui/AnimatedIcons';
 import { FEATURES } from '@/lib/utils/constants';
 
 export default function FeaturesSection() {

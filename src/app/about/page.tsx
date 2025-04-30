@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Script from 'next/script';
 import Image from 'next/image';
-import SuppressHydrationWarning from '../components/ui/SuppressHydrationWarning';
+import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
 
 export const metadata = {
   title: 'About AI-Vertise | Our Story and Mission',

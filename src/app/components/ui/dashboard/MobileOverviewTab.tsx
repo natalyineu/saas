@@ -1,6 +1,6 @@
 import React from 'react';
 import MobileMetricCard from './MobileMetricCard';
-import DynamicChart from '../DynamicChart';
+import DynamicChart from '@/components/ui/DynamicChart';
 
 interface MobileOverviewTabProps {
   scrollToCaseStudies: () => void;

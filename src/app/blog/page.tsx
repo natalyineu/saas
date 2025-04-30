@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Script from 'next/script';
-import SuppressHydrationWarning from '../components/ui/SuppressHydrationWarning';
+import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
 import BlogList from '../components/blog/BlogList';
 
 export const metadata: Metadata = {

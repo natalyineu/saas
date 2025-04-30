@@ -8,7 +8,7 @@ import CaseStudiesSection from './components/CaseStudiesSection';
 import Footer from './components/Footer';
 import Script from 'next/script';
 import { generateStructuredData } from '@/lib/seo';
-import SuppressHydrationWarning from './components/ui/SuppressHydrationWarning';
+import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
 import ContactForm from './components/ContactForm';
 
 // Enable static generation for this page
