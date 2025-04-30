@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { TargetBullseyeIcon } from './ui/BasicIcons';
+import { TargetBullseyeIcon } from '@/components/ui/BasicIcons';
 
 export default function SupportButton() {
   const [showTooltip, setShowTooltip] = useState(false);

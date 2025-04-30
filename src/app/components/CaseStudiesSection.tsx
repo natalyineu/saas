@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { CASE_STUDIES } from '@/lib/utils/constants';
-import CaseStudyIcon from './ui/CaseStudyIcons';
+import CaseStudyIcon from '@/components/ui/CaseStudyIcons';
 
 export default function CaseStudiesSection() {
   const [activeSlide, setActiveSlide] = useState(0);

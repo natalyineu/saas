@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import BrowserMockup from './ui/BrowserMockup';
+import BrowserMockup from '@/components/ui/BrowserMockup';
 import MobileDashboardView from '@/components/ui/MobileDashboardView';
 import TabletDashboardView from '@/components/ui/TabletDashboardView';
 import { DASHBOARD_URL } from '@/lib/utils/constants';
