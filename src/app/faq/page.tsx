@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { COMPANY_EMAIL } from '../lib/utils/constants';
 import { Metadata } from 'next';
+import { COMPANY_EMAIL } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | AI-Vertise Boost',

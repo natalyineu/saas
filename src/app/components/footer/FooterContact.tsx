@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_EMAIL, COMPANY_PHONE } from '../../lib/utils/constants';
+import { COMPANY_EMAIL, COMPANY_PHONE } from '@/lib/utils/constants';
 import FooterHeading from './FooterHeading';
 import SocialMediaLinks from './SocialMediaLinks';
 

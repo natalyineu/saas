@@ -1,6 +1,7 @@
 'use client';
 
-import { WORK_STEPS } from '../lib/utils/constants';
+import Image from 'next/image';
+import { WORK_STEPS } from '@/lib/utils/constants';
 import { useEffect, useState, useRef } from 'react';
 
 export default function HowItWorksSection() {

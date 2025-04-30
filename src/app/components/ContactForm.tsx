@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { COMPANY_EMAIL } from '../lib/utils/constants';
+import { COMPANY_EMAIL } from '@/lib/utils/constants';
 
 interface ContactFormProps {
   title?: string;

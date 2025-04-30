@@ -1,8 +1,9 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
-import { COMPANY_EMAIL, COMPANY_PHONE } from '../lib/utils/constants';
+import { COMPANY_EMAIL, COMPANY_PHONE } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
   title: 'Contact Us | AI-Vertise',

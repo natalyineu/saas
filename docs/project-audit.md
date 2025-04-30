@@ -9,7 +9,6 @@ saas/
 │   │   ├── blog/            # Blog pages and posts
 │   │   ├── components/      # App-specific components 
 │   │   ├── faq/             # FAQ section
-│   │   ├── lib/             # App-specific utility functions
 │   │   ├── policy/          # Policy pages
 │   │   ├── terms/           # Terms of service
 │   │   ├── cookie-policy/   # Cookie policy
@@ -17,10 +16,10 @@ saas/
 │   │   ├── layout.tsx       # Root layout
 │   │   └── page.tsx         # Home page
 │   ├── components/          # Shared UI components
-│   ├── lib/                 # Shared utility functions
+│   ├── lib/                 # Shared utility functions, hooks, and types
 │   ├── data/                # Data files and constants
 │   ├── config/              # Configuration files
-│   └── types/               # TypeScript type definitions
+│   └── types/               # Global TypeScript type definitions
 ├── public/                  # Static assets
 ├── docs/                    # Documentation
 └── ...                      # Config files (next.config.js, etc.)
@@ -32,7 +31,7 @@ The project follows modern Next.js best practices with:
 
 1. **Clear Separation of Concerns**: App router in `/src/app`, shared components in `/src/components`, utilities in `/src/lib`.
 
-2. **TypeScript Support**: Types defined in `/src/types`.
+2. **TypeScript Support**: Types defined in `/src/types` and component-specific types in `/src/lib/types`.
 
 3. **Centralized Data**: Configuration and data in dedicated directories.
 
@@ -86,17 +85,17 @@ export const metadata = {
    - CSS variables for theming
    - Utility classes preferred over custom CSS
 
-## Performance Considerations
+## Recent Improvements
 
-1. **Image Optimization**: Always use Next.js Image component
+1. **Consolidated Utilities**: All utility functions, hooks, and shared types are now in `/src/lib`
+   - Eliminated duplicate utility files that were in both `src/app/lib` and `src/lib`
+   - All imports now use the `@/lib` path consistently
 
-2. **Dynamic Imports**: Use for larger components that aren't needed on initial load
-
-3. **Selective Hydration**: Minimize 'use client' directives
+2. **Standardized Imports**: Updated all imports to use absolute paths with the `@/` prefix
 
 ## Next Steps
 
-1. Implement the recommendations above, starting with import path standardization.
-2. Create a component library with documented usage patterns.
-3. Establish a consistent file/folder naming convention across the project.
-4. Add comprehensive testing for components and pages. 
+1. Continue refactoring duplicated components between `src/app/components` and `src/components`
+2. Break down large components into smaller, more manageable pieces
+3. Create a component library with documented usage patterns
+4. Add comprehensive testing for components and pages 

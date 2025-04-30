@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import BrowserMockup from './ui/BrowserMockup';
 import MobileDashboardView from './ui/MobileDashboardView';
 import TabletDashboardView from './ui/TabletDashboardView';
-import { DASHBOARD_URL } from '../lib/utils/constants';
+import { DASHBOARD_URL } from '@/lib/utils/constants';
 
 // Dynamic imports with explicit loading state and no SSR
 const Modal = dynamic(() => import('./ui/Modal'), {

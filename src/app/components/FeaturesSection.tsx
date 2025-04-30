@@ -6,7 +6,7 @@ import {
   AIBrainIcon, 
   AnalyticsIcon 
 } from './ui/AnimatedIcons';
-import { FEATURES } from '../lib/utils/constants';
+import { FEATURES } from '@/lib/utils/constants';
 
 export default function FeaturesSection() {
   // Map the icons to the features from constants

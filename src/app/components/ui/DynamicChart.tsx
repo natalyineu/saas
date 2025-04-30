@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ChartOptions } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { initChartJS } from '../../lib/chartjs-plugin';
+import { initChartJS } from '@/lib/chartjs-plugin';
 
 // Initialize Chart.js on component mount
 initChartJS();
