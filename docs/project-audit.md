@@ -4,87 +4,95 @@
 
 ```
 saas/
-├── ai/                      # Main Next.js application
-│   ├── app/                 # App router structure
+├── src/                     # Application source code
+│   ├── app/                 # App router structure (pages/routes)
 │   │   ├── blog/            # Blog pages and posts
-│   │   ├── components/      # Shared components
+│   │   ├── components/      # App-specific components 
 │   │   ├── faq/             # FAQ section
-│   │   ├── lib/             # Utility functions/libraries
+│   │   ├── lib/             # App-specific utility functions
 │   │   ├── policy/          # Policy pages
 │   │   ├── terms/           # Terms of service
 │   │   ├── cookie-policy/   # Cookie policy
 │   │   ├── globals.css      # Global CSS
 │   │   ├── layout.tsx       # Root layout
-│   │   ├── page.tsx         # Home page
-│   │   └── ...              
-│   ├── public/              # Static assets
-│   └── ...                  # Config files
-└── package.json             # Root package.json with workspace config
+│   │   └── page.tsx         # Home page
+│   ├── components/          # Shared UI components
+│   ├── lib/                 # Shared utility functions
+│   ├── data/                # Data files and constants
+│   ├── config/              # Configuration files
+│   └── types/               # TypeScript type definitions
+├── public/                  # Static assets
+├── docs/                    # Documentation
+└── ...                      # Config files (next.config.js, etc.)
 ```
 
-## Current Structure Issues
+## Current Structure
 
-1. **Import Path Issue**: Blog posts are importing components with relative paths (`../../components/Navbar`), which can become problematic when moving files.
+The project follows modern Next.js best practices with:
 
-2. **No Blog-Specific Components**: Blog posts and related components are mixed in the main components directory.
+1. **Clear Separation of Concerns**: App router in `/src/app`, shared components in `/src/components`, utilities in `/src/lib`.
 
-3. **No TypeScript Type Definitions**: Could benefit from interface definitions for component props.
+2. **TypeScript Support**: Types defined in `/src/types`.
 
-4. **Missing SEO Optimization**: Blog posts should include metadata for SEO.
+3. **Centralized Data**: Configuration and data in dedicated directories.
 
-5. **Content Organization**: Case studies and blog posts are organized individually, but there's no shared structure for common elements.
+## Import Path Pattern
 
-## Recommendations
+```tsx
+// Import from app directory
+import { something } from '@/app/path/to/file';
 
-1. **Fix Import Paths**: Use absolute imports instead of relative paths for better maintainability:
-   ```tsx
-   // Instead of:
-   import Navbar from '../../components/Navbar';
-   
-   // Use:
-   import Navbar from '@/app/components/Navbar';
-   ```
+// Import from shared components
+import Component from '@/components/path/to/component';
 
-2. **Create Blog-Specific Components**: Move blog-related components to a dedicated folder:
-   ```
-   ai/app/blog/components/
-   ├── BlogHeader.tsx
-   ├── BlogFooter.tsx
-   ├── BlogCard.tsx
-   └── ...
-   ```
+// Import from lib
+import { utility } from '@/lib/path/to/utility';
+```
 
-3. **Add TypeScript Interfaces**: Define proper interfaces for component props:
-   ```tsx
-   interface BlogPostProps {
-     title: string;
-     date: string;
-     author: string;
-     readTime: string;
-     content: React.ReactNode;
-   }
-   ```
+## Component Organization
 
-4. **Implement Metadata**: Add metadata for SEO in each blog post:
-   ```tsx
-   export const metadata = {
-     title: 'How AI is Transforming Digital Advertising',
-     description: 'Learn how AI is leveling the playing field in digital advertising...',
-     openGraph: {
-       // OpenGraph data
-     }
-   };
-   ```
+1. **Page Components**: Located in `src/app/*/page.tsx`
 
-5. **Standardize Blog Post Structure**: Create a reusable BlogPost layout component to ensure consistency.
+2. **Layout Components**: Located in `src/app/layout.tsx` and `src/app/*/layout.tsx`
+
+3. **UI Components**: Located in `src/components/`
+   - Feature-based organization (e.g., `/navbar`, `/footer`)
+   - UI primitives in `/ui` directory
+
+4. **App-Specific Components**: Located in `src/app/components/`
+   - Components specific to routes/pages
+
+## Metadata Pattern
+
+```tsx
+export const metadata = {
+  title: 'Page Title | AI-Vertise',
+  description: 'Page description',
+  openGraph: {
+    // OpenGraph data
+  }
+};
+```
+
+## Development Guidelines
+
+1. **Component Best Practices**:
+   - Client components marked with 'use client' directive
+   - Server components by default when no interactive elements
+   - Props typed with TypeScript interfaces
+
+2. **Styling Approach**:
+   - Tailwind CSS for styling
+   - CSS variables for theming
+   - Utility classes preferred over custom CSS
 
 ## Performance Considerations
 
-1. **Image Optimization**: Ensure all images use Next.js Image component with proper optimization.
+1. **Image Optimization**: Always use Next.js Image component
 
-2. **Component Splitting**: Large components like Footer (14KB) could be split into smaller subcomponents.
+2. **Dynamic Imports**: Use for larger components that aren't needed on initial load
 
-3. **Client/Server Components**: Clearly designate which components need interactivity (client) versus static rendering (server).
+3. **Selective Hydration**: Minimize 'use client' directives
 
 ## Next Steps
 

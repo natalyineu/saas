@@ -52,20 +52,20 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-soft-gradient">
+    <section className="py-12 md:py-20 bg-soft-gradient">
       <div className="container mx-auto px-5 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Hero content */}
           <div className="order-1 md:order-1">
             <div className="max-w-xl">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 leading-tight">
                 <span className="gradient-text">AI-Vertise</span> Boost
               </h1>
-              <h2 className="text-lg sm:text-xl mb-12 text-gray-700 font-medium leading-relaxed">
+              <h2 className="text-lg sm:text-xl mb-8 text-gray-700 font-medium leading-relaxed">
                 You brief. We run. AI does the rest. AI-Vertise is a fully-managed, AI-powered ad platform built for small businesses. Just tell us your goals—we'll quickly create your ads, launch your campaigns within 24 hours, and deliver clear reports with actionable insights. No agencies, no delays, no complexity.
               </h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-7 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5 mb-10">
                 <div className="flex items-start">
                   <div className="bg-indigo-100 p-2.5 rounded-full mr-4 flex-shrink-0 mt-0.5">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
@@ -116,7 +116,7 @@ export default function HeroSection() {
               </div>
               
               {/* Standalone form with large rounded corners */}
-              <div className="mt-10 mb-20 max-w-xl">
+              <div className="mt-8 mb-14 max-w-xl">
                 {formSubmitted ? (
                   <div className="bg-white border border-gray-200 rounded-xl p-6">
                     <p className="text-gray-500 font-normal text-sm">
@@ -125,7 +125,7 @@ export default function HeroSection() {
                   </div>
                 ) : (
                   <>
-                    <h3 className="text-xl font-semibold mb-6 text-gray-800">
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800">
                       <span className="gradient-text">Start Your Ad Campaign</span> — Enter Your Contact Info
                     </h3>
                     <div className="bg-white rounded-xl shadow-md overflow-hidden relative border border-indigo-100 p-3">

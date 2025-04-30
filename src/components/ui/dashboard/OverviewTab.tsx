@@ -10,9 +10,9 @@ interface OverviewTabProps {
 
 export default function OverviewTab({ scrollToCaseStudies, metricsVisible }: OverviewTabProps) {
   return (
-    <div className={`transition-opacity duration-500 ${metricsVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`transition-opacity duration-500 ${metricsVisible ? 'opacity-100' : 'opacity-0'} relative`}>
       {/* Background pattern decoration */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-5 z-0">
+      <div className="absolute top-0 right-0 w-32 h-32 opacity-5" style={{ zIndex: 1 }}>
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
             <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
@@ -22,7 +22,7 @@ export default function OverviewTab({ scrollToCaseStudies, metricsVisible }: Ove
       </div>
       
       {/* Circle pattern */}
-      <div className="absolute bottom-8 left-8 w-24 h-24 opacity-5 z-0">
+      <div className="absolute bottom-8 left-8 w-24 h-24 opacity-5" style={{ zIndex: 1 }}>
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2" />
           <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -30,14 +30,17 @@ export default function OverviewTab({ scrollToCaseStudies, metricsVisible }: Ove
         </svg>
       </div>
       
-      {/* Stats cards */}
-      <StatsCards />
-      
-      {/* Chart */}
-      <PerformanceChart />
+      {/* Content */}
+      <div className="relative z-5">
+        {/* Stats cards */}
+        <StatsCards />
+        
+        {/* Chart */}
+        <PerformanceChart />
 
-      {/* Bottom buttons */}
-      <ActionButtons scrollToCaseStudies={scrollToCaseStudies} />
+        {/* Bottom buttons */}
+        <ActionButtons scrollToCaseStudies={scrollToCaseStudies} />
+      </div>
     </div>
   );
 } 
