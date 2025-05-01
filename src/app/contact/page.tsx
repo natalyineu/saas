@@ -1,6 +1,5 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { COMPANY_EMAIL, COMPANY_PHONE } from '@/lib/utils/constants';
 
@@ -9,10 +8,10 @@ export const metadata: Metadata = {
   description: 'Get in touch with our team for any questions about our AI-powered advertising solutions or to request a demo.',
   keywords: 'contact, support, help, AI advertising, demo request',
   openGraph: {
-    title: 'Contact Us | AI-Vertise',
-    description: 'Get in touch with our team for any questions about our AI-powered advertising solutions.',
+    title: 'Contact AI-Vertise Boost - Get in Touch',
+    description: 'Have questions about our AI-powered advertising platform? Reach out to our team for more information or assistance.',
     type: 'website',
-    url: 'https://aivertise.io/contact',
+    url: 'https://ai-vertise.com/contact',
   },
 };
 
@@ -93,7 +92,6 @@ export default function ContactPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 } 

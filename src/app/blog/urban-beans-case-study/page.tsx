@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -54,7 +53,7 @@ export default function CoffeeShopCaseStudy() {
     "dateModified": "2023-04-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://aivertise.io/blog/urban-beans-case-study"
+      "@id": "https://ai-vertise.com/blog/urban-beans-case-study"
     }
   };
 
@@ -239,7 +238,6 @@ export default function CoffeeShopCaseStudy() {
           </div>
         </article>
       </main>
-      <Footer />
     </>
   );
 } 

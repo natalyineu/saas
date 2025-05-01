@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Script from 'next/script';
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',
     description: 'Explore our collection of digital marketing case studies, success stories, and insights. Learn how AI-Vertise helps businesses achieve their marketing goals.',
     type: 'website',
-    url: 'https://aivertise.io/blog',
+    url: 'https://ai-vertise.com/blog',
     images: [
       {
         url: '/images/blog-og.jpg',
@@ -41,13 +40,13 @@ export default function Blog() {
     "@type": "Blog",
     "name": "AI-Vertise Blog",
     "description": "Digital Marketing Insights & Case Studies",
-    "url": "https://aivertise.io/blog",
+    "url": "https://ai-vertise.com/blog",
     "publisher": {
       "@type": "Organization",
       "name": "AI-Vertise",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://aivertise.io/images/logo.png"
+        "url": "https://ai-vertise.com/images/logo.png"
       }
     }
   };
@@ -322,7 +321,6 @@ export default function Blog() {
         </div>
       </main>
       
-      <Footer />
     </SuppressHydrationWarning>
   );
 } 
