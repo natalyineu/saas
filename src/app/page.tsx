@@ -1,15 +1,15 @@
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import PricingSection from './components/PricingSection';
-import HowItWorksSection from './components/HowItWorksSection';
-import ClientCostComparisonSection from './components/ClientCostComparisonSection';
-import CaseStudiesSection from './components/CaseStudiesSection';
-import Footer from './components/Footer';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import PricingSection from '@/components/PricingSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import ClientCostComparisonSection from '@/components/ClientCostComparisonSection';
+import CaseStudiesSection from '@/components/CaseStudiesSection';
+import Footer from '@/components/Footer';
 import Script from 'next/script';
 import { generateStructuredData } from '@/lib/seo';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
-import ContactForm from './components/ContactForm';
+import ContactForm from '@/components/ContactForm';
 
 // Enable static generation for this page
 export const dynamic = 'force-static';

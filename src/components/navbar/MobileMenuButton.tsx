@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DASHBOARD_URL } from '../../lib/utils/constants';
+import { DASHBOARD_URL } from '@/lib/utils/constants';
 
 interface MobileMenuButtonProps {
   isOpen: boolean;

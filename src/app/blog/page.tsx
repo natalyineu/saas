@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import Script from 'next/script';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
-import BlogList from '../components/blog/BlogList';
+import BlogList from '@/components/blog/BlogList';
 
 export const metadata: Metadata = {
   title: 'AI-Vertise Blog - Digital Marketing Insights & Case Studies',

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { DASHBOARD_URL } from '../../lib/utils/constants';
+import { DASHBOARD_URL } from '@/lib/utils/constants';
 import { usePathname } from 'next/navigation';
 
 interface MobileMenuProps {

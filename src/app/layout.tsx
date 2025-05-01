@@ -1,10 +1,10 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import SupportButton from './components/SupportButton';
-import CookieConsent from './components/CookieConsent';
-import GoogleAnalytics from './components/analytics/GoogleAnalytics';
-import BuyMeCoffeeScript from './components/analytics/BuyMeCoffeeScript';
-import BackgroundGrid from './components/layout/BackgroundGrid';
+import SupportButton from '@/components/SupportButton';
+import CookieConsent from '@/components/CookieConsent';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
+import BuyMeCoffeeScript from '@/components/analytics/BuyMeCoffeeScript';
+import BackgroundGrid from '@/components/layout/BackgroundGrid';
 import { seoMetadata, viewportConfig } from '@/config/seo';
 import Script from 'next/script';
 

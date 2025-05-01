@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import Script from 'next/script';
 import Image from 'next/image';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';

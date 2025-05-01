@@ -1,8 +1,8 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import ClientCostComparisonSection from '../components/ClientCostComparisonSection';
+import ClientCostComparisonSection from '@/components/ClientCostComparisonSection';
 
 // Enable static generation for this page
 export const dynamic = 'force-static';

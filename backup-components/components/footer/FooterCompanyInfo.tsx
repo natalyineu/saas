@@ -1,5 +1,5 @@
 import React from 'react';
-import BuyMeCoffeeButton from '../BuyMeCoffeeButton';
+import BuyMeCoffeeButton from '@/components/BuyMeCoffeeButton';
 
 export default function FooterCompanyInfo() {
   return (
