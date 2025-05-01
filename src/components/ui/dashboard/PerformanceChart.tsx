@@ -1,5 +1,5 @@
 import React from 'react';
-import DynamicChart from '../DynamicChart';
+import DynamicChart from '@/components/ui/DynamicChart';
 
 export default function PerformanceChart() {
   return (
