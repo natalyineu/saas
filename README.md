@@ -23,9 +23,10 @@ The codebase has been refactored to:
 
 ## Deployment Structure
 
-The project is configured to:
-- Build from the `/ai` directory 
-- Deploy to the root domain (no `/ai` path in URLs)
+The project is configured for deployment to Vercel with:
+- Production builds created with `npm run build`
+- Output directory set to `.next`
+- Automatic redirects configured in vercel.json
 
 ## Development
 

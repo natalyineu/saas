@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { DASHBOARD_URL } from '@/lib/utils/constants';
 
 interface BrowserMockupProps {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ interface BrowserMockupProps {
 const BrowserMockup: React.FC<BrowserMockupProps> = ({ 
   children, 
   className = '',
-  url = 'https://dashboard.ai-vertise.com/campaign/coffee-shop'
+  url = `${DASHBOARD_URL}campaign/coffee-shop`
 }) => {
   return (
     <div className={`browser-mockup rounded-xl overflow-hidden shadow-md sm:shadow-2xl ${className}`}>
