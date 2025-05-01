@@ -4,10 +4,22 @@ AI-powered advertising platform for small and medium businesses.
 
 ## Project Structure
 
-This repository has a monorepo structure:
+The project follows a standard Next.js 14 app router structure:
 
-- `/` (root): Contains the project configuration and workspace setup
-- `/ai`: Contains the actual Next.js application
+- `/src`: Main source directory
+  - `/app`: Pages and routes using Next.js 14 App Router
+  - `/components`: Shared UI components used throughout the application
+  - `/lib`: Utilities, hooks, and helper functions
+  - `/types`: TypeScript type definitions
+  - `/config`: Application configuration
+  - `/data`: Static data for the application
+
+## Recent Improvements
+
+The codebase has been refactored to:
+- Remove duplicated components between `/src/app/components` and `/src/components`
+- Standardize import paths using the `@/` alias consistently
+- Keep all reusable components in a single location (`/src/components`)
 
 ## Deployment Structure
 
@@ -38,6 +50,14 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
 
 ## Detailed Documentation
 
