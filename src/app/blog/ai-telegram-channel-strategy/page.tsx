@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 // Import using absolute paths
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 // Metadata for SEO
@@ -38,7 +37,6 @@ export default function BlogPost() {
   
   return (
     <>
-      <Navbar />
       <main className="container mx-auto px-4 py-12">
         <article className="max-w-3xl mx-auto prose lg:prose-lg">
           <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">

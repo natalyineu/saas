@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
@@ -255,7 +254,6 @@ export default function Blog() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
       
       <main className="pt-12 md:pt-20 pb-16 md:pb-24">
         <div className="container mx-auto px-4 md:px-6">

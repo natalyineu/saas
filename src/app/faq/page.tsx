@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { COMPANY_EMAIL } from '@/lib/utils/constants';
@@ -63,7 +62,6 @@ export default function FAQPage() {
 
   return (
     <>
-      <Navbar />
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-2">Frequently Asked Questions</h1>
         <p className="text-gray-600 mb-10">Find answers to the most common questions about AI-Vertise Boost.</p>

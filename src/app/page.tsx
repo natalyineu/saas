@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import PricingSection from '@/components/PricingSection';
@@ -35,7 +34,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }}
       />
-      <Navbar />
       <main>
         <HeroSection />
         <FeaturesSection />

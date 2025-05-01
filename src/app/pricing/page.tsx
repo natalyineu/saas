@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -21,7 +20,6 @@ export const metadata: Metadata = {
 export default function PricingDetailsPage() {
   return (
     <>
-      <Navbar />
       <main>
         <div className="pt-16 pb-8 md:pt-24 md:pb-12 bg-gradient-to-b from-primary-purple/5 to-white">
           <div className="container mx-auto px-4 md:px-6">

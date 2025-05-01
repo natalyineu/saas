@@ -1,5 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Navbar from '@/components/Navbar';
 import SupportButton from '@/components/SupportButton';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
@@ -67,6 +68,7 @@ export default function RootLayout({
         <BackgroundGrid />
         
         <div className="relative z-10">
+          <Navbar />
           {children}
         </div>
         <SupportButton />

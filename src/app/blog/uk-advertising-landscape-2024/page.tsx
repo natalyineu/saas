@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 
 // Import using absolute paths
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -119,7 +118,6 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Navbar />
       <main className="container mx-auto px-4 py-12">
         <Breadcrumbs />
         <article className="max-w-3xl mx-auto prose lg:prose-lg">

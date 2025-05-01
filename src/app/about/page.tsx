@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
 import Image from 'next/image';
@@ -45,7 +44,6 @@ export default function About() {
           })
         }}
       />
-      <Navbar />
       <main className="container mx-auto px-4 py-12">
         <section className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-purple to-primary-pink bg-clip-text text-transparent">About AI-Vertise</h1>
