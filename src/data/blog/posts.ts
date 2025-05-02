@@ -1,6 +1,6 @@
-import { JSX } from 'react';
+import { ContentItem } from '@/lib/types/content';
 
-export interface BlogPost {
+export interface BlogPost extends ContentItem {
   id: string;
   title: string;
   date: string;
@@ -14,19 +14,89 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "marketing-dashboard-benefits",
+    title: "7 Benefits of Using a Marketing Dashboard for Campaign Management",
+    date: "May 1, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Discover how marketing dashboards can streamline your campaign management, improve performance visibility, and help make data-driven decisions.",
+    readTime: "6 min read",
+    heroImage: "/images/blog/placeholder.svg"
+  },
+  {
+    id: "marketing-in-singapore",
+    title: "Digital Marketing Strategies for Success in Singapore's Competitive Market",
+    date: "April 30, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn effective digital marketing approaches tailored specifically for Singapore's unique market landscape and consumer behaviors.",
+    readTime: "7 min read",
+    heroImage: "/images/blog/placeholder.svg"
+  },
+  {
+    id: "ai-marketing-agents",
+    title: "The Rise of AI Marketing Agents: What You Need to Know",
+    date: "April 29, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "An overview of how AI marketing agents are transforming campaign management, content creation, and customer interactions.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/placeholder.svg"
+  },
+  {
+    id: "digital-marketing-china",
+    title: "Navigating Digital Marketing in China: Platforms, Trends and Strategies",
+    date: "April 28, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Essential insights into China's unique digital ecosystem and how to build effective marketing strategies for this vast market.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/placeholder.svg"
+  },
+  {
+    id: "media-planning-metrics",
+    title: "Key Media Planning Metrics Every Marketer Should Track",
+    date: "April 27, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "A comprehensive guide to the essential metrics that can help optimize your media planning and improve campaign performance.",
+    readTime: "7 min read",
+    heroImage: "/images/blog/placeholder.svg"
+  },
+  {
+    id: "effective-facebook-ads",
+    title: "5 Keys to More Effective Facebook Advertising in 2025",
+    date: "April 26, 2025",
+    author: "Marketing Team",
+    category: "ARTICLE",
+    excerpt: "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.",
+    readTime: "7 min read",
+    heroImage: "/images/blog/facebook-ads.jpg"
+  },
+  {
     id: "ai-in-digital-advertising",
-    title: "The Role of AI in Modern Digital Advertising",
-    date: "2024-05-10",
-    author: "Alex Morgan",
-    category: "AI Technology",
-    excerpt: "Discover how artificial intelligence is revolutionizing digital advertising strategies and improving ROI for businesses of all sizes.",
-    readTime: "5 min read",
+    title: "How AI is Transforming Digital Advertising for Small Businesses",
+    date: "April 25, 2025",
+    author: "Tech Team",
+    category: "ARTICLE",
+    excerpt: "Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.",
+    readTime: "8 min read",
     heroImage: "/images/blog/ai-advertising.jpg"
+  },
+  {
+    id: "programmatic-advertising-ai",
+    title: "The Future of Programmatic Advertising: AI-Driven Strategies",
+    date: "April 24, 2025",
+    author: "Strategy Team",
+    category: "ARTICLE",
+    excerpt: "Discover how AI is transforming programmatic advertising with smarter bidding strategies, enhanced targeting, and unprecedented efficiency.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/programmatic.jpg"
   },
   {
     id: "privacy-first-advertising",
     title: "Privacy-First Advertising: Navigating the Post-Cookie Era",
-    date: "2024-05-01",
+    date: "April 23, 2025",
     author: "Sarah Johnson",
     category: "Privacy & Compliance",
     excerpt: "Learn how to adapt your digital marketing strategy in a world where consumer privacy is increasingly protected.",
@@ -34,19 +104,9 @@ export const blogPosts: BlogPost[] = [
     heroImage: "/images/blog/privacy-first.jpg"
   },
   {
-    id: "programmatic-advertising-ai",
-    title: "Programmatic Advertising: How AI Makes It More Efficient",
-    date: "2024-04-22",
-    author: "Marcus Chen",
-    category: "AdTech",
-    excerpt: "Explore the intersection of programmatic advertising and artificial intelligence, and how it's creating more efficient ad buying.",
-    readTime: "6 min read",
-    heroImage: "/images/blog/programmatic.jpg"
-  },
-  {
     id: "social-media-ai-ads",
     title: "Maximizing Social Media Ad Performance with AI Tools",
-    date: "2024-04-15",
+    date: "April 22, 2025",
     author: "Jamie Williams",
     category: "Social Media",
     excerpt: "A practical guide to leveraging AI tools for creating, optimizing, and measuring social media advertising campaigns.",
@@ -56,7 +116,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "metaverse-marketing-opportunities",
     title: "Marketing in the Metaverse: Early Opportunities for Brands",
-    date: "2024-04-08",
+    date: "April 21, 2025",
     author: "Alex Morgan",
     category: "Future Tech",
     excerpt: "An exploration of how forward-thinking brands are establishing themselves in virtual worlds and metaverse platforms.",
@@ -64,19 +124,9 @@ export const blogPosts: BlogPost[] = [
     heroImage: "/images/blog/metaverse.jpg"
   },
   {
-    id: "effective-facebook-ads",
-    title: "Creating Effective Facebook Ad Campaigns That Convert",
-    date: "2024-03-28",
-    author: "Priya Patel",
-    category: "Social Media",
-    excerpt: "Step-by-step guidance on designing Facebook ad campaigns that drive conversions and maximize your ad spend.",
-    readTime: "7 min read",
-    heroImage: "/images/blog/facebook-ads.jpg"
-  },
-  {
     id: "ecommerce-personalization",
     title: "AI-Driven Personalization for E-commerce Marketing",
-    date: "2024-03-20",
+    date: "April 20, 2025",
     author: "Thomas Wright",
     category: "E-commerce",
     excerpt: "How AI is enabling unprecedented levels of personalization in e-commerce advertising and customer experiences.",
@@ -86,7 +136,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "social-media-ai-content",
     title: "Using AI to Generate Engaging Social Media Content",
-    date: "2024-03-12",
+    date: "April 19, 2025",
     author: "Emma Davis",
     category: "Content Creation",
     excerpt: "Practical ways to leverage AI content generation tools to keep your social media channels fresh and engaging.",
@@ -94,22 +144,22 @@ export const blogPosts: BlogPost[] = [
     heroImage: "/images/blog/ai-content.jpg"
   },
   {
-    id: "uk-advertising-landscape-2024",
-    title: "The UK Digital Advertising Landscape in 2024",
-    date: "2024-03-05",
+    id: "uk-advertising-landscape-2025",
+    title: "The UK Digital Advertising Landscape in 2025",
+    date: "April 18, 2025",
     author: "James Wilson",
     category: "Market Research",
     excerpt: "An analysis of current trends, challenges, and opportunities in the UK digital advertising market.",
     readTime: "8 min read",
     heroImage: "/images/blog/uk-landscape.jpg",
     content: `
-      # The UK Digital Advertising Landscape in 2024
+      # The UK Digital Advertising Landscape in 2025
 
-      The UK digital advertising market continues to evolve rapidly in 2024, with several key trends shaping how brands connect with consumers online. This article provides an overview of the current landscape, highlighting important shifts, challenges, and opportunities for marketers operating in the UK.
+      The UK digital advertising market continues to evolve rapidly in 2025, with several key trends shaping how brands connect with consumers online. This article provides an overview of the current landscape, highlighting important shifts, challenges, and opportunities for marketers operating in the UK.
 
       ## Current Market Size and Growth
 
-      The UK remains one of Europe's largest digital advertising markets, with spending projected to reach £25.9 billion in 2024, representing a 7.8% increase from the previous year. This growth occurs despite economic uncertainties, demonstrating the resilience and importance of digital channels for UK businesses.
+      The UK remains one of Europe's largest digital advertising markets, with spending projected to reach £25.9 billion in 2025, representing a 7.8% increase from the previous year. This growth occurs despite economic uncertainties, demonstrating the resilience and importance of digital channels for UK businesses.
 
       Several factors contribute to this continued expansion:
 
@@ -144,7 +194,7 @@ export const blogPosts: BlogPost[] = [
 
       The streaming revolution continues to reshape video advertising in the UK:
 
-      - Connected TV (CTV) ad spending is expected to grow by 22% in 2024
+      - Connected TV (CTV) ad spending is expected to grow by 22% in 2025
       - Major platforms like ITV's ITVX, Channel 4, and global services like Netflix and Amazon Prime are expanding their advertising offerings
       - Improved targeting capabilities are making CTV more attractive to performance marketers
       - Traditional TV advertisers are shifting portions of their budgets to streaming platforms
@@ -222,7 +272,7 @@ export const blogPosts: BlogPost[] = [
 
       ## Conclusion
 
-      The UK digital advertising landscape in 2024 is characterized by rapid change and adaptation. Privacy changes continue to reshape targeting and measurement approaches, while economic pressures drive focus on efficiency and effectiveness. At the same time, technological innovations, particularly in AI, are creating new opportunities for advertisers to connect with consumers.
+      The UK digital advertising landscape in 2025 is characterized by rapid change and adaptation. Privacy changes continue to reshape targeting and measurement approaches, while economic pressures drive focus on efficiency and effectiveness. At the same time, technological innovations, particularly in AI, are creating new opportunities for advertisers to connect with consumers.
 
       Success in this environment requires agility, willingness to experiment with new approaches, and strategic investment in first-party data and technology capabilities. Brands that can effectively navigate these changes while delivering relevant, valuable experiences to consumers will thrive in the evolving UK digital advertising landscape.
     `
@@ -230,7 +280,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ai-telegram-channel-strategy",
     title: "Building an Effective AI-Powered Telegram Channel Strategy",
-    date: "2024-02-25",
+    date: "April 17, 2025",
     author: "Elena Kowalski",
     category: "Messaging Platforms",
     excerpt: "How businesses can leverage AI to create engaging and effective Telegram channels for marketing and customer engagement.",
@@ -478,11 +528,11 @@ export const blogPosts: BlogPost[] = [
   {
     id: "telegram-ai-channel-selection",
     title: "Selecting the Right Channel Topics for Your AI Telegram Strategy",
-    date: "2024-02-17",
+    date: "April 16, 2025",
     author: "Elena Kowalski",
     category: "Messaging Platforms",
     excerpt: "A strategic guide to identifying and selecting the most effective channel topics for your Telegram presence.",
     readTime: "7 min read",
     heroImage: "/images/blog/telegram-topics.jpg"
   }
-]; 
+];

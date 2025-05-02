@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next';
 const getBlogPosts = () => {
   // In a real implementation, you'd fetch this from your CMS or database
   return [
-    'uk-advertising-landscape-2024',
+    'uk-advertising-landscape-2025',
     'ai-in-digital-advertising',
     'privacy-first-advertising',
     'programmatic-advertising-ai',
