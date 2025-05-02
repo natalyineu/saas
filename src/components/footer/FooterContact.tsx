@@ -66,7 +66,7 @@ export default function FooterContact() {
           </div>
         ) : (
           <form 
-            action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xayzgbnw'}`}
+            action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`}
             method="POST" 
             onSubmit={handleNewsletterSubmit}
             className="mt-3"

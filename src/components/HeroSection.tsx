@@ -152,7 +152,7 @@ export default function HeroSection() {
                       </div>
                       <form 
                         id="contact-form"
-                        action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xayzgbnw'}`}
+                        action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`}
                         method="POST"
                         onSubmit={handleFormSubmit}
                         className="hidden"

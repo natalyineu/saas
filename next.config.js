@@ -29,7 +29,7 @@ const nextConfig = {
   },
   // Environment variables
   env: {
-    NEXT_PUBLIC_FORMSPREE_ID: 'xayzgbnw',
+    NEXT_PUBLIC_FORMSPREE_ID: 'xblgwbvo',
   },
   // Transpile chart.js and related packages to fix webpack bundling issues
   transpilePackages: ['chart.js', 'react-chartjs-2'],

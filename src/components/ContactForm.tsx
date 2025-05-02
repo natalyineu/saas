@@ -16,7 +16,7 @@ export default function ContactForm({
   title = 'Contact Us',
   subtitle = "We'd love to hear from you",
   className = '',
-  formspreeId = 'xayzgbnw',
+  formspreeId = 'xblgwbvo',
   successMessage = "Thank you for your message. Our team will review it and get back to you shortly.",
   buttonText = 'Send Message',
 }: ContactFormProps) {
