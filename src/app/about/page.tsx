@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Script from 'next/script';
 import Image from 'next/image';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
@@ -160,7 +159,6 @@ export default function About() {
           </div>
         </section>
       </main>
-      <Footer />
     </SuppressHydrationWarning>
   );
 } 

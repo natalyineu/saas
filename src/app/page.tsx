@@ -4,9 +4,8 @@ import PricingSection from '@/components/PricingSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import ClientCostComparisonSection from '@/components/ClientCostComparisonSection';
 import CaseStudiesSection from '@/components/CaseStudiesSection';
-import Footer from '@/components/Footer';
 import Script from 'next/script';
-import { generateStructuredData } from '@/lib/seo';
+import { generateStructuredData } from '@/config/seo';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
 import ContactForm from '@/components/ContactForm';
 
@@ -60,7 +59,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </SuppressHydrationWarning>
   );
 }

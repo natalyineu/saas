@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ClientCostComparisonSection from '@/components/ClientCostComparisonSection';
@@ -161,7 +160,6 @@ export default function PricingDetailsPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 } 

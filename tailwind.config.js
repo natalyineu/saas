@@ -69,8 +69,13 @@ module.exports = {
         'spin-slow': 'spin 20s linear infinite',
         'spin-reverse': 'spin-reverse 15s linear infinite',
         'float': 'float 3s ease-in-out infinite',
+        'float-delay': 'float 3s ease-in-out 0.5s infinite',
+        'float-delay-long': 'float 3s ease-in-out 1s infinite',
         'ping-once': 'ping 1s cubic-bezier(0, 0, 0.2, 1) forwards',
         'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
+        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'float-slow': 'float 5s ease-in-out infinite',
+        'grow-x': 'growX 2s ease-out forwards',
       },
       keyframes: {
         'pulse-slow': {
@@ -127,6 +132,10 @@ module.exports = {
             transform: 'translateY(0)',
             animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
           }
+        },
+        'growX': {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
         }
       },
       boxShadow: {

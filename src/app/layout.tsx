@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import SupportButton from '@/components/SupportButton';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
@@ -70,6 +71,7 @@ export default function RootLayout({
         <div className="relative z-10">
           <Navbar />
           {children}
+          <Footer />
         </div>
         <SupportButton />
         <CookieConsent />

@@ -1,96 +1,62 @@
-import Link from 'next/link';
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
-import Script from 'next/script';
+import BlogPostLayout from '@/components/blog/BlogPostLayout';
+import Link from 'next/link';
 
+// Metadata for SEO
 export const metadata: Metadata = {
-  title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
-  description: 'Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.',
-  keywords: 'AI advertising, digital marketing, small business marketing, marketing automation, AI marketing tools',
+  title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost | AI-Vertise Boost',
+  description: 'Learn about how ai is transforming digital advertising | ai-vertise boost and how it can improve your marketing results.',
   openGraph: {
-    title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
-    description: 'Discover how AI is revolutionizing digital advertising for small businesses.',
-    type: 'article',
-    publishedTime: '2023-03-25',
-    authors: ['Tech Team'],
-    url: 'https://ai-vertise.com/blog/ai-in-digital-advertising',
+    title: 'How AI is Transforming Digital Advertising | AI-Vertise Boost | AI-Vertise Boost',
+    description: 'Learn about how ai is transforming digital advertising | ai-vertise boost and how it can improve your marketing results.',
     images: [
       {
-        url: '/images/blog/ai-advertising.jpg',
+        url: '/images/blog/placeholder.svg',
         width: 1200,
         height: 630,
-        alt: 'AI in Digital Advertising',
+        alt: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
       }
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How AI is Transforming Digital Advertising',
-    description: 'Discover how AI is revolutionizing digital advertising for small businesses.',
-    images: ['/images/blog/ai-advertising.jpg'],
-  },
 };
 
-export default function AIAdvertisingPost() {
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "How AI is Transforming Digital Advertising for Small Businesses",
-    "description": "Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.",
-    "image": "/images/blog/ai-advertising.jpg",
+    "@type": "Article",
+    "headline": "How AI is Transforming Digital Advertising | AI-Vertise Boost",
+    "description": "Learn about how ai is transforming digital advertising | ai-vertise boost",
     "author": {
       "@type": "Organization",
-      "name": "Tech Team"
+      "name": "Founder of ai-vertise.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "AI-Vertise",
+      "name": "Founder of ai-vertise.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ai-vertise.com/logo.png"
+        "url": "/logo.png"
       }
     },
-    "datePublished": "2023-03-25",
-    "dateModified": "2023-03-25",
+    "datePublished": "March 25, 2023",
+    "dateModified": "March 25, 2023",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/ai-in-digital-advertising"
     }
   };
 
+export default function BlogPost() {
   return (
-    <>
-      <Script
-        id="blogpost-structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <main className="container mx-auto px-4 py-12">
-        <article className="max-w-3xl mx-auto prose lg:prose-lg">
-          <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Blog
-          </Link>
-          
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">How AI is Transforming Digital Advertising for Small Businesses</h1>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>March 25, 2023</span>
-              <span className="mx-2">•</span>
-              <span>Tech Team</span>
-              <span className="mx-2">•</span>
-              <span>8 min read</span>
-            </div>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AI Technology</span>
-              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Digital Marketing</span>
-              <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Small Business</span>
-            </div>
-          </header>
-          
-          <p className="lead">
+    <BlogPostLayout
+      title="How AI is Transforming Digital Advertising | AI-Vertise Boost"
+      date="March 25, 2023"
+      author="Founder of ai-vertise.com"
+      readTime="8 min read"
+      tags={[]}
+      structuredData={jsonLd}
+    >
+      <p className="lead">
             Artificial Intelligence is democratizing digital advertising, making sophisticated marketing strategies accessible to businesses of all sizes. In this article, we explore how AI is leveling the playing field and helping small businesses compete with larger companies in the digital advertising arena.
           </p>
           
@@ -190,17 +156,22 @@ export default function AIAdvertisingPost() {
             At AI-Vertise Boost, we're helping small and medium businesses harness these powerful AI capabilities through our easy-to-use platform. Our goal is to make sophisticated digital advertising accessible to all businesses, regardless of their size or technical expertise.
           </p>
           
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <Link href="/blog" className="text-primary-purple hover:underline flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Blog
-            </Link>
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </>
+          
+      
+      <h2>Leverage AI for Your Marketing</h2>
+      <p>
+        AI-Vertise Boost has helped businesses harness the power of artificial intelligence to transform their marketing strategies. Our platform makes sophisticated targeting, bidding, and optimization accessible to businesses of all sizes, without requiring technical expertise.
+      </p>
+      
+      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
+        <h3 className="font-bold text-xl mb-3">Ready to bring AI to your marketing strategy?</h3>
+        <p className="mb-4">
+          Join hundreds of other businesses that have transformed their growth with AI-Vertise Boost.
+        </p>
+        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+          Get Started Today
+        </Link>
+      </div>
+    </BlogPostLayout>
   );
-} 
+}

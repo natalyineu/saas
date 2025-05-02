@@ -27,8 +27,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 // 3. Internal components (using absolute paths)
-import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 // 4. Types/interfaces
 import type { BlogPostProps } from '@/app/types';

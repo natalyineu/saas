@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import BlogHeader from '@/components/blog/BlogHeader';
+import { getBlogIcon, getBlogStats } from '@/lib/utils/blog-helpers';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 
 export const metadata: Metadata = {
@@ -9,10 +11,10 @@ export const metadata: Metadata = {
     canonical: 'https://ai-vertise.com/blog/effective-facebook-ads',
   },
   openGraph: {
-    title: '5 Keys to More Effective Facebook Advertising in 2023',
+    title: '5 Keys to More Effective Facebook Advertising in 2025',
     description: 'Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.',
     type: 'article',
-    publishedTime: '2023-04-10',
+    publishedTime: '2025-04-26',
     authors: ['Marketing Team'],
     url: 'https://ai-vertise.com/blog/effective-facebook-ads',
     images: [
@@ -27,34 +29,50 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '5 Keys to Effective Facebook Advertising',
-    description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2023.',
+    description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2025.',
     images: ['/images/blog/facebook-ads.jpg'],
     creator: '@aivertise',
     site: '@aivertise',
   },
 };
 
+
+// Blog post data
+const postData = {
+  id: 'effective-facebook-ads',
+  title: '5 Keys to More Effective Facebook Advertising | AI-Vertise Boost',
+  date: '',
+  author: '',
+  readTime: '',
+  category: 'AI Technology',
+  tags: []
+};
+
 export default function EffectiveFacebookAdsPost() {
+  const { title, date, author, readTime, tags, category } = postData;
+  const icon = getBlogIcon(postData);
+  const stats = getBlogStats(postData);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "5 Keys to More Effective Facebook Advertising in 2023",
+    "headline": "5 Keys to More Effective Facebook Advertising in 2025",
     "description": "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights on video content, audience targeting, and AI optimization.",
     "image": "/images/blog/facebook-ads.jpg",
     "author": {
       "@type": "Organization",
-      "name": "Marketing Team"
+      "name": "Founder of ai-vertise.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "AI-Vertise",
+      "name": "Founder of ai-vertise.com",
       "logo": {
         "@type": "ImageObject",
         "url": "https://ai-vertise.com/logo.png"
       }
     },
-    "datePublished": "2023-04-10",
-    "dateModified": "2023-04-10",
+    "datePublished": "2025-04-26",
+    "dateModified": "2025-04-26",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/effective-facebook-ads"
@@ -63,15 +81,15 @@ export default function EffectiveFacebookAdsPost() {
 
   return (
     <BlogPostLayout
-      title="5 Keys to More Effective Facebook Advertising in 2023"
-      date="April 10, 2023"
-      author="Marketing Team"
+      title="5 Keys to More Effective Facebook Advertising in 2025"
+      date="April 26, 2025"
+      author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["Facebook Ads", "Social Media", "Digital Marketing"]}
       structuredData={jsonLd}
     >
       <p className="lead">
-        Facebook remains one of the most powerful advertising platforms for businesses of all sizes, but the landscape is constantly evolving. In this article, we'll explore the five key strategies that are driving successful Facebook ad campaigns in 2023.
+        Facebook remains one of the most powerful advertising platforms for businesses of all sizes, but the landscape is constantly evolving. In this article, we'll explore the five key strategies that are driving successful Facebook ad campaigns in 2025.
       </p>
       
       <h2>1. Embrace Short-Form Video Content</h2>
@@ -141,7 +159,7 @@ export default function EffectiveFacebookAdsPost() {
       
       <h2>Conclusion</h2>
       <p>
-        Facebook advertising continues to evolve, and staying ahead of these trends will help your business maximize its return on ad spend. By embracing short-form video, leveraging advanced targeting, implementing proper tracking, adopting an omnichannel approach, and utilizing AI-powered tools, you'll position your campaigns for success in 2023 and beyond.
+        Facebook advertising continues to evolve, and staying ahead of these trends will help your business maximize its return on ad spend. By embracing short-form video, leveraging advanced targeting, implementing proper tracking, adopting an omnichannel approach, and utilizing AI-powered tools, you'll position your campaigns for success in 2025 and beyond.
       </p>
       <p>
         At AI-Vertise Boost, we help businesses implement these strategies efficiently through our AI-powered platform. Our technology handles the complex aspects of Facebook advertising while giving you easy-to-understand controls and insights.

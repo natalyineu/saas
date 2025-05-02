@@ -1,69 +1,62 @@
-import Link from 'next/link';
 import { Metadata } from 'next';
-
-// Import using absolute paths
-import Footer from '@/components/Footer';
+import BlogPostLayout from '@/components/blog/BlogPostLayout';
+import Link from 'next/link';
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'AI-Powered Telegram Channel Selection | AI-Vertise Boost',
-  description: 'Learn how to use AI to identify and select the most effective Telegram channels for your advertising campaigns to maximize ROI and reach your target audience.',
+  title: 'AI-Powered Telegram Channel Selection | AI-Vertise Boost | AI-Vertise Boost',
+  description: 'Learn about ai-powered telegram channel selection | ai-vertise boost and how it can improve your marketing results.',
   openGraph: {
-    title: 'AI-Powered Telegram Channel Selection | AI-Vertise Boost',
-    description: 'Learn how to use AI to identify and select the most effective Telegram channels for your advertising campaigns to maximize ROI and reach your target audience.',
+    title: 'AI-Powered Telegram Channel Selection | AI-Vertise Boost | AI-Vertise Boost',
+    description: 'Learn about ai-powered telegram channel selection | ai-vertise boost and how it can improve your marketing results.',
     images: [
       {
         url: '/images/blog/placeholder.svg',
         width: 1200,
         height: 630,
-        alt: 'AI Telegram Channel Selection',
+        alt: 'AI-Powered Telegram Channel Selection | AI-Vertise Boost',
       }
     ],
   },
 };
 
-// Blog post data
-const postData = {
-  title: 'Using AI to Select the Right Telegram Channels for Your Campaigns',
-  date: 'June 2, 2024',
-  author: 'Channel Strategy Team',
-  readTime: '8 min read',
-  tags: ['Telegram', 'Channel Selection', 'AI', 'Advertising'],
-};
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI-Powered Telegram Channel Selection | AI-Vertise Boost",
+    "description": "Learn about ai-powered telegram channel selection | ai-vertise boost",
+    "author": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/logo.png"
+      }
+    },
+    "datePublished": "June 2, 2024",
+    "dateModified": "June 2, 2024",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/telegram-ai-channel-selection"
+    }
+  };
 
 export default function BlogPost() {
-  const { title, date, author, readTime, tags } = postData;
-  
   return (
-    <>
-      <main className="container mx-auto px-4 py-12">
-        <article className="max-w-3xl mx-auto prose lg:prose-lg">
-          <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Blog
-          </Link>
-          
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>{date}</span>
-              <span className="mx-2">•</span>
-              <span>{author}</span>
-              <span className="mx-2">•</span>
-              <span>{readTime}</span>
-            </div>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {tags.map(tag => (
-                <span key={tag} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </header>
-          
-          <p className="lead">
+    <BlogPostLayout
+      title="AI-Powered Telegram Channel Selection | AI-Vertise Boost"
+      date="June 2, 2024"
+      author="Founder of ai-vertise.com"
+      readTime="8 min read"
+      tags={['Telegram', 'Channel Selection', 'AI', 'Advertising']}
+      structuredData={jsonLd}
+    >
+      <p className="lead">
             Telegram has emerged as a powerful platform for reaching engaged audiences, with over 700 million monthly active users and thousands of specialized channels. However, identifying the right channels for your specific campaign goals can be challenging. This article explores how AI-powered analysis can transform your Telegram channel selection process, ensuring better targeting and higher ROI.
           </p>
           
@@ -157,31 +150,22 @@ export default function BlogPost() {
             The growing complexity of the Telegram ecosystem makes intuition-based channel selection increasingly ineffective. AI-powered analysis provides a systematic, data-driven approach to identifying the most effective channels for your specific campaign objectives. By leveraging advanced algorithms to evaluate content relevance, audience quality, and performance potential, marketers can dramatically improve campaign performance and achieve greater return on their Telegram advertising investments.
           </p>
           
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mr-4">
-                <div className="w-12 h-12 rounded-full bg-gray-200"></div>
-              </div>
-              <div>
-                <h3 className="font-medium">{author}</h3>
-                <p className="text-gray-600 text-sm">
-                  Digital Marketing Analytics Expert with a focus on emerging platforms. Specializes in AI-driven campaign optimization and channel selection across messaging platforms, with particular expertise in Eastern European and Asian markets.
-                </p>
-              </div>
-            </div>
-          </div>
           
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <Link href="/blog" className="text-primary-purple hover:underline flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Blog
-            </Link>
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </>
+      
+      <h2>Leverage AI for Your Marketing</h2>
+      <p>
+        AI-Vertise Boost has helped businesses harness the power of artificial intelligence to transform their marketing strategies. Our platform makes sophisticated targeting, bidding, and optimization accessible to businesses of all sizes, without requiring technical expertise.
+      </p>
+      
+      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
+        <h3 className="font-bold text-xl mb-3">Ready to bring AI to your marketing strategy?</h3>
+        <p className="mb-4">
+          Join hundreds of other businesses that have transformed their growth with AI-Vertise Boost.
+        </p>
+        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+          Get Started Today
+        </Link>
+      </div>
+    </BlogPostLayout>
   );
-} 
+}

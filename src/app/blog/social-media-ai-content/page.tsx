@@ -1,69 +1,62 @@
-import Link from 'next/link';
 import { Metadata } from 'next';
-
-// Import using absolute paths
-import Footer from '@/components/Footer';
+import BlogPostLayout from '@/components/blog/BlogPostLayout';
+import Link from 'next/link';
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'AI-Powered Social Media Content Creation | AI-Vertise Boost',
-  description: 'Learn how to leverage AI tools to create engaging, platform-optimized social media content that saves time and increases engagement.',
+  title: 'AI-Powered Social Media Content Creation | AI-Vertise Boost | AI-Vertise Boost',
+  description: 'Learn about ai-powered social media content creation | ai-vertise boost and how it can improve your marketing results.',
   openGraph: {
-    title: 'AI-Powered Social Media Content Creation | AI-Vertise Boost',
-    description: 'Learn how to leverage AI tools to create engaging, platform-optimized social media content that saves time and increases engagement.',
+    title: 'AI-Powered Social Media Content Creation | AI-Vertise Boost | AI-Vertise Boost',
+    description: 'Learn about ai-powered social media content creation | ai-vertise boost and how it can improve your marketing results.',
     images: [
       {
         url: '/images/blog/placeholder.svg',
         width: 1200,
         height: 630,
-        alt: 'AI-Generated Social Media Content',
+        alt: 'AI-Powered Social Media Content Creation | AI-Vertise Boost',
       }
     ],
   },
 };
 
-// Blog post data
-const postData = {
-  title: 'Revolutionizing Social Media Content Creation with AI Tools',
-  date: 'May 25, 2024',
-  author: 'Content Team',
-  readTime: '7 min read',
-  tags: ['Social Media', 'Content Creation', 'AI Tools', 'Digital Marketing'],
-};
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI-Powered Social Media Content Creation | AI-Vertise Boost",
+    "description": "Learn about ai-powered social media content creation | ai-vertise boost",
+    "author": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/logo.png"
+      }
+    },
+    "datePublished": "May 25, 2024",
+    "dateModified": "May 25, 2024",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/social-media-ai-content"
+    }
+  };
 
 export default function BlogPost() {
-  const { title, date, author, readTime, tags } = postData;
-  
   return (
-    <>
-      <main className="container mx-auto px-4 py-12">
-        <article className="max-w-3xl mx-auto prose lg:prose-lg">
-          <Link href="/blog" className="text-primary-purple hover:underline flex items-center mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Blog
-          </Link>
-          
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>{date}</span>
-              <span className="mx-2">•</span>
-              <span>{author}</span>
-              <span className="mx-2">•</span>
-              <span>{readTime}</span>
-            </div>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {tags.map(tag => (
-                <span key={tag} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </header>
-          
-          <p className="lead">
+    <BlogPostLayout
+      title="AI-Powered Social Media Content Creation | AI-Vertise Boost"
+      date="May 25, 2024"
+      author="Founder of ai-vertise.com"
+      readTime="7 min read"
+      tags={['Social Media', 'Content Creation', 'AI Tools', 'Digital Marketing']}
+      structuredData={jsonLd}
+    >
+      <p className="lead">
             Creating consistent, high-quality content for social media has long been a challenge for brands. Now, AI-powered tools are transforming this process, enabling marketers to produce more engaging content with less time and effort. This article explores the cutting-edge AI solutions for social media content creation and how they're changing the game for marketers.
           </p>
           
@@ -155,31 +148,22 @@ export default function BlogPost() {
             AI tools are revolutionizing social media content creation, but they're not replacing human creativity—they're amplifying it. By leveraging these powerful technologies, marketers can overcome the content creation bottleneck, producing more high-quality, engaging content while freeing up time for strategy and creative thinking. The future of social media marketing will belong to those who can effectively harness AI as a creative partner, combining technological efficiency with human insight and creativity.
           </p>
           
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 mr-4">
-                <div className="w-12 h-12 rounded-full bg-gray-200"></div>
-              </div>
-              <div>
-                <h3 className="font-medium">{author}</h3>
-                <p className="text-gray-600 text-sm">
-                  Content Strategy Director specializing in AI-powered marketing tools. Has helped brands across various industries implement AI solutions for more effective content creation and distribution.
-                </p>
-              </div>
-            </div>
-          </div>
           
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <Link href="/blog" className="text-primary-purple hover:underline flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Blog
-            </Link>
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </>
+      
+      <h2>Boost Your Digital Marketing</h2>
+      <p>
+        AI-Vertise Boost has helped hundreds of businesses achieve exceptional results through intelligent, AI-powered advertising. Our platform makes sophisticated targeting, bidding, and optimization accessible to businesses of all sizes, without requiring technical expertise.
+      </p>
+      
+      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
+        <h3 className="font-bold text-xl mb-3">Ready to transform your marketing performance?</h3>
+        <p className="mb-4">
+          Join hundreds of other businesses that have transformed their growth with AI-Vertise Boost.
+        </p>
+        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+          Get Started Today
+        </Link>
+      </div>
+    </BlogPostLayout>
   );
-} 
+}

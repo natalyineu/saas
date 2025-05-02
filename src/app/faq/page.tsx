@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { COMPANY_EMAIL } from '@/lib/utils/constants';
 
@@ -89,7 +88,6 @@ export default function FAQPage() {
           </a>
         </div>
       </main>
-      <Footer />
     </>
   );
 } 
