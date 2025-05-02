@@ -2,22 +2,30 @@ import { MetadataRoute } from 'next';
 
 // Returns a list of all blog post URLs
 const getBlogPosts = () => {
-  // In a real implementation, you'd fetch this from your CMS or database
+  // All blog posts and success stories from our data files
   return [
-    'uk-advertising-landscape-2025',
+    // Regular blog posts
+    'marketing-dashboard-benefits',
+    'marketing-in-singapore',
+    'ai-marketing-agents',
+    'digital-marketing-china',
+    'media-planning-metrics',
+    'effective-facebook-ads',
     'ai-in-digital-advertising',
-    'privacy-first-advertising',
     'programmatic-advertising-ai',
+    'privacy-first-advertising',
     'social-media-ai-ads',
-    'social-media-ai-content',
     'metaverse-marketing-opportunities',
-    'telegram-ai-channel-selection',
     'ecommerce-personalization',
+    'social-media-ai-content',
+    'uk-advertising-landscape-2025',
     'ai-telegram-channel-strategy',
+    'telegram-ai-channel-selection',
+    
+    // Success stories / case studies
     'urban-beans-case-study',
     'taste-of-italy-case-study',
-    'chic-trends-case-study',
-    'effective-facebook-ads'
+    'chic-trends-case-study'
   ];
 };
 
