@@ -19,11 +19,11 @@ const requiredUrls = [
   '/blog/metaverse-marketing-opportunities',
   '/blog/telegram-ai-channel-selection',
   '/blog/ai-in-digital-advertising',
-  '/blog/uk-advertising-landscape-2024',
+  '/blog/uk-advertising-landscape-2025',
   '/blog/urban-beans-case-study'
 ];
 
-const appDir = path.join(__dirname, '..', 'app');
+const appDir = path.join(__dirname, '..', 'src', 'app');
 
 // Function to check if a URL path exists in the app directory
 function checkUrlPath(urlPath) {
