@@ -10,20 +10,30 @@ import {
   BlogAnalyticsIcon,
   BlogStrategyIcon,
   BlogDefaultIcon
-} from '@/components/blog/BlogCaseStudyIcons';
+} from '@/components/blog/icons/case-study-index';
 
+// Import from the new modular icon structure
 import {
   FacebookAdsIcon,
+  SocialMediaAdsIcon,
+  AiContentIcon
+} from '@/components/blog/icons/SocialMediaIcons';
+
+import {
   AiAdvertisingIcon,
   ProgrammaticIcon,
-  PrivacyIcon,
-  SocialMediaAdsIcon,
   MetaverseIcon,
-  EcommerceIcon,
-  AiContentIcon,
-  UkLandscapeIcon,
+  EcommerceIcon
+} from '@/components/blog/icons/TechnologyIcons';
+
+import {
+  PrivacyIcon,
+  UkLandscapeIcon
+} from '@/components/blog/icons/SecurityIcons';
+
+import {
   TelegramIcon
-} from '@/components/blog/AnimatedBlogIcons';
+} from '@/components/blog/icons/MessagingIcons';
 
 interface BlogContent {
   id: string;

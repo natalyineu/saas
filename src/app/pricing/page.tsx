@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import ClientCostComparisonSection from '@/components/ClientCostComparisonSection';
+import CostComparison from '@/components/CostComparison';
 
 // Enable static generation for this page
 export const dynamic = 'force-static';
@@ -106,7 +106,7 @@ export default function PricingDetailsPage() {
         </section>
         
         {/* Cost Comparison section */}
-        <ClientCostComparisonSection />
+        <CostComparison withSuspense={true} />
 
         {/* FAQs about pricing */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">

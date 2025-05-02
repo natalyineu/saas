@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import NavLogo from './navbar/NavLogo';
-import DesktopMenu from './navbar/DesktopMenu';
-import MobileMenuButton from './navbar/MobileMenuButton';
-import MobileMenu from './navbar/MobileMenu';
+import NavLogo from './NavLogo';
+import DesktopMenu from './DesktopMenu';
+import MobileMenuButton from './MobileMenuButton';
+import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

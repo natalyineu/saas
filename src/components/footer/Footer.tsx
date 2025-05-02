@@ -1,9 +1,9 @@
 import React from 'react';
-import FooterBackground from './footer/FooterBackground';
-import FooterCompanyInfo from './footer/FooterCompanyInfo';
-import FooterNavigation from './footer/FooterNavigation';
-import FooterContact from './footer/FooterContact';
-import FooterCopyright from './footer/FooterCopyright';
+import FooterBackground from './FooterBackground';
+import FooterCompanyInfo from './FooterCompanyInfo';
+import FooterNavigation from './FooterNavigation';
+import FooterContact from './FooterContact';
+import FooterCopyright from './FooterCopyright';
 
 export default function Footer() {
   return (
@@ -29,4 +29,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+} 
