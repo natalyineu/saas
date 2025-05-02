@@ -11,6 +11,8 @@ interface BlogPost {
   excerpt: string;
   author: string;
   readTime: string;
+  category: string;
+  icon?: React.ReactNode;
 }
 
 // Props for the BlogList component
@@ -54,8 +56,8 @@ export default function BlogList({ blogPosts }: BlogListProps) {
     return gradients[index % gradients.length];
   };
   
-  // Get icon based on post ID
-  const getIcon = (postId: string) => {
+  // Generate default icon if none is provided
+  const getDefaultIcon = (postId: string) => {
     if (postId.includes('advertising')) {
       return (
         <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,65 +83,6 @@ export default function BlogList({ blogPosts }: BlogListProps) {
             <circle cx="70" cy="65" r="10" fill="rgba(252,70,107,0.8)" />
             <path d="M50 50 L30 65" stroke="rgba(63,94,251,1)" strokeWidth="3" />
             <path d="M50 50 L70 65" stroke="rgba(63,94,251,1)" strokeWidth="3" />
-          </g>
-        </svg>
-      );
-    } else if (postId.includes('telegram')) {
-      return (
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-            <path d="M30 45 L50 65 L70 30 L35 50 Z" fill="rgba(252,70,107,0.8)" />
-            <path d="M35 50 L45 60 L50 55" fill="white" />
-          </g>
-        </svg>
-      );
-    } else if (postId.includes('facebook')) {
-      return (
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-            <rect x="25" y="25" width="50" height="50" rx="10" fill="rgba(63,94,251,1)" />
-            <path d="M52 75 V55 H62 L64 45 H52 V38 C52 35 54 33 58 33 H64 V25 C62 24 58 24 55 24 C48 24 42 29 42 37 V45 H32 V55 H42 V75 Z" fill="white" />
-          </g>
-        </svg>
-      );
-    } else if (postId.includes('ecommerce') || postId.includes('commerce')) {
-      return (
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-            <path d="M30 35 H70 L65 55 H35 Z" fill="rgba(252,70,107,0.8)" />
-            <circle cx="40" cy="65" r="5" fill="rgba(63,94,251,1)" />
-            <circle cx="60" cy="65" r="5" fill="rgba(63,94,251,1)" />
-            <path d="M35 45 H65" stroke="white" strokeWidth="2" />
-            <path d="M40 70 L60 70" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          </g>
-        </svg>
-      );
-    } else if (postId.includes('metaverse')) {
-      return (
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-            <path d="M25 40 L75 40 L75 70 L25 70 Z" fill="rgba(252,70,107,0.8)" strokeWidth="2" />
-            <path d="M40 45 L50 35 L60 45" stroke="white" strokeWidth="2" />
-            <path d="M35 70 L35 50 L65 50 L65 70" stroke="white" strokeWidth="2" fill="none" />
-            <circle cx="40" cy="60" r="3" fill="white" />
-            <circle cx="60" cy="60" r="3" fill="white" />
-            <path d="M40 60 L60 60" stroke="white" strokeWidth="1.5" />
-          </g>
-        </svg>
-      );
-    } else if (postId.includes('uk-advertising')) {
-      return (
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-          <g className="transform transition-transform duration-700 origin-center group-hover:rotate-12">
-            <path d="M30 30 L70 30 L70 70 L30 70 Z" fill="rgba(252,70,107,0.1)" stroke="rgba(252,70,107,0.8)" strokeWidth="2" />
-            <path d="M30 30 L70 70" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-            <path d="M30 70 L70 30" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-            <circle cx="50" cy="50" r="10" fill="rgba(252,70,107,0.8)" />
           </g>
         </svg>
       );
@@ -170,23 +113,27 @@ export default function BlogList({ blogPosts }: BlogListProps) {
           >
             <article className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
               {/* Post icon/image */}
-              <div className="h-48 relative overflow-hidden">
-                <div className={`h-full w-full flex items-center justify-center bg-gradient-to-br ${getGradient(index)} transition-all duration-500`}>
-                  <div className="relative w-32 h-32 flex items-center justify-center">
-                    <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-110">
-                      {getIcon(post.id)}
+              {post.icon ? (
+                post.icon
+              ) : (
+                <div className="h-48 relative overflow-hidden">
+                  <div className={`h-full w-full flex items-center justify-center bg-gradient-to-br ${getGradient(index)} transition-all duration-500`}>
+                    <div className="relative w-32 h-32 flex items-center justify-center">
+                      <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-110">
+                        {getDefaultIcon(post.id)}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
               
               {/* Post content */}
               <div className="flex-grow p-6">
                 <div className="mb-3">
                   <span className="inline-block bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs px-3 py-1 rounded-full mb-2">
-                    ARTICLE
+                    {post.category || "ARTICLE"}
                   </span>
-                  <time dateTime={post.date} className="text-gray-500 text-sm">
+                  <time dateTime={post.date} className="text-gray-500 text-sm ml-2">
                     {post.date}
                   </time>
                 </div>

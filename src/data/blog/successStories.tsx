@@ -24,7 +24,7 @@ export const successStories: SuccessStory[] = [
     category: "CASE STUDY",
     excerpt: "A specialty coffee shop used AI-Vertise Boost to target local coffee enthusiasts and saw a dramatic increase in new customers within the first month.",
     readTime: "5 min read",
-    author: "Marketing Team",
+    author: "Founder of ai-vertise.com",
     heroImage: "/images/case-studies/urban-beans.jpg",
     stats: {
       value: "+143%",
@@ -38,7 +38,7 @@ export const successStories: SuccessStory[] = [
     category: "CASE STUDY",
     excerpt: "A family-owned Italian restaurant leveraged our platform to promote their weekend specials, resulting in fully booked weekends.",
     readTime: "6 min read",
-    author: "Marketing Team",
+    author: "Founder of ai-vertise.com",
     heroImage: "/images/case-studies/taste-of-italy.jpg",
     stats: {
       value: "+87%",
@@ -52,7 +52,7 @@ export const successStories: SuccessStory[] = [
     category: "CASE STUDY",
     excerpt: "An online fashion boutique used our AI targeting to find fashion-forward customers, achieving impressive sales from day one.",
     readTime: "7 min read",
-    author: "Marketing Team",
+    author: "Founder of ai-vertise.com",
     heroImage: "/images/case-studies/chic-trends.jpg",
     stats: {
       value: "+215%",
