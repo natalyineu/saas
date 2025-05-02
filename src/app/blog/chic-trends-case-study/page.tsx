@@ -1,24 +1,68 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
-import { getBlogPostMetadata, createBlogPostPage } from '@/lib/utils/blog-templates';
+import BlogPostLayout from '@/components/blog/BlogPostLayout';
 
-// Blog post content data
-const postData = {
-  id: 'chic-trends-case-study',
-  title: 'Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend',
-  date: 'April 13, 2025',
-  readTime: '7 min read',
-  category: 'CASE STUDY',
-  excerpt: 'Learn about online boutique launch: fashion retailer achieves 215% return on ad spend and how it can improve your marketing results.',
-  tags: ['Fashion', 'E-commerce', 'Case Study', 'ROAS'],
-  heroImage: '/images/blog/placeholder.svg'
+// Metadata for SEO
+export const metadata: Metadata = {
+  title: 'Online Boutique Launch: Fashion Retailer Achieves 215% ROAS | AI-Vertise Boost',
+  description: 'Learn how an online fashion boutique achieved a 215% return on ad spend through AI-powered targeting and marketing strategy.',
+  openGraph: {
+    title: 'Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend',
+    description: 'Learn how an online fashion boutique achieved a 215% return on ad spend through AI-powered targeting and marketing strategy.',
+    type: 'article',
+    publishedTime: '2025-04-13',
+    images: [
+      {
+        url: '/images/blog/placeholder.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Online Boutique Launch Case Study',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Online Boutique Launch: Fashion Retailer Achieves 215% ROAS',
+    description: 'Learn how an online fashion boutique achieved a 215% return on ad spend through AI-powered targeting and marketing strategy.',
+    images: ['/images/blog/placeholder.svg'],
+  },
 };
 
-// Generate metadata using our utility
-export const metadata = getBlogPostMetadata(postData);
-
 export default function BlogPost() {
-  return createBlogPostPage(postData, (
-    <>
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend",
+    "description": "Learn how an online fashion boutique achieved a 215% return on ad spend through AI-powered targeting and marketing strategy.",
+    "author": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Founder of ai-vertise.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/logo.png"
+      }
+    },
+    "datePublished": "2025-04-13",
+    "dateModified": "2025-04-13",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-vertise.com/blog/chic-trends-case-study"
+    }
+  };
+
+  return (
+    <BlogPostLayout
+      title="Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend"
+      date="April 13, 2025"
+      author="Founder of ai-vertise.com"
+      readTime="7 min read"
+      tags={['Fashion', 'E-commerce', 'Case Study', 'ROAS']}
+      structuredData={jsonLd}
+    >
       <p className="lead">
         A new online boutique specializing in curated fashion for young professionals faced the daunting challenge of launching in a crowded e-commerce marketplace. With no established brand recognition and fierce competition from large retailers, they needed a strategic approach to their launch.
       </p>
@@ -150,6 +194,6 @@ export default function BlogPost() {
           Get Started Today
         </Link>
       </div>
-    </>
-  ));
+    </BlogPostLayout>
+  );
 }

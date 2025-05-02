@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import BlogHeader from '@/components/blog/BlogHeader';
-import { getBlogIcon, getBlogStats } from '@/lib/utils/blog-helpers';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 
 // Metadata for SEO
@@ -33,22 +31,7 @@ export const metadata: Metadata = {
   },
 };
 
-
-// Blog post data
-const postData = {
-  id: 'uk-advertising-landscape-2025',
-  title: 'UK Advertising Landscape 2025 | AI-Vertise Boost',
-  date: '',
-  author: '',
-  readTime: '',
-  category: 'AI Technology',
-  tags: []
-};
-
 export default function BlogPost() {
-  const icon = getBlogIcon(postData);
-  const stats = getBlogStats(postData);
-
   const title = 'The UK Advertising Landscape in 2025: Trends, Challenges, and Opportunities';
   const date = 'April 18, 2025';
   const author = 'Market Research Team';
@@ -87,6 +70,7 @@ export default function BlogPost() {
       date={date}
       author={author}
       readTime={readTime}
+      tags={tags}
       structuredData={jsonLd}
     >
       <p className="lead">
