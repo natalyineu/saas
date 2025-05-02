@@ -1,9 +1,20 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { COMPANY_EMAIL, COMPANY_PHONE } from '../../lib/utils/constants';
 import FooterHeading from './FooterHeading';
 import SocialMediaLinks from './SocialMediaLinks';
 
 export default function FooterContact() {
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+  
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Process will be handled by Formspree
+    setSubscribed(true);
+  };
+
   return (
     <div className="mt-6 md:mt-0">
       <FooterHeading
@@ -36,6 +47,51 @@ export default function FooterContact() {
           <SocialMediaLinks />
         </li>
       </ul>
+      
+      {/* Newsletter Subscription Form */}
+      <div className="mt-6">
+        <FooterHeading
+          icon={
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          }
+        >
+          Newsletter
+        </FooterHeading>
+        
+        {subscribed ? (
+          <div className="text-green-400 text-sm mt-2">
+            Thanks for subscribing!
+          </div>
+        ) : (
+          <form 
+            action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xayzgbnw'}`}
+            method="POST" 
+            onSubmit={handleNewsletterSubmit}
+            className="mt-3"
+          >
+            <input type="hidden" name="form_name" value="newsletter_subscription" />
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input 
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email address" 
+                required
+                className="bg-gray-800 text-white px-3 py-2 rounded-md text-sm border border-gray-700 focus:ring-1 focus:ring-primary-purple focus:outline-none"
+              />
+              <button 
+                type="submit"
+                className="bg-primary-purple hover:bg-primary-purple/90 text-white px-4 py-2 rounded-md text-sm"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        )}
+      </div>
     </div>
   );
 } 

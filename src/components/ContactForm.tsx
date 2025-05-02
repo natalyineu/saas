@@ -106,7 +106,7 @@ export default function ContactForm({
       {title && <h2 className="text-2xl font-bold mb-2">{title}</h2>}
       {subtitle && <p className="text-gray-600 mb-6">{subtitle}</p>}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="POST">
         <div className="space-y-6">
           <div>
             <label

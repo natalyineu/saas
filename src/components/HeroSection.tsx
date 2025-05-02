@@ -156,7 +156,10 @@ export default function HeroSection() {
                         method="POST"
                         onSubmit={handleFormSubmit}
                         className="hidden"
-                      ></form>
+                      >
+                        <input type="hidden" name="_subject" value="AI-Vertise Campaign Inquiry" />
+                        <input type="hidden" name="_next" value="https://ai-vertise.com/?success=true" />
+                      </form>
                     </div>
                   </>
                 )}
