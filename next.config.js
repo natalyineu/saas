@@ -27,6 +27,10 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
+  // Environment variables
+  env: {
+    NEXT_PUBLIC_FORMSPREE_ID: 'xayzgbnw',
+  },
   // Transpile chart.js and related packages to fix webpack bundling issues
   transpilePackages: ['chart.js', 'react-chartjs-2'],
   // Add headers for security and performance
