@@ -49,7 +49,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Starter",
-    buttonLink: "https://buymeacoffee.com/aivertise/membership",
+    buttonLink: "/contact",
     highlight: false
   },
   {
@@ -84,7 +84,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Growth",
-    buttonLink: "https://buymeacoffee.com/aivertise/membership",
+    buttonLink: "/contact",
     highlight: true
   },
   {
@@ -119,7 +119,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Impact",
-    buttonLink: "https://buymeacoffee.com/aivertise/membership",
+    buttonLink: "/contact",
     highlight: false
   },
   {

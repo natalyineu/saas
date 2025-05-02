@@ -5,7 +5,6 @@ import Footer from '@/components/footer';
 import SupportButton from '@/components/SupportButton';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
-import BuyMeCoffeeScript from '@/components/analytics/BuyMeCoffeeScript';
 import BackgroundGrid from '@/components/layout/BackgroundGrid';
 import { seoMetadata, viewportConfig } from '@/config/seo';
 import Script from 'next/script';
@@ -45,10 +44,8 @@ export default function RootLayout({
         
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://cdn.buymeacoffee.com" crossOrigin="anonymous" />
         
         <GoogleAnalytics />
-        <BuyMeCoffeeScript />
       </head>
       <body className="min-h-screen bg-soft-gradient relative" suppressHydrationWarning>
         <Script id="hydration-fix" strategy="beforeInteractive">

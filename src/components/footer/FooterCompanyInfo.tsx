@@ -1,5 +1,4 @@
 import React from 'react';
-import BuyMeCoffeeButton from '../BuyMeCoffeeButton';
 
 export default function FooterCompanyInfo() {
   return (
@@ -11,9 +10,6 @@ export default function FooterCompanyInfo() {
       <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base">
         AI-powered advertising for small and medium businesses. Smart targeting, fast launch, and budget optimization.
       </p>
-      <div className="mb-8 md:mb-0">
-        <BuyMeCoffeeButton />
-      </div>
     </div>
   );
 } 

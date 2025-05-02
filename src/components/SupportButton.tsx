@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { TargetBullseyeIcon } from './ui/BasicIcons';
+import { useRouter } from 'next/navigation';
 
 export default function SupportButton() {
+  const router = useRouter();
   const [showTooltip, setShowTooltip] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -49,21 +51,21 @@ export default function SupportButton() {
           className={`bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base font-medium shadow-lg rounded-full ${isMobile ? 'px-2 py-2' : 'px-4 sm:px-6 py-2.5 sm:py-3'} flex items-center justify-center hover:shadow-xl transition-all animate-pulse-slow`}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
-          onClick={() => window.open('https://buymeacoffee.com/aivertise/membership', '_blank')}
-          aria-label="Buy an Ads package"
+          onClick={() => router.push('/contact')}
+          aria-label="Contact us about advertising"
         >
           {/* Target icon */}
           <TargetBullseyeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" />
           
           {isMobile ? (
-            <span className="text-xs whitespace-nowrap">Buy Ads</span>
+            <span className="text-xs whitespace-nowrap">Contact</span>
           ) : (
-            <span>Buy an Ads package</span>
+            <span>Get an Ads package</span>
           )}
           
           {showTooltip && (
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white text-blue-600 shadow-md rounded-md py-1 px-2 text-sm whitespace-nowrap hidden md:block">
-              Get premium advertising
+              Contact us for premium advertising
             </div>
           )}
         </button>
