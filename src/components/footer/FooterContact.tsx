@@ -8,11 +8,38 @@ import SocialMediaLinks from './SocialMediaLinks';
 export default function FooterContact() {
   const [subscribed, setSubscribed] = useState(false);
   const [email, setEmail] = useState('');
+  const [submitting, setSubmitting] = useState(false);
   
-  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Process will be handled by Formspree
-    setSubscribed(true);
+    setSubmitting(true);
+    
+    try {
+      // Get form data
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Send to Formspree
+      const response = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setSubscribed(true);
+        setEmail('');
+      } else {
+        alert('There was a problem submitting the form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was a problem submitting the form. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -66,12 +93,11 @@ export default function FooterContact() {
           </div>
         ) : (
           <form 
-            action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`}
             method="POST" 
             onSubmit={handleNewsletterSubmit}
             className="mt-3"
           >
-            <input type="hidden" name="form_name" value="newsletter_subscription" />
+            <input type="hidden" name="form-type" value="newsletter" />
             <div className="flex flex-col sm:flex-row gap-2">
               <input 
                 type="email"
@@ -84,9 +110,20 @@ export default function FooterContact() {
               />
               <button 
                 type="submit"
-                className="bg-primary-purple hover:bg-primary-purple/90 text-white px-4 py-2 rounded-md text-sm"
+                disabled={submitting}
+                className="bg-primary-purple hover:bg-primary-purple/90 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center"
               >
-                Subscribe
+                {submitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Subscribe'
+                )}
               </button>
             </div>
           </form>
