@@ -14,7 +14,7 @@ export const dynamic = 'force-static';
 export const revalidate = 3600; // Revalidate every hour
 
 export default function Home() {
-  const { structuredData, organizationData, productData } = generateStructuredData();
+  const { structuredData, organizationData, productData, localBusinessData } = generateStructuredData();
 
   return (
     <SuppressHydrationWarning>
@@ -33,6 +33,11 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }}
       />
+      <Script
+        id="local-business-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
+      />
       <main>
         <HeroSection />
         <FeaturesSection />
@@ -45,7 +50,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-8">
             <div className="text-center mb-10">
               <span className="inline-block px-3 py-1 mb-2 text-xs font-medium text-primary-purple bg-primary-purple/10 rounded-full">CONTACT US</span>
-              <h2 className="text-3xl md:text-4xl mb-3 font-bold">Get in Touch</h2>
+              <h2 className="text-3xl md:text-4xl mb-3 font-bold">Get in Touch - Updated</h2>
               <p className="text-gray-600 max-w-3xl mx-auto mb-6 text-sm">Have questions about our services? Ready to boost your advertising performance? Reach out to our team.</p>
             </div>
             <div className="max-w-2xl mx-auto">
