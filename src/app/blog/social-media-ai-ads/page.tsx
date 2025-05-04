@@ -4,19 +4,22 @@ import Link from 'next/link';
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'AI-Powered Social Media Advertising Strategies | AI-Vertise Boost | AI-Vertise Boost',
-  description: 'Learn about ai-powered social media advertising strategies | ai-vertise boost and how it can improve your marketing results.',
+  title: 'AI-Powered Social Media Advertising Strategies | AI-Vertise Boost',
+  description: 'Master advanced AI-driven social media advertising techniques that improve targeting accuracy, creative performance, and ROI across Facebook, Instagram, TikTok, and other platforms.',
   openGraph: {
-    title: 'AI-Powered Social Media Advertising Strategies | AI-Vertise Boost | AI-Vertise Boost',
-    description: 'Learn about ai-powered social media advertising strategies | ai-vertise boost and how it can improve your marketing results.',
+    title: 'AI-Powered Social Media Advertising Strategies | AI-Vertise Boost',
+    description: 'Master advanced AI-driven social media advertising techniques that improve targeting accuracy, creative performance, and ROI across Facebook, Instagram, TikTok, and other platforms.',
     images: [
       {
         url: '/images/blog/placeholder.svg',
         width: 1200,
         height: 630,
-        alt: 'AI-Powered Social Media Advertising Strategies | AI-Vertise Boost',
+        alt: 'AI-Powered Social Media Advertising Strategies',
       }
     ],
+  },
+  alternates: {
+    canonical: 'https://ai-vertise.com/blog/social-media-ai-ads',
   },
 };
 
@@ -25,14 +28,14 @@ export const metadata: Metadata = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "AI-Powered Social Media Advertising Strategies | AI-Vertise Boost",
-    "description": "Learn about ai-powered social media advertising strategies | ai-vertise boost",
+    "description": "Master advanced AI-driven social media advertising techniques that improve targeting accuracy, creative performance, and ROI across Facebook, Instagram, TikTok, and other platforms.",
     "author": {
       "@type": "Organization",
       "name": "Founder of ai-vertise.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Founder of ai-vertise.com",
+      "name": "AI-Vertise Boost",
       "logo": {
         "@type": "ImageObject",
         "url": "/logo.png"

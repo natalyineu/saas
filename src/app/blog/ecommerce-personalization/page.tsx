@@ -4,19 +4,22 @@ import Link from 'next/link';
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'AI-Powered E-commerce Personalization | AI-Vertise Boost | AI-Vertise Boost',
-  description: 'Learn about ai-powered e-commerce personalization | ai-vertise boost and how it can improve your marketing results.',
+  title: 'AI-Powered E-commerce Personalization | AI-Vertise Boost',
+  description: 'Discover how AI-powered e-commerce personalization can transform customer experiences, increase conversion rates, and drive sales through tailored product recommendations and dynamic content.',
   openGraph: {
-    title: 'AI-Powered E-commerce Personalization | AI-Vertise Boost | AI-Vertise Boost',
-    description: 'Learn about ai-powered e-commerce personalization | ai-vertise boost and how it can improve your marketing results.',
+    title: 'AI-Powered E-commerce Personalization | AI-Vertise Boost',
+    description: 'Discover how AI-powered e-commerce personalization can transform customer experiences, increase conversion rates, and drive sales through tailored product recommendations and dynamic content.',
     images: [
       {
         url: '/images/blog/placeholder.svg',
         width: 1200,
         height: 630,
-        alt: 'AI-Powered E-commerce Personalization | AI-Vertise Boost',
+        alt: 'AI-Powered E-commerce Personalization',
       }
     ],
+  },
+  alternates: {
+    canonical: 'https://ai-vertise.com/blog/ecommerce-personalization',
   },
 };
 
@@ -25,21 +28,21 @@ export const metadata: Metadata = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "AI-Powered E-commerce Personalization | AI-Vertise Boost",
-    "description": "Learn about ai-powered e-commerce personalization | ai-vertise boost",
+    "description": "Discover how AI-powered e-commerce personalization can transform customer experiences, increase conversion rates, and drive sales through tailored product recommendations and dynamic content.",
     "author": {
       "@type": "Organization",
       "name": "Founder of ai-vertise.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Founder of ai-vertise.com",
+      "name": "AI-Vertise Boost",
       "logo": {
         "@type": "ImageObject",
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 27, 2024",
-    "dateModified": "May 27, 2024",
+    "datePublished": "May 15, 2024",
+    "dateModified": "May 15, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/ecommerce-personalization"
