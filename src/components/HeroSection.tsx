@@ -1,54 +1,75 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef, useEffect, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import BrowserMockup from './ui/BrowserMockup';
 import MobileDashboardView from './ui/MobileDashboardView';
 import TabletDashboardView from './ui/TabletDashboardView';
+import ErrorBoundary from './ui/ErrorBoundary';
 import { DASHBOARD_URL } from '@/lib/utils/constants';
 
-// Dynamic imports with explicit loading state and no SSR
+// Dynamic imports with proper Suspense fallbacks
 const Modal = dynamic(() => import('./ui/Modal'), {
   ssr: false,
-  loading: () => (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="bg-white p-6 rounded-lg">Loading...</div>
-    </div>
-  )
 });
 
 const CampaignDetails = dynamic(() => import('./ui/CampaignDetails'), { 
   ssr: false,
-  loading: () => <div className="p-4 text-center">Loading campaign details...</div>
 });
 
 const OptimizationSuggestions = dynamic(() => import('./ui/OptimizationSuggestions'), {
   ssr: false,
-  loading: () => <div className="p-4 text-center">Loading optimization suggestions...</div>
 });
+
+// Fallback components for Suspense
+const LoadingModal = () => (
+  <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+    <div className="bg-white p-6 rounded-lg">Loading...</div>
+  </div>
+);
+
+const LoadingContent = () => (
+  <div className="p-4 text-center">
+    <div className="animate-pulse flex space-x-4">
+      <div className="flex-1 space-y-4 py-1">
+        <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+        <div className="space-y-2">
+          <div className="h-4 bg-gray-200 rounded"></div>
+          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default function HeroSection() {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [isOptimizeModalOpen, setIsOptimizeModalOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const caseStudiesRef = useRef<HTMLElement | null>(null);
   
-  // Scroll to case studies section
+  // Find the case studies section on mount
+  useEffect(() => {
+    // Using querySelector is more reliable than getElementById
+    caseStudiesRef.current = document.querySelector('#case-studies');
+  }, []);
+  
+  // Scroll to case studies section using ref
   const scrollToCaseStudies = () => {
-    const caseStudiesSection = document.getElementById('case-studies');
-    if (caseStudiesSection) {
-      caseStudiesSection.scrollIntoView({ behavior: 'smooth' });
+    if (caseStudiesRef.current) {
+      caseStudiesRef.current.scrollIntoView({ behavior: 'smooth' });
     } else {
       setIsDetailsModalOpen(true);
     }
   };
   
-  // Handle form submission feedback
+  // Handle form submission with proper async pattern
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     // Let Formspree handle the actual submission
-    setTimeout(() => {
-      setFormSubmitted(true);
-    }, 500);
+    // Using state directly rather than setTimeout
+    setFormSubmitted(true);
   };
 
   return (
@@ -130,33 +151,30 @@ export default function HeroSection() {
                     </h3>
                     <div className="bg-white rounded-xl shadow-md overflow-hidden relative border border-indigo-100 p-3">
                       <div className="absolute inset-0 rounded-xl opacity-10" style={{ background: 'linear-gradient(90deg, #4A00E0, #FF416C)' }}></div>
-                      <div className="flex flex-row items-center gap-4 relative z-10">
-                        <input 
-                          name="contact"
-                          type="text" 
-                          placeholder="Enter your email or phone" 
-                          className="px-6 py-5 border border-gray-100 rounded-lg bg-white/80 w-full focus:ring-1 focus:ring-indigo-300 focus:outline-none text-gray-700 text-base"
-                          required
-                          form="contact-form"
-                        />
-                        <button 
-                          type="submit"
-                          className="bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium px-6 py-5 rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center text-base shadow-sm whitespace-nowrap"
-                          form="contact-form"
-                        >
-                          Get AI Marketing
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                          </svg>
-                        </button>
-                      </div>
                       <form 
                         id="contact-form"
                         action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`}
                         method="POST"
                         onSubmit={handleFormSubmit}
-                        className="hidden"
                       >
+                        <div className="flex flex-row items-center gap-4 relative z-10">
+                          <input 
+                            name="contact"
+                            type="text" 
+                            placeholder="Enter your email or phone" 
+                            className="px-6 py-5 border border-gray-100 rounded-lg bg-white/80 w-full focus:ring-1 focus:ring-indigo-300 focus:outline-none text-gray-700 text-base"
+                            required
+                          />
+                          <button 
+                            type="submit"
+                            className="bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium px-6 py-5 rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center text-base shadow-sm whitespace-nowrap"
+                          >
+                            Get AI Marketing
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                          </button>
+                        </div>
                         <input type="hidden" name="_subject" value="AI-Vertise Campaign Inquiry" />
                         <input type="hidden" name="_next" value="https://ai-vertise.com/?success=true" />
                       </form>
@@ -188,12 +206,16 @@ export default function HeroSection() {
               <BrowserMockup className="shadow-2xl transform md:scale-110 md:origin-center">
                 {/* Mobile view */}
                 <div className="sm:hidden">
-                  <MobileDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                  <ErrorBoundary>
+                    <MobileDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                  </ErrorBoundary>
                 </div>
                 
                 {/* Tablet and desktop view */}
                 <div className="hidden sm:block">
-                  <TabletDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                  <ErrorBoundary>
+                    <TabletDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                  </ErrorBoundary>
                 </div>
               </BrowserMockup>
             </div>
@@ -201,17 +223,29 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Modals rendered directly without Suspense wrapper */}
+      {/* Modals with proper Suspense and ErrorBoundary */}
       {isDetailsModalOpen && (
-        <Modal title="Campaign Details" onClose={() => setIsDetailsModalOpen(false)}>
-          <CampaignDetails />
-        </Modal>
+        <ErrorBoundary>
+          <Suspense fallback={<LoadingModal />}>
+            <Modal title="Campaign Details" onClose={() => setIsDetailsModalOpen(false)}>
+              <Suspense fallback={<LoadingContent />}>
+                <CampaignDetails />
+              </Suspense>
+            </Modal>
+          </Suspense>
+        </ErrorBoundary>
       )}
       
       {isOptimizeModalOpen && (
-        <Modal title="Optimization Suggestions" onClose={() => setIsOptimizeModalOpen(false)}>
-          <OptimizationSuggestions />
-        </Modal>
+        <ErrorBoundary>
+          <Suspense fallback={<LoadingModal />}>
+            <Modal title="Optimization Suggestions" onClose={() => setIsOptimizeModalOpen(false)}>
+              <Suspense fallback={<LoadingContent />}>
+                <OptimizationSuggestions />
+              </Suspense>
+            </Modal>
+          </Suspense>
+        </ErrorBoundary>
       )}
     </section>
   );

@@ -1,7 +1,44 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define the required URLs from our task
+// Load the blog post registry to generate URLs
+const blogDataPath = path.join(__dirname, '..', 'src', 'data', 'blog', 'index.ts');
+const blogDataContent = fs.readFileSync(blogDataPath, 'utf8');
+
+// Extract blog post IDs using regex
+function extractBlogIds() {
+  const blogPostsMatch = blogDataContent.match(/export const blogPosts: BlogPost\[] = \[([\s\S]*?)\];/);
+  const successStoriesMatch = blogDataContent.match(/export const successStories: BlogPost\[] = \[([\s\S]*?)\];/);
+  
+  const blogPostIds = [];
+  
+  if (blogPostsMatch) {
+    const idMatches = blogPostsMatch[1].match(/id: '([^']+)'/g);
+    if (idMatches) {
+      idMatches.forEach(match => {
+        const id = match.replace("id: '", "").replace("'", "");
+        blogPostIds.push(id);
+      });
+    }
+  }
+  
+  if (successStoriesMatch) {
+    const idMatches = successStoriesMatch[1].match(/id: '([^']+)'/g);
+    if (idMatches) {
+      idMatches.forEach(match => {
+        const id = match.replace("id: '", "").replace("'", "");
+        blogPostIds.push(id);
+      });
+    }
+  }
+  
+  return blogPostIds;
+}
+
+// Get blog post IDs
+const blogPostIds = extractBlogIds();
+
+// Define required URLs for our site
 const requiredUrls = [
   '/',
   '/blog',
@@ -10,17 +47,8 @@ const requiredUrls = [
   '/policy',
   '/cookie-policy',
   '/faq',
-  '/blog/ai-telegram-channel-strategy',
-  '/blog/privacy-first-advertising',
-  '/blog/social-media-ai-ads',
-  '/blog/programmatic-advertising-ai',
-  '/blog/social-media-ai-content',
-  '/blog/ecommerce-personalization',
-  '/blog/metaverse-marketing-opportunities',
-  '/blog/telegram-ai-channel-selection',
-  '/blog/ai-in-digital-advertising',
-  '/blog/uk-advertising-landscape-2025',
-  '/blog/urban-beans-case-study'
+  // Add blog post URLs dynamically
+  ...blogPostIds.map(id => `/blog/${id}`)
 ];
 
 const appDir = path.join(__dirname, '..', 'src', 'app');
@@ -43,48 +71,29 @@ function checkUrlPath(urlPath) {
 }
 
 // Main verification function
-function verifyRequiredUrls() {
+function verifyUrls() {
   console.log('Verifying required URLs...');
+  
   let allValid = true;
   
   for (const url of requiredUrls) {
     const exists = checkUrlPath(url);
-    console.log(`${exists ? '✅' : '❌'} ${url}`);
-    
     if (!exists) {
+      console.error(`❌ Missing URL path: ${url}`);
       allValid = false;
+    } else {
+      console.log(`✅ Found URL path: ${url}`);
     }
   }
   
-  // Check for any missing blog posts
-  const blogDir = path.join(appDir, 'blog');
-  if (fs.existsSync(blogDir)) {
-    const blogDirs = fs.readdirSync(blogDir, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
-      .map(dirent => dirent.name);
-    
-    const blogUrls = requiredUrls.filter(url => url.startsWith('/blog/'))
-      .map(url => url.substring('/blog/'.length));
-    
-    const missingBlogs = blogUrls.filter(blog => !blogDirs.includes(blog));
-    
-    if (missingBlogs.length > 0) {
-      console.log('\nMissing blog directories:');
-      missingBlogs.forEach(blog => console.log(`- ${blog}`));
-    }
+  if (allValid) {
+    console.log('\n✅ All required URLs are valid!');
+    process.exit(0);
+  } else {
+    console.error('\n❌ Some required URLs are missing!');
+    process.exit(1);
   }
-  
-  return allValid;
 }
 
 // Run the verification
-const result = verifyRequiredUrls();
-
-if (result) {
-  console.log('\nAll required URLs are valid! ✅');
-} else {
-  console.log('\nSome required URLs are missing. ❌');
-}
-
-// Output result code for CI/CD pipelines
-process.exit(result ? 0 : 1); 
+verifyUrls(); 

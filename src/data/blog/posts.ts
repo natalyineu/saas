@@ -14,6 +14,116 @@ export interface BlogPost extends ContentItem {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "email-marketing-automation",
+    title: "Email Marketing Automation: AI-Powered Strategies for Higher Engagement",
+    date: "April 10, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "Email Marketing",
+    excerpt: "Discover how AI-powered email marketing automation can dramatically increase open rates, click-through rates, and conversions while saving time and resources.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/email-marketing-automation.jpg",
+    tags: ["Email Marketing", "Marketing Automation", "AI Tools", "Personalization", "ROI Optimization"]
+  },
+  {
+    id: "video-marketing-strategy",
+    title: "Video Marketing Strategy Guide: Formats, Platforms, and Optimization",
+    date: "April 8, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "Video Marketing",
+    excerpt: "Learn how to create an effective video marketing strategy that leverages the right formats and platforms to reach your target audience and achieve your business goals.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/video-marketing-strategy.jpg",
+    tags: ["Video Marketing", "Content Strategy", "Social Media", "YouTube", "Engagement"]
+  },
+  {
+    id: "voice-search-optimization",
+    title: "Voice Search Optimization: Preparing Your Brand for the Audio Revolution",
+    date: "April 5, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "SEO",
+    excerpt: "Optimize your digital presence for voice search with these practical strategies to ensure your brand stays visible as more consumers adopt voice-activated devices.",
+    readTime: "7 min read",
+    heroImage: "/images/blog/voice-search-optimization.jpg",
+    tags: ["Voice Search", "SEO", "Digital Marketing", "Smart Speakers", "Local Search"]
+  },
+  {
+    id: "influencer-marketing-strategy",
+    title: "Influencer Marketing Strategy: Building Authentic Partnerships That Convert",
+    date: "April 3, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "Influencer Marketing",
+    excerpt: "Develop an effective influencer marketing strategy focused on authentic partnerships that resonate with audiences and drive measurable business results.",
+    readTime: "10 min read",
+    heroImage: "/images/blog/influencer-marketing-strategy.jpg",
+    tags: ["Influencer Marketing", "Social Media", "Brand Partnerships", "Content Creation", "ROI Measurement"]
+  },
+  {
+    id: "marketing-attribution-models",
+    title: "Marketing Attribution Models Explained: Choosing the Right Approach",
+    date: "April 1, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "Analytics",
+    excerpt: "Compare different marketing attribution models and learn how to select the right approach for accurately measuring campaign performance across multiple channels.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/marketing-attribution-models.jpg",
+    tags: ["Marketing Analytics", "Attribution Modeling", "Data Analysis", "ROI Optimization", "Multi-Channel Marketing"]
+  },
+  {
+    id: "connected-tv-ad-campaign",
+    title: "Connected TV Ad Campaign Mastery: Strategies for the Streaming Age",
+    date: "July 3, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn how to create effective Connected TV ad campaigns that leverage precision targeting and measurement while capturing audience attention in premium streaming environments.",
+    readTime: "10 min read",
+    heroImage: "/images/blog/connected-tv-ad-campaign.jpg",
+    tags: ["Connected TV", "CTV", "Video Advertising", "Streaming Media", "Programmatic Advertising"]
+  },
+  {
+    id: "pinterest-ad-campaign",
+    title: "Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing Success",
+    date: "June 26, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform's unique visual discovery ecosystem.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/pinterest-ad-campaign.jpg",
+    tags: ["Pinterest", "Social Media Marketing", "Visual Marketing", "E-commerce", "ROI Optimization"]
+  },
+  {
+    id: "yahoo-dsp-ad-campaign",
+    title: "Yahoo DSP Campaign Guide: Strategies for Effective Cross-Channel Advertising",
+    date: "June 19, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Discover how to leverage Yahoo's demand-side platform for successful programmatic campaigns that drive engagement and conversions across devices and channels.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/yahoo-dsp-ad-campaign.jpg",
+    tags: ["Yahoo DSP", "Programmatic Advertising", "DSP", "Display Advertising", "Cross-Channel Marketing"]
+  },
+  {
+    id: "xandr-ad-campaign",
+    title: "Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025",
+    date: "June 12, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn how to leverage Xandr's advanced programmatic advertising platform to create targeted, high-performing campaigns that deliver superior results across multiple channels.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/xandr-ad-campaign.jpg",
+    tags: ["Xandr", "Programmatic Advertising", "Display Advertising", "Ad Tech", "Media Buying"]
+  },
+  {
+    id: "google-ads-search-campaign",
+    title: "Google Ads Search Campaign Mastery: Strategies for Boosting ROI",
+    date: "June 5, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn how to build high-performing Google Ads search campaigns that drive qualified traffic and maximize your return on investment.",
+    readTime: "8 min read",
+    heroImage: "/images/blog/google-ads-search-campaign.jpg",
+    tags: ["Google Ads", "PPC", "Search Marketing", "Digital Advertising", "ROI Optimization"]
+  },
+  {
     id: "marketing-dashboard-benefits",
     title: "7 Benefits of Using a Marketing Dashboard for Campaign Management",
     date: "May 1, 2025",
@@ -21,7 +131,8 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "Discover how marketing dashboards can streamline your campaign management, improve performance visibility, and help make data-driven decisions.",
     readTime: "6 min read",
-    heroImage: "/images/blog/placeholder.svg"
+    heroImage: "/images/blog/marketing-dashboard-benefits.jpg",
+    tags: ["Marketing Analytics", "Campaign Management", "Data Visualization", "Marketing Tools", "Performance Metrics"]
   },
   {
     id: "marketing-in-singapore",
@@ -31,7 +142,8 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "Learn effective digital marketing approaches tailored specifically for Singapore's unique market landscape and consumer behaviors.",
     readTime: "7 min read",
-    heroImage: "/images/blog/placeholder.svg"
+    heroImage: "/images/blog/marketing-in-singapore.jpg",
+    tags: ["Singapore Marketing", "Digital Marketing", "APAC Strategy", "International Marketing", "Market Entry"]
   },
   {
     id: "ai-marketing-agents",
@@ -41,7 +153,8 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "An overview of how AI marketing agents are transforming campaign management, content creation, and customer interactions.",
     readTime: "8 min read",
-    heroImage: "/images/blog/placeholder.svg"
+    heroImage: "/images/blog/ai-marketing-agents.jpg",
+    tags: ["AI Marketing", "Marketing Automation", "Artificial Intelligence", "MarTech", "Future of Marketing"]
   },
   {
     id: "digital-marketing-china",
@@ -51,7 +164,7 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "Essential insights into China's unique digital ecosystem and how to build effective marketing strategies for this vast market.",
     readTime: "9 min read",
-    heroImage: "/images/blog/placeholder.svg"
+    heroImage: "/images/blog/digital-marketing-china.jpg"
   },
   {
     id: "media-planning-metrics",
@@ -61,7 +174,7 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "A comprehensive guide to the essential metrics that can help optimize your media planning and improve campaign performance.",
     readTime: "7 min read",
-    heroImage: "/images/blog/placeholder.svg"
+    heroImage: "/images/blog/media-planning-metrics.jpg"
   },
   {
     id: "effective-facebook-ads",
@@ -71,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.",
     readTime: "7 min read",
-    heroImage: "/images/blog/facebook-ads.jpg"
+    heroImage: "/images/blog/effective-facebook-ads.jpg"
   },
   {
     id: "ai-in-digital-advertising",
@@ -151,7 +264,7 @@ export const blogPosts: BlogPost[] = [
     category: "Market Research",
     excerpt: "An analysis of current trends, challenges, and opportunities in the UK digital advertising market.",
     readTime: "8 min read",
-    heroImage: "/images/blog/uk-landscape.jpg",
+    heroImage: "/images/blog/uk-advertising-landscape-2025.jpg",
     content: `
       # The UK Digital Advertising Landscape in 2025
 

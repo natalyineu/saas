@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     authors: ['Marketing Team'],
     images: [
       {
-        url: '/images/blog/uk-advertising.jpg',
+        url: '/images/blog/uk-advertising-landscape-2025.jpg',
         width: 1200,
         height: 630,
         alt: 'UK Advertising Landscape 2025',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'UK Advertising Landscape 2025',
     description: 'Explore key trends in the UK advertising landscape for 2025.',
-    images: ['/images/blog/uk-advertising.jpg'],
+    images: ['/images/blog/uk-advertising-landscape-2025.jpg'],
     creator: '@aivertise',
     site: '@aivertise',
   },
@@ -61,6 +61,12 @@ export default function BlogPost() {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/uk-advertising-landscape-2025"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://ai-vertise.com/images/blog/uk-advertising-landscape-2025.jpg",
+      "width": "1200",
+      "height": "630"
     }
   };
   
@@ -73,6 +79,49 @@ export default function BlogPost() {
       tags={tags}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
+                  {/* UK Map Outline */}
+                  <path d="M40 30 L35 35 L38 45 L35 55 L40 65 L50 70 L60 65 L65 55 L63 45 L65 35 L60 30 L50 35 L40 30" 
+                    fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                  
+                  {/* UK Flag elements */}
+                  <path d="M45 40 L55 60" stroke="rgba(252,70,107,0.7)" strokeWidth="1" />
+                  <path d="M55 40 L45 60" stroke="rgba(252,70,107,0.7)" strokeWidth="1" />
+                  <path d="M50 35 L50 65" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+                  <path d="M38 50 L62 50" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+                  
+                  {/* Digital advertising elements */}
+                  <circle cx="45" cy="45" r="3" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+                  <circle cx="55" cy="45" r="2" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+                  <circle cx="45" cy="55" r="2" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+                  <circle cx="55" cy="55" r="3" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+                  
+                  {/* Data/trend lines */}
+                  <path d="M30 70 L40 68 L50 72 L60 65 L70 70" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" fill="none" className="animate-dash-slow" />
+                  <path d="M30 75 L40 71 L50 76 L60 69 L70 75" stroke="rgba(252,70,107,0.6)" strokeWidth="1.5" fill="none" className="animate-dash-slow" />
+                  
+                  {/* 2025 indicator */}
+                  <circle cx="70" cy="70" r="2" fill="rgba(63,94,251,1)" />
+                  <circle cx="70" cy="75" r="2" fill="rgba(252,70,107,1)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">UK Advertising Landscape</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">2025 Trends</h3>
+            <p className="text-gray-600">Regulatory changes, AI adoption, and evolving consumer behaviors transforming British advertising</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
         The UK advertising landscape has undergone significant transformation in recent years, shaped by technological innovation, regulatory changes, and evolving consumer behavior. As we move through 2025, understanding these shifts is essential for brands seeking to effectively engage UK audiences. This article explores the current state of UK advertising, key trends, and strategic opportunities.
       </p>

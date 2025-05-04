@@ -63,6 +63,47 @@ export default function BlogPost() {
       tags={['Fashion', 'E-commerce', 'Case Study', 'ROAS']}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
+                  {/* Shopping bag */}
+                  <path d="M35 40 L35 70 L65 70 L65 40" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                  <path d="M35 40 L40 30 L60 30 L65 40" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                  
+                  {/* Bag handles */}
+                  <path d="M40 40 C40 35, 45 35, 45 40" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="none" />
+                  <path d="M55 40 C55 35, 60 35, 60 40" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="none" />
+                  
+                  {/* Fashion items in bag */}
+                  <rect x="40" y="45" width="8" height="10" fill="rgba(252,70,107,0.2)" />
+                  <rect x="52" y="45" width="8" height="10" fill="rgba(252,70,107,0.2)" />
+                  <path d="M40 60 L60 60" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
+                  <path d="M45 65 L55 65" stroke="rgba(252,70,107,0.8)" strokeWidth="1" />
+                  
+                  {/* Upward graph/ROAS indicator */}
+                  <path d="M25 75 L35 65 L45 70 L55 60 L65 55 L75 45" stroke="rgba(252,70,107,1)" strokeWidth="1.5" fill="none" className="animate-dash-slow" />
+                  <circle cx="75" cy="45" r="2" fill="rgba(252,70,107,1)" />
+                  <path d="M70 50 L75 45 L80 50" stroke="rgba(252,70,107,1)" strokeWidth="1" />
+                  
+                  {/* 215% indicator */}
+                  <circle cx="72" cy="40" r="8" fill="rgba(252,70,107,0.1)" stroke="rgba(252,70,107,0.5)" strokeWidth="1" className="animate-pulse-slow" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">Fashion Boutique Success</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Case Study Results</h3>
+            <p className="text-gray-600">215% ROAS and 68% lower customer acquisition cost through AI-powered marketing</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
         A new online boutique specializing in curated fashion for young professionals faced the daunting challenge of launching in a crowded e-commerce marketplace. With no established brand recognition and fierce competition from large retailers, they needed a strategic approach to their launch.
       </p>

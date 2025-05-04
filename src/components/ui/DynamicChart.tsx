@@ -1,12 +1,8 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
-import { ChartOptions } from 'chart.js';
-import { Line } from 'react-chartjs-2';
-import { initChartJS } from '../../lib/chartjs-plugin';
-
-// Initialize Chart.js on component mount
-initChartJS();
+import React, { useEffect, useState, useRef, useMemo } from 'react';
+import { initChartJS, ChartOptions } from '../../lib/chartjs-plugin';
+import ErrorBoundary from '../ui/ErrorBoundary';
 
 interface DynamicChartProps {
   className?: string;
@@ -23,19 +19,68 @@ const MONTHLY_MILESTONES = {
   'Month 6': 'CTV Rollout'
 };
 
+// Lazy load Line component from react-chartjs-2
+const Line = React.lazy(() => import('react-chartjs-2').then(module => ({ default: module.Line })));
+
+// Component to handle Chart.js lazy loading
+const ChartWrapper = ({ children }: { children: React.ReactNode }) => (
+  <React.Suspense fallback={
+    <div className="h-full w-full flex items-center justify-center">
+      <div className="animate-pulse flex space-x-4">
+        <div className="flex-1 space-y-4 py-1">
+          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+          <div className="space-y-2">
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }>
+    {children}
+  </React.Suspense>
+);
+
+// Main chart component with ErrorBoundary
+const DynamicChartWithErrorBoundary: React.FC<DynamicChartProps> = (props) => (
+  <ErrorBoundary>
+    <DynamicChart {...props} />
+  </ErrorBoundary>
+);
+
 const DynamicChart: React.FC<DynamicChartProps> = ({ className, tooltips = false }) => {
+  // Chart state
   const [labels] = useState(['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6']);
   const [adSpendData, setAdSpendData] = useState<number[]>([]);
   const [revenueData, setRevenueData] = useState<number[]>([]);
   const [animationProgress, setAnimationProgress] = useState(0);
   const [refreshTime] = useState(new Date());
   const [chartReady, setChartReady] = useState(false);
+  const [chartInitialized, setChartInitialized] = useState(false);
   const animationRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Initialize Chart.js library
+  useEffect(() => {
+    // Skip on server
+    if (typeof window === 'undefined') return;
+    
+    // Initialize Chart.js asynchronously
+    const loadChartJS = async () => {
+      try {
+        await initChartJS();
+        setChartInitialized(true);
+      } catch (error) {
+        console.error('Failed to initialize Chart.js:', error);
+      }
+    };
+    
+    loadChartJS();
+  }, []);
   
   // Initialize data
   useEffect(() => {
-    // Don't run on server
-    if (typeof window === 'undefined') {
+    // Don't run on server or until Chart.js is loaded
+    if (typeof window === 'undefined' || !chartInitialized) {
       return;
     }
 
@@ -97,10 +142,10 @@ const DynamicChart: React.FC<DynamicChartProps> = ({ className, tooltips = false
         clearInterval(animationRef.current);
       }
     };
-  }, [refreshTime, labels]);
+  }, [refreshTime, labels, chartInitialized]);
 
-  // Chart options
-  const options: ChartOptions<'line'> = {
+  // Chart options - memoized to prevent unnecessary rerenders
+  const options: ChartOptions<'line'> = useMemo(() => ({
     responsive: true,
     maintainAspectRatio: false,
     scales: {
@@ -190,10 +235,10 @@ const DynamicChart: React.FC<DynamicChartProps> = ({ className, tooltips = false
       duration: 1000, // Animation duration in ms
       easing: 'easeOutQuart',
     },
-  };
+  }), [tooltips]);
 
-  // Prepare chart data with animated drawing
-  const data = {
+  // Prepare chart data with animated drawing - memoized to prevent unnecessary rerenders
+  const data = useMemo(() => ({
     labels,
     datasets: [
       {
@@ -223,18 +268,34 @@ const DynamicChart: React.FC<DynamicChartProps> = ({ className, tooltips = false
         pointBorderColor: '#fff',
       },
     ],
-  };
+  }), [labels, adSpendData, revenueData, animationProgress]);
 
-  // Only render the chart on the client
-  if (!chartReady || typeof window === 'undefined') {
-    return <div className={`chart-container relative w-full h-full ${className}`}><div className="h-full w-full flex items-center justify-center">Loading chart...</div></div>;
+  // Only render the chart on the client and when ready
+  if (!chartReady || !chartInitialized || typeof window === 'undefined') {
+    return (
+      <div className={`chart-container relative w-full h-full ${className}`}>
+        <div className="h-full w-full flex items-center justify-center">
+          <div className="animate-pulse flex space-x-4">
+            <div className="flex-1 space-y-4 py-1">
+              <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+              <div className="space-y-2">
+                <div className="h-4 bg-gray-200 rounded"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
     <div className={`chart-container relative w-full h-full ${className}`}>
-      <Line options={options} data={data} />
+      <ChartWrapper>
+        <Line options={options} data={data} />
+      </ChartWrapper>
     </div>
   );
 }
 
-export default DynamicChart; 
+export default DynamicChartWithErrorBoundary; 

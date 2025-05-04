@@ -55,6 +55,54 @@ export default function BlogPost() {
       tags={["AI", "Marketing Automation", "Future Tech"]}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
+                  {/* Robot/AI head */}
+                  <rect x="35" y="30" width="30" height="25" rx="3" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                  
+                  {/* Robot eyes */}
+                  <circle cx="42" cy="40" r="3" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+                  <circle cx="58" cy="40" r="3" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+                  
+                  {/* Robot antenna */}
+                  <path d="M50 30 L50 25 L47 20 L53 20 L50 25" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="white" />
+                  <circle cx="50" cy="18" r="2" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+                  
+                  {/* Marketing data/connections */}
+                  <path d="M30 60 L45 55" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+                  <path d="M30 70 L45 65" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+                  <path d="M70 60 L55 55" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+                  <path d="M70 70 L55 65" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+                  
+                  {/* Robot body with marketing elements */}
+                  <rect x="40" y="55" width="20" height="20" rx="2" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
+                  <path d="M45 60 L55 60" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
+                  <path d="M45 65 L55 65" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
+                  <path d="M45 70 L55 70" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
+                  
+                  {/* Data points */}
+                  <circle cx="30" cy="60" r="2" fill="rgba(252,70,107,0.6)" />
+                  <circle cx="30" cy="70" r="2" fill="rgba(252,70,107,0.6)" />
+                  <circle cx="70" cy="60" r="2" fill="rgba(252,70,107,0.6)" />
+                  <circle cx="70" cy="70" r="2" fill="rgba(252,70,107,0.6)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">AI Marketing Agents</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Key Benefits</h3>
+            <p className="text-gray-600">Autonomous campaign management, intelligent content creation, and data-driven optimization across all channels</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
         AI marketing agents represent the next evolution in marketing automation—autonomous systems that can plan, execute, and optimize marketing activities with minimal human oversight. This article explores how these sophisticated AI systems are transforming the marketing landscape and what this means for businesses and marketing professionals.
       </p>

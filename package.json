@@ -28,8 +28,11 @@
     "typescript": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/parser": "^7.27.1",
+    "@babel/traverse": "^7.27.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/estree": "^1.0.7",
+    "canvas": "^3.1.0",
     "eslint": "^9.24.0",
     "eslint-config-next": "^15.3.0",
     "playwright": "^1.51.1"

@@ -135,4 +135,50 @@ export const EcommerceIcon = () => (
       <circle cx="75" cy="70" r="2" fill="rgba(252,70,107,1)" className="animate-pulse-slow opacity-90" />
     </svg>
   </div>
+);
+
+// Connected TV Icon
+export const ConnectedTvIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-purple animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* TV screen */}
+      <rect x="30" y="30" width="40" height="30" rx="2" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* TV stand */}
+      <path d="M45 60 L55 60 L55 65 L45 65 Z" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      <path d="M40 65 L60 65" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      
+      {/* Screen content */}
+      <rect x="33" y="33" width="34" height="24" rx="1" fill="rgba(252,70,107,0.05)" />
+      <rect x="36" y="36" width="28" height="5" fill="rgba(252,70,107,0.2)" />
+      <rect x="36" y="43" width="18" height="10" fill="rgba(252,70,107,0.15)" />
+      <rect x="56" y="43" width="8" height="10" fill="rgba(63,94,251,0.2)" />
+      
+      {/* Connectivity signals */}
+      <path d="M20 40 C15 45, 15 45, 20 50" stroke="rgba(63,94,251,0.6)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      <path d="M20 30 C10 40, 10 50, 20 60" stroke="rgba(63,94,251,0.4)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      
+      <path d="M80 40 C85 45, 85 45, 80 50" stroke="rgba(63,94,251,0.6)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      <path d="M80 30 C90 40, 90 50, 80 60" stroke="rgba(63,94,251,0.4)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      
+      {/* Streaming data */}
+      <circle cx="50" cy="75" r="3" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+      <path d="M50 75 L50 65" stroke="rgba(252,70,107,0.6)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      
+      {/* Remote control suggestion */}
+      <rect x="65" y="70" width="7" height="12" rx="2" fill="white" stroke="rgba(252,70,107,0.6)" strokeWidth="1" 
+        className="animate-pulse-slow" />
+      <circle cx="68.5" cy="73" r="1" fill="rgba(252,70,107,0.8)" />
+      <rect x="67" y="76" width="3" height="2" rx="1" fill="rgba(252,70,107,0.8)" />
+    </svg>
+  </div>
 ); 

@@ -125,4 +125,227 @@ export const FashionIcon = () => (
       <circle cx="60" cy="67" r="1" fill="#EB429E" />
     </svg>
   </div>
+);
+
+// Marketing Dashboard Icon
+export const DashboardIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-purple animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* Dashboard screen */}
+      <rect x="30" y="30" width="40" height="35" rx="2" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* Dashboard stand */}
+      <path d="M45 65 L55 65 L55 70 L45 70 Z" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      
+      {/* Dashboard charts and metrics */}
+      <rect x="35" y="35" width="14" height="10" rx="1" fill="rgba(252,70,107,0.2)" className="animate-pulse-slow" />
+      <path d="M37 40 L41 38 L45 42" stroke="rgba(252,70,107,1)" strokeWidth="1" fill="none" />
+      
+      <rect x="51" y="35" width="14" height="10" rx="1" fill="rgba(63,94,251,0.2)" className="animate-pulse-slow" />
+      <circle cx="58" cy="40" r="3" stroke="rgba(63,94,251,1)" strokeWidth="1" fill="none" />
+      <path d="M56 40 L60 40" stroke="rgba(63,94,251,1)" strokeWidth="1" />
+      <path d="M58 38 L58 42" stroke="rgba(63,94,251,1)" strokeWidth="1" />
+      
+      <rect x="35" y="48" width="30" height="6" rx="1" fill="rgba(252,70,107,0.1)" className="animate-pulse-slow opacity-70" />
+      <rect x="37" y="50" width="20" height="2" rx="1" fill="rgba(252,70,107,0.5)" className="animate-pulse-slow" />
+      
+      <rect x="35" y="57" width="30" height="6" rx="1" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow opacity-80" />
+      <rect x="37" y="59" width="15" height="2" rx="1" fill="rgba(63,94,251,0.5)" className="animate-pulse-slow" />
+      
+      {/* Data flow */}
+      <path d="M20 45 L30 45" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+      <path d="M70 45 L80 45" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" 
+        className="animate-dash-slow" />
+    </svg>
+  </div>
+);
+
+// Singapore Marketing Icon
+export const SingaporeIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-pink animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* Singapore skyline simplified */}
+      <path d="M25 60 L35 60 L35 50 L40 45 L45 50 L45 40 L50 35 L55 40 L55 45 L60 35 L65 45 L65 50 L70 50 L75 60" 
+        fill="none" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* Marina Bay Sands simplified */}
+      <rect x="45" y="45" width="10" height="15" rx="1" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      <path d="M40 45 L60 45" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="none" />
+      
+      {/* Digital elements overlaid on skyline */}
+      <path d="M30 40 L35 40" stroke="rgba(252,70,107,0.7)" strokeWidth="1.5" 
+        className="animate-pulse-slow" />
+      <path d="M55 30 L60 30" stroke="rgba(252,70,107,0.7)" strokeWidth="1.5" 
+        className="animate-pulse-slow opacity-80" />
+      <path d="M70 40 L75 40" stroke="rgba(252,70,107,0.7)" strokeWidth="1.5" 
+        className="animate-pulse-slow opacity-60" />
+      
+      {/* Mobile/digital representation */}
+      <rect x="30" y="65" width="40" height="8" rx="4" fill="white" stroke="rgba(252,70,107,1)" strokeWidth="1.5" />
+      <circle cx="35" cy="69" r="2" fill="rgba(252,70,107,0.5)" />
+      <circle cx="42" cy="69" r="2" fill="rgba(252,70,107,0.5)" />
+      <circle cx="49" cy="69" r="2" fill="rgba(252,70,107,0.5)" />
+      <circle cx="56" cy="69" r="2" fill="rgba(252,70,107,0.5)" />
+      <circle cx="63" cy="69" r="2" fill="rgba(252,70,107,0.5)" />
+      
+      {/* Merlion suggestion */}
+      <circle cx="25" cy="55" r="3" fill="white" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+    </svg>
+  </div>
+);
+
+// AI Marketing Agents Icon
+export const AiAgentIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-purple animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* Robot/Agent head */}
+      <rect x="40" y="30" width="20" height="25" rx="5" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* Robot eyes */}
+      <circle cx="45" cy="40" r="3" fill="rgba(252,70,107,0.7)" className="animate-pulse-slow" />
+      <circle cx="55" cy="40" r="3" fill="rgba(252,70,107,0.7)" className="animate-pulse-slow" />
+      
+      {/* Robot mouth/speaker */}
+      <rect x="45" y="48" width="10" height="2" rx="1" fill="rgba(63,94,251,0.7)" />
+      
+      {/* Robot antennas */}
+      <path d="M45 30 L40 25" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      <circle cx="40" cy="25" r="2" fill="rgba(252,70,107,0.7)" className="animate-pulse-slow" />
+      
+      <path d="M55 30 L60 25" stroke="rgba(63,94,251,1)" strokeWidth="1.5" />
+      <circle cx="60" cy="25" r="2" fill="rgba(252,70,107,0.7)" className="animate-pulse-slow" />
+      
+      {/* Marketing connections */}
+      <path d="M35 60 C25 50, 20 40, 30 30" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" 
+        className="animate-dash-slow" fill="none" />
+      <path d="M65 60 C75 50, 80 40, 70 30" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" 
+        className="animate-dash-slow" fill="none" />
+      
+      {/* Agent connections to marketing channels */}
+      <rect x="25" y="60" width="10" height="8" rx="1" fill="white" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+      <text x="27" y="66" fill="rgba(63,94,251,1)" fontSize="5">A</text>
+      
+      <rect x="45" y="65" width="10" height="8" rx="1" fill="white" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+      <text x="47" y="71" fill="rgba(63,94,251,1)" fontSize="5">B</text>
+      
+      <rect x="65" y="60" width="10" height="8" rx="1" fill="white" stroke="rgba(63,94,251,0.7)" strokeWidth="1" />
+      <text x="67" y="66" fill="rgba(63,94,251,1)" fontSize="5">C</text>
+      
+      {/* Data processing circuits */}
+      <path d="M40 55 L60 55" stroke="rgba(252,70,107,1)" strokeWidth="1" strokeDasharray="1 1" className="animate-dash-slow" />
+      <path d="M50 55 L50 65" stroke="rgba(252,70,107,1)" strokeWidth="1" strokeDasharray="1 1" className="animate-dash-slow" />
+    </svg>
+  </div>
+);
+
+// China Marketing Icon
+export const ChinaIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-pink animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* Great Wall suggestion */}
+      <path d="M25 45 C30 40, 35 45, 40 40 C45 35, 50 40, 55 35 C60 30, 65 35, 70 30 C75 25, 80 30, 75 35" 
+        fill="none" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* Chinese character suggestion (simplified) */}
+      <path d="M45 50 L55 50" stroke="rgba(252,70,107,1)" strokeWidth="2" />
+      <path d="M50 45 L50 60" stroke="rgba(252,70,107,1)" strokeWidth="2" />
+      <path d="M45 55 L55 55" stroke="rgba(252,70,107,1)" strokeWidth="2" />
+      
+      {/* Digital platforms */}
+      <circle cx="35" cy="65" r="5" fill="white" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" />
+      <text x="33" y="67" fill="rgba(63,94,251,1)" fontSize="4">W</text>
+      
+      <circle cx="50" cy="70" r="5" fill="white" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" />
+      <text x="49" y="72" fill="rgba(63,94,251,1)" fontSize="4">T</text>
+      
+      <circle cx="65" cy="65" r="5" fill="white" stroke="rgba(63,94,251,0.8)" strokeWidth="1.5" />
+      <text x="63" y="67" fill="rgba(63,94,251,1)" fontSize="4">B</text>
+      
+      {/* Connection lines between platforms */}
+      <path d="M35 60 L40 55" stroke="rgba(252,70,107,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      <path d="M50 65 L50 60" stroke="rgba(252,70,107,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      <path d="M65 60 L60 55" stroke="rgba(252,70,107,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      
+      {/* Mobile device */}
+      <rect x="43" y="25" width="14" height="20" rx="2" fill="white" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
+      <rect x="45" y="28" width="10" height="14" rx="1" fill="rgba(252,70,107,0.1)" />
+    </svg>
+  </div>
+);
+
+// Media Planning Metrics Icon
+export const MediaMetricsIcon = () => (
+  <div className="relative w-full h-full">
+    <div className="absolute inset-0 rounded-full border-2 border-primary-purple animate-pulse-slow" aria-hidden="true"></div>
+    <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" className="animate-pulse-slow" />
+      
+      {/* Clipboard base */}
+      <rect x="35" y="30" width="30" height="40" rx="2" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" 
+        className="transform transition-transform duration-500 origin-center group-hover:scale-105" />
+      
+      {/* Clipboard top */}
+      <path d="M45 30 C45 25, 55 25, 55 30" stroke="rgba(63,94,251,1)" strokeWidth="2" fill="none" />
+      
+      {/* Chart/metrics elements */}
+      <rect x="40" y="35" width="20" height="8" rx="1" fill="rgba(252,70,107,0.1)" />
+      <path d="M42 39 L47 36 L52 41 L57 38" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" fill="none" 
+        className="animate-dash-slow" />
+      
+      {/* Key metrics */}
+      <rect x="40" y="45" width="8" height="3" rx="1" fill="rgba(63,94,251,0.2)" />
+      <rect x="50" y="45" width="10" height="3" rx="1" fill="rgba(252,70,107,0.2)" />
+      
+      <rect x="40" y="50" width="8" height="3" rx="1" fill="rgba(63,94,251,0.2)" />
+      <rect x="50" y="50" width="10" height="3" rx="1" fill="rgba(252,70,107,0.2)" />
+      
+      <rect x="40" y="55" width="8" height="3" rx="1" fill="rgba(63,94,251,0.2)" />
+      <rect x="50" y="55" width="10" height="3" rx="1" fill="rgba(252,70,107,0.2)" />
+      
+      <rect x="40" y="60" width="8" height="3" rx="1" fill="rgba(63,94,251,0.2)" />
+      <rect x="50" y="60" width="10" height="3" rx="1" fill="rgba(252,70,107,0.2)" />
+      
+      {/* Media channels */}
+      <circle cx="25" cy="35" r="3" fill="rgba(63,94,251,0.5)" className="animate-pulse-slow" />
+      <circle cx="25" cy="45" r="3" fill="rgba(63,94,251,0.5)" className="animate-pulse-slow opacity-80" />
+      <circle cx="25" cy="55" r="3" fill="rgba(63,94,251,0.5)" className="animate-pulse-slow opacity-60" />
+      <circle cx="25" cy="65" r="3" fill="rgba(63,94,251,0.5)" className="animate-pulse-slow opacity-90" />
+      
+      {/* Connections from channels to metrics */}
+      <path d="M28 35 L35 35" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      <path d="M28 45 L35 45" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      <path d="M28 55 L35 55" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      <path d="M28 65 L35 65" stroke="rgba(63,94,251,0.5)" strokeWidth="1" strokeDasharray="2 2" className="animate-dash-slow" />
+      
+      {/* Results indicators */}
+      <path d="M65 35 L75 35" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+      <circle cx="75" cy="35" r="2" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+      
+      <path d="M65 45 L75 45" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+      <circle cx="75" cy="45" r="2" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+      
+      <path d="M65 55 L75 55" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+      <circle cx="75" cy="55" r="2" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+      
+      <path d="M65 65 L75 65" stroke="rgba(252,70,107,0.5)" strokeWidth="1.5" strokeDasharray="2 2" className="animate-dash-slow" />
+      <circle cx="75" cy="65" r="2" fill="rgba(252,70,107,0.8)" className="animate-pulse-slow" />
+    </svg>
+  </div>
 ); 

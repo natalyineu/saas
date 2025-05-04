@@ -18,6 +18,7 @@ interface BlogPost {
 // Props for the BlogList component
 interface BlogListProps {
   blogPosts: BlogPost[];
+  currentPostId?: string;
 }
 
 // The number of posts to show initially
@@ -25,7 +26,7 @@ const INITIAL_POSTS_TO_SHOW = 3;
 // Number of additional posts to load with each click
 const POSTS_PER_PAGE = 3;
 
-export default function BlogList({ blogPosts }: BlogListProps) {
+export default function BlogList({ blogPosts, currentPostId }: BlogListProps) {
   // State to track how many posts to display
   const [postsToShow, setPostsToShow] = useState(INITIAL_POSTS_TO_SHOW);
   
@@ -38,9 +39,6 @@ export default function BlogList({ blogPosts }: BlogListProps) {
       Math.min(prevCount + POSTS_PER_PAGE, blogPosts.length)
     );
   };
-  
-  // Console log for debugging
-  console.log(`Showing ${postsToShow} out of ${blogPosts.length} posts`);
   
   // Generate gradient backgrounds based on post index
   const getGradient = (index: number) => {
@@ -110,6 +108,7 @@ export default function BlogList({ blogPosts }: BlogListProps) {
             key={post.id}
             href={`/blog/${post.id}`}
             className="group"
+            aria-current={currentPostId === post.id ? "page" : undefined}
           >
             <article className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
               {/* Post icon/image */}

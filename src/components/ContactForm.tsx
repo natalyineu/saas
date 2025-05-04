@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ErrorBoundary from './ui/ErrorBoundary';
 import { COMPANY_EMAIL } from '../lib/utils/constants';
 
 interface ContactFormProps {
@@ -12,7 +13,14 @@ interface ContactFormProps {
   buttonText?: string;
 }
 
-export default function ContactForm({
+// Wrap the main component with ErrorBoundary
+const ContactFormWithErrorBoundary = (props: ContactFormProps) => (
+  <ErrorBoundary>
+    <ContactForm {...props} />
+  </ErrorBoundary>
+);
+
+function ContactForm({
   title = 'Contact Us',
   subtitle = "We'd love to hear from you",
   className = '',
@@ -63,15 +71,18 @@ export default function ContactForm({
         setStatus('success');
         form.reset();
       } else {
+        const errorData = await response.json().catch(() => null);
         setStatus('error');
+        console.error('Form submission error:', errorData);
         alert('Oops! There was a problem submitting your form. Please try again.');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setStatus('error');
       alert('Oops! There was a problem submitting your form. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
-
-    setSubmitting(false);
   };
 
   if (status === 'success') {
@@ -189,4 +200,7 @@ export default function ContactForm({
       </form>
     </div>
   );
-} 
+}
+
+// Export the wrapped component as default
+export default ContactFormWithErrorBoundary; 

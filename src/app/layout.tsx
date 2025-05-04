@@ -42,8 +42,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#6366f1" />
         <script src="/hydration-fix.js" async></script>
         
+        {/* Connection preloading for analytics and commonly accessed third parties */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Search engine verification tags will be added via metadata.other */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        
+        {/* Supported languages - helps with localization signals */}
+        <link rel="alternate" href="https://ai-vertise.com" hrefLang="en" />
+        <link rel="alternate" href="https://ai-vertise.com" hrefLang="x-default" />
         
         <GoogleAnalytics />
       </head>

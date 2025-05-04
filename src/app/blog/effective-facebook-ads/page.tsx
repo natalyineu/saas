@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: 'https://ai-vertise.com/blog/effective-facebook-ads',
     images: [
       {
-        url: '/images/blog/facebook-ads.jpg',
+        url: '/images/blog/effective-facebook-ads.jpg',
         width: 1200,
         height: 630,
         alt: 'Effective Facebook Advertising Strategies',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '5 Keys to Effective Facebook Advertising',
     description: 'Learn the latest strategies for maximizing your ROI on Facebook ads in 2025.',
-    images: ['/images/blog/facebook-ads.jpg'],
+    images: ['/images/blog/effective-facebook-ads.jpg'],
     creator: '@aivertise',
     site: '@aivertise',
   },
@@ -58,7 +58,12 @@ export default function EffectiveFacebookAdsPost() {
     "@type": "BlogPosting",
     "headline": "5 Keys to More Effective Facebook Advertising in 2025",
     "description": "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights on video content, audience targeting, and AI optimization.",
-    "image": "/images/blog/facebook-ads.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://ai-vertise.com/images/blog/effective-facebook-ads.jpg",
+      "width": "1200",
+      "height": "630"
+    },
     "author": {
       "@type": "Organization",
       "name": "Founder of ai-vertise.com"

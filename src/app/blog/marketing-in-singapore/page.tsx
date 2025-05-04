@@ -1,6 +1,28 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { blogPosts } from '@/data/blog/posts';
+
+// Get related posts based on tags
+const relatedPosts = blogPosts
+  .filter(post => 
+    post.id !== 'marketing-in-singapore' && 
+    (post.tags?.includes('Digital Marketing') || 
+     post.tags?.includes('International Marketing'))
+  )
+  .slice(0, 3);
+
+// Find the current post index to determine prev/next
+const currentPostIndex = blogPosts.findIndex(post => post.id === 'marketing-in-singapore');
+const prevPost = currentPostIndex > 0 ? {
+  id: blogPosts[currentPostIndex - 1].id,
+  title: blogPosts[currentPostIndex - 1].title
+} : null;
+
+const nextPost = currentPostIndex < blogPosts.length - 1 ? {
+  id: blogPosts[currentPostIndex + 1].id,
+  title: blogPosts[currentPostIndex + 1].title
+} : null;
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -17,6 +39,9 @@ export const metadata: Metadata = {
         alt: 'Marketing in Singapore',
       }
     ],
+  },
+  alternates: {
+    canonical: 'https://ai-vertise.com/blog/marketing-in-singapore',
   },
 };
 
@@ -54,6 +79,8 @@ export default function BlogPost() {
       readTime="7 min read"
       tags={["Singapore", "Digital Marketing", "International Marketing"]}
       structuredData={jsonLd}
+      prevPost={prevPost}
+      nextPost={nextPost}
     >
       <p className="lead">
         Singapore may be a small nation, but it's a digital marketing powerhouse with one of the world's highest internet penetration rates, exceptional digital infrastructure, and a tech-savvy population. This creates both opportunity and challenge for marketers. This guide explores effective digital marketing strategies tailored to Singapore's unique market landscape.
@@ -204,6 +231,19 @@ export default function BlogPost() {
       <p>
         At AI-Vertise Boost, we help international brands optimize their digital marketing for the Singapore market with AI-powered tools that combine global marketing sophistication with localized insights and strategies.
       </p>
+      
+      <h2>Related Content</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        {relatedPosts.map(post => (
+          <div key={post.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+            <span className="text-xs text-gray-500">{post.category}</span>
+            <h3 className="font-bold mb-2 text-primary-purple hover:underline">
+              <Link href={`/blog/${post.id}`}>{post.title}</Link>
+            </h3>
+            <p className="text-sm text-gray-600 line-clamp-2">{post.excerpt}</p>
+          </div>
+        ))}
+      </div>
       
       <h2>Expand Your Reach in Singapore</h2>
       <p>
