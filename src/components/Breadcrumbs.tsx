@@ -23,6 +23,12 @@ export default function Breadcrumbs({
   capitalizeLinks = true,
 }: BreadcrumbProps) {
   const paths = usePathname();
+  
+  // Add null check for paths
+  if (!paths) {
+    return null;
+  }
+  
   const pathNames = paths.split('/').filter(path => path);
 
   // Create structured data for breadcrumbs
