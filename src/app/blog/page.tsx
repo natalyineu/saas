@@ -43,12 +43,33 @@ export default function BlogPage() {
 
   // Update the type and description for a blog page rather than an article
   jsonLd['@type'] = 'Blog';
-  jsonLd.description = 'Digital marketing insights, case studies, and success stories';
+  (jsonLd as any).description = 'Digital marketing insights, case studies, and success stories';
+
+  // Add BlogPosting items to the structured data
+  const blogPostingsLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": allContent.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "datePublished": post.date,
+        "url": `https://ai-vertise.com/blog/${post.id}`
+      }
+    }))
+  };
 
   return (
     <>
       <Script id="structured-data" type="application/ld+json">
         {JSON.stringify(jsonLd)}
+      </Script>
+      
+      <Script id="blog-postings-data" type="application/ld+json">
+        {JSON.stringify(blogPostingsLd)}
       </Script>
 
       <SuppressHydrationWarning>
@@ -78,7 +99,7 @@ export default function BlogPage() {
           <section className="mb-12" aria-labelledby="cta-heading">
             <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-8 rounded-lg">
               <div className="max-w-3xl mx-auto text-center">
-                <h3 id="cta-heading" className="text-2xl font-bold mb-4">Ready to Boost Your Marketing?</h3>
+                <h2 id="cta-heading" className="text-2xl font-bold mb-4">Ready to Boost Your Marketing?</h2>
                 <p className="text-gray-700 mb-6">
                   Join hundreds of businesses that have transformed their digital marketing performance with AI-Vertise Boost.
                 </p>
