@@ -15,15 +15,18 @@ export function DateDisplay({ date, className = '' }: DateDisplayProps) {
   );
 }
 
-interface AuthorDisplayProps {
+export interface AuthorDisplayProps {
+  authorName?: string;
   className?: string;
 }
 
-export function AuthorDisplay({ className = '' }: AuthorDisplayProps) {
-  // Consistently using the standard author name
+export function AuthorDisplay({ authorName, className = '' }: AuthorDisplayProps) {
+  // Use provided author name or default
+  const displayName = authorName || 'Founder of ai-vertise.com';
+  
   return (
     <span className={`text-sm text-gray-500 ${className}`}>
-      Founder of ai-vertise.com
+      {displayName}
     </span>
   );
 }
@@ -90,6 +93,7 @@ interface ContentMetaProps {
   readTime: string;
   category: string;
   isSuccessStory?: boolean;
+  authorName?: string;
   tags?: string[];
   className?: string;
 }
@@ -99,6 +103,7 @@ export function ContentMeta({
   readTime, 
   category, 
   isSuccessStory = false,
+  authorName,
   tags = [],
   className = '' 
 }: ContentMetaProps) {
@@ -114,7 +119,7 @@ export function ContentMeta({
       )}
       
       <div className="flex items-center justify-between mt-4">
-        <AuthorDisplay />
+        <AuthorDisplay authorName={authorName} />
         <ReadTimeDisplay readTime={readTime} />
       </div>
     </div>
