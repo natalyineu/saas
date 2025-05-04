@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 
 /**
  * Generate a comprehensive robots.txt file with specific directives for different user agents
+ * Updated for production deployment - June 2024
  */
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = 'https://ai-vertise.com';
