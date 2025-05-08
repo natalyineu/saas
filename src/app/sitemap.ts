@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog/posts';
+import { successStories } from '@/data/blog/index';
+import { ContentItem } from '@/lib/types/content';
 
 type SitemapFrequency = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 
@@ -8,32 +10,25 @@ interface EnhancedSitemapItem {
   lastModified?: string | Date;
   changeFrequency?: SitemapFrequency;
   priority?: number;
-  images?: Array<{
-    url: string;
-    title?: string;
-    caption?: string;
-    geo_location?: string;
-    license_url?: string;
-  }>;
 }
 
-// Returns image data for a given blog post
-const getBlogPostImageData = (slug: string) => {
-  const baseUrl = 'https://ai-vertise.com';
-  const imagePath = `/images/blog/${slug}.jpg`;
-  
-  // Default image if specific one doesn't exist
-  return {
-    url: `${baseUrl}${imagePath}`,
-    title: slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
-    caption: `AI-Vertise ${slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`,
-    license: 'https://creativecommons.org/licenses/by/4.0/'
-  };
+// Define a combined type for blog posts that might have tags
+type PostWithPossibleTags = ContentItem & {
+  id: string;
+  date: string;
+  tags?: string[];
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai-vertise.com';
-  const currentDate = new Date();
+  const currentDate = new Date().toISOString();
+  
+  // Generate date for content types with different freshness levels
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+  
+  const oneMonthAgo = new Date();
+  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
   
   // Static pages with specific priorities and frequencies
   const staticPages: EnhancedSitemapItem[] = [
@@ -42,88 +37,88 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
       changeFrequency: 'daily',
       lastModified: currentDate,
-      images: [
-        {
-          url: `${baseUrl}/og-image.jpg`,
-          title: 'AI-Vertise Boost Platform',
-          caption: 'AI-powered advertising solution for small businesses',
-        }
-      ]
     },
     {
       url: `${baseUrl}/about`,
       priority: 0.8,
       changeFrequency: 'monthly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/pricing`,
       priority: 0.9,
       changeFrequency: 'weekly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneWeekAgo.toISOString(),
     },
     {
       url: `${baseUrl}/blog`,
       priority: 0.9,
       changeFrequency: 'daily',
       lastModified: currentDate,
-      images: []
     },
     {
       url: `${baseUrl}/contact`,
       priority: 0.8,
       changeFrequency: 'monthly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/faq`,
       priority: 0.7,
       changeFrequency: 'monthly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/policy`,
       priority: 0.4,
       changeFrequency: 'yearly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/privacy`,
       priority: 0.4,
       changeFrequency: 'yearly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/terms`,
       priority: 0.4,
       changeFrequency: 'yearly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     },
     {
       url: `${baseUrl}/cookie-policy`,
       priority: 0.4,
       changeFrequency: 'yearly',
-      lastModified: currentDate,
-      images: []
+      lastModified: oneMonthAgo.toISOString(),
     }
   ];
   
-  // Blog post pages - dynamic based on blog data
-  // Read from your blog data source (assuming you have one)
-  const blogPostPages: EnhancedSitemapItem[] = blogPosts.map(post => {
+  // Group blog posts by category for better organization
+  const categories = new Set<string>();
+  // Include both regular blog posts and success stories for categories
+  [...blogPosts, ...successStories].forEach(post => {
+    if (post.category) {
+      categories.add(post.category.toLowerCase().replace(/\s+/g, '-'));
+    }
+  });
+  
+  // Add category pages to sitemap
+  const categoryPages: EnhancedSitemapItem[] = Array.from(categories).map(category => ({
+    url: `${baseUrl}/blog/category/${category}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+  
+  // Process function for both blog posts and success stories
+  const processPost = (post: PostWithPossibleTags): EnhancedSitemapItem => {
     // Calculate date objects from post data
     const publishDate = post.date ? new Date(post.date) : new Date();
     
     // Set a priority based on recency (higher for newer posts)
     const daysSincePublish = Math.floor(
-      (currentDate.getTime() - publishDate.getTime()) / (1000 * 60 * 60 * 24)
+      (new Date().getTime() - publishDate.getTime()) / (1000 * 60 * 60 * 24)
     );
     
     let priority = 0.7; // default priority
@@ -146,30 +141,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     return {
       url: `${baseUrl}/blog/${post.id}`,
-      lastModified: publishDate,
+      lastModified: publishDate.toISOString(),
       changeFrequency,
-      priority,
-      images: post.heroImage ? [
-        {
-          url: post.heroImage.startsWith('http') 
-            ? post.heroImage 
-            : `${baseUrl}${post.heroImage}`,
-          title: post.title,
-          caption: post.excerpt || post.title,
-        }
-      ] : []
+      priority
     };
+  };
+  
+  // Blog post pages - dynamic based on blog data
+  const blogPostPages: EnhancedSitemapItem[] = [
+    ...blogPosts.map(processPost),
+    ...successStories.map(post => processPost(post as unknown as PostWithPossibleTags))
+  ];
+  
+  // Add tag pages to sitemap
+  const tags = new Set<string>();
+  
+  // Add tags from blog posts
+  blogPosts.forEach(post => {
+    if (post.tags && Array.isArray(post.tags)) {
+      post.tags.forEach(tag => {
+        tags.add(tag.toLowerCase().replace(/\s+/g, '-'));
+      });
+    }
   });
   
+  const tagPages: EnhancedSitemapItem[] = Array.from(tags).map(tag => ({
+    url: `${baseUrl}/blog/tag/${tag}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+  
   // Combine all pages
-  const allPages = [...staticPages, ...blogPostPages];
+  const allPages = [...staticPages, ...categoryPages, ...tagPages, ...blogPostPages];
   
   // Format for Next.js sitemap
   return allPages.map(page => ({
     url: page.url,
     lastModified: page.lastModified,
-    // Next.js sitemap doesn't directly support these properties, 
-    // but we include them as it's useful for other formats
-    // and may be supported in future Next.js versions
+    // Next.js sitemap doesn't support these properties directly,
+    // but we need them for XML generation
   }));
 } 
