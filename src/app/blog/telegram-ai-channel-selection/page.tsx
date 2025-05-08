@@ -38,8 +38,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "June 2, 2024",
-    "dateModified": "June 2, 2024",
+    "datePublished": "March 20, 2024",
+    "dateModified": "March 20, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/telegram-ai-channel-selection"
@@ -50,7 +50,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="AI-Powered Telegram Channel Selection | AI-Vertise Boost"
-      date="June 2, 2024"
+      date="March 20, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={['Telegram', 'Channel Selection', 'AI', 'Advertising']}

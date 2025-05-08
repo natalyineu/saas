@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
+import { BlogFashionIcon } from '@/components/blog/icons/CaseStudyIcons';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend',
     description: 'Learn how an online fashion boutique achieved a 215% return on ad spend through AI-powered targeting and marketing strategy.',
     type: 'article',
-    publishedTime: '2025-04-13',
+    publishedTime: '2024-04-25',
     images: [
       {
         url: '/images/blog/placeholder.svg',
@@ -46,8 +47,8 @@ export default function BlogPost() {
         "url": "/logo.png"
       }
     },
-    "datePublished": "2025-04-13",
-    "dateModified": "2025-04-13",
+    "datePublished": "April 25, 2024",
+    "dateModified": "April 25, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/chic-trends-case-study"
@@ -57,7 +58,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Online Boutique Launch: Fashion Retailer Achieves 215% Return on Ad Spend"
-      date="April 13, 2025"
+      date="April 25, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={['Fashion', 'E-commerce', 'Case Study', 'ROAS']}
@@ -67,32 +68,10 @@ export default function BlogPost() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/3 p-8 flex justify-center">
             <div className="relative w-40 h-40">
-              <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
-                  {/* Shopping bag */}
-                  <path d="M35 40 L35 70 L65 70 L65 40" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  <path d="M35 40 L40 30 L60 30 L65 40" fill="white" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                  
-                  {/* Bag handles */}
-                  <path d="M40 40 C40 35, 45 35, 45 40" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="none" />
-                  <path d="M55 40 C55 35, 60 35, 60 40" stroke="rgba(63,94,251,1)" strokeWidth="1.5" fill="none" />
-                  
-                  {/* Fashion items in bag */}
-                  <rect x="40" y="45" width="8" height="10" fill="rgba(252,70,107,0.2)" />
-                  <rect x="52" y="45" width="8" height="10" fill="rgba(252,70,107,0.2)" />
-                  <path d="M40 60 L60 60" stroke="rgba(252,70,107,0.8)" strokeWidth="1.5" />
-                  <path d="M45 65 L55 65" stroke="rgba(252,70,107,0.8)" strokeWidth="1" />
-                  
-                  {/* Upward graph/ROAS indicator */}
-                  <path d="M25 75 L35 65 L45 70 L55 60 L65 55 L75 45" stroke="rgba(252,70,107,1)" strokeWidth="1.5" fill="none" className="animate-dash-slow" />
-                  <circle cx="75" cy="45" r="2" fill="rgba(252,70,107,1)" />
-                  <path d="M70 50 L75 45 L80 50" stroke="rgba(252,70,107,1)" strokeWidth="1" />
-                  
-                  {/* 215% indicator */}
-                  <circle cx="72" cy="40" r="8" fill="rgba(252,70,107,0.1)" stroke="rgba(252,70,107,0.5)" strokeWidth="1" className="animate-pulse-slow" />
-                </g>
-              </svg>
+              <div className="absolute top-0 right-0 z-10 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                +215%
+              </div>
+              <BlogFashionIcon />
             </div>
           </div>
           <div className="w-full md:w-2/3 p-8 bg-white/50">
@@ -215,21 +194,6 @@ export default function BlogPost() {
         <h3 className="font-bold text-xl mb-3">Ready to boost your online store?</h3>
         <p className="mb-4">
           Join hundreds of other e-commerce businesses that have transformed their growth with AI-Vertise Boost.
-        </p>
-        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
-          Get Started Today
-        </Link>
-      </div>
-      
-      <h2>Boost Your Digital Marketing</h2>
-      <p>
-        AI-Vertise Boost has helped hundreds of businesses achieve exceptional results through intelligent, AI-powered advertising. Our platform makes sophisticated targeting, bidding, and optimization accessible to businesses of all sizes, without requiring technical expertise.
-      </p>
-      
-      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
-        <h3 className="font-bold text-xl mb-3">Ready to transform your marketing performance?</h3>
-        <p className="mb-4">
-          Join hundreds of other businesses that have transformed their growth with AI-Vertise Boost.
         </p>
         <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
           Get Started Today

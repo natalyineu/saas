@@ -66,8 +66,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 8, 2025",
-  "dateModified": "April 8, 2025",
+  "datePublished": "May 6, 2024",
+  "dateModified": "May 6, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/video-marketing-strategy"
@@ -84,7 +84,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Video Marketing Strategy Guide: Formats, Platforms, and Optimization"
-      date="April 8, 2025"
+      date="May 6, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={["Video Marketing", "Content Strategy", "Social Media", "YouTube", "Engagement"]}

@@ -66,8 +66,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 1, 2025",
-  "dateModified": "April 1, 2025",
+  "datePublished": "May 1, 2024",
+  "dateModified": "May 1, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/marketing-attribution-models"
@@ -84,7 +84,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Marketing Attribution Models Explained: Choosing the Right Approach"
-      date="April 1, 2025"
+      date="May 1, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["Marketing Analytics", "Attribution Modeling", "Data Analysis", "ROI Optimization", "Multi-Channel Marketing"]}

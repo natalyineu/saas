@@ -66,8 +66,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 5, 2025",
-  "dateModified": "April 5, 2025",
+  "datePublished": "May 4, 2024",
+  "dateModified": "May 4, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/voice-search-optimization"
@@ -84,7 +84,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Voice Search Optimization: Preparing Your Brand for the Audio Revolution"
-      date="April 5, 2025"
+      date="May 4, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["Voice Search", "SEO", "Digital Marketing", "Smart Speakers", "Local Search"]}

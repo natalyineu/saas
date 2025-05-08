@@ -27,22 +27,14 @@ const nextPost = currentPostIndex < blogPosts.length - 1 ? {
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing Success | AI-Vertise',
-  description: 'Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform\'s unique visual discovery ecosystem.',
+  title: 'Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing | AI-Vertise',
+  description: "Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform's unique visual discovery ecosystem.",
   openGraph: {
-    title: 'Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing Success | AI-Vertise',
-    description: 'Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform\'s unique visual discovery ecosystem.',
-    images: [
-      {
-        url: '/images/blog/pinterest-ad-campaign.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pinterest Ad Campaign Strategy',
-      }
-    ],
+    title: 'Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing | AI-Vertise',
+    description: "Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform's unique visual discovery ecosystem.",
   },
   alternates: {
-    canonical: 'https://ai-vertise.com/blog/pinterest-ad-campaign',
+    canonical: '/blog/pinterest-ad-campaign',
   },
 };
 
@@ -60,20 +52,14 @@ const jsonLd = {
     "name": "Founder of ai-vertise.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "/logo.png"
+      "url": "https://ai-vertise.com/logo.png"
     }
   },
-  "datePublished": "June 26, 2025",
-  "dateModified": "June 26, 2025",
+  "datePublished": "April 26, 2024",
+  "dateModified": "April 26, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/pinterest-ad-campaign"
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://ai-vertise.com/images/blog/pinterest-ad-campaign.jpg",
-    "width": "1200",
-    "height": "630"
   }
 };
 
@@ -81,10 +67,9 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing Success"
-      date="June 26, 2025"
+      date="April 26, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
-      heroImage="/images/blog/pinterest-ad-campaign.jpg"
       tags={["Pinterest", "Social Media Marketing", "Visual Marketing", "E-commerce", "ROI Optimization"]}
       structuredData={jsonLd}
       prevPost={prevPost}

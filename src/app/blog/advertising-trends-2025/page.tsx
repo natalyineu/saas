@@ -68,8 +68,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 15, 2025",
-  "dateModified": "July 15, 2025",
+  "datePublished": "March 16, 2024",
+  "dateModified": "March 16, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "/blog/advertising-trends-2025"
@@ -86,7 +86,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="2025 Advertising Trends: Real-World Applications Case Study"
-      date="July 15, 2025"
+      date="March 16, 2024"
       author="Founder of ai-vertise.com"
       readTime="10 min read"
       tags={["2025 Trends", "Future of Advertising", "Innovation", "Digital Transformation", "Consumer Behavior"]}

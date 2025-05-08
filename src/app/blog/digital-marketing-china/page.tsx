@@ -37,8 +37,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 28, 2025",
-  "dateModified": "April 28, 2025",
+  "datePublished": "April 8, 2024",
+  "dateModified": "April 8, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/digital-marketing-china"
@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Navigating Digital Marketing in China: Platforms, Trends and Strategies"
-      date="April 28, 2025"
+      date="April 8, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={["China", "Digital Marketing", "International Marketing"]}

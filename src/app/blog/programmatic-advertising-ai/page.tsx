@@ -38,8 +38,8 @@ export default function BlogPost() {
         "url": "/logo.png"
       }
     },
-    "datePublished": "2024-05-22",
-    "dateModified": "2024-05-22",
+    "datePublished": "April 1, 2024",
+    "dateModified": "April 1, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/programmatic-advertising-ai"
@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="The Future of Programmatic Advertising: AI-Driven Strategies"
-      date="May 22, 2024"
+      date="April 1, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={['Programmatic', 'AI', 'Advertising', 'Automation']}

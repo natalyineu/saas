@@ -62,8 +62,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 30, 2025",
-  "dateModified": "April 30, 2025",
+  "datePublished": "April 12, 2024",
+  "dateModified": "April 12, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/marketing-in-singapore"
@@ -74,7 +74,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Digital Marketing Strategies for Success in Singapore's Competitive Market"
-      date="April 30, 2025"
+      date="April 12, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["Singapore", "Digital Marketing", "International Marketing"]}

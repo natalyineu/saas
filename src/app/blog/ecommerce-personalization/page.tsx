@@ -41,8 +41,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 15, 2024",
-    "dateModified": "May 15, 2024",
+    "datePublished": "March 24, 2024",
+    "dateModified": "March 24, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/ecommerce-personalization"
@@ -53,7 +53,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="AI-Powered E-commerce Personalization | AI-Vertise Boost"
-      date="May 27, 2024"
+      date="March 24, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={['E-commerce', 'Personalization', 'AI', 'Customer Experience']}

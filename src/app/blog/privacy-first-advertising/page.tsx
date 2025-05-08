@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { PrivacyIcon } from '@/components/blog/icons/SecurityIcons';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Learn about privacy-first advertising strategies | ai-vertise boost and how it can improve your marketing results.',
     images: [
       {
-        url: '/images/blog/placeholder.svg',
+        url: '/images/blog/privacy-first.jpg',
         width: 1200,
         height: 630,
         alt: 'Privacy-First Advertising Strategies | AI-Vertise Boost',
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 15, 2024",
-    "dateModified": "May 15, 2024",
+    "datePublished": "March 30, 2024",
+    "dateModified": "March 30, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/privacy-first-advertising"
@@ -50,12 +51,28 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Privacy-First Advertising Strategies | AI-Vertise Boost"
-      date="May 15, 2024"
+      date="March 30, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={['Privacy', 'Digital Advertising', 'Cookie-Less', 'Data Protection']}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <PrivacyIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">Privacy-First Marketing</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Key Insights</h3>
+            <p className="text-gray-600">How to adapt your advertising strategy for the post-cookie era while maintaining performance</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
             As privacy regulations tighten and third-party cookies phase out, advertisers must adapt to a new landscape that prioritizes user privacy. This article explores how businesses can thrive with privacy-first advertising strategies that build trust while maintaining marketing effectiveness.
           </p>

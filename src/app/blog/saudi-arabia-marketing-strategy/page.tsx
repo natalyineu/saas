@@ -67,8 +67,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 5, 2025",
-  "dateModified": "July 5, 2025",
+  "datePublished": "March 10, 2024",
+  "dateModified": "March 10, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/saudi-arabia-marketing-strategy"
@@ -85,7 +85,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Saudi Arabia Marketing Strategy: Vision 2030 Alignment Case Study"
-      date="July 5, 2025"
+      date="March 10, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={["Saudi Arabia", "Vision 2030", "Middle East Marketing", "Technology Marketing", "Growth Strategy"]}

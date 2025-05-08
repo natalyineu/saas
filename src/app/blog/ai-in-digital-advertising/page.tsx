@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { AiAdvertisingIcon } from '@/components/blog/icons/TechnologyIcons';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Learn about how ai is transforming digital advertising | ai-vertise boost and how it can improve your marketing results.',
     images: [
       {
-        url: '/images/blog/placeholder.svg',
+        url: '/images/blog/ai-advertising.jpg',
         width: 1200,
         height: 630,
         alt: 'How AI is Transforming Digital Advertising | AI-Vertise Boost',
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "March 25, 2023",
-    "dateModified": "March 25, 2023",
+    "datePublished": "April 3, 2024",
+    "dateModified": "April 3, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/ai-in-digital-advertising"
@@ -50,12 +51,28 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="How AI is Transforming Digital Advertising | AI-Vertise Boost"
-      date="March 25, 2023"
+      date="April 3, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={[]}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <AiAdvertisingIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">AI in Digital Advertising</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Key Insights</h3>
+            <p className="text-gray-600">How small businesses can leverage AI to compete with larger competitors in digital advertising</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
             Artificial Intelligence is democratizing digital advertising, making sophisticated marketing strategies accessible to businesses of all sizes. In this article, we explore how AI is leveling the playing field and helping small businesses compete with larger companies in the digital advertising arena.
           </p>

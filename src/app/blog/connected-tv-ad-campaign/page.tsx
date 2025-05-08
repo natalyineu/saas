@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
 import { blogPosts } from '@/data/blog/posts';
+import { ConnectedTvIcon } from '@/components/blog/icons/TechnologyIcons';
 
 // Get related posts based on tags
 const relatedPosts = blogPosts
@@ -63,8 +64,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 3, 2025",
-  "dateModified": "July 3, 2025",
+  "datePublished": "April 29, 2024",
+  "dateModified": "April 29, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/connected-tv-ad-campaign"
@@ -81,7 +82,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Connected TV Ad Campaign Mastery: Strategies for the Streaming Age"
-      date="July 3, 2025"
+      date="April 29, 2024"
       author="Founder of ai-vertise.com"
       readTime="10 min read"
       tags={["Connected TV", "CTV", "Video Advertising", "Streaming Media", "Programmatic Advertising"]}
@@ -89,6 +90,22 @@ export default function BlogPost() {
       prevPost={prevPost}
       nextPost={nextPost}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <ConnectedTvIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">Connected TV Advertising</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Key Insights</h3>
+            <p className="text-gray-600">Strategies for effective advertising in the streaming age with precision targeting</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
         As traditional linear TV audiences continue to migrate to streaming platforms, Connected TV (CTV) has emerged as a critical advertising channel that combines the impact of television with the precision and measurement capabilities of digital marketing. With over 85% of U.S. households now accessible through CTV and similar adoption rates accelerating globally, advertisers are increasingly shifting budgets to this dynamic medium. This comprehensive guide explores how to develop and execute effective CTV ad campaigns that deliver measurable business results in the streaming age.
       </p>
@@ -268,7 +285,7 @@ export default function BlogPost() {
         Content context significantly impacts advertising effectiveness in CTV environments, requiring thoughtful alignment between messaging and programming.
       </p>
       
-      <h2>Advanced CTV Strategies for 2025</h2>
+      <h2>Advanced CTV Strategies for 2024</h2>
       
       <h3>Data-Driven Linear (DDL) Approaches</h3>
       <p>

@@ -8,7 +8,7 @@ import Script from 'next/script';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the blog post script to optimize loading
-const BlogPostScript = dynamic(() => import('@/app/blog/BlogPostScript'), {
+const BlogPostScript = dynamic(() => import('@/components/blog/BlogPostScript'), {
   ssr: false,
 });
 

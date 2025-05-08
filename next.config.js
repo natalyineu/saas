@@ -2,11 +2,23 @@
 const nextConfig = {
   basePath: '',
   images: {
-    domains: [
-      'localhost', 
-      'ai-vertise.com',
-      'images.unsplash.com',
-      'cdn.buymeacoffee.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ai-vertise.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.buymeacoffee.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      }
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

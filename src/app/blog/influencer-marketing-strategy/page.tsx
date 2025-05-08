@@ -66,8 +66,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 3, 2025",
-  "dateModified": "April 3, 2025",
+  "datePublished": "May 2, 2024",
+  "dateModified": "May 2, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/influencer-marketing-strategy"
@@ -84,7 +84,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Influencer Marketing Strategy: Building Authentic Partnerships That Convert"
-      date="April 3, 2025"
+      date="May 2, 2024"
       author="Founder of ai-vertise.com"
       readTime="10 min read"
       tags={["Influencer Marketing", "Social Media", "Brand Partnerships", "Content Creation", "ROI Measurement"]}

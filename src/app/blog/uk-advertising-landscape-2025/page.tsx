@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'UK Advertising Landscape 2025 | AI-Vertise Boost',
     description: 'Explore key trends in the UK advertising landscape for 2025, including regulatory changes and AI adoption in digital marketing.',
     type: 'article',
-    publishedTime: '2025-04-18',
+    publishedTime: '2024-04-10',
     authors: ['Marketing Team'],
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function BlogPost() {
   const title = 'The UK Advertising Landscape in 2025: Trends, Challenges, and Opportunities';
-  const date = 'April 18, 2025';
+  const date = 'April 10, 2024';
   const author = 'Market Research Team';
   const readTime = '10 min read';
   const tags = ['UK', 'Advertising', 'Industry Trends', '2025 Forecast'];

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { BlogRestaurantIcon } from '@/components/blog/icons/CaseStudyIcons';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "April 14, 2025",
-    "dateModified": "April 14, 2025",
+    "datePublished": "May 8, 2024",
+    "dateModified": "May 8, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/taste-of-italy-case-study"
@@ -50,12 +51,32 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Italian Restaurant Success: 87% Boost in Weekend Reservations"
-      date="April 14, 2025"
+      date="May 8, 2024"
       author="Founder of ai-vertise.com"
       readTime="6 min read"
       tags={['Restaurant', 'Italian Cuisine', 'Case Study', 'Marketing']}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <div className="absolute top-0 right-0 z-10 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                +87%
+              </div>
+              <BlogRestaurantIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">Taste of Italy Restaurant</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Results at a Glance</h3>
+            <p className="text-2xl font-bold text-primary-purple mb-2">87% increase in weekend reservations</p>
+            <p className="text-gray-600">Family-owned Italian restaurant in a competitive metropolitan market</p>
+          </div>
+        </div>
+      </div>
+
       <p className="lead">
             A family-owned Italian restaurant in a major city's vibrant food scene was struggling to fill tables during weekend dinner service despite their authentic cuisine and excellent reviews. They needed a way to stand out in an extremely competitive market.
           </p>
@@ -172,23 +193,6 @@ export default function BlogPost() {
               Get Started Today
             </Link>
           </div>
-          
-          
-      
-      <h2>Boost Your Digital Marketing</h2>
-      <p>
-        AI-Vertise Boost has helped hundreds of businesses achieve exceptional results through intelligent, AI-powered advertising. Our platform makes sophisticated targeting, bidding, and optimization accessible to businesses of all sizes, without requiring technical expertise.
-      </p>
-      
-      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
-        <h3 className="font-bold text-xl mb-3">Ready to transform your marketing performance?</h3>
-        <p className="mb-4">
-          Join hundreds of other businesses that have transformed their growth with AI-Vertise Boost.
-        </p>
-        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
-          Get Started Today
-        </Link>
-      </div>
     </BlogPostLayout>
   );
 }

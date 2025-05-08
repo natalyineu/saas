@@ -68,8 +68,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 20, 2025",
-  "dateModified": "July 20, 2025",
+  "datePublished": "March 18, 2024",
+  "dateModified": "March 18, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "/blog/econometrics-marketing-mix"
@@ -86,7 +86,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Econometrics and Marketing Mix Modeling: A Data-Driven Case Study"
-      date="July 20, 2025"
+      date="March 18, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={["Econometrics", "Marketing Mix Modeling", "ROI Optimization", "Data Analytics", "Budget Allocation"]}

@@ -63,8 +63,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "June 5, 2025",
-  "dateModified": "June 5, 2025",
+  "datePublished": "April 17, 2024",
+  "dateModified": "April 17, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/google-ads-search-campaign"
@@ -81,7 +81,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Google Ads Search Campaign Mastery: Strategies for Boosting ROI"
-      date="June 5, 2025"
+      date="April 17, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["Google Ads", "PPC", "Search Marketing", "Digital Advertising", "ROI Optimization"]}
@@ -125,7 +125,7 @@ export default function BlogPost() {
         This architectural approach enables granular performance analysis and tactical optimization while giving Google's algorithms enough data to work effectively.
       </p>
       
-      <h3>Keyword Strategy for 2025 and Beyond</h3>
+      <h3>Keyword Strategy for 2024 and Beyond</h3>
       <p>
         Effective keyword strategy has evolved significantly with Google's emphasis on intent over exact matching:
       </p>

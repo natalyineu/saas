@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "email-marketing-automation",
     title: "Email Marketing Automation: AI-Powered Strategies for Higher Engagement",
-    date: "April 10, 2025",
+    date: "May 8, 2024",
     author: "Founder of ai-vertise.com",
     category: "Email Marketing",
     excerpt: "Discover how AI-powered email marketing automation can dramatically increase open rates, click-through rates, and conversions while saving time and resources.",
@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "video-marketing-strategy",
     title: "Video Marketing Strategy Guide: Formats, Platforms, and Optimization",
-    date: "April 8, 2025",
+    date: "May 6, 2024",
     author: "Founder of ai-vertise.com",
     category: "Video Marketing",
     excerpt: "Learn how to create an effective video marketing strategy that leverages the right formats and platforms to reach your target audience and achieve your business goals.",
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "voice-search-optimization",
     title: "Voice Search Optimization: Preparing Your Brand for the Audio Revolution",
-    date: "April 5, 2025",
+    date: "May 4, 2024",
     author: "Founder of ai-vertise.com",
     category: "SEO",
     excerpt: "Optimize your digital presence for voice search with these practical strategies to ensure your brand stays visible as more consumers adopt voice-activated devices.",
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "influencer-marketing-strategy",
     title: "Influencer Marketing Strategy: Building Authentic Partnerships That Convert",
-    date: "April 3, 2025",
+    date: "May 2, 2024",
     author: "Founder of ai-vertise.com",
     category: "Influencer Marketing",
     excerpt: "Develop an effective influencer marketing strategy focused on authentic partnerships that resonate with audiences and drive measurable business results.",
@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "marketing-attribution-models",
     title: "Marketing Attribution Models Explained: Choosing the Right Approach",
-    date: "April 1, 2025",
+    date: "May 1, 2024",
     author: "Founder of ai-vertise.com",
     category: "Analytics",
     excerpt: "Compare different marketing attribution models and learn how to select the right approach for accurately measuring campaign performance across multiple channels.",
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "connected-tv-ad-campaign",
     title: "Connected TV Ad Campaign Mastery: Strategies for the Streaming Age",
-    date: "July 3, 2025",
+    date: "April 29, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn how to create effective Connected TV ad campaigns that leverage precision targeting and measurement while capturing audience attention in premium streaming environments.",
@@ -82,7 +82,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "pinterest-ad-campaign",
     title: "Pinterest Ad Campaign Guide: Strategies for Visual Discovery Marketing Success",
-    date: "June 26, 2025",
+    date: "April 26, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform's unique visual discovery ecosystem.",
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "yahoo-dsp-ad-campaign",
     title: "Yahoo DSP Campaign Guide: Strategies for Effective Cross-Channel Advertising",
-    date: "June 19, 2025",
+    date: "April 23, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Discover how to leverage Yahoo's demand-side platform for successful programmatic campaigns that drive engagement and conversions across devices and channels.",
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "xandr-ad-campaign",
     title: "Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025",
-    date: "June 12, 2025",
+    date: "April 20, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn how to leverage Xandr's advanced programmatic advertising platform to create targeted, high-performing campaigns that deliver superior results across multiple channels.",
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "google-ads-search-campaign",
     title: "Google Ads Search Campaign Mastery: Strategies for Boosting ROI",
-    date: "June 5, 2025",
+    date: "April 17, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn how to build high-performing Google Ads search campaigns that drive qualified traffic and maximize your return on investment.",
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "marketing-dashboard-benefits",
     title: "7 Benefits of Using a Marketing Dashboard for Campaign Management",
-    date: "May 1, 2025",
+    date: "April 14, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Discover how marketing dashboards can streamline your campaign management, improve performance visibility, and help make data-driven decisions.",
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "marketing-in-singapore",
     title: "Digital Marketing Strategies for Success in Singapore's Competitive Market",
-    date: "April 30, 2025",
+    date: "April 12, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn effective digital marketing approaches tailored specifically for Singapore's unique market landscape and consumer behaviors.",
@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ai-marketing-agents",
     title: "The Rise of AI Marketing Agents: What You Need to Know",
-    date: "April 29, 2025",
+    date: "April 10, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "An overview of how AI marketing agents are transforming campaign management, content creation, and customer interactions.",
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "digital-marketing-china",
     title: "Navigating Digital Marketing in China: Platforms, Trends and Strategies",
-    date: "April 28, 2025",
+    date: "April 8, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Essential insights into China's unique digital ecosystem and how to build effective marketing strategies for this vast market.",
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "media-planning-metrics",
     title: "Key Media Planning Metrics Every Marketer Should Track",
-    date: "April 27, 2025",
+    date: "April 6, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "A comprehensive guide to the essential metrics that can help optimize your media planning and improve campaign performance.",
@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "effective-facebook-ads",
     title: "5 Keys to More Effective Facebook Advertising in 2025",
-    date: "April 26, 2025",
+    date: "April 5, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.",
@@ -188,7 +188,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ai-in-digital-advertising",
     title: "How AI is Transforming Digital Advertising for Small Businesses",
-    date: "April 25, 2025",
+    date: "April 3, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Discover how artificial intelligence is leveling the playing field and helping small businesses compete with larger competitors in digital advertising.",
@@ -198,7 +198,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "programmatic-advertising-ai",
     title: "The Future of Programmatic Advertising: AI-Driven Strategies",
-    date: "April 24, 2025",
+    date: "April 1, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Discover how AI is transforming programmatic advertising with smarter bidding strategies, enhanced targeting, and unprecedented efficiency.",
@@ -208,7 +208,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "privacy-first-advertising",
     title: "Privacy-First Advertising: Navigating the Post-Cookie Era",
-    date: "April 23, 2025",
+    date: "March 30, 2024",
     author: "Founder of ai-vertise.com",
     category: "Privacy and Compliance",
     excerpt: "Learn how to adapt your digital marketing strategy in a world where consumer privacy is increasingly protected.",
@@ -218,7 +218,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "social-media-ai-ads",
     title: "Maximizing Social Media Ad Performance with AI Tools",
-    date: "April 22, 2025",
+    date: "March 28, 2024",
     author: "Founder of ai-vertise.com",
     category: "Social Media",
     excerpt: "A practical guide to leveraging AI tools for creating, optimizing, and measuring social media advertising campaigns.",
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "metaverse-marketing-opportunities",
     title: "Marketing in the Metaverse: Early Opportunities for Brands",
-    date: "April 21, 2025",
+    date: "March 26, 2024",
     author: "Founder of ai-vertise.com",
     category: "Future Tech",
     excerpt: "An exploration of how forward-thinking brands are establishing themselves in virtual worlds and metaverse platforms.",
@@ -238,7 +238,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ecommerce-personalization",
     title: "AI-Driven Personalization for E-commerce Marketing",
-    date: "April 20, 2025",
+    date: "March 24, 2024",
     author: "Founder of ai-vertise.com",
     category: "E-commerce",
     excerpt: "How AI is enabling unprecedented levels of personalization in e-commerce advertising and customer experiences.",
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "social-media-ai-content",
     title: "Using AI to Generate Engaging Social Media Content",
-    date: "April 19, 2025",
+    date: "March 22, 2024",
     author: "Founder of ai-vertise.com",
     category: "Content Creation",
     excerpt: "Practical ways to leverage AI content generation tools to keep your social media channels fresh and engaging.",
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "uk-advertising-landscape-2025",
     title: "The UK Digital Advertising Landscape in 2025",
-    date: "April 18, 2025",
+    date: "April 10, 2024",
     author: "Founder of ai-vertise.com",
     category: "Market Research",
     excerpt: "An analysis of current trends, challenges, and opportunities in the UK digital advertising market.",
@@ -392,7 +392,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ai-telegram-channel-strategy",
     title: "Building an Effective AI-Powered Telegram Channel Strategy",
-    date: "April 17, 2025",
+    date: "May 8, 2024",
     author: "Founder of ai-vertise.com",
     category: "Messaging Platforms",
     excerpt: "How businesses can leverage AI to create engaging and effective Telegram channels for marketing and customer engagement.",
@@ -640,7 +640,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "telegram-ai-channel-selection",
     title: "Selecting the Right Channel Topics for Your AI Telegram Strategy",
-    date: "April 16, 2025",
+    date: "March 20, 2024",
     author: "Founder of ai-vertise.com",
     category: "Messaging Platforms",
     excerpt: "A strategic guide to identifying and selecting the most effective channel topics for your Telegram presence.",
@@ -650,7 +650,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "econometrics-marketing-mix",
     title: "Econometrics and Marketing Mix Modeling: A Data-Driven Case Study",
-    date: "July 20, 2025",
+    date: "March 18, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Explore how a leading consumer brand leveraged econometrics and marketing mix modeling to optimize their budget allocation and achieve 43% higher ROI across channels.",
@@ -661,7 +661,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "advertising-trends-2025",
     title: "2025 Advertising Trends: Real-World Applications Case Study",
-    date: "July 15, 2025",
+    date: "March 16, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Discover how forward-thinking brands are already implementing the biggest advertising trends of 2025, and the measurable results they're achieving with these innovative approaches.",
@@ -672,7 +672,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "global-brands-marketing-approach",
     title: "Global Brand Marketing: How Leading Companies Maintain Local Relevance",
-    date: "July 10, 2025",
+    date: "March 14, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "An in-depth analysis of how three global brands successfully balanced universal brand positioning with local market adaptations to drive growth across diverse regions.",
@@ -682,7 +682,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "uae-advertising-strategy",
     title: "Advertising in the United Arab Emirates: Luxury Brand Case Study",
-    date: "July 8, 2025",
+    date: "March 12, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "Learn how a premium lifestyle brand crafted a tailored advertising strategy for the UAE market, resulting in 68% brand awareness growth and 37% sales increase within six months.",
@@ -693,7 +693,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "saudi-arabia-marketing-strategy",
     title: "Saudi Arabia Marketing Strategy: Vision 2030 Alignment Case Study",
-    date: "July 5, 2025",
+    date: "March 10, 2024",
     author: "Founder of ai-vertise.com",
     category: "ARTICLE",
     excerpt: "An examination of how a technology company aligned its marketing strategy with Saudi Arabia's Vision 2030 objectives to capture market share and build lasting relationships in the region.",

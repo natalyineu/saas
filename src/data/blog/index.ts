@@ -18,21 +18,21 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'ai-telegram-channel-strategy',
     title: 'AI-Optimized Telegram Channels for Marketing',
-    date: 'May 19, 2024',
+    date: 'May 8, 2024',
     category: 'Social Media',
     readTime: '5 min read'
   },
   {
     id: 'privacy-first-advertising',
     title: 'Privacy-First Advertising Strategies',
-    date: 'May 15, 2024',
+    date: 'May 7, 2024',
     category: 'Privacy',
     readTime: '7 min read'
   },
   {
     id: 'social-media-ai-ads',
     title: 'AI-Powered Social Media Advertising',
-    date: 'May 10, 2024',
+    date: 'May 6, 2024',
     category: 'Social Media',
     readTime: '6 min read'
   },
@@ -134,7 +134,7 @@ export const successStories: BlogPost[] = [
   {
     id: 'urban-beans-case-study',
     title: 'Urban Beans: 143% Increase in Local Customers',
-    date: 'May 22, 2024',
+    date: 'May 8, 2024',
     category: 'Case Study',
     readTime: '4 min read',
     isSuccessStory: true

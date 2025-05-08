@@ -38,8 +38,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 30, 2024",
-    "dateModified": "May 30, 2024",
+    "datePublished": "March 26, 2024",
+    "dateModified": "March 26, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/metaverse-marketing-opportunities"
@@ -50,7 +50,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Metaverse Marketing Opportunities | AI-Vertise Boost"
-      date="May 30, 2024"
+      date="March 26, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={['Metaverse', 'Digital Marketing', 'Virtual Reality', 'Web3']}

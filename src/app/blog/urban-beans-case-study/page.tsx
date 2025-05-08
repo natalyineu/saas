@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { BlogCoffeeShopIcon } from '@/components/blog/icons/CaseStudyIcons';
 
 export const metadata: Metadata = {
   title: 'Coffee Shop Success: 143% Traffic Increase | AI-Vertise',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Coffee Shop Success Story: 143% Increase in Foot Traffic',
     description: 'See how this coffee shop used AI-Vertise to outperform competitors and increase foot traffic by 143%',
     type: 'article',
-    publishedTime: '2025-04-15',
+    publishedTime: '2024-05-08',
     authors: ['Marketing Team'],
     images: [
       {
@@ -50,8 +51,8 @@ export default function CoffeeShopCaseStudy() {
         "url": "/logo.png"
       }
     },
-    "datePublished": "2025-04-15",
-    "dateModified": "2025-04-15",
+    "datePublished": "May 8, 2024",
+    "dateModified": "May 8, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/urban-beans-case-study"
@@ -61,7 +62,7 @@ export default function CoffeeShopCaseStudy() {
   return (
     <BlogPostLayout
       title="Coffee Shop Campaign: How a Local Café Increased Foot Traffic by 143%"
-      date="April 15, 2025"
+      date="May 8, 2024"
       author="Founder of ai-vertise.com"
       readTime="5 min read"
       tags={['Coffee Shop', 'Local Business', 'Case Study', 'Digital Marketing']}
@@ -74,16 +75,7 @@ export default function CoffeeShopCaseStudy() {
               <div className="absolute top-0 right-0 z-10 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow-lg">
                 +143%
               </div>
-              
-              <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle className="animate-pulse-slow" cx="50" cy="50" r="35" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" strokeWidth="2" />
-                <g className="transform transition-transform duration-700 origin-center hover:rotate-12">
-                  <rect x="35" y="25" width="30" height="10" rx="5" fill="rgba(252,70,107,1)" />
-                  <path d="M30 60 L70 60" stroke="rgba(63,94,251,1)" strokeWidth="3" />
-                  <path d="M40 50 C40 40, 60 40, 60 50" stroke="rgba(63,94,251,1)" strokeWidth="3" fill="none" />
-                  <path d="M30 70 L40 60 L60 60 L70 70" stroke="rgba(63,94,251,1)" strokeWidth="2" fill="none" />
-                </g>
-              </svg>
+              <BlogCoffeeShopIcon />
             </div>
           </div>
           <div className="w-full md:w-2/3 p-8 bg-white/50">

@@ -37,8 +37,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 29, 2025",
-  "dateModified": "April 29, 2025",
+  "datePublished": "April 10, 2024",
+  "dateModified": "April 10, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/ai-marketing-agents"
@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="The Rise of AI Marketing Agents: What You Need to Know"
-      date="April 29, 2025"
+      date="April 10, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["AI", "Marketing Automation", "Future Tech"]}

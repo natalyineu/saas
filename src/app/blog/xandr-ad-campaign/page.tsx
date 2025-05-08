@@ -27,10 +27,10 @@ const nextPost = currentPostIndex < blogPosts.length - 1 ? {
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025 | AI-Vertise',
+  title: 'Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2024 | AI-Vertise',
   description: 'Learn how to leverage Xandr\'s advanced programmatic advertising platform to create targeted, high-performing campaigns that deliver superior results across multiple channels.',
   openGraph: {
-    title: 'Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025 | AI-Vertise',
+    title: 'Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2024 | AI-Vertise',
     description: 'Learn how to leverage Xandr\'s advanced programmatic advertising platform to create targeted, high-performing campaigns that deliver superior results across multiple channels.',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025",
+  "headline": "Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2024",
   "description": "Learn how to leverage Xandr's advanced programmatic advertising platform to create targeted, high-performing campaigns that deliver superior results across multiple channels.",
   "author": {
     "@type": "Organization",
@@ -63,8 +63,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "June 12, 2025",
-  "dateModified": "June 12, 2025",
+  "datePublished": "April 20, 2024",
+  "dateModified": "April 20, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/xandr-ad-campaign"
@@ -80,8 +80,8 @@ const jsonLd = {
 export default function BlogPost() {
   return (
     <BlogPostLayout
-      title="Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2025"
-      date="June 12, 2025"
+      title="Maximizing ROI with Xandr Ad Campaigns: Advanced Strategies for 2024"
+      date="April 20, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={["Xandr", "Programmatic Advertising", "Display Advertising", "Ad Tech", "Media Buying"]}

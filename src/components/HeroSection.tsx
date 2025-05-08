@@ -46,7 +46,6 @@ const LoadingContent = () => (
 export default function HeroSection() {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [isOptimizeModalOpen, setIsOptimizeModalOpen] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const caseStudiesRef = useRef<HTMLElement | null>(null);
   
   // Find the case studies section on mount
@@ -62,14 +61,6 @@ export default function HeroSection() {
     } else {
       setIsDetailsModalOpen(true);
     }
-  };
-  
-  // Handle form submission with proper async pattern
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Let Formspree handle the actual submission
-    // Using state directly rather than setTimeout
-    setFormSubmitted(true);
   };
 
   return (
@@ -136,51 +127,39 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              {/* Standalone form with large rounded corners */}
+              {/* Replace form with sign-up button */}
               <div className="mt-8 mb-14 max-w-xl">
-                {formSubmitted ? (
-                  <div className="bg-white border border-gray-200 rounded-xl p-6">
-                    <p className="text-gray-500 font-normal text-sm">
-                      Thanks! We'll contact you shortly about your ad campaign.
-                    </p>
-                  </div>
-                ) : (
-                  <>
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                      <span className="gradient-text">Start Your Ad Campaign</span> — Enter Your Contact Info
-                    </h3>
-                    <div className="bg-white rounded-xl shadow-md overflow-hidden relative border border-indigo-100 p-3">
-                      <div className="absolute inset-0 rounded-xl opacity-10" style={{ background: 'linear-gradient(90deg, #4A00E0, #FF416C)' }}></div>
-                      <form 
-                        id="contact-form"
-                        action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xblgwbvo'}`}
-                        method="POST"
-                        onSubmit={handleFormSubmit}
-                      >
-                        <div className="flex flex-row items-center gap-4 relative z-10">
-                          <input 
-                            name="contact"
-                            type="text" 
-                            placeholder="Enter your email or phone" 
-                            className="px-6 py-5 border border-gray-100 rounded-lg bg-white/80 w-full focus:ring-1 focus:ring-indigo-300 focus:outline-none text-gray-700 text-base"
-                            required
-                          />
-                          <button 
-                            type="submit"
-                            className="bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium px-6 py-5 rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center text-base shadow-sm whitespace-nowrap"
-                          >
-                            Get AI Marketing
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                          </button>
-                        </div>
-                        <input type="hidden" name="_subject" value="AI-Vertise Campaign Inquiry" />
-                        <input type="hidden" name="_next" value="https://ai-vertise.com/?success=true" />
-                      </form>
-                    </div>
-                  </>
-                )}
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  <span className="gradient-text">Start Your Ad Campaign</span> — Create Your Account
+                </h3>
+                <div className="flex gap-4">
+                  <a 
+                    href="https://db.ai-vertise.com/register" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium px-6 py-4 rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center text-base shadow-md whitespace-nowrap justify-center flex-1"
+                  >
+                    Sign Up
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                  <Link 
+                    href="/#pricing" 
+                    className="border-2 border-primary-purple text-primary-purple font-medium px-6 py-4 rounded-lg hover:bg-primary-purple hover:text-white transition-all duration-200 flex items-center text-base whitespace-nowrap justify-center flex-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Get the current origin and pathname
+                      const url = window.location.origin + '/#pricing';
+                      window.location.href = url;
+                    }}
+                  >
+                    See Packages
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -203,21 +182,36 @@ export default function HeroSection() {
                   Ad Campaign Dashboard
                 </span>
               </div>
-              <BrowserMockup className="shadow-2xl transform md:scale-110 md:origin-center">
-                {/* Mobile view */}
-                <div className="sm:hidden">
-                  <ErrorBoundary>
-                    <MobileDashboardView scrollToCaseStudies={scrollToCaseStudies} />
-                  </ErrorBoundary>
+              <a 
+                href="https://db.ai-vertise.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] relative"
+                aria-label="Visit AI-Vertise Dashboard"
+              >
+                {/* Click to register badge */}
+                <div className="absolute bottom-4 right-4 z-30 bg-primary-purple text-white px-4 py-2 rounded-lg shadow-lg flex items-center font-medium text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                  </svg>
+                  Try Dashboard
                 </div>
-                
-                {/* Tablet and desktop view */}
-                <div className="hidden sm:block">
-                  <ErrorBoundary>
-                    <TabletDashboardView scrollToCaseStudies={scrollToCaseStudies} />
-                  </ErrorBoundary>
-                </div>
-              </BrowserMockup>
+                <BrowserMockup className="shadow-2xl transform md:scale-110 md:origin-center">
+                  {/* Mobile view */}
+                  <div className="sm:hidden">
+                    <ErrorBoundary>
+                      <MobileDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                    </ErrorBoundary>
+                  </div>
+                  
+                  {/* Tablet and desktop view */}
+                  <div className="hidden sm:block">
+                    <ErrorBoundary>
+                      <TabletDashboardView scrollToCaseStudies={scrollToCaseStudies} />
+                    </ErrorBoundary>
+                  </div>
+                </BrowserMockup>
+              </a>
             </div>
           </div>
         </div>

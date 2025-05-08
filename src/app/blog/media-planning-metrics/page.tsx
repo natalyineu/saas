@@ -37,8 +37,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 27, 2025",
-  "dateModified": "April 27, 2025",
+  "datePublished": "April 6, 2024",
+  "dateModified": "April 6, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/media-planning-metrics"
@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Key Media Planning Metrics Every Marketer Should Track"
-      date="April 27, 2025"
+      date="April 6, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["Media Planning", "Analytics", "Marketing Strategy"]}

@@ -59,8 +59,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 10, 2025",
-  "dateModified": "July 10, 2025",
+  "datePublished": "March 14, 2024",
+  "dateModified": "March 14, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "/blog/global-brands-marketing-approach"
@@ -71,7 +71,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Global Brand Marketing: How Leading Companies Maintain Local Relevance"
-      date="July 10, 2025"
+      date="March 14, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["Global Marketing", "Brand Strategy", "Localization", "International Business", "Cultural Adaptation"]}

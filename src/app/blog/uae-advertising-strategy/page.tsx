@@ -67,8 +67,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "July 8, 2025",
-  "dateModified": "July 8, 2025",
+  "datePublished": "March 12, 2024",
+  "dateModified": "March 12, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/uae-advertising-strategy"
@@ -85,7 +85,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Advertising in the United Arab Emirates: Luxury Brand Case Study"
-      date="July 8, 2025"
+      date="March 12, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["UAE Market", "Luxury Advertising", "Middle East", "Digital Marketing", "Regional Strategy"]}

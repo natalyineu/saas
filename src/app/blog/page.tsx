@@ -5,9 +5,9 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import SuppressHydrationWarning from '@/components/ui/SuppressHydrationWarning';
 import UnifiedBlogList from '@/components/blog/UnifiedBlogList';
-import { successStories } from '@/data/blog/successStories';
+import { successStories } from '@/data/blog/index';
 import { blogPosts } from '@/data/blog/posts';
-import { sortContentByDate } from '@/lib/types/content';
+import { ContentItem, sortContentByDate } from '@/lib/types/content';
 import { generateMetadata as genMeta, generateStructuredData } from '@/lib/utils/metadata';
 
 // Blog post data for the page itself
@@ -32,8 +32,8 @@ export default function BlogPage() {
   const stats = getBlogStats(pageData);
 
   // Sort both content types by date
-  const successStoriesList = sortContentByDate(successStories);
-  const blogPostsList = sortContentByDate(blogPosts);
+  const successStoriesList = sortContentByDate(successStories as unknown as ContentItem[]);
+  const blogPostsList = sortContentByDate(blogPosts as unknown as ContentItem[]);
   
   // Combine with success stories first, then blog posts
   const allContent = [...successStoriesList, ...blogPostsList];
@@ -61,6 +61,31 @@ export default function BlogPage() {
       }
     }))
   };
+  
+  // Extract all categories
+  const categories = Array.from(new Set([
+    ...blogPosts.map(post => post.category),
+    ...successStories.map(story => story.category)
+  ]));
+  
+  // Extract and count all tags
+  const tagCounts: Record<string, number> = {};
+  blogPosts.forEach(post => {
+    if (post.tags) {
+      post.tags.forEach(tag => {
+        if (tagCounts[tag]) {
+          tagCounts[tag]++;
+        } else {
+          tagCounts[tag] = 1;
+        }
+      });
+    }
+  });
+  
+  // Sort tags by count (most used first)
+  const sortedTags = Object.entries(tagCounts)
+    .sort(([, countA], [, countB]) => countB - countA)
+    .slice(0, 20); // Limit to top 20 tags
 
   return (
     <>
@@ -111,6 +136,46 @@ export default function BlogPage() {
                   Get Started Today
                 </Link>
               </div>
+            </div>
+          </section>
+          
+          {/* Categories Section - Now smaller and after CTA */}
+          <section className="mb-10 mt-16" aria-labelledby="categories-heading">
+            <h3 id="categories-heading" className="text-xl font-bold mb-3">Browse by Category</h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-6" aria-hidden="true"></div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map(category => {
+                const categorySlug = category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+                return (
+                  <Link
+                    key={categorySlug}
+                    href={`/blog/category/${categorySlug}`}
+                    className="bg-gradient-to-r from-primary-purple/5 to-primary-pink/5 hover:from-primary-purple/10 hover:to-primary-pink/10 text-gray-700 px-3 py-2 rounded-lg text-xs font-medium transition-colors"
+                  >
+                    {category}
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+          
+          {/* Popular Tags Section - Now smaller and after Categories */}
+          <section className="mb-12" aria-labelledby="tags-heading">
+            <h3 id="tags-heading" className="text-xl font-bold mb-3">Popular Topics</h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-6" aria-hidden="true"></div>
+            <div className="flex flex-wrap gap-2">
+              {sortedTags.map(([tag, count]) => {
+                const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+                return (
+                  <Link
+                    key={tagSlug}
+                    href={`/blog/tag/${tagSlug}`}
+                    className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs transition-colors"
+                  >
+                    {tag} ({count})
+                  </Link>
+                );
+              })}
             </div>
           </section>
         </main>

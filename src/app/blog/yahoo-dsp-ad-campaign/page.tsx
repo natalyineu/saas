@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
 import { blogPosts } from '@/data/blog/posts';
+import { YahooDspIcon } from '@/components/blog/icons/MarketingPlatformIcons';
 
 // Get related posts based on tags
 const relatedPosts = blogPosts
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://ai-vertise.com/blog/yahoo-dsp-ad-campaign',
+    canonical: '/blog/yahoo-dsp-ad-campaign',
   },
 };
 
@@ -63,15 +64,15 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "June 19, 2025",
-  "dateModified": "June 19, 2025",
+  "datePublished": "April 23, 2024",
+  "dateModified": "April 23, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://ai-vertise.com/blog/yahoo-dsp-ad-campaign"
+    "@id": "/blog/yahoo-dsp-ad-campaign"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://ai-vertise.com/images/blog/yahoo-dsp-ad-campaign.jpg",
+    "url": "/images/blog/yahoo-dsp-ad-campaign.jpg",
     "width": "1200",
     "height": "630"
   }
@@ -81,7 +82,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Yahoo DSP Campaign Guide: Strategies for Effective Cross-Channel Advertising"
-      date="June 19, 2025"
+      date="April 23, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["Yahoo DSP", "Programmatic Advertising", "DSP", "Display Advertising", "Cross-Channel Marketing"]}
@@ -89,6 +90,22 @@ export default function BlogPost() {
       prevPost={prevPost}
       nextPost={nextPost}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <YahooDspIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">Yahoo DSP Campaign Guide</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Cross-Channel Advertising Strategies</h3>
+            <p className="text-gray-600">Discover how to leverage Yahoo's demand-side platform for successful programmatic campaigns</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
         Yahoo's Demand-Side Platform (DSP) offers advertisers a versatile toolset for executing programmatic campaigns across a diverse ecosystem of channels, from traditional display to cutting-edge solutions like digital out-of-home and connected TV. As a compelling alternative to Google's DV360 and Amazon's DSP, Yahoo's platform provides unique data capabilities, premium inventory access, and a user-friendly interface that make it an increasingly important part of sophisticated advertisers' programmatic strategies. This guide explores how to extract maximum value from Yahoo DSP campaigns in 2025 and beyond.
       </p>

@@ -1,0 +1,24 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="white"/>
+  <circle cx="600" cy="315" r="200" fill="rgba(63,94,251,0.1)" stroke="rgba(63,94,251,1)" stroke-width="6"/>
+  <g transform="translate(450, 165)">
+    <!-- Chart/graph base -->
+    <rect x="0" y="0" width="300" height="300" fill="white" stroke="rgba(63,94,251,1)" stroke-width="6" rx="8"/>
+    
+    <!-- Bar chart elements -->
+    <rect x="30" y="180" width="42" height="90" fill="rgba(252,70,107,0.8)"/>
+    <rect x="90" y="120" width="42" height="150" fill="rgba(63,94,251,0.8)"/>
+    <rect x="150" y="60" width="42" height="210" fill="rgba(252,70,107,0.8)"/>
+    <rect x="210" y="150" width="42" height="120" fill="rgba(63,94,251,0.8)"/>
+    
+    <!-- Line graph overlay -->
+    <path d="M51 150 L111 90 L171 120 L231 60" stroke="rgba(252,70,107,1)" stroke-width="6" fill="none"/>
+    <circle cx="51" cy="150" r="8" fill="rgba(252,70,107,1)"/>
+    <circle cx="111" cy="90" r="8" fill="rgba(252,70,107,1)"/>
+    <circle cx="171" cy="120" r="8" fill="rgba(252,70,107,1)"/>
+    <circle cx="231" cy="60" r="8" fill="rgba(252,70,107,1)"/>
+    
+    <!-- ROI indicator -->
+    <text x="270" y="60" font-size="32" fill="rgba(63,94,251,1)" font-weight="bold">+43%</text>
+  </g>
+</svg>

@@ -38,8 +38,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 25, 2024",
-    "dateModified": "May 25, 2024",
+    "datePublished": "March 22, 2024",
+    "dateModified": "March 22, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/social-media-ai-content"
@@ -50,7 +50,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="AI-Powered Social Media Content Creation | AI-Vertise Boost"
-      date="May 25, 2024"
+      date="March 22, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={['Social Media', 'Content Creation', 'AI Tools', 'Digital Marketing']}

@@ -66,8 +66,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "April 10, 2025",
-  "dateModified": "April 10, 2025",
+  "datePublished": "May 8, 2024",
+  "dateModified": "May 8, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/email-marketing-automation"
@@ -84,7 +84,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="Email Marketing Automation: AI-Powered Strategies for Higher Engagement"
-      date="April 10, 2025"
+      date="May 8, 2024"
       author="Founder of ai-vertise.com"
       readTime="8 min read"
       tags={["Email Marketing", "Marketing Automation", "AI Tools", "Personalization", "ROI Optimization"]}

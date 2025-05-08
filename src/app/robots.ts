@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 /**
  * Generate a comprehensive robots.txt file with specific directives for different user agents
- * Updated for production deployment - June 2024
+ * Updated for better SEO - July 2024
  */
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = 'https://ai-vertise.com';
@@ -18,7 +18,9 @@ export default function robots(): MetadataRoute.Robots {
           '/about/',
           '/pricing/',
           '/contact/',
-          '/faq/'
+          '/faq/',
+          '/blog/category/',
+          '/blog/tag/'
         ],
         disallow: [
           '/api/',
@@ -42,7 +44,17 @@ export default function robots(): MetadataRoute.Robots {
       // Google-specific rules - Google doesn't follow crawl-delay
       {
         userAgent: 'Googlebot',
-        allow: '/',
+        allow: [
+          '/',
+          '/blog/',
+          '/about/',
+          '/pricing/',
+          '/contact/',
+          '/faq/',
+          '/blog/category/',
+          '/blog/tag/',
+          '/images/'
+        ],
         disallow: [
           '/api/',
           '/admin/',
@@ -50,6 +62,16 @@ export default function robots(): MetadataRoute.Robots {
           '/*?',
           '/*state=*',
           '/*token=*'
+        ]
+      },
+      // Rules for Google Mobile bot
+      {
+        userAgent: 'Googlebot-Mobile',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/temp/'
         ]
       },
       // Rules for Google Image bot
@@ -71,7 +93,16 @@ export default function robots(): MetadataRoute.Robots {
       // Bing-specific rules to improve indexing
       {
         userAgent: 'Bingbot',
-        allow: '/',
+        allow: [
+          '/',
+          '/blog/',
+          '/about/',
+          '/pricing/',
+          '/contact/',
+          '/faq/',
+          '/blog/category/',
+          '/blog/tag/'
+        ],
         crawlDelay: 1
       },
       // Yandex-specific rules

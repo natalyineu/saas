@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BlogPostLayout from '@/components/blog/BlogPostLayout';
 import Link from 'next/link';
+import { SocialMediaAdsIcon } from '@/components/blog/icons/SocialMediaIcons';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Master advanced AI-driven social media advertising techniques that improve targeting accuracy, creative performance, and ROI across Facebook, Instagram, TikTok, and other platforms.',
     images: [
       {
-        url: '/images/blog/placeholder.svg',
+        url: '/images/blog/social-media.jpg',
         width: 1200,
         height: 630,
         alt: 'AI-Powered Social Media Advertising Strategies',
@@ -41,8 +42,8 @@ export const metadata: Metadata = {
         "url": "/logo.png"
       }
     },
-    "datePublished": "May 18, 2024",
-    "dateModified": "May 18, 2024",
+    "datePublished": "March 28, 2024",
+    "dateModified": "March 28, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/social-media-ai-ads"
@@ -53,12 +54,28 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="AI-Powered Social Media Advertising Strategies | AI-Vertise Boost"
-      date="May 18, 2024"
+      date="March 28, 2024"
       author="Founder of ai-vertise.com"
       readTime="9 min read"
       tags={['Social Media', 'AI', 'Advertising', 'Digital Marketing']}
       structuredData={jsonLd}
     >
+      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-12 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/3 p-8 flex justify-center">
+            <div className="relative w-40 h-40">
+              <SocialMediaAdsIcon />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 p-8 bg-white/50">
+            <h2 className="text-2xl font-bold mb-2">AI-Powered Social Ads</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary-purple to-primary-pink mb-4"></div>
+            <h3 className="text-xl mb-2">Key Insights</h3>
+            <p className="text-gray-600">How artificial intelligence is revolutionizing social media advertising performance</p>
+          </div>
+        </div>
+      </div>
+      
       <p className="lead">
             Social media advertising is experiencing a profound transformation thanks to artificial intelligence. From audience targeting to creative generation and optimization, AI is helping advertisers achieve unprecedented efficiency and effectiveness. This article explores the latest AI innovations in social media advertising and how brands can leverage them for competitive advantage.
           </p>

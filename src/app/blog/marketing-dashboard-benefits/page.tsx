@@ -37,8 +37,8 @@ const jsonLd = {
       "url": "/logo.png"
     }
   },
-  "datePublished": "May 1, 2025",
-  "dateModified": "May 1, 2025",
+  "datePublished": "April 14, 2024",
+  "dateModified": "April 14, 2024",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ai-vertise.com/blog/marketing-dashboard-benefits"
@@ -49,7 +49,7 @@ export default function BlogPost() {
   return (
     <BlogPostLayout
       title="7 Benefits of Using a Marketing Dashboard for Campaign Management"
-      date="May 1, 2025"
+      date="April 14, 2024"
       author="Founder of ai-vertise.com"
       readTime="6 min read"
       tags={["Analytics", "Campaign Management", "Marketing Tools"]}

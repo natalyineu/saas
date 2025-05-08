@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: '5 Keys to More Effective Facebook Advertising in 2025',
     description: 'Learn the latest strategies for maximizing your ROI on Facebook ads with our expert tips and insights.',
     type: 'article',
-    publishedTime: '2025-04-26',
+    publishedTime: '2024-04-05',
     authors: ['Marketing Team'],
     url: 'https://ai-vertise.com/blog/effective-facebook-ads',
     images: [
@@ -76,8 +76,8 @@ export default function EffectiveFacebookAdsPost() {
         "url": "https://ai-vertise.com/logo.png"
       }
     },
-    "datePublished": "2025-04-26",
-    "dateModified": "2025-04-26",
+    "datePublished": "April 5, 2024",
+    "dateModified": "April 5, 2024",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ai-vertise.com/blog/effective-facebook-ads"
@@ -87,7 +87,7 @@ export default function EffectiveFacebookAdsPost() {
   return (
     <BlogPostLayout
       title="5 Keys to More Effective Facebook Advertising in 2025"
-      date="April 26, 2025"
+      date="April 5, 2024"
       author="Founder of ai-vertise.com"
       readTime="7 min read"
       tags={["Facebook Ads", "Social Media", "Digital Marketing"]}
