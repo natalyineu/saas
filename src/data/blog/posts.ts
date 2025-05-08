@@ -210,7 +210,7 @@ export const blogPosts: BlogPost[] = [
     title: "Privacy-First Advertising: Navigating the Post-Cookie Era",
     date: "April 23, 2025",
     author: "Founder of ai-vertise.com",
-    category: "Privacy & Compliance",
+    category: "Privacy and Compliance",
     excerpt: "Learn how to adapt your digital marketing strategy in a world where consumer privacy is increasingly protected.",
     readTime: "7 min read",
     heroImage: "/images/blog/privacy-first.jpg"

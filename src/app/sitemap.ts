@@ -19,6 +19,16 @@ type PostWithPossibleTags = ContentItem & {
   tags?: string[];
 };
 
+// Function to escape special XML characters
+function escapeXml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai-vertise.com';
   const currentDate = new Date().toISOString();
@@ -99,13 +109,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Include both regular blog posts and success stories for categories
   [...blogPosts, ...successStories].forEach(post => {
     if (post.category) {
-      categories.add(post.category.toLowerCase().replace(/\s+/g, '-'));
+      const safeCategory = post.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+      categories.add(safeCategory);
     }
   });
   
   // Add category pages to sitemap
   const categoryPages: EnhancedSitemapItem[] = Array.from(categories).map(category => ({
-    url: `${baseUrl}/blog/category/${category}`,
+    url: `${baseUrl}/blog/category/${escapeXml(category)}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -140,7 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     
     return {
-      url: `${baseUrl}/blog/${post.id}`,
+      url: `${baseUrl}/blog/${escapeXml(post.id)}`,
       lastModified: publishDate.toISOString(),
       changeFrequency,
       priority
@@ -160,13 +171,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   blogPosts.forEach(post => {
     if (post.tags && Array.isArray(post.tags)) {
       post.tags.forEach(tag => {
-        tags.add(tag.toLowerCase().replace(/\s+/g, '-'));
+        const safeTag = tag.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+        tags.add(safeTag);
       });
     }
   });
   
   const tagPages: EnhancedSitemapItem[] = Array.from(tags).map(tag => ({
-    url: `${baseUrl}/blog/tag/${tag}`,
+    url: `${baseUrl}/blog/tag/${escapeXml(tag)}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 0.7,
