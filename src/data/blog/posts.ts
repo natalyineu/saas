@@ -87,7 +87,6 @@ export const blogPosts: BlogPost[] = [
     category: "ARTICLE",
     excerpt: "Learn how to create high-performing Pinterest ad campaigns that drive engagement, traffic, and conversions by leveraging the platform's unique visual discovery ecosystem.",
     readTime: "9 min read",
-    heroImage: "/images/blog/pinterest-ad-campaign.jpg",
     tags: ["Pinterest", "Social Media Marketing", "Visual Marketing", "E-commerce", "ROI Optimization"]
   },
   {
@@ -647,5 +646,59 @@ export const blogPosts: BlogPost[] = [
     excerpt: "A strategic guide to identifying and selecting the most effective channel topics for your Telegram presence.",
     readTime: "7 min read",
     heroImage: "/images/blog/telegram-topics.jpg"
+  },
+  {
+    id: "econometrics-marketing-mix",
+    title: "Econometrics and Marketing Mix Modeling: A Data-Driven Case Study",
+    date: "July 20, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Explore how a leading consumer brand leveraged econometrics and marketing mix modeling to optimize their budget allocation and achieve 43% higher ROI across channels.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/econometrics-marketing-mix.jpg",
+    tags: ["Econometrics", "Marketing Mix Modeling", "ROI Optimization", "Data Analytics", "Budget Allocation"]
+  },
+  {
+    id: "advertising-trends-2025",
+    title: "2025 Advertising Trends: Real-World Applications Case Study",
+    date: "July 15, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Discover how forward-thinking brands are already implementing the biggest advertising trends of 2025, and the measurable results they're achieving with these innovative approaches.",
+    readTime: "10 min read",
+    heroImage: "/images/blog/advertising-trends-2025.jpg",
+    tags: ["2025 Trends", "Future of Advertising", "Innovation", "Digital Transformation", "Consumer Behavior"]
+  },
+  {
+    id: "global-brands-marketing-approach",
+    title: "Global Brand Marketing: How Leading Companies Maintain Local Relevance",
+    date: "July 10, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "An in-depth analysis of how three global brands successfully balanced universal brand positioning with local market adaptations to drive growth across diverse regions.",
+    readTime: "8 min read",
+    tags: ["Global Marketing", "Brand Strategy", "Localization", "International Business", "Cultural Adaptation"]
+  },
+  {
+    id: "uae-advertising-strategy",
+    title: "Advertising in the United Arab Emirates: Luxury Brand Case Study",
+    date: "July 8, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "Learn how a premium lifestyle brand crafted a tailored advertising strategy for the UAE market, resulting in 68% brand awareness growth and 37% sales increase within six months.",
+    readTime: "7 min read",
+    heroImage: "/images/blog/uae-advertising.jpg",
+    tags: ["UAE Market", "Luxury Advertising", "Middle East", "Digital Marketing", "Regional Strategy"]
+  },
+  {
+    id: "saudi-arabia-marketing-strategy",
+    title: "Saudi Arabia Marketing Strategy: Vision 2030 Alignment Case Study",
+    date: "July 5, 2025",
+    author: "Founder of ai-vertise.com",
+    category: "ARTICLE",
+    excerpt: "An examination of how a technology company aligned its marketing strategy with Saudi Arabia's Vision 2030 objectives to capture market share and build lasting relationships in the region.",
+    readTime: "9 min read",
+    heroImage: "/images/blog/saudi-marketing-strategy.jpg",
+    tags: ["Saudi Arabia", "Vision 2030", "Middle East Marketing", "Technology Marketing", "Growth Strategy"]
   }
 ];
