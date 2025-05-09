@@ -7,6 +7,7 @@ import {
   AnalyticsIcon 
 } from './ui/AnimatedIcons';
 import { FEATURES } from '../lib/utils/constants';
+import Link from 'next/link';
 
 export default function FeaturesSection() {
   // Map the icons to the features from constants
@@ -56,22 +57,27 @@ export default function FeaturesSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {featuresWithIcons.map((feature, index) => (
-            <div 
-              key={index} 
-              className="group relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:-translate-y-2"
+            <Link 
+              key={index}
+              href={`/contact?feature=${encodeURIComponent(feature.title)}`}
+              className="group cursor-pointer"
             >
-              {/* Feature card background design */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.gradient} opacity-5 rounded-bl-full transform group-hover:scale-150 transition-transform duration-500`}></div>
-              
-              <div className="relative z-10">
-                <div className="mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-primary-purple transition-colors">{feature.title}</h3>
-                <p className="text-gray-600 group-hover:text-gray-700 transition-colors">{feature.description}</p>
+              <div 
+                className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:-translate-y-2 h-full"
+              >
+                {/* Feature card background design */}
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.gradient} opacity-5 rounded-bl-full transform group-hover:scale-150 transition-transform duration-500`}></div>
+                
+                <div className="relative z-10">
+                  <div className="mb-6">{feature.icon}</div>
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary-purple transition-colors">{feature.title}</h3>
+                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors">{feature.description}</p>
+                </div>
+                
+                {/* Bottom indicator */}
+                <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${feature.gradient} group-hover:w-full transition-all duration-500`}></div>
               </div>
-              
-              {/* Bottom indicator */}
-              <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${feature.gradient} group-hover:w-full transition-all duration-500`}></div>
-            </div>
+            </Link>
           ))}
         </div>
         

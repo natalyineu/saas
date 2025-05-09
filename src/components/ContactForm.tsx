@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from './ui/ErrorBoundary';
 import { COMPANY_EMAIL } from '../lib/utils/constants';
+import { useSearchParams } from 'next/navigation';
 
 interface ContactFormProps {
   title?: string;
@@ -28,9 +29,27 @@ function ContactForm({
   successMessage = "Thank you for your message. Our team will review it and get back to you shortly.",
   buttonText = 'Send Message',
 }: ContactFormProps) {
+  const searchParams = useSearchParams();
   const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState<{contactMethod?: string; message?: string}>({});
   const [submitting, setSubmitting] = useState(false);
+  const [messageValue, setMessageValue] = useState('');
+  const [isClient, setIsClient] = useState(false);
+  
+  // Set isClient to true when component mounts on client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  // Check for feature query parameter and set the message template
+  useEffect(() => {
+    if (isClient && searchParams) {
+      const feature = searchParams.get('feature');
+      if (feature) {
+        setMessageValue(`I'm interested in learning more about the "${feature}" feature. Please provide more information about how it can help my business.`);
+      }
+    }
+  }, [searchParams, isClient]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -151,6 +170,8 @@ function ContactForm({
               id="message"
               name="message"
               rows={5}
+              value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
               placeholder="How can we help you?"
               className={`w-full px-4 py-3 rounded-lg border ${
                 errors.message ? 'border-red-500' : 'border-gray-300'
