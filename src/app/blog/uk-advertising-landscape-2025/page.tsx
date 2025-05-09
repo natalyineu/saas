@@ -237,8 +237,8 @@ export default function BlogPost() {
         <p className="mb-4">
           AI-Vertise helps brands navigate the complex UK advertising landscape with AI-powered solutions that ensure compliance, effectiveness, and ROI.
         </p>
-        <a href="/pricing" className="inline-block text-white bg-gradient-to-r from-primary-purple to-primary-pink px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all">
-          Explore Our Solutions
+        <a href="https://go.ai-vertise.com/register" className="inline-block text-white bg-gradient-to-r from-primary-purple to-primary-pink px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-all">
+          Get Started Today
         </a>
       </div>
     </BlogPostLayout>

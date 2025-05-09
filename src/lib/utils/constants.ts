@@ -4,7 +4,7 @@ export const COMPANY_NAME = "AI-Vertise Boost";
 export const COMPANY_EMAIL = "contact@ai-vertise.com";
 export const COMPANY_PHONE = "+48503589781";
 export const PAYMENT_LINK = "/contact";
-export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || "https://db.ai-vertise.com/";
+export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || "https://go.ai-vertise.com/";
 
 export const FEATURES: Feature[] = [
   {

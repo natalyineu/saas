@@ -51,21 +51,21 @@ export default function SupportButton() {
           className={`bg-blue-500 hover:bg-blue-600 text-white text-sm sm:text-base font-medium shadow-lg rounded-full ${isMobile ? 'px-2 py-2' : 'px-4 sm:px-6 py-2.5 sm:py-3'} flex items-center justify-center hover:shadow-xl transition-all animate-pulse-slow`}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
-          onClick={() => router.push('/contact')}
-          aria-label="Contact us about advertising"
+          onClick={() => window.location.href = 'https://go.ai-vertise.com/register'}
+          aria-label="Get an advertising package"
         >
           {/* Target icon */}
           <TargetBullseyeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" />
           
           {isMobile ? (
-            <span className="text-xs whitespace-nowrap">Contact</span>
+            <span className="text-xs whitespace-nowrap">Get Ads</span>
           ) : (
             <span>Get an Ads package</span>
           )}
           
           {showTooltip && (
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white text-blue-600 shadow-md rounded-md py-1 px-2 text-sm whitespace-nowrap hidden md:block">
-              Contact us for premium advertising
+              Sign up for an advertising package
             </div>
           )}
         </button>

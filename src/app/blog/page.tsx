@@ -129,7 +129,7 @@ export default function BlogPage() {
                   Join hundreds of businesses that have transformed their digital marketing performance with AI-Vertise Boost.
                 </p>
                 <Link 
-                  href="/#pricing" 
+                  href="https://go.ai-vertise.com/register" 
                   className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-8 py-3 rounded-lg inline-block font-medium hover:shadow-lg transition-all"
                   aria-label="View pricing plans"
                 >

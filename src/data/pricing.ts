@@ -49,7 +49,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Starter",
-    buttonLink: "/contact",
+    buttonLink: "https://go.ai-vertise.com/register",
     highlight: false
   },
   {
@@ -84,7 +84,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Growth",
-    buttonLink: "/contact",
+    buttonLink: "https://go.ai-vertise.com/register",
     highlight: true
   },
   {
@@ -119,7 +119,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Choose Impact",
-    buttonLink: "/contact",
+    buttonLink: "https://go.ai-vertise.com/register",
     highlight: false
   },
   {
@@ -152,7 +152,7 @@ export const pricingPlans: Plan[] = [
       }
     ],
     buttonText: "Talk to Sales",
-    buttonLink: "/contact",
+    buttonLink: "https://go.ai-vertise.com/register",
     highlight: false,
     isCustom: true
   }

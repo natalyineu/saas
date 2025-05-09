@@ -169,6 +169,16 @@ export default function EffectiveFacebookAdsPost() {
       <p>
         At AI-Vertise Boost, we help businesses implement these strategies efficiently through our AI-powered platform. Our technology handles the complex aspects of Facebook advertising while giving you easy-to-understand controls and insights.
       </p>
+      
+      <div className="bg-gradient-to-r from-primary-purple/10 to-primary-pink/10 p-6 rounded-lg my-8">
+        <h3 className="font-bold text-xl mb-3">Ready to boost your Facebook advertising results?</h3>
+        <p className="mb-4">
+          Join hundreds of other businesses that have transformed their social media marketing with AI-Vertise Boost.
+        </p>
+        <a href="https://go.ai-vertise.com/register" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+          Get Started Today
+        </a>
+      </div>
     </BlogPostLayout>
   );
 } 

@@ -410,7 +410,7 @@ export default function BlogPost() {
         <p className="mb-4">
           AI-Vertise Boost helps businesses create high-performing Connected TV campaigns that deliver measurable results through precision targeting and premium placements.
         </p>
-        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+        <Link href="https://go.ai-vertise.com/register" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
           Get Started Today
         </Link>
       </div>

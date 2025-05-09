@@ -134,9 +134,7 @@ export default function HeroSection() {
                 </h3>
                 <div className="flex gap-4">
                   <a 
-                    href="https://db.ai-vertise.com/register" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    href="https://go.ai-vertise.com/register" 
                     className="bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium px-6 py-4 rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center text-base shadow-md whitespace-nowrap justify-center flex-1"
                   >
                     Sign Up
@@ -145,14 +143,8 @@ export default function HeroSection() {
                     </svg>
                   </a>
                   <Link 
-                    href="/#pricing" 
+                    href="https://go.ai-vertise.com/register" 
                     className="border-2 border-primary-purple text-primary-purple font-medium px-6 py-4 rounded-lg hover:bg-primary-purple hover:text-white transition-all duration-200 flex items-center text-base whitespace-nowrap justify-center flex-1"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // Get the current origin and pathname
-                      const url = window.location.origin + '/#pricing';
-                      window.location.href = url;
-                    }}
                   >
                     See Packages
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -182,20 +174,9 @@ export default function HeroSection() {
                   Ad Campaign Dashboard
                 </span>
               </div>
-              <a 
-                href="https://db.ai-vertise.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block cursor-pointer transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] relative"
-                aria-label="Visit AI-Vertise Dashboard"
-              >
-                {/* Click to register badge */}
-                <div className="absolute bottom-4 right-4 z-30 bg-primary-purple text-white px-4 py-2 rounded-lg shadow-lg flex items-center font-medium text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                  </svg>
-                  Try Dashboard
-                </div>
+              
+              {/* Dashboard preview with mockup */}
+              <div className="relative">
                 <BrowserMockup className="shadow-2xl transform md:scale-110 md:origin-center">
                   {/* Mobile view */}
                   <div className="sm:hidden">
@@ -211,7 +192,21 @@ export default function HeroSection() {
                     </ErrorBoundary>
                   </div>
                 </BrowserMockup>
-              </a>
+                
+                {/* Try Dashboard button - now positioned over the mockup */}
+                <a 
+                  href="https://go.ai-vertise.com/" 
+                  className="absolute bottom-4 right-4 z-30"
+                  aria-label="Visit AI-Vertise Dashboard"
+                >
+                  <div className="bg-primary-purple text-white px-4 py-2 rounded-lg shadow-lg flex items-center font-medium text-sm hover:bg-primary-purple/90 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                    Try Dashboard
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

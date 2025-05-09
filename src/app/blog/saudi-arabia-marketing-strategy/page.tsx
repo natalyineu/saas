@@ -456,7 +456,7 @@ export default function BlogPost() {
           AI-Vertise helps companies develop marketing strategies that authentically connect with Saudi Arabia's national transformation goals.
         </p>
         <Link 
-          href="/contact" 
+          href="https://go.ai-vertise.com/register" 
           className="inline-block px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium rounded-lg hover:opacity-90 transition-all"
         >
           Schedule a Vision Alignment Consultation

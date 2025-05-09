@@ -200,7 +200,7 @@ export default function CoffeeShopCaseStudy() {
         <p className="mb-4">
           Join hundreds of other local businesses that have transformed their growth with AI-Vertise Boost.
         </p>
-        <Link href="/#pricing" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
+        <Link href="https://go.ai-vertise.com/register" className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all">
           Get Started Today
         </Link>
       </div>

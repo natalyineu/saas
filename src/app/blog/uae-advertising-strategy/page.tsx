@@ -395,7 +395,7 @@ export default function BlogPost() {
           AI-Vertise helps luxury and premium brands develop sophisticated advertising strategies for the UAE and broader Middle East markets.
         </p>
         <Link 
-          href="/contact" 
+          href="https://go.ai-vertise.com/register" 
           className="inline-block px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium rounded-lg hover:opacity-90 transition-all"
         >
           Schedule a Consultation

@@ -313,7 +313,7 @@ export default function BlogPost() {
           Learn how AI-Vertise can help you implement econometrics and marketing mix modeling for your business.
         </p>
         <Link 
-          href="/contact" 
+          href="https://go.ai-vertise.com/register" 
           className="inline-block px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium rounded-lg hover:opacity-90 transition-all"
         >
           Request a Consultation

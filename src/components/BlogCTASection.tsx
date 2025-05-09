@@ -33,9 +33,15 @@ export default function BlogCTASection() {
               </ul>
               <Link 
                 href="/blog" 
-                className="btn-primary inline-block"
+                className="btn-primary inline-block mr-4"
               >
                 Visit Our Blog
+              </Link>
+              <Link 
+                href="https://go.ai-vertise.com/register" 
+                className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-6 py-2 rounded-lg inline-block font-medium hover:shadow-lg transition-all"
+              >
+                Get Started Today
               </Link>
             </div>
             <div className="md:w-1/2 relative bg-white/50 pb-16 md:pb-0">
@@ -131,12 +137,18 @@ export default function BlogCTASection() {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-4 right-0 left-0 flex justify-center">
+                <div className="absolute bottom-4 right-0 left-0 flex justify-center gap-3">
                   <Link 
                     href="/blog"
+                    className="bg-white border border-primary-purple text-primary-purple text-xs md:text-sm font-bold px-4 py-2 rounded-full hover:bg-primary-purple hover:text-white transition-colors"
+                  >
+                    VIEW BLOG
+                  </Link>
+                  <Link 
+                    href="https://go.ai-vertise.com/register"
                     className="bg-gradient-to-r from-primary-purple to-primary-pink text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full"
                   >
-                    VIEW ALL SUCCESS STORIES
+                    GET STARTED
                   </Link>
                 </div>
               </div>
