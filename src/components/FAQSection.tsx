@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { COMPANY_EMAIL } from '@/lib/utils/constants';
 import { faqs } from '@/data/faq';
 
@@ -20,26 +21,44 @@ export default function FAQSection() {
           itemScope
           itemType="https://schema.org/Question"
         >
-          <button
-            className="flex justify-between items-center w-full p-4 text-left bg-white hover:bg-gray-50 focus:outline-none"
-            onClick={() => toggleFAQ(index)}
-            aria-expanded={openIndex === index}
-          >
-            <span className="text-lg font-medium" itemProp="name">{faq.question}</span>
-            <svg
-              className={`w-5 h-5 text-gray-500 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
+          <div className="flex justify-between items-center w-full p-4 text-left bg-white">
+            <button
+              className="flex-grow text-left text-lg font-medium"
+              onClick={() => toggleFAQ(index)}
+              aria-expanded={openIndex === index}
+              itemProp="name"
             >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
+              {faq.question}
+            </button>
+            <div className="flex items-center space-x-3">
+              <Link 
+                href={`/faq/${faq.slug}`}
+                className="text-sm text-primary-purple hover:underline"
+                aria-label={`Read more about ${faq.question}`}
+              >
+                Read more
+              </Link>
+              <button
+                onClick={() => toggleFAQ(index)}
+                aria-label={openIndex === index ? "Collapse answer" : "Expand answer"}
+                className="flex-shrink-0"
+              >
+                <svg
+                  className={`w-5 h-5 text-gray-500 transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
           <div
             className={`transition-all duration-300 ease-in-out ${
               openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
@@ -49,6 +68,29 @@ export default function FAQSection() {
           >
             <div className="p-4 bg-gray-50 border-t border-gray-200">
               <p className="text-gray-700" itemProp="text">{faq.answer}</p>
+              <div className="mt-3 text-right">
+                <Link 
+                  href={`/faq/${faq.slug}`}
+                  className="inline-flex items-center text-sm text-primary-purple hover:underline"
+                  aria-label={`Read more about ${faq.question}`}
+                >
+                  More details
+                  <svg 
+                    className="ml-1 h-4 w-4" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

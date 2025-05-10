@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog/posts';
 import { successStories } from '@/data/blog/index';
 import { ContentItem } from '@/lib/types/content';
+import { faqs } from '@/data/faq';
 
 type SitemapFrequency = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
 
@@ -184,8 +185,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
   
+  // Add individual FAQ pages to sitemap
+  const faqPages: EnhancedSitemapItem[] = faqs.map(faq => ({
+    url: `${baseUrl}/faq/${escapeXml(faq.slug)}`,
+    lastModified: oneMonthAgo.toISOString(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+  
   // Combine all pages
-  const allPages = [...staticPages, ...categoryPages, ...tagPages, ...blogPostPages];
+  const allPages = [...staticPages, ...categoryPages, ...tagPages, ...blogPostPages, ...faqPages];
   
   // Format for Next.js sitemap
   return allPages.map(page => ({
