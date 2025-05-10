@@ -22,8 +22,10 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    formats: ['image/webp'],
-    minimumCacheTTL: 60,
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 120,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -37,7 +39,10 @@ const nextConfig = {
   // Add performance optimization experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ['lucide-react', 'chart.js', 'react-chartjs-2'],
+    scrollRestoration: true,
+    serverMinification: true,
+    serverComponentsExternalPackages: [],
   },
   // Environment variables
   env: {
@@ -54,6 +59,26 @@ const nextConfig = {
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
           },
           {
             key: 'Cache-Control',
@@ -79,10 +104,32 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // Add special caching for static assets
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Add special caching for static assets
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-cache, no-store, max-age=0, must-revalidate',
+          },
+        ],
+      },
     ];
   },
   // Set the src directory as the application source
   distDir: '.next',
+  // Configure PWA capabilities
+  output: 'standalone',
 };
 
 module.exports = nextConfig; 

@@ -6,7 +6,7 @@ import SupportButton from '@/components/SupportButton';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import BackgroundGrid from '@/components/layout/BackgroundGrid';
-import { seoMetadata, viewportConfig } from '@/config/seo';
+import { seoMetadata, viewportConfig, generateStructuredData } from '@/config/seo';
 import Script from 'next/script';
 
 // Initialize fonts
@@ -33,6 +33,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Get structured data objects
+  const { structuredData, organizationData, productData, localBusinessData } = generateStructuredData();
+
   return (
     <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
       <head>
@@ -48,6 +51,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
+        {/* Preload critical resources */}
+        <link rel="preload" href="/images/hero-image.jpg" as="image" />
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        
         {/* Search engine verification tags will be added via metadata.other */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no" />
@@ -55,6 +62,28 @@ export default function RootLayout({
         {/* Supported languages - helps with localization signals */}
         <link rel="alternate" href="https://ai-vertise.com" hrefLang="en" />
         <link rel="alternate" href="https://ai-vertise.com" hrefLang="x-default" />
+        
+        {/* Enhanced structured data */}
+        <Script 
+          id="structured-data-website" 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <Script 
+          id="structured-data-organization" 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        />
+        <Script 
+          id="structured-data-product" 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }}
+        />
+        <Script 
+          id="structured-data-localbusiness" 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
+        />
         
         <GoogleAnalytics />
       </head>

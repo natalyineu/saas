@@ -11,14 +11,40 @@ const VERIFICATION_CODES = {
   PINTEREST: process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION || '', // Pinterest verification
 };
 
+// Core business keywords for semantic relevance
+const CORE_KEYWORDS = [
+  'AI advertising', 
+  'digital marketing automation', 
+  'AI ad optimization', 
+  'small business marketing',
+  'automated marketing campaigns',
+  'machine learning advertising',
+  'advertising ROI', 
+  'marketing AI', 
+  'targeted ad campaigns',
+  'automated ad creation',
+  'budget optimization',
+  'performance marketing',
+  'AI marketing platform',
+  'digital advertising technology',
+  'data-driven marketing'
+];
+
 export const seoMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: 'AI-Vertise Boost | AI-Powered Ad Management',
-  description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed specifically for small and medium businesses.',
-  keywords: 'AI advertising, digital marketing, ad management, SMB marketing, AI-powered ads, advertising automation, marketing for small businesses, machine learning ads, targeted advertising, ROI optimization',
-  authors: [{ name: 'AI-Vertise Team' }],
+  title: {
+    template: '%s | AI-Vertise Boost',
+    default: 'AI-Vertise Boost | AI-Powered Advertising Platform for Small Businesses'
+  },
+  description: 'AI-Vertise Boost helps small businesses increase ROI by 35%+ with AI-powered advertising. Automated campaign management, smart targeting, and real-time optimization with 24/7 performance tracking.',
+  keywords: CORE_KEYWORDS.join(', '),
+  authors: [
+    { name: 'AI-Vertise Team', url: 'https://ai-vertise.com/about' }
+  ],
   creator: 'AI-Vertise',
   publisher: 'AI-Vertise',
+  category: 'Technology',
+  applicationName: 'AI-Vertise Boost',
   robots: {
     index: true,
     follow: true,
@@ -44,8 +70,8 @@ export const seoMetadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: BASE_URL,
-    title: 'AI-Vertise Boost | AI-Powered Ad Management',
-    description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed specifically for small and medium businesses.',
+    title: 'AI-Vertise Boost | AI-Powered Advertising for SMBs',
+    description: 'AI-Vertise Boost helps small businesses increase advertising ROI by 35%+ with AI-powered campaign management. Smart targeting and real-time optimization across all digital channels.',
     siteName: 'AI-Vertise Boost',
     images: [
       {
@@ -54,27 +80,47 @@ export const seoMetadata: Metadata = {
         height: 630,
         alt: 'AI-Vertise Boost Platform - AI-powered advertising solution for small businesses',
         type: 'image/jpeg',
+      },
+      {
+        url: '/og-image-square.jpg',
+        width: 600,
+        height: 600,
+        alt: 'AI-Vertise Boost - Small business advertising platform',
+        type: 'image/jpeg',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI-Vertise Boost | AI-Powered Ad Management',
-    description: 'Supercharge your advertising with our AI-powered platform. Smart targeting, fast launch, and budget optimization designed specifically for small and medium businesses.',
-    images: ['/og-image.jpg'],
+    title: 'AI-Vertise Boost | AI-Powered Advertising for SMBs',
+    description: 'Increase your advertising ROI by 35%+ with AI-powered campaign management. Smart targeting and real-time optimization across all digital channels.',
+    images: ['/og-image-twitter.jpg'],
     creator: '@aivertise',
     site: '@aivertise',
+  },
+  appleWebApp: {
+    title: 'AI-Vertise',
+    statusBarStyle: 'black-translucent',
+    capable: true
+  },
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+    date: false
   },
   icons: {
     icon: [
       { url: '/favicon-new.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/x-icon' }
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
     other: [
-      { rel: 'mask-icon', url: '/favicon-new.svg', color: '#3F5EFB' }
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#3F5EFB' },
+      { rel: 'shortcut icon', url: '/favicon.ico' }
     ]
   },
   other: {
@@ -94,6 +140,14 @@ export const seoMetadata: Metadata = {
     // Additional SEO metadata
     'format-detection': 'telephone=no',
     'referrer': 'origin-when-cross-origin',
+    
+    // Technology indicators
+    'generator': 'Next.js',
+    'powered-by': 'Artificial Intelligence',
+    
+    // Monetization and ownership
+    'monetization': '$ilp.uphold.com/YourPointer', // Update with real monetization ID if using Web Monetization
+    'copyright': `© ${new Date().getFullYear()} AI-Vertise Inc. All rights reserved.`
   }
 };
 
@@ -104,7 +158,10 @@ export const viewportConfig: Viewport = {
   maximumScale: 5,
   minimumScale: 1,
   userScalable: true,
-  themeColor: '#3F5EFB',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#3F5EFB' },
+    { media: '(prefers-color-scheme: dark)', color: '#6366F1' }
+  ],
   viewportFit: 'cover',
   colorScheme: 'normal'
 };
