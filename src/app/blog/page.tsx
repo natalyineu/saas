@@ -131,9 +131,9 @@ export default function BlogPage() {
                 <Link 
                   href="https://go.ai-vertise.com/register" 
                   className="bg-gradient-to-r from-primary-purple to-primary-pink text-white px-8 py-3 rounded-lg inline-block font-medium hover:shadow-lg transition-all"
-                  aria-label="View pricing plans"
+                  aria-label="Sign up for AI-powered advertising services"
                 >
-                  Get Started Today
+                  Start your AI advertising campaign
                 </Link>
               </div>
             </div>

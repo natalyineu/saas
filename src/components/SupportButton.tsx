@@ -52,20 +52,20 @@ export default function SupportButton() {
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
           onClick={() => window.location.href = 'https://go.ai-vertise.com/register'}
-          aria-label="Get an advertising package"
+          aria-label="Purchase AI-powered advertising package for your business"
         >
           {/* Target icon */}
           <TargetBullseyeIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2 text-white" />
           
           {isMobile ? (
-            <span className="text-xs whitespace-nowrap">Get Ads</span>
+            <span className="text-xs whitespace-nowrap">AI Ads</span>
           ) : (
-            <span>Get an Ads package</span>
+            <span>Purchase AI advertising</span>
           )}
           
           {showTooltip && (
             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white text-blue-600 shadow-md rounded-md py-1 px-2 text-sm whitespace-nowrap hidden md:block">
-              Sign up for an advertising package
+              Purchase AI-powered advertising package for your business
             </div>
           )}
         </button>

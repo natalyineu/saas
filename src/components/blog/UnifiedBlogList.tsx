@@ -44,6 +44,7 @@ export default function UnifiedBlogList({
   };
   
   const hasMoreContent = displayCount < content.length;
+  const remainingCount = content.length - displayCount;
 
   return (
     <div className="space-y-10">
@@ -66,9 +67,9 @@ export default function UnifiedBlogList({
           <button 
             onClick={handleLoadMore}
             className="px-6 py-3 bg-gradient-to-r from-primary-purple to-primary-pink text-white font-medium rounded-lg shadow-sm hover:opacity-90 transition-all duration-300 flex items-center"
-            aria-label={`Load ${loadMoreIncrement} more posts`}
+            aria-label={`Load ${Math.min(loadMoreIncrement, remainingCount)} more articles and case studies`}
           >
-            View More Content
+            Show {Math.min(loadMoreIncrement, remainingCount)} more marketing articles
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               className="h-5 w-5 ml-2" 
