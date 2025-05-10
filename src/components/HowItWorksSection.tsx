@@ -62,7 +62,7 @@ export default function HowItWorksSection() {
         <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl mb-4">How Our Ad Platform Works</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Getting started with AI-Vertise Boost's marketing solutions is simple. Launch your ad campaign in just three easy steps.
+            Getting started with AI-Vertise Ads's marketing solutions is simple. Launch your ad campaign in just three easy steps.
           </p>
         </div>
         

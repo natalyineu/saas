@@ -126,7 +126,7 @@ export default function BlogPage() {
               <div className="max-w-3xl mx-auto text-center">
                 <h2 id="cta-heading" className="text-2xl font-bold mb-4">Ready to Boost Your Marketing?</h2>
                 <p className="text-gray-700 mb-6">
-                  Join hundreds of businesses that have transformed their digital marketing performance with AI-Vertise Boost.
+                  Join hundreds of businesses that have transformed their digital marketing performance with AI-Vertise Ads.
                 </p>
                 <Link 
                   href="https://go.ai-vertise.com/register" 

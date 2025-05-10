@@ -1,6 +1,6 @@
 import { CaseStudy, Feature, PricingPlan, WorkStep } from "../types";
 
-export const COMPANY_NAME = "AI-Vertise Boost";
+export const COMPANY_NAME = "AI-Vertise Ads";
 export const COMPANY_EMAIL = "contact@ai-vertise.com";
 export const COMPANY_PHONE = "+48503589781";
 export const PAYMENT_LINK = "/contact";
@@ -118,7 +118,7 @@ export const CASE_STUDIES: Omit<CaseStudy, 'icon'>[] = [
     title: "Cafe Marketing Campaign",
     company: "Local Coffee Shop",
     result: "+143% increase in foot traffic",
-    description: "A specialty coffee shop used AI-Vertise Boost's targeted ad technology to reach local coffee enthusiasts and saw a dramatic increase in new customers within their first digital marketing campaign."
+    description: "A specialty coffee shop used AI-Vertise Ads's targeted ad technology to reach local coffee enthusiasts and saw a dramatic increase in new customers within their first digital marketing campaign."
   },
   {
     title: "Restaurant Ad Strategy",

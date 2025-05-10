@@ -51,7 +51,7 @@ export default function SuccessStoriesCarousel({ stories }: SuccessStoriesCarous
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h2 className="text-4xl font-bold text-center mb-4">Success Stories</h2>
       <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-        See how businesses like yours have achieved amazing results with AI-Vertise Boost.
+        See how businesses like yours have achieved amazing results with AI-Vertise Ads.
       </p>
 
       <div className="relative">

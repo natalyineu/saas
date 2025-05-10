@@ -11,7 +11,7 @@ interface MetadataOptions {
 }
 
 const defaultOptions: MetadataOptions = {
-  siteTitle: 'AI-Vertise Boost',
+  siteTitle: 'AI-Vertise Ads',
   siteUrl: 'https://ai-vertise.com',
   defaultImage: '/images/og-image.jpg',
   defaultAuthor: 'Founder of ai-vertise.com',
@@ -58,7 +58,7 @@ export function generateMetadata(
       description = `Explore insights and best practices for ${lowercaseTitle} to improve your marketing performance and drive business growth.`;
     }
   } else {
-    description = `Expert insights and strategies on AI-powered digital advertising for small and medium businesses. Maximize your marketing ROI with AI-Vertise Boost.`;
+    description = `Expert insights and strategies on AI-powered digital advertising for small and medium businesses. Maximize your marketing ROI with AI-Vertise Ads.`;
   }
   
   // Use a consistent og image approach that doesn't rely on removed hero images
@@ -139,7 +139,7 @@ export function generateMetadata(
       'theme-color': '#ffffff',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'default',
-      'apple-mobile-web-app-title': siteTitle || 'AI-Vertise Boost',
+      'apple-mobile-web-app-title': siteTitle || 'AI-Vertise Ads',
     }
   };
 }
@@ -222,10 +222,10 @@ export function generateStructuredData(
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is AI-Vertise Boost?",
+        "name": "What is AI-Vertise Ads?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI-Vertise Boost is an AI-powered advertising platform designed specifically for small and medium-sized businesses that want to leverage advanced artificial intelligence to improve their marketing campaigns."
+          "text": "AI-Vertise Ads is an AI-powered advertising platform designed specifically for small and medium-sized businesses that want to leverage advanced artificial intelligence to improve their marketing campaigns."
         }
       },
       {

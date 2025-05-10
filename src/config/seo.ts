@@ -33,10 +33,10 @@ const CORE_KEYWORDS = [
 export const seoMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    template: '%s | AI-Vertise Boost',
-    default: 'AI-Vertise Boost | AI-Powered Advertising Platform for Small Businesses'
+    template: '%s | AI-Vertise Ads',
+    default: 'AI-Vertise Ads | AI-Powered Advertising Platform for Small Businesses'
   },
-  description: 'AI-Vertise Boost helps small businesses increase ROI by 35%+ with AI-powered advertising. Automated campaign management, smart targeting, and real-time optimization with 24/7 performance tracking.',
+  description: 'AI-Vertise Ads helps small businesses increase ROI by 35%+ with AI-powered advertising. Automated campaign management, smart targeting, and real-time optimization with 24/7 performance tracking.',
   keywords: CORE_KEYWORDS.join(', '),
   authors: [
     { name: 'AI-Vertise Team', url: 'https://ai-vertise.com/about' }
@@ -44,7 +44,7 @@ export const seoMetadata: Metadata = {
   creator: 'AI-Vertise',
   publisher: 'AI-Vertise',
   category: 'Technology',
-  applicationName: 'AI-Vertise Boost',
+  applicationName: 'AI-Vertise Ads',
   robots: {
     index: true,
     follow: true,
@@ -70,29 +70,29 @@ export const seoMetadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: BASE_URL,
-    title: 'AI-Vertise Boost | AI-Powered Advertising for SMBs',
-    description: 'AI-Vertise Boost helps small businesses increase advertising ROI by 35%+ with AI-powered campaign management. Smart targeting and real-time optimization across all digital channels.',
-    siteName: 'AI-Vertise Boost',
+    title: 'AI-Vertise Ads | AI-Powered Advertising for SMBs',
+    description: 'AI-Vertise Ads helps small businesses increase advertising ROI by 35%+ with AI-powered campaign management. Smart targeting and real-time optimization across all digital channels.',
+    siteName: 'AI-Vertise Ads',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI-Vertise Boost Platform - AI-powered advertising solution for small businesses',
+        alt: 'AI-Vertise Ads Platform - AI-powered advertising solution for small businesses',
         type: 'image/jpeg',
       },
       {
         url: '/og-image-square.jpg',
         width: 600,
         height: 600,
-        alt: 'AI-Vertise Boost - Small business advertising platform',
+        alt: 'AI-Vertise Ads - Small business advertising platform',
         type: 'image/jpeg',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI-Vertise Boost | AI-Powered Advertising for SMBs',
+    title: 'AI-Vertise Ads | AI-Powered Advertising for SMBs',
     description: 'Increase your advertising ROI by 35%+ with AI-powered campaign management. Smart targeting and real-time optimization across all digital channels.',
     images: ['/og-image-twitter.jpg'],
     creator: '@aivertise',
@@ -174,7 +174,7 @@ export function generateStructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "AI-Vertise Boost",
+    "name": "AI-Vertise Ads",
     "url": BASE_URL,
     "description": "AI-powered advertising platform for small and medium businesses",
     "potentialAction": {

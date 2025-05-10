@@ -7,12 +7,12 @@ import Script from 'next/script';
 import { faqs, generateFAQStructuredData } from '@/data/faq';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | AI-Vertise Boost',
-  description: 'Get comprehensive answers to common questions about AI-Vertise Boost. Learn how our AI-powered advertising platform streamlines campaigns, increases ROI, and helps small businesses succeed with digital marketing.',
+  title: 'Frequently Asked Questions | AI-Vertise Ads',
+  description: 'Get comprehensive answers to common questions about AI-Vertise Ads. Learn how our AI-powered advertising platform streamlines campaigns, increases ROI, and helps small businesses succeed with digital marketing.',
   keywords: 'AI-Vertise FAQ, advertising FAQ, AI marketing questions, digital advertising help, small business marketing, ad campaign automation, marketing ROI, advertising platform',
   openGraph: {
-    title: 'Frequently Asked Questions | AI-Vertise Boost',
-    description: 'Find answers to common questions about AI-Vertise Boost, our AI-powered advertising platform designed specifically for small and medium businesses.',
+    title: 'Frequently Asked Questions | AI-Vertise Ads',
+    description: 'Find answers to common questions about AI-Vertise Ads, our AI-powered advertising platform designed specifically for small and medium businesses.',
     type: 'website',
     url: 'https://ai-vertise.com/faq',
     images: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: '/images/faq-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI-Vertise Boost FAQ - Find answers to your digital marketing questions'
+        alt: 'AI-Vertise Ads FAQ - Find answers to your digital marketing questions'
       }
     ]
   },
   twitter: {
     card: 'summary',
-    title: 'Frequently Asked Questions | AI-Vertise Boost',
-    description: 'Find answers to common questions about AI-Vertise Boost.',
+    title: 'Frequently Asked Questions | AI-Vertise Ads',
+    description: 'Find answers to common questions about AI-Vertise Ads.',
     images: ['/images/faq-twitter-card.jpg']
   },
   alternates: {
@@ -57,7 +57,7 @@ export default function FAQPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "AI-Vertise FAQ",
-            "description": "Frequently asked questions about AI-Vertise Boost, our AI-powered advertising platform.",
+            "description": "Frequently asked questions about AI-Vertise Ads, our AI-powered advertising platform.",
             "url": "https://ai-vertise.com/faq",
             "mainEntity": {
               "@type": "FAQPage",

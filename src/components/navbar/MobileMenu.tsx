@@ -77,7 +77,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
       <div className="flex flex-col px-5 gap-4">
         <div className="mb-4 text-center">
-          <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-purple to-primary-pink">AI-Vertise Boost</h2>
+          <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-purple to-primary-pink">AI-Vertise Ads</h2>
         </div>
 
         {mobileNavLinks.map((link, index) => {

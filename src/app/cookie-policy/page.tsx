@@ -3,18 +3,18 @@ import { Metadata } from 'next';
 import { COMPANY_NAME, COMPANY_EMAIL } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | AI-Vertise Boost',
+  title: 'Cookie Policy | AI-Vertise Ads',
   description: 'Our cookie policy explains how we use cookies and similar technologies on our website to enhance your browsing experience.',
   keywords: 'cookie policy, cookies, website cookies, tracking technologies, data privacy',
   openGraph: {
-    title: 'Cookie Policy | AI-Vertise Boost',
+    title: 'Cookie Policy | AI-Vertise Ads',
     description: 'Our cookie policy explains how we use cookies and similar technologies on our website to enhance your browsing experience.',
     type: 'website',
     url: 'https://ai-vertise.com/cookie-policy',
   },
   twitter: {
     card: 'summary',
-    title: 'Cookie Policy | AI-Vertise Boost',
+    title: 'Cookie Policy | AI-Vertise Ads',
     description: 'Our cookie policy explains how we use cookies and similar technologies.'
   }
 };

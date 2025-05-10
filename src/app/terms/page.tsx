@@ -3,19 +3,19 @@ import { Metadata } from 'next';
 import { COMPANY_NAME, COMPANY_EMAIL } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | AI-Vertise Boost',
-  description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Boost, our AI-powered advertising platform.',
+  title: 'Terms of Service | AI-Vertise Ads',
+  description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Ads, our AI-powered advertising platform.',
   keywords: 'terms of service, terms and conditions, advertising terms, user agreement, subscription terms',
   openGraph: {
-    title: 'Terms of Service | AI-Vertise Boost',
-    description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Boost, our AI-powered advertising platform.',
+    title: 'Terms of Service | AI-Vertise Ads',
+    description: 'Our terms of service outline the rules, guidelines, and agreements for using AI-Vertise Ads, our AI-powered advertising platform.',
     type: 'website',
     url: 'https://ai-vertise.com/terms',
   },
   twitter: {
     card: 'summary',
-    title: 'Terms of Service | AI-Vertise Boost',
-    description: 'Our terms of service outline the rules and agreements for using AI-Vertise Boost.'
+    title: 'Terms of Service | AI-Vertise Ads',
+    description: 'Our terms of service outline the rules and agreements for using AI-Vertise Ads.'
   }
 };
 

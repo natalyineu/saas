@@ -7,27 +7,27 @@ import { getFaqSlug } from '@/lib/utils/slug';
 export const faqs = [
   {
     id: 1,
-    question: "What is AI-Vertise Boost?",
-    answer: "AI-Vertise Boost is an AI-powered advertising platform designed specifically for small and medium businesses. It helps automate and optimize digital ad campaigns across multiple channels.",
-    slug: "what-is-ai-vertise-boost"
+    question: "What is AI-Vertise Ads?",
+    answer: "AI-Vertise Ads is an AI-powered advertising platform designed specifically for small and medium businesses. It helps automate and optimize digital ad campaigns across multiple channels.",
+    slug: "what-is-ai-vertise-ads"
   },
   {
     id: 2,
-    question: "How does AI-Vertise Boost work?",
+    question: "How does AI-Vertise Ads work?",
     answer: "Our platform uses artificial intelligence to analyze your business goals, target audience, and budget. It then creates, launches, and optimizes ad campaigns across platforms like Google, Facebook, and Instagram, continuously improving performance.",
-    slug: "how-does-ai-vertise-boost-work"
+    slug: "how-does-ai-vertise-ads-work"
   },
   {
     id: 3,
-    question: "Do I need technical knowledge to use AI-Vertise Boost?",
+    question: "Do I need technical knowledge to use AI-Vertise Ads?",
     answer: "No technical knowledge is required. Our platform is designed with an intuitive interface that guides you through the process. Our AI handles the complex technical aspects of campaign management.",
     slug: "do-i-need-technical-knowledge"
   },
   {
     id: 4,
-    question: "How much does AI-Vertise Boost cost?",
+    question: "How much does AI-Vertise Ads cost?",
     answer: "We offer flexible pricing plans starting at $299/month. Visit our pricing page for detailed information about our plans and features.",
-    slug: "how-much-does-ai-vertise-boost-cost"
+    slug: "how-much-does-ai-vertise-ads-cost"
   },
   {
     id: 5,
@@ -43,9 +43,9 @@ export const faqs = [
   },
   {
     id: 7,
-    question: "What platforms does AI-Vertise Boost support?",
+    question: "What platforms does AI-Vertise Ads support?",
     answer: "We currently support Google Ads, Facebook, Instagram, LinkedIn, Twitter, and TikTok. We're constantly adding more platforms to our ecosystem.",
-    slug: "what-platforms-does-ai-vertise-boost-support"
+    slug: "what-platforms-does-ai-vertise-ads-support"
   },
   {
     id: 8,

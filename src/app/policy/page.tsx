@@ -3,18 +3,18 @@ import { Metadata } from 'next';
 import { COMPANY_NAME, COMPANY_EMAIL } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | AI-Vertise Boost',
-  description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Boost, our AI-powered advertising platform.',
+  title: 'Privacy Policy | AI-Vertise Ads',
+  description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Ads, our AI-powered advertising platform.',
   keywords: 'privacy policy, data protection, advertising privacy, personal data, GDPR compliance',
   openGraph: {
-    title: 'Privacy Policy | AI-Vertise Boost',
-    description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Boost, our AI-powered advertising platform.',
+    title: 'Privacy Policy | AI-Vertise Ads',
+    description: 'Our privacy policy explains how we collect, use, and protect your information when using AI-Vertise Ads, our AI-powered advertising platform.',
     type: 'website',
     url: 'https://ai-vertise.com/policy',
   },
   twitter: {
     card: 'summary',
-    title: 'Privacy Policy | AI-Vertise Boost',
+    title: 'Privacy Policy | AI-Vertise Ads',
     description: 'Our privacy policy explains how we collect, use, and protect your information.'
   }
 };

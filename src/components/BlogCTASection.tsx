@@ -9,7 +9,7 @@ export default function BlogCTASection() {
             <div className="md:w-1/2 p-6 md:p-12">
               <h2 className="text-2xl md:text-4xl mb-4">Want more real-world insights?</h2>
               <p className="text-gray-600 mb-6">
-                Explore more detailed case studies from the same businesses that achieved exceptional results with AI-Vertise Boost.
+                Explore more detailed case studies from the same businesses that achieved exceptional results with AI-Vertise Ads.
               </p>
               <ul className="mb-6 md:mb-8 space-y-2">
                 <li className="flex items-start">

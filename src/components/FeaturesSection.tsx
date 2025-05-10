@@ -51,7 +51,7 @@ export default function FeaturesSection() {
             <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-primary-purple to-primary-pink rounded-full"></div>
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto mt-6 text-lg">
-            With AI-Vertise Boost, you don't just run ads — you execute powerful digital marketing campaigns. Our AI-powered advertising platform is built to drive real business outcomes across <span className="font-bold">50+</span> countries, whether you're just starting or scaling your ad strategy.
+            With AI-Vertise Ads, you don't just run ads — you execute powerful digital marketing campaigns. Our AI-powered advertising platform is built to drive real business outcomes across <span className="font-bold">50+</span> countries, whether you're just starting or scaling your ad strategy.
           </p>
         </div>
         

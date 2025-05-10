@@ -92,7 +92,7 @@ export default function CaseStudiesSection() {
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl mb-4">Success Stories</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            See how businesses like yours have achieved amazing results with AI-Vertise Boost.
+            See how businesses like yours have achieved amazing results with AI-Vertise Ads.
           </p>
         </div>
         

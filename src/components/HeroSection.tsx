@@ -71,10 +71,10 @@ export default function HeroSection() {
           <div className="order-1 md:order-1">
             <div className="max-w-xl">
               <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 leading-tight">
-                <span className="gradient-text">AI-Vertise</span> Boost
+                Upgrade Your Growth with <span className="gradient-text">AI Ads</span>
               </h1>
               <h2 className="text-lg sm:text-xl mb-8 text-gray-700 font-medium leading-relaxed">
-                You brief. We run. AI does the rest. AI-Vertise is a fully-managed, AI-powered ad platform built for small businesses. Just tell us your goals—we'll quickly create your ads, launch your campaigns within 24 hours, and deliver clear reports with actionable insights. No agencies, no delays, no complexity.
+                AI-Vertise is an end-to-end, AdTech platform built for small businesses. Simply tell us your goals, and we'll design, launch, and optimize your campaigns within 24 hours. Get clear, actionable reports to maximize your ROI.
               </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5 mb-10">

@@ -1,4 +1,4 @@
-# AI-Vertise Boost
+# AI-Vertise Ads
 
 AI-powered advertising platform for small and medium businesses.
 

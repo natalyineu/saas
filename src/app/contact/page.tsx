@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Get in touch with our team for any questions about our AI-powered advertising solutions or to request a demo.',
   keywords: 'contact, support, help, AI advertising, demo request',
   openGraph: {
-    title: 'Contact AI-Vertise Boost - Get in Touch',
+    title: 'Contact AI-Vertise Ads - Get in Touch',
     description: 'Have questions about our AI-powered advertising platform? Reach out to our team for more information or assistance.',
     type: 'website',
     url: 'https://ai-vertise.com/contact',
